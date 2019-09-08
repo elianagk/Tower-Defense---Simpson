@@ -1,5 +1,5 @@
 package Mapa;
 
-public class Mapa {
-
+public class Mapa  {
+	
 }
