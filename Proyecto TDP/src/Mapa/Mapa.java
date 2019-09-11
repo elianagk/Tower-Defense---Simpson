@@ -1,8 +1,9 @@
 package Mapa;
 
 
-import Enemigos.Enemigo;
 import GameObject.*;
+import GameObject.Personajes.Enemigo;
+import GameObject.Personajes.Torre;
 
 public class Mapa  {
 	static Personaje torres[]= new Torre [5] , enemigos[] = new Enemigo[6];

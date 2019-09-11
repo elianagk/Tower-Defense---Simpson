@@ -1,5 +1,7 @@
 package GameObject;
 
+import GameObjectGrafico.GameObjectGrafico;
+
 public abstract class GameObject {
 
 	protected int vida;
