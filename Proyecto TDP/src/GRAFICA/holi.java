@@ -46,31 +46,56 @@ public class holi extends JFrame{
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 1500, 1000);
+		frame.setBounds(100, 100, 961, 702);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		
 
 		
-		panel = new JPanel(new FlowLayout());
+		panel = new JPanel();
 		frame.getContentPane().add(panel);
 		ImageIcon mapa= new ImageIcon ("C:/Users/eliko/OneDrive/Documents/PROYECTO TDP/plant.jpg");
 		panel.setBounds(15, 15, 200, 200);
+		panel.setLayout(null);
 		
+		JLabel lblNewLabel = new JLabel("Puntaje: ");
+		lblNewLabel.setBounds(455, 0, 98, 48);
+		panel.add(lblNewLabel);
 		
-		map= new JLabel();
+		JButton Lisa = new JButton("LISA");
+		Lisa.setBounds(333, 0, 112, 82);
+		panel.add(Lisa);
 		
-		map.setIcon(mapa);
-		panel.add(map);
+		JButton Homero = new JButton("HOMERO");
+		Homero.setIcon(new ImageIcon("C:\\Users\\eliko\\OneDrive\\Documents\\PROYECTO TDP\\homer.png"));
+		Homero.setBounds(222, 0, 112, 82);
+		panel.add(Homero);
+		
+		JButton Marge = new JButton("MARGE");
+		Marge.setBounds(109, 0, 112, 82);
+		Marge.setIcon(new ImageIcon("C:\\Users\\eliko\\OneDrive\\Documents\\PROYECTO TDP\\margesinfondo.png"));
+		panel.add(Marge);
+		
+		JButton Bart = new JButton("BART");
+		Bart.setBounds(0, 0, 112, 82);
+		panel.add(Bart);
 		
 		bart= new JLabel();
+		bart.setBounds(388, 465, 82, 90);
 		bart.setBackground(null);
-		
+//		Point p=bart.getLocation();
+//		int x= p.x;
+//		int y= p.y;
 		bart.setIcon(new ImageIcon("C:/Users/eliko/OneDrive/Documents/PROYECTO TDP/bartsinfondo.png"));
 		
 		panel.add(bart);
 		
 		
+		map= new JLabel();
+		map.setBounds(0, -53, 1436, 874);
+		
+		map.setIcon(mapa);
+		panel.add(map);
 		
 		
 		
@@ -78,6 +103,13 @@ public class holi extends JFrame{
 		
 		
 		
+		
+		/**
+		 * oyente boton mouseListener(x,y) bart 
+		 *  Aliado b = new Bart(x,y)
+		 *  panel.add(b.getGrafico().getSprite();
+		 *  miMapa.addAliado(b,(x,y))
+		 */
 		
 		
 		
@@ -130,7 +162,4 @@ public class holi extends JFrame{
 		
 		
 	}
-	
-	
-
 }
