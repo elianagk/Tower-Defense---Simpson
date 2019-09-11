@@ -1,4 +1,6 @@
-package GameObject;
+package Enemigos;
+
+import GameObject.Personaje;
 
 public class Enemigo extends Personaje {
 	

@@ -1,6 +1,26 @@
 package Mapa;
 
+import Enemigos.Enemigo;
+import GameObject.Torre;
+
 public class Mapa  {
+	
+	protected Enemigo[] enemigos;
+	protected Torre[] aliados;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 }
 
