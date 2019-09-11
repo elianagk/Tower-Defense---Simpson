@@ -1,9 +1,15 @@
 package GameObject;
 
-import javax.swing.ImageIcon;
+import java.awt.*;
+import javax.swing.*;
 
 public abstract class GameObjectGrafico {
-
+	
+	protected Point p;
+	protected JLabel objeto;
+	
+	
+	
 	
 	
 }

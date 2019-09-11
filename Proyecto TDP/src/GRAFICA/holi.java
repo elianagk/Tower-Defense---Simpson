@@ -3,6 +3,8 @@ package GRAFICA;
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.awt.event.ActionEvent;
 
 import javax.swing.border.BevelBorder;
@@ -76,19 +78,33 @@ public class holi extends JFrame{
 		Marge.setIcon(new ImageIcon("C:\\Users\\eliko\\OneDrive\\Documents\\PROYECTO TDP\\margesinfondo.png"));
 		panel.add(Marge);
 		
+		bart= new JLabel();
+		
 		JButton Bart = new JButton("BART");
+		Bart.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				bart= new JLabel();
+				bart.setBounds(388, 465, 82, 90);
+				bart.setBackground(null);
+
+				bart.setIcon(new ImageIcon("C:/Users/eliko/OneDrive/Documents/PROYECTO TDP/bartsinfondo.png"));
+				panel.add(bart);
+				
+			}
+		});
+		
 		Bart.setBounds(0, 0, 112, 82);
 		panel.add(Bart);
 		
-		bart= new JLabel();
-		bart.setBounds(388, 465, 82, 90);
-		bart.setBackground(null);
-//		Point p=bart.getLocation();
-//		int x= p.x;
-//		int y= p.y;
-		bart.setIcon(new ImageIcon("C:/Users/eliko/OneDrive/Documents/PROYECTO TDP/bartsinfondo.png"));
-		
-		panel.add(bart);
+//		bart= new JLabel();
+//		bart.setBounds(388, 465, 82, 90);
+//		bart.setBackground(null);
+////		Point p=bart.getLocation();
+////		int x= p.x;
+////		int y= p.y;
+//		bart.setIcon(new ImageIcon("C:/Users/eliko/OneDrive/Documents/PROYECTO TDP/bartsinfondo.png"));
+//		
+//		panel.add(bart);
 		
 		
 		map= new JLabel();
