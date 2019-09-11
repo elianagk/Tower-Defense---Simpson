@@ -7,6 +7,7 @@ public abstract class GameObjectGrafico {
 	
 	protected Point p;
 	protected JLabel objeto;
+	protected String imagen;
 	
 	
 	
