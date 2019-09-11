@@ -1,4 +1,4 @@
-package GameObject;
+package GameObjectGrafico;
 
 import java.awt.*;
 import javax.swing.*;

@@ -1,4 +1,4 @@
-package Enemigos;
+package GameObject.Personajes;
 
 import GameObject.Personaje;
 
