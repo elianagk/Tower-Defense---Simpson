@@ -1,27 +1,22 @@
 package Mapa;
 
+
 import Enemigos.Enemigo;
-import GameObject.Torre;
+import GameObject.*;
 
 public class Mapa  {
+	static Personaje torres[]= new Torre [5] , enemigos[] = new Enemigo[6];
 	
-	protected Enemigo[] enemigos;
-	protected Torre[] aliados;
-	
-	
+
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+	public Mapa () {
+		for (Personaje torre : torres) {
+			
+		}
+	}
+
 }
 
 //Lista de personajes
