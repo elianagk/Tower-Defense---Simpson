@@ -8,5 +8,8 @@ public abstract class GameObject {
 	protected GameObjectGrafico miobjetografico;
 	protected Position position;
 	
+	public Position getPosition() {
+		return position;
+	}
 	
 }
