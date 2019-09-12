@@ -1,5 +1,6 @@
+
 package GameObjectGrafico;
 
-public class PersonajeGrafico {
+public class PersonajeGrafico extends GameObjectGrafico {
 
 }
