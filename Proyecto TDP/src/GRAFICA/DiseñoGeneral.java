@@ -8,11 +8,13 @@ import java.awt.event.ActionEvent;
 
 
 public class DiseñoGeneral extends JFrame{
+	
 
 	private JFrame frmJuego;
 	JLabel MAPA;
 	JButton btnHomero;
 	JLayeredPane PANELPRINCIPAL;
+	JPanel PANELTIENDA;
 	int index=0;
 
 	/**
@@ -55,6 +57,12 @@ public class DiseñoGeneral extends JFrame{
 		frmJuego.setVisible(true);
 		PANELPRINCIPAL.setLayout(null);
 		
+		JPanel PANELTIENDA = new JPanel();
+		PANELTIENDA.setBounds(0, 0, 500, 100);
+		PANELPRINCIPAL.add(PANELTIENDA, index);
+		PANELTIENDA.setLayout(null);
+		
+		
 		
 		MAPA = new JLabel("");
 		MAPA.setBounds(0, 0, PANELPRINCIPAL.getWidth(), PANELPRINCIPAL.getHeight());
@@ -65,8 +73,8 @@ public class DiseñoGeneral extends JFrame{
 		MAPA.addMouseListener( new Mouse());
 		
 		btnHomero = new JButton("");
-		btnHomero.setBounds(97, 81, 116, 94);
-		PANELPRINCIPAL.add(btnHomero, index);
+		btnHomero.setBounds(0, 0, 100, 100);
+		PANELTIENDA.add(btnHomero, index);
 		btnHomero.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				btnHomero.setEnabled(false);
@@ -92,7 +100,7 @@ public class DiseñoGeneral extends JFrame{
 		
 		
 		
-	
+		index++;
 	}
 	
 	
@@ -104,9 +112,7 @@ public class DiseñoGeneral extends JFrame{
 		ImageIcon fot0= new ImageIcon("C:\\Users\\Matia\\OneDrive\\Escritorio\\Tecnologia de program\\homero.png");
 		Icon homero= new ImageIcon(fot0.getImage().getScaledInstance(h.getWidth(), h.getHeight(), Image.SCALE_DEFAULT));
 		h.setIcon(homero);
-		PANELPRINCIPAL.add(h, index++);
+		PANELPRINCIPAL.add(h, index);
 		btnHomero.setEnabled(true);
 	}
-	
-	
 }
