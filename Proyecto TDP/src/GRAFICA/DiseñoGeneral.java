@@ -67,7 +67,7 @@ public class DiseñoGeneral extends JFrame{
 		MAPA = new JLabel("");
 		MAPA.setBounds(0, 0, PANELPRINCIPAL.getWidth(), PANELPRINCIPAL.getHeight());
 		PANELPRINCIPAL.add(MAPA, index);
-		ImageIcon fot1= new ImageIcon("C:\\Users\\Matia\\OneDrive\\Escritorio\\ProyectoGit\\proyectoTDP\\Proyecto TDP\\imagenes\\plant.jpg");
+		ImageIcon fot1= new ImageIcon(getClass().getClassLoader().getResource("bartsinfondo.jpeg"));
 		Icon mapa= new ImageIcon(fot1.getImage().getScaledInstance(MAPA.getWidth(), MAPA.getHeight(), Image.SCALE_DEFAULT));
 		MAPA.setIcon(mapa);
 		MAPA.addMouseListener( new Mouse());
@@ -86,7 +86,7 @@ public class DiseñoGeneral extends JFrame{
 				});
 			}
 		});
-		ImageIcon fot0= new ImageIcon("C:\\Users\\Matia\\OneDrive\\Escritorio\\Tecnologia de program\\homero.png");
+		ImageIcon fot0= new ImageIcon(getClass().getClassLoader().getResource("bartsinfondo.jpeg"));
 		Icon homero= new ImageIcon(fot0.getImage().getScaledInstance(btnHomero.getWidth(), btnHomero.getHeight(), Image.SCALE_DEFAULT));
 		btnHomero.setIcon(homero);
 		
@@ -109,7 +109,7 @@ public class DiseñoGeneral extends JFrame{
 	public void agregarHomero(int x, int y) {
 		JLabel h= new JLabel();
 		h.setBounds(x, y, 30, 30);
-		ImageIcon fot0= new ImageIcon("C:\\Users\\Matia\\OneDrive\\Escritorio\\Tecnologia de program\\homero.png");
+		ImageIcon fot0= new ImageIcon(getClass().getClassLoader().getResource("bartsinfondo.jpeg"));
 		Icon homero= new ImageIcon(fot0.getImage().getScaledInstance(h.getWidth(), h.getHeight(), Image.SCALE_DEFAULT));
 		h.setIcon(homero);
 		PANELPRINCIPAL.add(h, index);
