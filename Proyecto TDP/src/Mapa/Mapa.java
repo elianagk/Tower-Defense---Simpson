@@ -7,6 +7,8 @@ import GameObject.Personajes.Enemigos.*;
 import GameObject.Personajes.Torres.*;
 import java.util.ArrayList;
 import Jugador.Jugador;
+import Tienda.TiendaLogica;
+
 import java.awt.Point;
 import GRAFICA.MapaGrafico;
 
@@ -17,7 +19,7 @@ public class Mapa  {
 	private Jugador jugador;
 	private MapaGrafico mapaGrafico;
 	private int width, height;
-	private Tienda tienda;
+	private TiendaLogica tienda;
 
 	public Mapa (int width, int height) {
 		torres= new ArrayList<Torre> ();
