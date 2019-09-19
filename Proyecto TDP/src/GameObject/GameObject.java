@@ -12,4 +12,6 @@ public abstract class GameObject {
 		return position;
 	}
 	
+	
+	
 }
