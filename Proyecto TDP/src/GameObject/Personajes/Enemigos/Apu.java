@@ -1,8 +1,14 @@
 package GameObject.Personajes.Enemigos;
 
 import GameObject.Personajes.Enemigo;
+import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.ApuGrafico;
 
 public class Apu extends Enemigo {
+	
+	public Apu() {
+		miobjetografico = new ApuGrafico();
+	}
+	
 	
 	@Override
 	public void avanzar() {
