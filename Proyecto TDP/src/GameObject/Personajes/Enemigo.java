@@ -2,7 +2,7 @@ package GameObject.Personajes;
 
 import GameObject.Personaje;
 
-public class Enemigo extends Personaje {
+public abstract class Enemigo extends Personaje {
 	
 	protected int velocidad;
 	protected int puntaje;
@@ -30,6 +30,11 @@ public class Enemigo extends Personaje {
 		this.costo = costo;
 	}
 	
+	
+	public abstract  void avanzar();
+	
+	@Override
+	public abstract void atacar() ;
 	
 	
 	
