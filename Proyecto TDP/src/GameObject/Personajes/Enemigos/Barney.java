@@ -1,8 +1,15 @@
 package GameObject.Personajes.Enemigos;
 
 import GameObject.Personajes.Enemigo;
+import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.BarneyGrafico;
 
 public class Barney extends Enemigo {
+	
+	public Barney() {
+		miobjetografico= new BarneyGrafico();
+	}
+	
+	
 	
 	@Override
 	public void avanzar() {

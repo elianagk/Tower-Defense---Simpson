@@ -2,6 +2,6 @@ package GameObjectGrafico.PersonajesGrafico.EnemigosGrafico;
 
 import GameObjectGrafico.PersonajesGrafico.EnemigoGrafico;
 
-public class AbeGrafico extends EnemigoGrafico {
+public class NedGrafico extends EnemigoGrafico {
 
 }

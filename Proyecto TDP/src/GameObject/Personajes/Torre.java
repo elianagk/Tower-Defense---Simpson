@@ -5,9 +5,7 @@ import GameObject.Personaje;
 public abstract class Torre extends Personaje {
 
 	@Override
-	public void atacar() {
-		// TODO Auto-generated method stub
-		
-	}
+	public abstract void atacar() ;
+	//DEBERIAMOS SABER A QUIEN ATACAMOS PARA PODER SACARLE VIDA
 
 }
