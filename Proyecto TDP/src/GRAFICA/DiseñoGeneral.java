@@ -10,6 +10,9 @@ import java.awt.event.ActionEvent;
 public class DiseñoGeneral extends JFrame{
 	
 
+	/**
+	 * 
+	 */
 	private JFrame frmJuego;
 	JLabel MAPA;
 	JButton btnHomero;
@@ -57,24 +60,26 @@ public class DiseñoGeneral extends JFrame{
 		frmJuego.setVisible(true);
 		PANELPRINCIPAL.setLayout(null);
 		
-		JPanel PANELTIENDA = new JPanel();
+		JLayeredPane PANELTIENDA = new JLayeredPane();
 		PANELTIENDA.setBounds(0, 0, 500, 100);
-		PANELPRINCIPAL.add(PANELTIENDA, index);
+		PANELPRINCIPAL.add(PANELTIENDA);
+		PANELPRINCIPAL.setLayer(PANELTIENDA, 0);
 		PANELTIENDA.setLayout(null);
-		
 		
 		
 		MAPA = new JLabel("");
 		MAPA.setBounds(0, 0, PANELPRINCIPAL.getWidth(), PANELPRINCIPAL.getHeight());
-		PANELPRINCIPAL.add(MAPA, index);
-		ImageIcon fot1= new ImageIcon(getClass().getClassLoader().getResource("bartsinfondo.jpeg"));
+		PANELPRINCIPAL.add(MAPA);
+		PANELPRINCIPAL.setLayer(MAPA, 0);
+		ImageIcon fot1= new ImageIcon(getClass().getClassLoader().getResource("plant.jpg"));
 		Icon mapa= new ImageIcon(fot1.getImage().getScaledInstance(MAPA.getWidth(), MAPA.getHeight(), Image.SCALE_DEFAULT));
 		MAPA.setIcon(mapa);
 		MAPA.addMouseListener( new Mouse());
 		
 		btnHomero = new JButton("");
 		btnHomero.setBounds(0, 0, 100, 100);
-		PANELTIENDA.add(btnHomero, index);
+		PANELTIENDA.add(btnHomero);
+		PANELTIENDA.setLayer(btnHomero, 0);
 		btnHomero.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				btnHomero.setEnabled(false);
@@ -86,7 +91,7 @@ public class DiseñoGeneral extends JFrame{
 				});
 			}
 		});
-		ImageIcon fot0= new ImageIcon(getClass().getClassLoader().getResource("bartsinfondo.jpeg"));
+		ImageIcon fot0= new ImageIcon(getClass().getClassLoader().getResource("bartsinfondo.png"));
 		Icon homero= new ImageIcon(fot0.getImage().getScaledInstance(btnHomero.getWidth(), btnHomero.getHeight(), Image.SCALE_DEFAULT));
 		btnHomero.setIcon(homero);
 		
@@ -109,10 +114,11 @@ public class DiseñoGeneral extends JFrame{
 	public void agregarHomero(int x, int y) {
 		JLabel h= new JLabel();
 		h.setBounds(x, y, 30, 30);
-		ImageIcon fot0= new ImageIcon(getClass().getClassLoader().getResource("bartsinfondo.jpeg"));
+		ImageIcon fot0= new ImageIcon(getClass().getClassLoader().getResource("bartsinfondo.png"));
 		Icon homero= new ImageIcon(fot0.getImage().getScaledInstance(h.getWidth(), h.getHeight(), Image.SCALE_DEFAULT));
 		h.setIcon(homero);
-		PANELPRINCIPAL.add(h, index);
+		PANELPRINCIPAL.add(h);
+		PANELPRINCIPAL.setLayer(h,  1);
 		btnHomero.setEnabled(true);
 	}
 }
