@@ -7,5 +7,9 @@ import GameObject.GameObject;
 public class Boton extends JButton {
 	
 	protected GameObject miobjeto;
+	
+	public Boton() {
+		
+	}
 
 }
