@@ -27,6 +27,10 @@ public class TiendaGrafica extends JPanel {
 		this.add(botones[i]);
 	}
 	
+	
+	
 	}
+	
+	
 
 }

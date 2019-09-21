@@ -32,6 +32,9 @@ public class Mapa  {
 	}
 	
 //	public agregarEntidad(GameObject o) 
+	//--> deberiamos pasarle las coordenadas en donde se clickeo en el mapa grafico(se lo pasa la tienda logica)
+	//este mapa logico, deberia decirle al gameobject sus coordenadas, con el metodo SETPOSITION
+	
 	
 	/**
 	 * recorre la lista de personajes para chequear colisiones
