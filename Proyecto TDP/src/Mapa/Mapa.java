@@ -30,6 +30,8 @@ public class Mapa  {
 	
 	public void agregarEntidad(GameObject o) {
 		entidades.add(o);
+		mapaGrafico.agregarEntidad(o);
+		
 	}
 	
 	
@@ -57,7 +59,9 @@ public class Mapa  {
 	 * remueve una entidad o del la lista de personajes y del mapa grafico
 	 * @param o entidad a remover
 	 */
-//	public removerEntidad(GameObject o)
+	public void removerEntidad(GameObject o) {
+		
+	}
 	
 }
 
