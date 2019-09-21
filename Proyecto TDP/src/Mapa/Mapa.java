@@ -14,26 +14,27 @@ import GRAFICA.MapaGrafico;
 
 
 public class Mapa  {
-	private ArrayList<Torre> torres;
-	private ArrayList<Enemigo> enemigos;
+	private ArrayList<GameObject> entidades;
 	private Jugador jugador;
 	private MapaGrafico mapaGrafico;
 	private int width, height;
 	private TiendaLogica tienda;
 
 	public Mapa (int width, int height) {
-		torres= new ArrayList<Torre> ();
-		enemigos= new ArrayList<Enemigo> ();
+		entidades= new ArrayList<GameObject> ();
 		jugador= new Jugador();
 		this.width=width;
 		this.height=height;
 	}
 	
-	public Position getPosition(GameObject o){
+	public Point getPosition(GameObject o){
 		return o.getPosition();
 	}
 	
 //	public agregarEntidad(GameObject o) 
+	//--> deberiamos pasarle las coordenadas en donde se clickeo en el mapa grafico(se lo pasa la tienda logica)
+	//este mapa logico, deberia decirle al gameobject sus coordenadas, con el metodo SETPOSITION
+	
 	
 	/**
 	 * recorre la lista de personajes para chequear colisiones
