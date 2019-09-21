@@ -2,7 +2,11 @@ package GRAFICA;
 
 import java.awt.*;
 import javax.swing.*;
+
+import Juego.Juego;
+
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 import java.awt.event.ActionEvent;
 
@@ -14,11 +18,14 @@ public class DiseñoGeneral extends JFrame{
 	 * 
 	 */
 	private JFrame frmJuego;
-	JLabel MAPA;
-	JButton btnHomero;
-	JLayeredPane PANELPRINCIPAL;
-	JPanel PANELTIENDA;
+	private JLabel MAPA;
+	private JButton btnHomero;
+	private JLayeredPane PANELPRINCIPAL;
+	private JPanel PANELTIENDA;
 	int index=0;
+	private Juego juego;
+	private ContadorTiempo tiempo;
+	
 
 	/**
 	 * Launch the application.
@@ -41,6 +48,7 @@ public class DiseñoGeneral extends JFrame{
 	 */
 	public DiseñoGeneral() {
 		initialize();
+		
 	}
 
 	/**
@@ -49,7 +57,7 @@ public class DiseñoGeneral extends JFrame{
 	private void initialize() {
 		frmJuego = new JFrame();
 		frmJuego.setTitle("Juego");
-		frmJuego.setResizable(false);
+		//frmJuego.setResizable(false);
 		frmJuego.setBounds(100, 100, 1080, 720);
 		frmJuego.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmJuego.getContentPane().setLayout(null);
@@ -65,6 +73,8 @@ public class DiseñoGeneral extends JFrame{
 		PANELPRINCIPAL.add(PANELTIENDA);
 		PANELPRINCIPAL.setLayer(PANELTIENDA, 0);
 		PANELTIENDA.setLayout(null);
+		
+		
 		
 		
 		MAPA = new JLabel("");
@@ -103,10 +113,13 @@ public class DiseñoGeneral extends JFrame{
 		//Icon icono = new ImageIcon(fot.getImage().getScaledInstance(jLabel1.getWidth(), jLabel1.getHeight(), Image.SCALE_DEFAULT));
 		//jLabel1.setIcon(icono);
 		
-		
+		juego = new Juego(this);
+		tiempo = new ContadorTiempo(juego);
+		tiempo.start();
 		
 		index++;
 	}
+	
 	
 	
 	//-------------METODOS----------------------
@@ -121,4 +134,6 @@ public class DiseñoGeneral extends JFrame{
 		PANELPRINCIPAL.setLayer(h,  1);
 		btnHomero.setEnabled(true);
 	}
+	
+	
 }

@@ -32,6 +32,8 @@ public class Mapa  {
 		entidades.add(o);
 	}
 	
+	
+	
 	/**
 	 * recorre la lista de personajes para chequear colisiones
 	 * @param x coordenada x dentro del mapa, donde se va a chequear la colision

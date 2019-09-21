@@ -3,13 +3,24 @@ package GameObjectGrafico;
 import java.awt.*;
 import javax.swing.*;
 
-public abstract class GameObjectGrafico {
+import GameObject.Position;
+
+
+public abstract class GameObjectGrafico extends JLabel {
 	
-	protected Point p;
-	protected JLabel objeto;
+	protected Position p;
 	protected String imagen;
 	
+	public void setPosicion (int x, int y) {
+		p.setPosition(x, y);
+		
+	}
 	
+	public abstract void cambiarPosicion();
+	
+	public void setImagen(String img) {
+		imagen = img;
+	}
 	
 	
 	
