@@ -28,10 +28,11 @@ public class Mapa  {
 	}
 	
 	
-	public void agregarEntidad(GameObject o) {
+	public void agregarEntidad(GameObject o, int x, int y) {
+		o.setX(x);
+		o.setY(y);
 		entidades.add(o);
-		mapaGrafico.agregarEntidad(o);
-		
+		mapaGrafico.agregarEntidad(o);		
 	}
 	
 	

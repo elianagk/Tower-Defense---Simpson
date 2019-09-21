@@ -11,28 +11,37 @@ public abstract class GameObject {
 
 	protected int vida;
 	protected GameObjectGrafico miobjetografico;
-	protected Point pos;
-	
+	protected int x, y;	
 	
 	protected Icon image[];
 	protected final int width = 32;
 	protected final int height = 32;
 	
-	protected int velocidad;
+
 	
 	
-	
+	public GameObject() {
+		
+	}
 	
 	public JLabel getGrafico() {
 		return miobjetografico;
 	}
 	
-	public Point getPosition() {
-		return pos;
+	public void setX(int x) {
+		this.x=x;
 	}
 	
-	public void setPosition(int x, int y) {
-		pos.setLocation(x, y);
+	public void setY(int y) {
+		this.y=y;
+	}
+	
+	public int getX () {
+		return x;
+	}
+	
+	public int getY() {
+		return y;
 	}
 	
 	public void setImagen(String img) {
