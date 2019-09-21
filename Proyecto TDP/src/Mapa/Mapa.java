@@ -11,36 +11,45 @@ import Tienda.TiendaLogica;
 
 import java.awt.Point;
 import GRAFICA.MapaGrafico;
-
+import java.util.ListIterator;
 
 public class Mapa  {
-	private ArrayList<Torre> torres;
-	private ArrayList<Enemigo> enemigos;
+	private ArrayList<GameObject> entidades;
 	private Jugador jugador;
 	private MapaGrafico mapaGrafico;
 	private int width, height;
 	private TiendaLogica tienda;
 
 	public Mapa (int width, int height) {
-		torres= new ArrayList<Torre> ();
-		enemigos= new ArrayList<Enemigo> ();
+		entidades= new ArrayList<GameObject> ();
 		jugador= new Jugador();
 		this.width=width;
 		this.height=height;
 	}
 	
-	public Position getPosition(GameObject o){
-		return o.getPosition();
-	}
 	
-//	public agregarEntidad(GameObject o) 
+	public void agregarEntidad(GameObject o) {
+		entidades.add(o);
+	}
 	
 	/**
 	 * recorre la lista de personajes para chequear colisiones
 	 * @param x coordenada x dentro del mapa, donde se va a chequear la colision
 	 * @param y coordenada y dentro del mapa, donde se va a chequear la colision
+	 * @return true si hay colisiones (no se puede agregar el objeto), false caso contrario
 	 */
-//	public sinColisiones (int x, int y)
+	public boolean sinColisiones (int x, int y) {
+		boolean colisiones=false;
+		ListIterator<GameObject> it= entidades.listIterator();
+		GameObject o;
+		while (!colisiones && it.hasNext()) {
+			o=it.next();
+			colisiones= (x!=o.getX() && y!=o.getY());
+		}
+		
+		
+		return colisiones;
+	}
 	
 	/**
 	 * remueve una entidad o del la lista de personajes y del mapa grafico
