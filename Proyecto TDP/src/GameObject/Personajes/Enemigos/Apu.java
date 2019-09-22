@@ -1,7 +1,5 @@
 package GameObject.Personajes.Enemigos;
 
-import java.awt.Point;
-
 import javax.swing.JLabel;
 import GameObject.Personajes.Enemigo;
 import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.ApuGrafico;
