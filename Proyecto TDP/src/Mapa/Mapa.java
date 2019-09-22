@@ -11,7 +11,7 @@ import Tienda.TiendaLogica;
 
 import java.awt.Point;
 import GRAFICA.MapaGrafico;
-
+import java.util.ListIterator;
 
 public class Mapa  {
 	private ArrayList<GameObject> entidades;
@@ -27,11 +27,13 @@ public class Mapa  {
 		this.height=height;
 	}
 	
-	public Point getPosition(GameObject o){
-		return o.getPosition();
-	}
 	
-//	public agregarEntidad(GameObject o) 
+	public void agregarEntidad(GameObject o, int x, int y) {
+		o.setX(x);
+		o.setY(y);
+		entidades.add(o);
+		mapaGrafico.agregarEntidad(o);		
+	}
 	
 	
 	
@@ -39,14 +41,29 @@ public class Mapa  {
 	 * recorre la lista de personajes para chequear colisiones
 	 * @param x coordenada x dentro del mapa, donde se va a chequear la colision
 	 * @param y coordenada y dentro del mapa, donde se va a chequear la colision
+	 * @return true si hay colisiones (no se puede agregar el objeto), false caso contrario
 	 */
-//	public sinColisiones (int x, int y)
+	public boolean sinColisiones (int x, int y) {
+		boolean colisiones=false;
+		ListIterator<GameObject> it= entidades.listIterator();
+		GameObject o;
+		while (!colisiones && it.hasNext()) {
+			o=it.next();
+			colisiones= (x!=o.getX() && y!=o.getY());
+		}
+		
+		
+		return colisiones;
+	}
 	
 	/**
 	 * remueve una entidad o del la lista de personajes y del mapa grafico
 	 * @param o entidad a remover
 	 */
-//	public removerEntidad(GameObject o)
+	public void removerEntidad(GameObject o) {
+		entidades.remove(o);
+		mapaGrafico.removerEntidad(o);
+	}
 	
 }
 
