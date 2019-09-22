@@ -16,6 +16,7 @@ public class Juego {
 	
 	
 	
+	
 	public Juego(DiseñoGeneral gui){
 		enemigos = new Enemigo[1];
 		
@@ -29,8 +30,9 @@ public class Juego {
 //		}
 		
 		
-		enemigos[0]= new Apu(10, gui.getX()+20, gui.getY()+20);
+		enemigos[0]= new Apu(10, gui.getX(), gui.getY());
 		gui.add(enemigos[0].getGrafico());
+		gui.repaint();
 	}
 	
 	public void mover(){
