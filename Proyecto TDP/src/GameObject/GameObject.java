@@ -18,12 +18,11 @@ public abstract class GameObject {
 	protected final int height = 32;
 	
 
-	
-	
 	public GameObject() {
 		
 	}
 	
+
 	public JLabel getGrafico() {
 		return miobjetografico;
 	}
