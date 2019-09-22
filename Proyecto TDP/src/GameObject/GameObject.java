@@ -21,8 +21,6 @@ public abstract class GameObject {
 	protected int velocidad;
 	
 	
-	
-	
 	public JLabel getGrafico() {
 		return miobjetografico;
 	}
