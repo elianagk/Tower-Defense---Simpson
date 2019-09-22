@@ -61,7 +61,8 @@ public class Mapa  {
 	 * @param o entidad a remover
 	 */
 	public void removerEntidad(GameObject o) {
-		
+		entidades.remove(o);
+		mapaGrafico.removerEntidad(o);
 	}
 	
 }
