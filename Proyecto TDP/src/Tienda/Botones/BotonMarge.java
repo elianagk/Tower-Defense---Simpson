@@ -9,16 +9,10 @@ import Tienda.TiendaLogica;
 public class BotonMarge extends Boton {
 	
 	
-	public BotonMarge(TiendaLogica tienda) {
-		super(tienda);
+	public BotonMarge(String s, TiendaLogica tienda) {
+		super(s, tienda, new Marge());
 		
-		this.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent arg0) {
-				tienda.setEntidad(new Marge());
-			}
-			
-		});	
+		
 	}
 
 }

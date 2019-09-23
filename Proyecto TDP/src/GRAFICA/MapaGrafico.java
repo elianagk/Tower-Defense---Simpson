@@ -22,7 +22,7 @@ public class MapaGrafico extends JLabel{
 		tiendaLogica= tiendal;
 		this.setBounds(0, 0, ancho, alto);
 		this.setLayout(null);
-		ImageIcon fot1= new ImageIcon(getClass().getClassLoader().getResource("plant.jpg"));
+		ImageIcon fot1= new ImageIcon(getClass().getClassLoader().getResource("CASA.png"));
 		Icon mapa= new ImageIcon(fot1.getImage().getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_DEFAULT));
 		this.setIcon(mapa);
 		this.addMouseListener(new Mouse() {

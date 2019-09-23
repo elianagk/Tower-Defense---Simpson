@@ -6,7 +6,7 @@ import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.BumbleeManGrafico;
 public class BumbleeMan extends Enemigo {
 	
 	public BumbleeMan() {
-		miobjetografico= new BumbleeManGrafico();
+		miobjetografico= new BumbleeManGrafico("");
 	}
 	
 	

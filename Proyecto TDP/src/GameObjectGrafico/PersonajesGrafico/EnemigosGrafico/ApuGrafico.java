@@ -6,9 +6,8 @@ import GameObjectGrafico.PersonajesGrafico.EnemigoGrafico;
 
 public class ApuGrafico extends EnemigoGrafico {
 	
-	public ApuGrafico() {
-		this.setImagen("apu1.png");
-		this.setIcon(new ImageIcon(getClass().getClassLoader().getResource(imagen)));
+	public ApuGrafico(String s) {
+		super (s);
 	}
 
 	

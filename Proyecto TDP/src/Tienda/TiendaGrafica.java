@@ -14,6 +14,7 @@ import Tienda.Botones.Premio;
 
 public class TiendaGrafica extends JPanel {
 	protected Boton[] botones;
+	
 	protected TiendaLogica tienda;
 	
 	public TiendaGrafica(TiendaLogica tienda) {
@@ -23,14 +24,20 @@ public class TiendaGrafica extends JPanel {
 	
 	//-----
 	
-	//-----
-	botones[1]= new BotonBart("C:\\Users\\Matia\\OneDrive\\Escritorio\\ProyectoGit\\proyectoTDP\\Proyecto TDP\\imagenes\\bartsinfondo.png", tienda);
-	this.add(botones[1]);
+	//-----´
+	botones[0]= new BotonHomero("homero.ico", tienda);
+	
+	botones[1]= new BotonBart("bartsinfondo.png", tienda);
+	
+	botones[2]= new BotonLisa("lisa.png", tienda);
+	botones[3]= new BotonMarge("marge.png", tienda);
+	botones[4]= new BotonAbuelo("abe.gif", tienda);
+	botones[5]= new Premio("donut.png", tienda);
 	
 	
-//	for (int i=0; i<botones.length; i++) {
-//		this.add(botones[i]);
-//	}
+	for (int i=0; i<botones.length; i++) {
+		this.add(botones[i]);
+	}
 	
 	
 	

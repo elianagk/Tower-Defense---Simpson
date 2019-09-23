@@ -8,8 +8,7 @@ public class BartGrafico extends TorreGrafico {
 	String direccionImg;
 	
 	public BartGrafico(String s) {
-		direccionImg= s;
-		this.setIcon(new ImageIcon("C:\\\\Users\\\\Matia\\\\OneDrive\\\\Escritorio\\\\ProyectoGit\\\\proyectoTDP\\\\Proyecto TDP\\\\imagenes\\\\bartsinfondo.png"));
+		super(s);
 	}
 	
 	public void setImagen(String img) {

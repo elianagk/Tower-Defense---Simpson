@@ -6,7 +6,7 @@ import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.MrBurnsGrafico;
 public class MrBurns extends Enemigo {
 	
 	public MrBurns() {
-		miobjetografico= new MrBurnsGrafico();
+		miobjetografico= new MrBurnsGrafico("");
 	}
 	
 	

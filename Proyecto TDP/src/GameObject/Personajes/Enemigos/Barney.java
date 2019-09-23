@@ -6,7 +6,7 @@ import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.BarneyGrafico;
 public class Barney extends Enemigo {
 	
 	public Barney() {
-		miobjetografico= new BarneyGrafico();
+		miobjetografico= new BarneyGrafico("");
 	}
 	
 	
