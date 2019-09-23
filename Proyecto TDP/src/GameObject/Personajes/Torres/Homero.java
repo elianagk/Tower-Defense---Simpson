@@ -6,7 +6,7 @@ import GameObjectGrafico.PersonajesGrafico.TorresGrafico.HomeroGrafico;
 public class Homero extends Torre {
 	
 	public Homero() {
-		miobjetografico= new HomeroGrafico();
+		miobjetografico= new HomeroGrafico("");
 	}
 	
 	

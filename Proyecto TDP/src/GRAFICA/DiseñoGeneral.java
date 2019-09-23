@@ -77,7 +77,7 @@ public class DiseñoGeneral extends JFrame{
 		
 		mapal= new Mapa(PANELPRINCIPAL.getWidth(), PANELPRINCIPAL.getHeight(), null); 
 		tiendaLogica= new TiendaLogica(mapal);
-		MAPA = new MapaGrafico(tiendaLogica, "plant.jpg", PANELPRINCIPAL.getWidth(), PANELPRINCIPAL.getHeight());
+		MAPA = new MapaGrafico(tiendaLogica, "casa.png", PANELPRINCIPAL.getWidth(), PANELPRINCIPAL.getHeight());
 		mapal.setMapaGrafico(MAPA);
 		
 		

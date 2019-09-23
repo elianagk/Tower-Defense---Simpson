@@ -9,16 +9,10 @@ import Tienda.TiendaLogica;
 public class BotonLisa extends Boton {
 	
 	
-	public BotonLisa(TiendaLogica tienda) {
-		super(tienda);
+	public BotonLisa(String s, TiendaLogica tienda) {
+		super(s, tienda, new Lisa());
 		
-		this.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent arg0) {
-				tienda.setEntidad(new Lisa());
-			}
-			
-		});	
+		
 	}
 
 }

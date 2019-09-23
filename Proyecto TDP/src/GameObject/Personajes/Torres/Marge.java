@@ -6,7 +6,7 @@ import GameObjectGrafico.PersonajesGrafico.TorresGrafico.MargeGrafico;
 public class Marge extends Torre {
 	
 	public Marge() {
-		miobjetografico = new MargeGrafico();
+		miobjetografico = new MargeGrafico("");
 	}
 	
 	

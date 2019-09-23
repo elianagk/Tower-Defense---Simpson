@@ -13,17 +13,8 @@ import Tienda.TiendaLogica;
 public class BotonBart extends Boton {
 	
 	public BotonBart(String s, TiendaLogica tiendaLogica) {
-		super(tiendaLogica);
-		this.setText("");
+		super(s, tiendaLogica, new Bart());
 		
-		
-		this.setIcon(new ImageIcon(s));
-		this.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent arg0) {
-				tiendaLogica.setEntidad(new Bart());
-			}
-		});	
 	}
 
 }

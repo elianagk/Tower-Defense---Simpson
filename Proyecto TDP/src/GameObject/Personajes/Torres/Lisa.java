@@ -6,7 +6,7 @@ import GameObjectGrafico.PersonajesGrafico.TorresGrafico.LisaGrafico;
 public class Lisa extends Torre {
 	
 	public Lisa() {
-		miobjetografico= new LisaGrafico();
+		miobjetografico= new LisaGrafico("");
 	}
 	
 	

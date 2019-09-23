@@ -7,7 +7,7 @@ import Tienda.Botones.*;
 
 public class TiendaLogica {
 	
-	private MapaGrafico mapag;
+	
 	private Mapa mapal;
 	private GameObject g;
 	

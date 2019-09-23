@@ -6,7 +6,7 @@ import GameObjectGrafico.PersonajesGrafico.TorresGrafico.AbueloGrafico;
 public class Abuelo extends Torre {
 	
 	public Abuelo() {
-		miobjetografico = new AbueloGrafico();
+		miobjetografico = new AbueloGrafico("");
 	}
 
 	@Override

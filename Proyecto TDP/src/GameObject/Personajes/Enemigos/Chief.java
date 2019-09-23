@@ -6,7 +6,7 @@ import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.ChiefGrafico;
 public class Chief extends Enemigo {
 	
 	public Chief() {
-		miobjetografico= new ChiefGrafico();
+		miobjetografico= new ChiefGrafico("");
 	}
 	
 	

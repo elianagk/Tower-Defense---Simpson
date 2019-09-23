@@ -6,7 +6,7 @@ import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.NedGrafico;
 public class Ned extends Enemigo {
 	
 	public Ned() {
-		miobjetografico= new NedGrafico();
+		miobjetografico= new NedGrafico("");
 	}
 
 	@Override
