@@ -6,7 +6,7 @@ import GameObjectGrafico.PersonajesGrafico.TorresGrafico.BartGrafico;;
 public class Bart extends Torre {
 	
 	public Bart() {
-		miobjetografico = new BartGrafico();
+		miobjetografico = new BartGrafico("C:\\\\Users\\\\Matia\\\\OneDrive\\\\Escritorio\\\\ProyectoGit\\\\proyectoTDP\\\\Proyecto TDP\\\\imagenes\\\\bartsinfondo.png");
 	}
 	
 	
