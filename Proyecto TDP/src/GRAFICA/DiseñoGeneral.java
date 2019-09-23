@@ -4,7 +4,7 @@ import java.awt.*;
 import javax.swing.*;
 
 import Juego.Juego;
-import Mapa.Mapa;
+import Mapa.MapaLogico;
 import Tienda.TiendaGrafica;
 import Tienda.TiendaLogica;
 import Tienda.Botones.Boton;
@@ -31,7 +31,7 @@ public class DiseñoGeneral extends JFrame{
 	private Juego juego;
 	private ContadorTiempo tiempo;
 	private TiendaLogica tiendaLogica;
-	private Mapa mapal;
+	private MapaLogico mapal;
 	
 
 	/**
@@ -75,7 +75,7 @@ public class DiseñoGeneral extends JFrame{
 		frmJuego.setVisible(true);
 		PANELPRINCIPAL.setLayout(null);
 		
-		mapal= new Mapa(PANELPRINCIPAL.getWidth(), PANELPRINCIPAL.getHeight(), null); 
+		mapal= new MapaLogico(PANELPRINCIPAL.getWidth(), PANELPRINCIPAL.getHeight(), null); 
 		tiendaLogica= new TiendaLogica(mapal);
 		MAPA = new MapaGrafico(tiendaLogica, "casa.png", PANELPRINCIPAL.getWidth(), PANELPRINCIPAL.getHeight());
 		mapal.setMapaGrafico(MAPA);

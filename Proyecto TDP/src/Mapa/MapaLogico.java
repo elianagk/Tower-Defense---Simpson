@@ -13,14 +13,14 @@ import java.awt.Point;
 import GRAFICA.MapaGrafico;
 import java.util.ListIterator;
 
-public class Mapa  {
+public class MapaLogico  {
 	private ArrayList<GameObject> entidades;
 	private Jugador jugador;
 	private MapaGrafico mapaGrafico;
 	private int width, height;
 	private TiendaLogica tienda;
 
-	public Mapa (int width, int height, MapaGrafico mapag) {
+	public MapaLogico (int width, int height, MapaGrafico mapag) {
 		entidades= new ArrayList<GameObject> ();
 		jugador= new Jugador();
 		this.width=width;

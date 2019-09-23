@@ -2,18 +2,18 @@ package Tienda;
 
 import GRAFICA.MapaGrafico;
 import GameObject.GameObject;
-import Mapa.Mapa;
+import Mapa.MapaLogico;
 import Tienda.Botones.*;
 
 public class TiendaLogica {
 	
 	
-	private Mapa mapal;
+	private MapaLogico mapal;
 	private GameObject g;
 	
 	
 	
-	public TiendaLogica(Mapa mapa) {
+	public TiendaLogica(MapaLogico mapa) {
 		g= null;
 		mapal= mapa;
 	}
