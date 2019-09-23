@@ -3,6 +3,7 @@ package GameObject.Personajes.Enemigos;
 import javax.swing.JLabel;
 import GameObject.Personajes.Enemigo;
 import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.ApuGrafico;
+import GameObject.GameObject;
 
 public class Apu extends Enemigo {
 	
@@ -29,5 +30,8 @@ public class Apu extends Enemigo {
 		// gif atacando
 		
 	}
-
+	
+	public GameObject clone() {
+		return new Apu(velocidad, x, y);
+	}
 }

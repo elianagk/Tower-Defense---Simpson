@@ -1,5 +1,6 @@
 package GameObject.Personajes.Torres;
 
+import GameObject.GameObject;
 import GameObject.Personajes.Torre;
 import GameObjectGrafico.PersonajesGrafico.TorresGrafico.HomeroGrafico;
 
@@ -16,4 +17,8 @@ public class Homero extends Torre {
 		
 	}
 
+	public GameObject clone() {
+		return new Homero();
+	}
+	
 }

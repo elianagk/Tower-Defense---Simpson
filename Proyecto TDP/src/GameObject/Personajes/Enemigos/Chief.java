@@ -1,12 +1,16 @@
 package GameObject.Personajes.Enemigos;
 
+import GameObject.GameObject;
 import GameObject.Personajes.Enemigo;
 import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.ChiefGrafico;
 
 public class Chief extends Enemigo {
 	
-	public Chief() {
+	public Chief(int velocidad, int x, int y) {
 		miobjetografico= new ChiefGrafico("");
+		this.velocidad= velocidad;
+		this.x= x;
+		this.y= y;
 	}
 	
 	
@@ -21,4 +25,7 @@ public class Chief extends Enemigo {
 		
 	}
 
+	public GameObject clone() {
+		return new Chief(velocidad, x, y);
+	}
 }

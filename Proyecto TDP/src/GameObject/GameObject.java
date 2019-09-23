@@ -47,7 +47,7 @@ public abstract class GameObject {
 		miobjetografico.setImagen(img);
 	}
 	
-	
+	public abstract GameObject clone();
 	
 	
 	

@@ -1,12 +1,16 @@
 package GameObject.Personajes.Enemigos;
 
+import GameObject.GameObject;
 import GameObject.Personajes.Enemigo;
 import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.MrBurnsGrafico;
 
 public class MrBurns extends Enemigo {
 	
-	public MrBurns() {
+	public MrBurns(int velocidad, int x, int y) {
 		miobjetografico= new MrBurnsGrafico("");
+		this.velocidad= velocidad;
+		this.x= x;
+		this.y= y;
 	}
 	
 	
@@ -21,4 +25,7 @@ public class MrBurns extends Enemigo {
 		
 	}
 
+	public GameObject clone() {
+		return new MrBurns(velocidad, x, y);
+	}
 }

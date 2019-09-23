@@ -1,12 +1,17 @@
 package GameObject.Personajes.Enemigos;
 
+import GameObject.GameObject;
 import GameObject.Personajes.Enemigo;
 import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.BarneyGrafico;
 
 public class Barney extends Enemigo {
 	
-	public Barney() {
+	
+	public Barney(int velocidad, int x, int y) {
 		miobjetografico= new BarneyGrafico("");
+		this.velocidad= velocidad;
+		this.x= x;
+		this.y= y;
 	}
 	
 	
@@ -20,6 +25,10 @@ public class Barney extends Enemigo {
 	public void atacar() {
 		// gif atacando
 		
+	}
+	
+	public GameObject clone() {
+		return new Barney(velocidad, x, y);
 	}
 
 }

@@ -18,11 +18,9 @@ import Tienda.TiendaLogica;
 public class Boton extends JButton {
 	
 	protected TiendaLogica tienda;
-	protected GameObject miobjeto;
 	
 	public Boton(String s, TiendaLogica tienda, GameObject t) {
-		this.tienda= tienda; 
-		miobjeto= t;
+		this.tienda= tienda;
 		this.setText("");
 		
 		
@@ -30,7 +28,7 @@ public class Boton extends JButton {
 		this.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				tienda.setEntidad(miobjeto);
+				tienda.setEntidad(t.clone());
 			}
 		});	
 	}

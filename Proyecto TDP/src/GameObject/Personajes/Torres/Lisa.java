@@ -1,5 +1,6 @@
 package GameObject.Personajes.Torres;
 
+import GameObject.GameObject;
 import GameObject.Personajes.Torre;
 import GameObjectGrafico.PersonajesGrafico.TorresGrafico.LisaGrafico;
 
@@ -16,4 +17,8 @@ public class Lisa extends Torre {
 		
 	}
 
+	public GameObject clone() {
+		return new Lisa();
+	}
+	
 }

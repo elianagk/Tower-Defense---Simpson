@@ -1,12 +1,16 @@
 package GameObject.Personajes.Enemigos;
 
+import GameObject.GameObject;
 import GameObject.Personajes.Enemigo;
 import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.BumbleeManGrafico;
 
 public class BumbleeMan extends Enemigo {
 	
-	public BumbleeMan() {
+	public BumbleeMan(int velocidad, int x, int y) {
 		miobjetografico= new BumbleeManGrafico("");
+		this.velocidad= velocidad;
+		this.x= x;
+		this.y= y;
 	}
 	
 	
@@ -19,6 +23,10 @@ public class BumbleeMan extends Enemigo {
 	public void atacar() {
 		// gif atacando
 		
+	}
+	
+	public GameObject clone() {
+		return new BumbleeMan(velocidad, x, y);
 	}
 
 }
