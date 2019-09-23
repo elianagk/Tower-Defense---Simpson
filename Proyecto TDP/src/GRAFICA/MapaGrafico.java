@@ -38,6 +38,7 @@ public class MapaGrafico extends JLabel{
 		toAdd.setBounds(o.getX(), o.getY(), 100, 100);
 		System.out.println("Coordenada x: "+o.getX()+" // Coordenada y: "+o.getY());
 		this.add(toAdd);	//lo detecta pero mepa que lo añade y no se ve
+		this.repaint();
 	}
 	
 	public void avisarTienda(int x, int y) {
