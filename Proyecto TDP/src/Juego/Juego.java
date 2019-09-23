@@ -1,9 +1,9 @@
 package Juego;
 
-import java.awt.event.KeyEvent;
 import java.util.Random;
 
 import GRAFICA.DiseñoGeneral;
+import GRAFICA.MapaGrafico;
 import GameObject.Personajes.Enemigo;
 import GameObject.Personajes.Enemigos.Apu;
 import Jugador.Jugador;
@@ -13,13 +13,11 @@ public class Juego {
 	
 	private Enemigo enemigos[];
 	private Jugador jugador;
-	
+	private MapaGrafico mapa;
 	
 	
 	public Juego(DiseñoGeneral gui){
 		enemigos = new Enemigo[1];
-		
-		
 		
 		
 //		for(int i = 0; i < enemigos.length; i++){

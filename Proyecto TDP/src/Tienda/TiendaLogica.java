@@ -14,13 +14,14 @@ public class TiendaLogica {
 	
 	
 	public TiendaLogica() {
-		
+		g=null;
 		
 	}
 	
-	public void click(int x, int y) {
+	public void revisarTienda(int x, int y) {
 		if (ProximaEntidad()) {
 			mapal.agregarEntidad(g, x, y);
+			g=null;
 		}
 	}
 	
