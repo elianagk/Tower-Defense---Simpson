@@ -7,4 +7,13 @@ public class Nivel {
 	private Horda horda;
 	private Juego juego;
 	
+	
+	public void ejecutarHordas() {
+		
+	}
+	
+	public void finalizarNivel() {
+		
+	}
+	
 }

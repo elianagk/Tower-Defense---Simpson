@@ -63,6 +63,7 @@ public abstract  class Enemigo extends Personaje {
 			}
 		}
 		cambiarGrafico(dir);
+		
 	}
 	
 	public abstract  void avanzar();
