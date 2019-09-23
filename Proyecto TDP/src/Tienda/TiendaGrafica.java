@@ -1,5 +1,7 @@
 package Tienda;
 
+import java.awt.GridLayout;
+
 import javax.swing.JPanel;
 
 import Tienda.Botones.Boton;
@@ -12,20 +14,23 @@ import Tienda.Botones.Premio;
 
 public class TiendaGrafica extends JPanel {
 	protected Boton[] botones;
+	protected TiendaLogica tienda;
 	
-	
-	public TiendaGrafica() {
-	
+	public TiendaGrafica(TiendaLogica tienda) {
+	this.setLayout(new GridLayout(1, 6));
+	this.setBounds(0, 0, 600, 100);
 	botones = new Boton[6];
-	botones[1]= new BotonAbuelo();
-	botones[2]= new BotonBart();
-	botones[3]= new BotonHomero();
-	botones[4]= new BotonLisa();
-	botones[5]= new BotonMarge();
-	botones[6]= new Premio();
-	for (int i=1; i<botones.length; i++) {
-		this.add(botones[i]);
-	}
+	
+	//-----
+	
+	//-----
+	botones[1]= new BotonBart("C:\\Users\\Matia\\OneDrive\\Escritorio\\ProyectoGit\\proyectoTDP\\Proyecto TDP\\imagenes\\bartsinfondo.png", tienda);
+	this.add(botones[1]);
+	
+	
+//	for (int i=0; i<botones.length; i++) {
+//		this.add(botones[i]);
+//	}
 	
 	
 	

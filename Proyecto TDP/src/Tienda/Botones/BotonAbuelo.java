@@ -4,16 +4,16 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import GameObject.Personajes.Torres.Abuelo;
+import Tienda.TiendaLogica;
 
 public class BotonAbuelo extends Boton {
 	
-	public BotonAbuelo() {
+	public BotonAbuelo(TiendaLogica tienda) {
+		super(tienda);
 		this.addActionListener(new ActionListener() {
-
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				miobjeto= new Abuelo();
-				tienda.setEntidad(miobjeto);
+				tienda.setEntidad(new Abuelo());
 			}
 			
 		});

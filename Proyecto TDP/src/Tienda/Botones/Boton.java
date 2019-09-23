@@ -13,17 +13,8 @@ public class Boton extends JButton {
 	protected TiendaLogica tienda;
 	protected GameObject miobjeto;
 	
-	public Boton() {
-		this.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent arg0) {
-				//creo el tipo logico
-				//le paso a la tienda logica (el tipo logico)
-				
-			}
-			
-		});
+	public Boton(TiendaLogica tienda) {
+		this.tienda= tienda; 
 	}
 	
 	

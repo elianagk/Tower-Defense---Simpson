@@ -4,6 +4,11 @@ import java.awt.*;
 import javax.swing.*;
 
 import Juego.Juego;
+import Mapa.Mapa;
+import Tienda.TiendaGrafica;
+import Tienda.TiendaLogica;
+import Tienda.Botones.Boton;
+import Tienda.Botones.BotonHomero;
 
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
@@ -18,13 +23,15 @@ public class DiseñoGeneral extends JFrame{
 	 * 
 	 */
 	private JFrame frmJuego;
-	private JLabel MAPA;
-	private JButton btnHomero;
+	private MapaGrafico MAPA;
+	private Boton btnHomero;
 	private JLayeredPane PANELPRINCIPAL;
-	private JPanel PANELTIENDA;
+	private TiendaGrafica PANELTIENDA;
 	int index=0;
 	private Juego juego;
 	private ContadorTiempo tiempo;
+	private TiendaLogica tiendaLogica;
+	private Mapa mapal;
 	
 
 	/**
@@ -57,7 +64,7 @@ public class DiseñoGeneral extends JFrame{
 	private void initialize() {
 		frmJuego = new JFrame();
 		frmJuego.setTitle("Juego");
-		//frmJuego.setResizable(false);
+		frmJuego.setResizable(false);
 		frmJuego.setBounds(100, 100, 1080, 720);
 		frmJuego.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmJuego.getContentPane().setLayout(null);
@@ -68,42 +75,21 @@ public class DiseñoGeneral extends JFrame{
 		frmJuego.setVisible(true);
 		PANELPRINCIPAL.setLayout(null);
 		
-		JLayeredPane PANELTIENDA = new JLayeredPane();
-		PANELTIENDA.setBounds(0, 0, 500, 100);
+		mapal= new Mapa(PANELPRINCIPAL.getWidth(), PANELPRINCIPAL.getHeight(), null); 
+		tiendaLogica= new TiendaLogica(mapal);
+		MAPA = new MapaGrafico(tiendaLogica, "plant.jpg", PANELPRINCIPAL.getWidth(), PANELPRINCIPAL.getHeight());
+		mapal.setMapaGrafico(MAPA);
+		
+		
+		PANELTIENDA= new TiendaGrafica(tiendaLogica);
 		PANELPRINCIPAL.add(PANELTIENDA);
 		PANELPRINCIPAL.setLayer(PANELTIENDA, 0);
-		PANELTIENDA.setLayout(null);
 		
 		
-		
-		
-		MAPA = new JLabel("");
-		MAPA.setBounds(0, 0, PANELPRINCIPAL.getWidth(), PANELPRINCIPAL.getHeight());
 		PANELPRINCIPAL.add(MAPA);
 		PANELPRINCIPAL.setLayer(MAPA, 0);
-		ImageIcon fot1= new ImageIcon(getClass().getClassLoader().getResource("CASA.png"));
-		Icon mapa= new ImageIcon(fot1.getImage().getScaledInstance(MAPA.getWidth(), MAPA.getHeight(), Image.SCALE_DEFAULT));
-		MAPA.setIcon(mapa);
-		MAPA.addMouseListener( new Mouse());
+
 		
-		btnHomero = new JButton("");
-		btnHomero.setBounds(0, 0, 100, 100);
-		PANELTIENDA.add(btnHomero);
-		PANELTIENDA.setLayer(btnHomero, 0);
-		btnHomero.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				btnHomero.setEnabled(false);
-				MAPA.addMouseListener(new Mouse() {
-				    @Override
-				    public void mouseClicked(MouseEvent e) {
-				    	agregarHomero(e.getX(), e.getY());
-				    }
-				});
-			}
-		});
-		ImageIcon fot0= new ImageIcon(getClass().getClassLoader().getResource("bartsinfondo.png"));
-		Icon homero= new ImageIcon(fot0.getImage().getScaledInstance(btnHomero.getWidth(), btnHomero.getHeight(), Image.SCALE_DEFAULT));
-		btnHomero.setIcon(homero);
 		
 		
 		
@@ -123,17 +109,17 @@ public class DiseñoGeneral extends JFrame{
 	
 	
 	//-------------METODOS----------------------
-	
-	public void agregarHomero(int x, int y) {
-		JLabel h= new JLabel();
-		h.setBounds(x, y, 30, 30);
-		ImageIcon fot0= new ImageIcon(getClass().getClassLoader().getResource("bartsinfondo.png"));
-		Icon homero= new ImageIcon(fot0.getImage().getScaledInstance(h.getWidth(), h.getHeight(), Image.SCALE_DEFAULT));
-		h.setIcon(homero);
-		PANELPRINCIPAL.add(h);
-		PANELPRINCIPAL.setLayer(h,  1);
-		btnHomero.setEnabled(true);
-	}
-	
+//	
+//	public void agregarHomero(int x, int y) {
+//		JLabel h= new JLabel();
+//		h.setBounds(x, y, 30, 30);
+//		ImageIcon fot0= new ImageIcon(getClass().getClassLoader().getResource("bartsinfondo.png"));
+//		Icon homero= new ImageIcon(fot0.getImage().getScaledInstance(h.getWidth(), h.getHeight(), Image.SCALE_DEFAULT));
+//		h.setIcon(homero);
+//		PANELPRINCIPAL.add(h);
+//		PANELPRINCIPAL.setLayer(h,  1);
+//		btnHomero.setEnabled(true);
+//	}
+//	
 	
 }

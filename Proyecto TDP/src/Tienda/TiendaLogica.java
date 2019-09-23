@@ -13,21 +13,22 @@ public class TiendaLogica {
 	
 	
 	
-	public TiendaLogica() {
-		
-		
+	public TiendaLogica(Mapa mapa) {
+		g= null;
+		mapal= mapa;
 	}
 	
-	public void click(int x, int y) {
+	public void revisarTienda(int x, int y) {
 		if (ProximaEntidad()) {
 			mapal.agregarEntidad(g, x, y);
+			g= null;
 		}
 	}
 	
 	
 	
 	public void setEntidad(GameObject o) {
-		g=o;
+		g= o;
 	}
 	
 	public GameObject getEntidad() {
@@ -37,6 +38,5 @@ public class TiendaLogica {
 	public boolean ProximaEntidad() {
 		return g!=null;
 	}
-	
 
 }

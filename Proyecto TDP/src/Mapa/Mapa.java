@@ -20,13 +20,17 @@ public class Mapa  {
 	private int width, height;
 	private TiendaLogica tienda;
 
-	public Mapa (int width, int height) {
+	public Mapa (int width, int height, MapaGrafico mapag) {
 		entidades= new ArrayList<GameObject> ();
 		jugador= new Jugador();
 		this.width=width;
 		this.height=height;
+		mapaGrafico= mapag;
 	}
 	
+	public void setMapaGrafico(MapaGrafico m) {
+		mapaGrafico= m;
+	}
 	
 	public void agregarEntidad(GameObject o, int x, int y) {
 		o.setX(x);
