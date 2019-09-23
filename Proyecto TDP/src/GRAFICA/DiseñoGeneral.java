@@ -81,7 +81,7 @@ public class DiseñoGeneral extends JFrame{
 		MAPA.setBounds(0, 0, PANELPRINCIPAL.getWidth(), PANELPRINCIPAL.getHeight());
 		PANELPRINCIPAL.add(MAPA);
 		PANELPRINCIPAL.setLayer(MAPA, 0);
-		ImageIcon fot1= new ImageIcon(getClass().getClassLoader().getResource("plant.jpg"));
+		ImageIcon fot1= new ImageIcon(getClass().getClassLoader().getResource("CASA.png"));
 		Icon mapa= new ImageIcon(fot1.getImage().getScaledInstance(MAPA.getWidth(), MAPA.getHeight(), Image.SCALE_DEFAULT));
 		MAPA.setIcon(mapa);
 		MAPA.addMouseListener( new Mouse());
