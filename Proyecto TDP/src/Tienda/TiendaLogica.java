@@ -20,7 +20,7 @@ public class TiendaLogica {
 	
 	public void revisarTienda(int x, int y) {
 		if (ProximaEntidad()) {
-			mapal.agregarEntidad(g, x, y);
+			mapal.agregarEntidad(g.obtenerGrafica(), x, y);	//PREGUNTAR ESTO EN EL GRUPO
 			g=null;
 		}
 	}

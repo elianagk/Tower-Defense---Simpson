@@ -29,7 +29,7 @@ public class MapaGrafico extends JLabel{
 	}
 	
 	public void agregarEntidad(GameObject o) {
-		
+		this.add(o);
 	}
 	
 	public void avisarTienda(int x, int y) {

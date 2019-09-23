@@ -12,8 +12,8 @@ import Tienda.TiendaLogica;
 
 public class BotonBart extends Boton {
 	
-	public BotonBart(String s, TiendaLogica tienda) {
-		super(tienda);
+	public BotonBart(String s, TiendaLogica tiendaLogica) {
+		super(tiendaLogica);
 		this.setText("");
 		
 		
@@ -21,7 +21,7 @@ public class BotonBart extends Boton {
 		this.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				tienda.setEntidad(new Bart());
+				tiendaLogica.setEntidad(new Bart());
 			}
 		});	
 	}
