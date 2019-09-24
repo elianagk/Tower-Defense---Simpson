@@ -8,7 +8,7 @@ public class Apu extends Enemigo {
 	
 	public Apu(int velocidad, int x, int y) {
 		this.velocidad= velocidad;
-		miobjetografico = new ApuGrafico("");
+		miobjetografico = new ApuGrafico("apu1.png");
 		this.x=x;
 		this.y=y;
 	}
