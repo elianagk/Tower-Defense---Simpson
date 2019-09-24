@@ -22,9 +22,10 @@ public class Boton extends JButton {
 	public Boton(String s, TiendaLogica tienda, GameObject t) {
 		this.tienda= tienda;
 		this.setText("");
-		
-		
-		this.setIcon(new ImageIcon(getClass().getClassLoader().getResource(s)));
+		this.setSize(100, 100);
+		ImageIcon fot= new ImageIcon(getClass().getClassLoader().getResource(s));
+		Icon i= new ImageIcon(fot.getImage().getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_DEFAULT));
+		this.setIcon(i);
 		this.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {

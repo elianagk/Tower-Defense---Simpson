@@ -1,9 +1,10 @@
 package Tienda;
 
 import java.awt.GridLayout;
-
 import javax.swing.JPanel;
-
+import javax.swing.ImageIcon;
+import javax.swing.*;
+import java.awt.event.*;
 import Tienda.Botones.Boton;
 import Tienda.Botones.BotonAbuelo;
 import Tienda.Botones.BotonBart;
@@ -18,10 +19,16 @@ public class TiendaGrafica extends JPanel {
 	protected TiendaLogica tienda;
 	
 	public TiendaGrafica(TiendaLogica tienda) {
-	this.setLayout(new GridLayout(1, 6));
+	this.setLayout(new GridLayout(1, 7));
 	this.setBounds(0, 0, 600, 100);
 	botones = new Boton[6];
-	
+	JButton botonEliminar= new JButton(new ImageIcon(getClass().getClassLoader().getResource("apu1.png")));
+	botonEliminar.addActionListener(new ActionListener() {
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			
+		}
+	});
 	//-----
 	
 	//-----´
