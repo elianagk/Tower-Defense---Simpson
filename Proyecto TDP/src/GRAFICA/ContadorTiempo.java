@@ -6,7 +6,7 @@ public class ContadorTiempo extends Thread {
 
 	private Juego elJuego;
 
-	ContadorTiempo(Juego j) {
+	public ContadorTiempo(Juego j) {
 		this.elJuego = j;
 	}
 

@@ -36,7 +36,7 @@ public class MapaGrafico extends JLabel{
 		});
 		
 
-		juego = new Juego(this);
+		juego = new Juego(this );
 		tiempo = new ContadorTiempo(juego);
 		tiempo.start();
 	}

@@ -3,10 +3,12 @@ package GameObject.Personajes.Torres;
 import GameObject.GameObject;
 import GameObject.Personajes.Torre;
 import GameObjectGrafico.PersonajesGrafico.TorresGrafico.HomeroGrafico;
+import VISITOR.Visitor;
 
 public class Homero extends Torre {
 	
 	public Homero() {
+		super(85, 70, 85, 1);
 		miobjetografico= new HomeroGrafico("");
 	}
 	
@@ -19,6 +21,13 @@ public class Homero extends Torre {
 
 	public GameObject clone() {
 		return new Homero();
+	}
+
+
+	@Override
+	public void Aceptar(Visitor visitante) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 }
