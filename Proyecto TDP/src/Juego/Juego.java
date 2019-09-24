@@ -11,6 +11,7 @@ import GameObject.Personaje;
 import GameObject.Personajes.Enemigo;
 import GameObject.Personajes.Enemigos.Apu;
 import Jugador.Jugador;
+import Mapa.MapaLogico;
 
 
 
@@ -19,6 +20,7 @@ public class Juego {
 	private Enemigo enemigos[];
 	private Jugador jugador;
 	private MapaGrafico mapa;
+	private MapaLogico mapalogico;
 	private final int gravity_force = 5;
 	private final int ground_position = 400;
 	

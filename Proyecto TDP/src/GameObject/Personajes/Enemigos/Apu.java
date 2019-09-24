@@ -5,6 +5,7 @@ import java.awt.Point;
 import javax.swing.JLabel;
 import GameObject.Personajes.Enemigo;
 import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.ApuGrafico;
+import VISITOR.Visitor;
 import GameObject.GameObject;
 
 public class Apu extends Enemigo {
@@ -37,5 +38,11 @@ public class Apu extends Enemigo {
 	
 	public GameObject clone() {
 		return new Apu(velocidad, this.position);
+	}
+
+	@Override
+	public void Aceptar(Visitor visitante) {
+		// TODO Auto-generated method stub
+		
 	}
 }

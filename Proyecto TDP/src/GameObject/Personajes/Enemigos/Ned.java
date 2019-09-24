@@ -5,6 +5,7 @@ import java.awt.Point;
 import GameObject.GameObject;
 import GameObject.Personajes.Enemigo;
 import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.NedGrafico;
+import VISITOR.Visitor;
 
 public class Ned extends Enemigo {
 	
@@ -27,5 +28,11 @@ public class Ned extends Enemigo {
 
 	public GameObject clone() {
 		return new Ned(velocidad, position);
+	}
+
+	@Override
+	public void Aceptar(Visitor visitante) {
+		// TODO Auto-generated method stub
+		
 	}
 }

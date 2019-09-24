@@ -5,11 +5,15 @@ import GameObject.*;
 import GameObject.Personajes.*;
 import GameObject.Personajes.Enemigos.*;
 import GameObject.Personajes.Torres.*;
+import Juego.Juego;
+
 import java.util.ArrayList;
 import Jugador.Jugador;
 import Tienda.TiendaLogica;
 
 import java.awt.Point;
+
+import GRAFICA.ContadorTiempo;
 import GRAFICA.MapaGrafico;
 import java.util.ListIterator;
 
@@ -20,12 +24,15 @@ public class MapaLogico  {
 	private int width, height;
 	private TiendaLogica tienda;
 
+
 	public MapaLogico (int width, int height, MapaGrafico mapag) {
 		entidades= new ArrayList<GameObject> ();
 		jugador= new Jugador();
 		this.width=width;
 		this.height=height;
 		mapaGrafico= mapag;
+		
+		
 	}
 	
 	public void setMapaGrafico(MapaGrafico m) {
@@ -48,7 +55,7 @@ public class MapaLogico  {
 	 * @param y coordenada y dentro del mapa, donde se va a chequear la colision
 	 * @return true si hay colisiones (no se puede agregar el objeto), false caso contrario
 	 */
-	public boolean sinColisiones (int x, int y) {
+	public boolean HayColisiones (int x, int y) {
 		boolean colisiones=false;
 		ListIterator<GameObject> it= entidades.listIterator();
 		GameObject o;

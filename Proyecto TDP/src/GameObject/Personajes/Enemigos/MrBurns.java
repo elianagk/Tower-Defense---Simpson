@@ -5,6 +5,7 @@ import java.awt.Point;
 import GameObject.GameObject;
 import GameObject.Personajes.Enemigo;
 import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.MrBurnsGrafico;
+import VISITOR.Visitor;
 
 public class MrBurns extends Enemigo {
 	
@@ -28,5 +29,12 @@ public class MrBurns extends Enemigo {
 
 	public GameObject clone() {
 		return new MrBurns(velocidad, position);
+	}
+
+
+	@Override
+	public void Aceptar(Visitor visitante) {
+		// TODO Auto-generated method stub
+		
 	}
 }

@@ -5,6 +5,7 @@ import java.awt.Point;
 import GameObject.GameObject;
 import GameObject.Personajes.Enemigo;
 import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.BumbleeManGrafico;
+import VISITOR.Visitor;
 
 public class BumbleeMan extends Enemigo {
 	
@@ -28,6 +29,13 @@ public class BumbleeMan extends Enemigo {
 	
 	public GameObject clone() {
 		return new BumbleeMan(velocidad, this.position);
+	}
+
+
+	@Override
+	public void Aceptar(Visitor visitante) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

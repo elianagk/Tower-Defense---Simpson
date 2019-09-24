@@ -5,6 +5,7 @@ import java.awt.Point;
 import GameObject.GameObject;
 import GameObject.Personajes.Enemigo;
 import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.ChiefGrafico;
+import VISITOR.Visitor;
 
 public class Chief extends Enemigo {
 	
@@ -28,5 +29,12 @@ public class Chief extends Enemigo {
 
 	public GameObject clone() {
 		return new Chief(velocidad, position);
+	}
+
+
+	@Override
+	public void Aceptar(Visitor visitante) {
+		// TODO Auto-generated method stub
+		
 	}
 }

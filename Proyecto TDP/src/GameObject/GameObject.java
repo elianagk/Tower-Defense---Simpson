@@ -4,9 +4,9 @@ import java.awt.Point;
 
 import javax.swing.Icon;
 import javax.swing.JLabel;
-import javax.swing.text.Position;
 
 import GameObjectGrafico.GameObjectGrafico;
+import VISITOR.Visitor;
 
 public abstract class GameObject {
 
@@ -14,7 +14,7 @@ public abstract class GameObject {
 	protected GameObjectGrafico miobjetografico;
 	protected Point position;
 	
-	protected Icon image[];
+	protected Icon image[];// imagen statica, gif caminando, gif atacando
 	protected final int width = 50;
 	protected final int height = 50;
 	
@@ -65,6 +65,6 @@ public abstract class GameObject {
 	
 	public abstract GameObject clone();
 	
-	
+	public abstract void Aceptar(Visitor visitante) ;
 	
 }
