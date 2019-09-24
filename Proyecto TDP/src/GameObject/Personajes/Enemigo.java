@@ -5,8 +5,16 @@ import GameObject.Personaje;
 public abstract  class Enemigo extends Personaje {
 	protected int velocidad;
 	protected int puntaje;
-	protected int costo;
+	protected int monedas;
 	protected int jump_strenght = 10;
+	
+	
+//	public Enemigo(int vida, int velocidad, int puntaje, int monedas) {
+//		this.velocidad= velocidad;
+//		this.puntaje= puntaje;
+//		this.monedas= monedas;
+//	}
+	//lo dejo comentado porque no tengo ganas de poner los super en las otras clases
 	
 	
 	public int getVelocidad() {
@@ -25,12 +33,12 @@ public abstract  class Enemigo extends Personaje {
 		this.puntaje = puntaje;
 	}
 	
-	public int getCosto() {
-		return costo;
+	public int getMonedas() {
+		return monedas;
 	}
 	
-	public void setCosto(int costo) {
-		this.costo = costo;
+	public void setMonedas(int monedas) {
+		this.monedas = monedas;
 	}
 	
 	protected void cambiarGrafico(String dir){
