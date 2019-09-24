@@ -3,6 +3,7 @@ package GRAFICA;
 import java.awt.*;
 import javax.swing.*;
 
+import Hordas.Horda;
 import Juego.Juego;
 import Mapa.MapaLogico;
 import Tienda.TiendaGrafica;
@@ -99,9 +100,11 @@ public class DiseñoGeneral extends JFrame{
 		//Icon icono = new ImageIcon(fot.getImage().getScaledInstance(jLabel1.getWidth(), jLabel1.getHeight(), Image.SCALE_DEFAULT));
 		//jLabel1.setIcon(icono);
 		
-//		juego = new Juego(this);
+//		juego = new Juego(MAPA);
 //		tiempo = new ContadorTiempo(juego);
 //		tiempo.start();
+		
+		
 		
 		index++;
 	}

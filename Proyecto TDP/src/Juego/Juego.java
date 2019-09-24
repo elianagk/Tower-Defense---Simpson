@@ -12,12 +12,14 @@ import GameObject.Personajes.Enemigo;
 import GameObject.Personajes.Enemigos.Apu;
 import Jugador.Jugador;
 import Mapa.MapaLogico;
+import Nivel.Nivel;
 
 
 
 public class Juego {
 	
-	private Enemigo enemigos[];
+	public Enemigo enemigos[];
+	private Nivel niveles[];
 	private Jugador jugador;
 	private MapaGrafico mapa;
 	private MapaLogico mapalogico;
@@ -27,6 +29,9 @@ public class Juego {
 	
 	
 	public Juego(MapaGrafico gui){
+		niveles= new Nivel[1];
+		niveles[0]= new Nivel();
+		comenzarNiveles();
 		enemigos = new Enemigo[1];
 		mapa=gui;
 		
@@ -37,7 +42,7 @@ public class Juego {
 //		}
 		Point posicion= new Point (gui.getX()+900, ground_position);
 		
-		enemigos[0]= new Apu(5, posicion);
+		enemigos[0]= new Apu(posicion);
 		mapa.add(enemigos[0].getGrafico());
 		mapa.repaint();
 	}
@@ -58,5 +63,8 @@ public class Juego {
 	}
 	
 	
+	public void comenzarNiveles() {
+		niveles[0].ejecutarHordas();
+	}
 
 }

@@ -5,15 +5,18 @@ import java.awt.Point;
 import javax.swing.JLabel;
 import GameObject.Personajes.Enemigo;
 import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.ApuGrafico;
+import Mapa.MapaLogico;
 import VISITOR.Visitor;
 import GameObject.GameObject;
 
 public class Apu extends Enemigo {
 	
-	public Apu(int velocidad, Point posicion) {
-		this.velocidad= velocidad;
+	public Apu(Point posicion, MapaLogico ml) {
+		super(posicion, ml);
+		vida= 100;
+		velocidad= 5;
 		miobjetografico = new ApuGrafico("apucaminandogif.gif");
-		position= posicion;
+		
 		
 		
 	}
@@ -37,12 +40,23 @@ public class Apu extends Enemigo {
 	}
 	
 	public GameObject clone() {
-		return new Apu(velocidad, this.position);
+		return null;
 	}
 
 	@Override
 	public void Aceptar(Visitor visitante) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public void aplicarDaño(int daño) {
+		if(vida>=daño)
+			vida-=daño;
+		else {
+			vida=0;
+			mapaLogico.removerEntidad(this);
+		}
+			
 	}
 }

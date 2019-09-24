@@ -30,5 +30,12 @@ public class Marge extends Torre {
 		// TODO Auto-generated method stub
 		
 	}
+
+
+	@Override
+	public void aplicarDaño(int daño) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 }

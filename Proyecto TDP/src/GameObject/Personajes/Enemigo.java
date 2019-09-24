@@ -1,6 +1,9 @@
 package GameObject.Personajes;
 
+import java.awt.Point;
+
 import GameObject.Personaje;
+import Mapa.MapaLogico;
 
 public abstract  class Enemigo extends Personaje {
 	protected int velocidad;
@@ -9,12 +12,11 @@ public abstract  class Enemigo extends Personaje {
 	protected int jump_strenght = 10;
 	
 	
-//	public Enemigo(int vida, int velocidad, int puntaje, int monedas) {
-//		this.velocidad= velocidad;
-//		this.puntaje= puntaje;
-//		this.monedas= monedas;
-//	}
-	//lo dejo comentado porque no tengo ganas de poner los super en las otras clases
+	public Enemigo(Point p, MapaLogico ml) {
+		mapaLogico= ml;
+		position=p;
+	}
+
 	
 	
 	public int getVelocidad() {

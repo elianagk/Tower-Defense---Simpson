@@ -28,4 +28,10 @@ public class Abuelo extends Torre {
 		
 	}
 
+	@Override
+	public void aplicarDaño(int daño) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

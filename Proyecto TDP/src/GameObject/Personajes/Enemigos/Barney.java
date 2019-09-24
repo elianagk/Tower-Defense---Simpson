@@ -42,4 +42,12 @@ public class Barney extends Enemigo {
 		
 	}
 
+
+
+	@Override
+	public void aplicarDaño(int daño) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

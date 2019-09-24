@@ -38,4 +38,11 @@ public class BumbleeMan extends Enemigo {
 		
 	}
 
+
+	@Override
+	public void aplicarDaño(int daño) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
