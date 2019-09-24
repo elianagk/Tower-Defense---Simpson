@@ -1,9 +1,9 @@
 package Tienda;
 
-import GRAFICA.MapaGrafico;
+
 import GameObject.GameObject;
 import Mapa.MapaLogico;
-import Tienda.Botones.*;
+
 
 public class TiendaLogica {
 	

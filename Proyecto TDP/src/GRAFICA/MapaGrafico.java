@@ -16,7 +16,7 @@ import java.awt.event.MouseEvent;
 
 
 public class MapaGrafico extends JLabel{
-	private TiendaGrafica tiendaGrafica;
+	
 	private TiendaLogica tiendaLogica;
 	private Juego juego;
 	private ContadorTiempo tiempo;
