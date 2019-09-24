@@ -6,8 +6,8 @@ public abstract  class Enemigo extends Personaje {
 	protected int velocidad;
 	protected int puntaje;
 	protected int costo;
-	protected int x;
-	protected int y;
+	protected int jump_strenght = 10;
+	
 	
 	public int getVelocidad() {
 		return velocidad;
@@ -33,39 +33,40 @@ public abstract  class Enemigo extends Personaje {
 		this.costo = costo;
 	}
 	
-	protected void cambiarGrafico(int dir){
-		if(this.miobjetografico != null){
-			this.miobjetografico.cambiarPosicion();
-			this.miobjetografico.setBounds(getX(), getY(), width, height);
+	protected void cambiarGrafico(String dir){
+		if(miobjetografico != null){
+			miobjetografico.cambiarPosicion();
+			miobjetografico.setBounds(position.x, position.y, 90, 100);
 		}
 	}
 	
-	public void mover(int dir){	
+	
+	public void mover(String dir){	
 		switch (dir) {
-			case 0 : {//Arriba
-				setX(x);
-				setY(y-velocidad);		
+			case jump_key : //Jump
+				position.setLocation(position.x, position.y - jump_strenght);
 				break;
-			}
-			case 1 : {//Abajo
-				setX(x);
-				setY(y+velocidad);
+			case forward_key : //Avanzar
+				
+				position.setLocation(position.x + velocidad, position.y);
 				break;
-			}
-			case 2 : {//Izquierda
-				setX(x-velocidad);
-				setY(y);
+			case backward_key : //Retroceder
+				position.setLocation(position.x - velocidad, position.y);
 				break;
-			}
-			case 3 : {//Derecha
-				setX(x+velocidad);
-				setY(y);
+			default : //Cualquier otra cosa - Quieto
+				dir = still_key;
 				break;
-			}
 		}
+		this.last_dir = dir;
 		cambiarGrafico(dir);
-		
 	}
+	
+	public void fall(int gravity){
+		position.setLocation(position.x, position.y + gravity);
+		this.cambiarGrafico(this.last_dir);
+	}
+	
+	
 	
 	public abstract  void avanzar();
 	

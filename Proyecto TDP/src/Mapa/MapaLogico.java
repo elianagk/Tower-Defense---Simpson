@@ -33,8 +33,9 @@ public class MapaLogico  {
 	}
 	
 	public void agregarEntidad(GameObject o, int x, int y) {
-		o.setX(x);
-		o.setY(y);
+		Point p = new Point (x, y);
+		o.setPosicion(p);
+		
 		entidades.add(o);
 		mapaGrafico.agregarEntidad(o);		
 	}
@@ -53,7 +54,7 @@ public class MapaLogico  {
 		GameObject o;
 		while (!colisiones && it.hasNext()) {
 			o=it.next();
-			colisiones= (x!=o.getX() && y!=o.getY());
+			colisiones= (x!=o.getPosicion().x && y!=o.getPosicion().y);
 		}
 		
 		

@@ -1,16 +1,17 @@
 package GameObject.Personajes.Enemigos;
 
+import java.awt.Point;
+
 import GameObject.GameObject;
 import GameObject.Personajes.Enemigo;
 import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.BumbleeManGrafico;
 
 public class BumbleeMan extends Enemigo {
 	
-	public BumbleeMan(int velocidad, int x, int y) {
+	public BumbleeMan(int velocidad, Point posicion) {
 		miobjetografico= new BumbleeManGrafico("");
 		this.velocidad= velocidad;
-		this.x= x;
-		this.y= y;
+		position= posicion;
 	}
 	
 	
@@ -26,7 +27,7 @@ public class BumbleeMan extends Enemigo {
 	}
 	
 	public GameObject clone() {
-		return new BumbleeMan(velocidad, x, y);
+		return new BumbleeMan(velocidad, this.position);
 	}
 
 }

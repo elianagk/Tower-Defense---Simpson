@@ -3,6 +3,7 @@ package GRAFICA;
 import Tienda.TiendaGrafica;
 import Tienda.TiendaLogica;
 import GameObject.GameObject;
+import Juego.Juego;
 
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
@@ -17,6 +18,8 @@ import java.awt.event.MouseEvent;
 public class MapaGrafico extends JLabel{
 	private TiendaGrafica tiendaGrafica;
 	private TiendaLogica tiendaLogica;
+	private Juego juego;
+	private ContadorTiempo tiempo;
 	
 	public MapaGrafico(TiendaLogica tiendal, String s, int ancho, int alto) {
 		tiendaLogica= tiendal;
@@ -31,12 +34,17 @@ public class MapaGrafico extends JLabel{
 		    	avisarTienda(e.getX(), e.getY());
 		    }
 		});
+		
+
+		juego = new Juego(this);
+		tiempo = new ContadorTiempo(juego);
+		tiempo.start();
 	}
 	
 	public void agregarEntidad(GameObject o) {
 		JLabel toAdd= o.getGrafico();
 		toAdd.setBounds(o.getX(), o.getY(), 100, 100);
-		System.out.println("Coordenada x: "+o.getX()+" // Coordenada y: "+o.getY());
+		//System.out.println("Coordenada x: "+o.getX()+" // Coordenada y: "+o.getY());
 		this.add(toAdd);	//lo detecta pero mepa que lo añade y no se ve
 		this.repaint();
 	}
