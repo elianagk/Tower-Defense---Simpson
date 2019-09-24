@@ -1,5 +1,7 @@
 package GameObject.Personajes.Enemigos;
 
+import java.awt.Point;
+
 import GameObject.GameObject;
 import GameObject.Personajes.Enemigo;
 import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.BarneyGrafico;
@@ -7,11 +9,11 @@ import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.BarneyGrafico;
 public class Barney extends Enemigo {
 	
 	
-	public Barney(int velocidad, int x, int y) {
+	public Barney(int velocidad, Point posicion) {
+		position= posicion;
 		miobjetografico= new BarneyGrafico("");
 		this.velocidad= velocidad;
-		this.x= x;
-		this.y= y;
+		
 	}
 	
 	
@@ -28,7 +30,7 @@ public class Barney extends Enemigo {
 	}
 	
 	public GameObject clone() {
-		return new Barney(velocidad, x, y);
+		return new Barney(velocidad, this.position);
 	}
 
 }

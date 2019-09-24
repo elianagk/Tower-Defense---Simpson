@@ -10,4 +10,6 @@ public abstract class Personaje extends GameObject {
 	public abstract void atacar();
 	//DEBERIAMOS SABER A QUIEN ATACAMOS PARA PODER SACARLE VIDA
 	
+	
+	
 }

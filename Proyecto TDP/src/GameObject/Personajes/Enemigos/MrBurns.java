@@ -1,16 +1,17 @@
 package GameObject.Personajes.Enemigos;
 
+import java.awt.Point;
+
 import GameObject.GameObject;
 import GameObject.Personajes.Enemigo;
 import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.MrBurnsGrafico;
 
 public class MrBurns extends Enemigo {
 	
-	public MrBurns(int velocidad, int x, int y) {
+	public MrBurns(int velocidad, Point posicion) {
 		miobjetografico= new MrBurnsGrafico("");
 		this.velocidad= velocidad;
-		this.x= x;
-		this.y= y;
+		position= posicion;
 	}
 	
 	
@@ -26,6 +27,6 @@ public class MrBurns extends Enemigo {
 	}
 
 	public GameObject clone() {
-		return new MrBurns(velocidad, x, y);
+		return new MrBurns(velocidad, position);
 	}
 }
