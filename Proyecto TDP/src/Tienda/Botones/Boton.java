@@ -28,6 +28,7 @@ public class Boton extends JButton {
 		this.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
+				//HAY QUE PREGUNTAR SI LE ALCANZA LA PLATA AL JUGADOR PARA PODER PONER ESTO
 				tienda.setEntidad(t.clone());
 			}
 		});	
