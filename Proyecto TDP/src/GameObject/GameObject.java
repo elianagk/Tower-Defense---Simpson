@@ -29,14 +29,17 @@ public abstract class GameObject {
 	protected String last_dir = "";
 	
 
-	public GameObject(Point pos, MapaLogico ml, GameObjectGrafico gog) {
-		posicion= pos;
+	public GameObject(MapaLogico ml, GameObjectGrafico gog) {
+		posicion= null;
 		mapaLogico= ml;
 		miObjetoGrafico= gog;
-		mapaLogico.agregarEntidad(this, (int)posicion.getX(), (int)posicion.getY());
+//		mapaLogico.agregarEntidad(this, (int)posicion.getX(), (int)posicion.getY());
 	}
 	
-
+//	public void agregarEntidad() {
+//		mapaLogico.agregarEntidad(this, (int)posicion.getX(), (int)posicion.getY());
+//	}
+	
 	public JLabel getGrafico() {
 		last_dir= still_key;
 		return miObjetoGrafico;

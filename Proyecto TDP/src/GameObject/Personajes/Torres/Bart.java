@@ -1,16 +1,15 @@
 package GameObject.Personajes.Torres;
 
-import javax.swing.ImageIcon;
-
 import GameObject.GameObject;
 import GameObject.Personajes.Torre;
 import GameObjectGrafico.PersonajesGrafico.TorresGrafico.BartGrafico;
+import Mapa.MapaLogico;
 import VISITOR.Visitor;;
 
 public class Bart extends Torre {
 	
-	public Bart() {
-		super(80, 30, 50, 1, new BartGrafico());
+	public Bart(MapaLogico mapaLogico) {
+		super(80, 30, 50, 1, mapaLogico, new BartGrafico());
 	}
 	
 	
@@ -21,7 +20,7 @@ public class Bart extends Torre {
 	}
 	
 	public GameObject clone() {
-		return new Bart();
+		return new Bart(mapaLogico);
 	}
 
 

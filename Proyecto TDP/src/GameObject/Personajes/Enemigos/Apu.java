@@ -11,13 +11,10 @@ import GameObject.GameObject;
 
 public class Apu extends Enemigo {
 	
-	public Apu(Point posicion, MapaLogico ml) {
-		super(posicion, ml, new ApuGrafico());
+	public Apu(MapaLogico ml) {
+		super(ml, new ApuGrafico());
 		vida= 100;
 		velocidad= 5;
-		
-		
-		
 	}
 	
 	public JLabel getGrafico(){
@@ -48,14 +45,5 @@ public class Apu extends Enemigo {
 		
 	}
 
-	@Override
-	public void aplicarDaño(int daño) {
-		if(vida>=daño)
-			vida-=daño;
-		else {
-			vida=0;
-			mapaLogico.removerEntidad(this);
-		}
-			
-	}
+	
 }

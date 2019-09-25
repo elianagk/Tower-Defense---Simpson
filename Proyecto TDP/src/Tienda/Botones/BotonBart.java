@@ -13,7 +13,7 @@ import Tienda.TiendaLogica;
 public class BotonBart extends Boton {
 	
 	public BotonBart(String s, TiendaLogica tiendaLogica) {
-		super(s, tiendaLogica, new Bart());
+		super(s, tiendaLogica, new Bart(tiendaLogica.getMapaLogico()));
 		
 	}
 

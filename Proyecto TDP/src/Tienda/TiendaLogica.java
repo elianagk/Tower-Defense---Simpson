@@ -9,19 +9,19 @@ import Mapa.MapaLogico;
 public class TiendaLogica {
 	
 	
-	private MapaLogico mapal;
+	private MapaLogico mapaLogico;
 	private GameObject g;
 	
 	
 	
 	public TiendaLogica(MapaLogico mapa) {
 		g= null;
-		mapal= mapa;
+		mapaLogico= mapa;
 	}
 	
 	public void revisarTienda(int x, int y) {
 		if (ProximaEntidad()) {
-			mapal.agregarEntidad(g, x, y);
+			mapaLogico.agregarEntidad(g, x, y);
 			g= null;
 		}
 	}
@@ -44,7 +44,11 @@ public class TiendaLogica {
 	
 	
 	//Sirve para matar a apu desde un boton
+	public MapaLogico getMapaLogico() {
+		return mapaLogico;
+	}
+	
 	public Juego getJuego() {
-		return mapal.getJuego();
+		return mapaLogico.getJuego();
 	}
 }

@@ -22,30 +22,40 @@ public class TiendaGrafica extends JPanel {
 	this.setLayout(new GridLayout(1, 7));
 	this.setBounds(0, 0, 600, 100);
 	botones = new Boton[6];
+	
 	JButton botonEliminar= new JButton(new ImageIcon(getClass().getClassLoader().getResource("apu1.png")));
 	botonEliminar.addActionListener(new ActionListener() {
 		@Override
 		public void actionPerformed(ActionEvent e) {
+			if (tienda.getJuego().enemigos[0]==null) {
+				System.out.println("enemigos nulo");				
+			}
+			else
+				System.out.println("enemigos no nulo");
+
 			tienda.getJuego().enemigos[0].aplicarDaño(100);
+			tienda.getJuego().enemigos[0]=null;
 		}
 	});
 	//-----
 	
 	//-----´
-	botones[0]= new BotonHomero("homero.ico", tienda);
+//	botones[0]= new BotonHomero("homero.ico", tienda);
 	
 	botones[1]= new BotonBart("bartsinfondo.png", tienda);
 	
-	botones[2]= new BotonLisa("lisa.png", tienda);
-	botones[3]= new BotonMarge("marge.png", tienda);
-	botones[4]= new BotonAbuelo("abe.gif", tienda);
-	botones[5]= new Premio("donut.png", tienda);
+//	botones[2]= new BotonLisa("lisa.png", tienda);
+//	botones[3]= new BotonMarge("marge.png", tienda);
+//	botones[4]= new BotonAbuelo("abe.gif", tienda);
+//	botones[5]= new Premio("donut.png", tienda);
 	
+	add(botones[1]);
+	add(botonEliminar);
 	
-	for (int i=0; i<botones.length; i++) {
-		this.add(botones[i]);
-	}
-	
+//	for (int i=0; i<botones.length; i++) {
+//		this.add(botones[i]);
+//	}
+//	
 	
 	
 	}

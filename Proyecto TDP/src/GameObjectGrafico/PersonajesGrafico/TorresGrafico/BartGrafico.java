@@ -8,7 +8,7 @@ public class BartGrafico extends TorreGrafico {
 	String direccionImg;
 	
 	public BartGrafico() {
-		super("bart.png");
+		super("bartsinfondo.png");
 	}
 	
 	public void setImagen(String img) {

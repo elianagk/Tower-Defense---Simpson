@@ -13,12 +13,9 @@ public abstract  class Enemigo extends Personaje {
 	protected int jump_strenght = 10;
 	
 	
-	public Enemigo(Point p, MapaLogico ml, GameObjectGrafico gog) {
-		super(p, ml, gog);
-		
+	public Enemigo(MapaLogico ml, GameObjectGrafico gog) {
+		super(ml, gog);
 	}
-
-	
 	
 	public int getVelocidad() {
 		return velocidad;
@@ -45,12 +42,11 @@ public abstract  class Enemigo extends Personaje {
 	}
 	
 	protected void cambiarGrafico(String dir){
-		if(miobjetografico != null){
-			miobjetografico.cambiarPosicion();
-			miobjetografico.setBounds(posicion.x, posicion.y, 90, 100);
+		if(miObjetoGrafico != null) {
+			miObjetoGrafico.cambiarPosicion();
+			miObjetoGrafico.setBounds(posicion.x, posicion.y, 90, 100);
 		}
 	}
-	
 	
 	public void mover(String dir){	
 		switch (dir) {

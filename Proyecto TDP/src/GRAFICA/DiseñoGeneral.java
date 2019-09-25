@@ -104,7 +104,7 @@ public class DiseñoGeneral extends JFrame{
 		tiempo = new ContadorTiempo(juego);
 		tiempo.start();
 		
-		
+		MAPA.setJuego(juego);
 		
 		index++;
 	}

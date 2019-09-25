@@ -17,6 +17,7 @@ public class Nivel {
 	public void ejecutarHorda() {
 		horda= new Horda(this, mapaLogico, 1);
 		juego.addEnemigo(horda.crearEnemigo());
+		mapaLogico.agregarEntidad(juego.enemigos[0], juego.enemigos[0].getX(),juego.enemigos[0].getY());
 	}
 	
 	public void ejecutarHordas() {

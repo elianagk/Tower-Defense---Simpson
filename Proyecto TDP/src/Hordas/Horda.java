@@ -22,7 +22,9 @@ public class Horda {
 	
 	public GameObject crearEnemigo() {
 		Point p= new Point(900, 400);
-		return new Apu(p, mapaLogico);
+		Apu apu= new Apu(mapaLogico);
+		apu.setPosicion(p);
+		return apu;
 	}
 	
 	public boolean finalizarHorda( ) {
