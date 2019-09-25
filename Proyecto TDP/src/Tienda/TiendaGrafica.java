@@ -26,7 +26,7 @@ public class TiendaGrafica extends JPanel {
 	botonEliminar.addActionListener(new ActionListener() {
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			enemigos[0].aplicarDaño(100);
+			tienda.getJuego().enemigos[0].aplicarDaño(100);
 		}
 	});
 	//-----

@@ -100,9 +100,9 @@ public class DiseñoGeneral extends JFrame{
 		//Icon icono = new ImageIcon(fot.getImage().getScaledInstance(jLabel1.getWidth(), jLabel1.getHeight(), Image.SCALE_DEFAULT));
 		//jLabel1.setIcon(icono);
 		
-//		juego = new Juego(MAPA);
-//		tiempo = new ContadorTiempo(juego);
-//		tiempo.start();
+		juego = new Juego(MAPA, mapal);
+		tiempo = new ContadorTiempo(juego);
+		tiempo.start();
 		
 		
 		

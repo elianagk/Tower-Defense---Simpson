@@ -42,7 +42,6 @@ public class MapaLogico  {
 	public void agregarEntidad(GameObject o, int x, int y) {
 		Point p = new Point (x, y);
 		o.setPosicion(p);
-		
 		entidades.add(o);
 		mapaGrafico.agregarEntidad(o);		
 	}
@@ -77,6 +76,12 @@ public class MapaLogico  {
 		mapaGrafico.removerEntidad(o);
 	}
 	
+	
+	
+	//Sirve para matar a apu desde un boton
+	public Juego getJuego() {
+		return mapaGrafico.getJuego();
+	}
 }
 
 //Lista de personajes

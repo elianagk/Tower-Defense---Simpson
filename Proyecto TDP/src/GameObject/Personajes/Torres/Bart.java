@@ -10,9 +10,7 @@ import VISITOR.Visitor;;
 public class Bart extends Torre {
 	
 	public Bart() {
-		super(80, 30, 50, 1);
-		
-		miobjetografico = new BartGrafico("bartsinfondo.png");
+		super(80, 30, 50, 1, new BartGrafico());
 	}
 	
 	

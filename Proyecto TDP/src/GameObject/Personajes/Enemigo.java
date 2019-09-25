@@ -3,6 +3,7 @@ package GameObject.Personajes;
 import java.awt.Point;
 
 import GameObject.Personaje;
+import GameObjectGrafico.GameObjectGrafico;
 import Mapa.MapaLogico;
 
 public abstract  class Enemigo extends Personaje {
@@ -12,9 +13,9 @@ public abstract  class Enemigo extends Personaje {
 	protected int jump_strenght = 10;
 	
 	
-	public Enemigo(Point p, MapaLogico ml) {
-		mapaLogico= ml;
-		position=p;
+	public Enemigo(Point p, MapaLogico ml, GameObjectGrafico gog) {
+		super(p, ml, gog);
+		
 	}
 
 	
@@ -46,7 +47,7 @@ public abstract  class Enemigo extends Personaje {
 	protected void cambiarGrafico(String dir){
 		if(miobjetografico != null){
 			miobjetografico.cambiarPosicion();
-			miobjetografico.setBounds(position.x, position.y, 90, 100);
+			miobjetografico.setBounds(posicion.x, posicion.y, 90, 100);
 		}
 	}
 	
@@ -54,14 +55,14 @@ public abstract  class Enemigo extends Personaje {
 	public void mover(String dir){	
 		switch (dir) {
 			case jump_key : //Jump
-				position.setLocation(position.x, position.y - jump_strenght);
+				posicion.setLocation(posicion.x, posicion.y - jump_strenght);
 				break;
 			case forward_key : //Avanzar
 				
-				position.setLocation(position.x + velocidad, position.y);
+				posicion.setLocation(posicion.x + velocidad, posicion.y);
 				break;
 			case backward_key : //Retroceder
-				position.setLocation(position.x - velocidad, position.y);
+				posicion.setLocation(posicion.x - velocidad, posicion.y);
 				break;
 			default : //Cualquier otra cosa - Quieto
 				dir = still_key;
@@ -72,7 +73,7 @@ public abstract  class Enemigo extends Personaje {
 	}
 	
 	public void fall(int gravity){
-		position.setLocation(position.x, position.y + gravity);
+		posicion.setLocation(posicion.x, posicion.y + gravity);
 		this.cambiarGrafico(this.last_dir);
 	}
 	

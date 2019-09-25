@@ -6,13 +6,16 @@ import javax.swing.Icon;
 import javax.swing.JLabel;
 
 import GameObjectGrafico.GameObjectGrafico;
+import Mapa.MapaLogico;
 import VISITOR.Visitor;
 
 public abstract class GameObject {
 
 	protected int vida;
-	protected GameObjectGrafico miobjetografico;
-	protected Point position;
+	protected GameObjectGrafico miObjetoGrafico;
+	protected Point posicion;
+	
+	protected MapaLogico mapaLogico;
 	
 	protected Icon image[];// imagen statica, gif caminando, gif atacando
 	protected final int width = 50;
@@ -26,41 +29,44 @@ public abstract class GameObject {
 	protected String last_dir = "";
 	
 
-	public GameObject() {
-		
+	public GameObject(Point pos, MapaLogico ml, GameObjectGrafico gog) {
+		posicion= pos;
+		mapaLogico= ml;
+		miObjetoGrafico= gog;
+		mapaLogico.agregarEntidad(this, (int)posicion.getX(), (int)posicion.getY());
 	}
 	
 
 	public JLabel getGrafico() {
 		last_dir= still_key;
-		return miobjetografico;
+		return miObjetoGrafico;
 	}
 	
 	public void setPosicion(Point p) {
-		position=p;
+		posicion=p;
 	}
 	
 	public Point getPosicion() {
-		return position;
+		return posicion;
 	}
 	
 	public int getX() {
-		return position.x;
+		return posicion.x;
 	}
 	public int getY() {
-		return position.y;
+		return posicion.y;
 	}
 	
 	public void setX(int x) {
-		position.x=x;
+		posicion.x=x;
 	}
 	
 	public void setY(int y) {
-		position.y=y;
+		posicion.y=y;
 	}
 	
 	public void setImagen(String img) {
-		miobjetografico.setImagen(img);
+		miObjetoGrafico.setImagen(img);
 	}
 	
 	public abstract GameObject clone();

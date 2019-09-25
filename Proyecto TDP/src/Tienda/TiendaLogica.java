@@ -2,6 +2,7 @@ package Tienda;
 
 
 import GameObject.GameObject;
+import Juego.Juego;
 import Mapa.MapaLogico;
 
 
@@ -39,4 +40,11 @@ public class TiendaLogica {
 		return g!=null;
 	}
 
+	
+	
+	
+	//Sirve para matar a apu desde un boton
+	public Juego getJuego() {
+		return mapal.getJuego();
+	}
 }

@@ -36,9 +36,9 @@ public class MapaGrafico extends JLabel{
 		});
 		
 
-		juego = new Juego(this );
-		tiempo = new ContadorTiempo(juego);
-		tiempo.start();
+//		juego = new Juego(this);
+//		tiempo = new ContadorTiempo(juego);
+//		tiempo.start();
 	}
 	
 	public void agregarEntidad(GameObject o) {
@@ -60,4 +60,10 @@ public class MapaGrafico extends JLabel{
 		parent.repaint();
 	}
 	
+	
+	
+	//Sirve para matar a apu desde un boton
+	public Juego getJuego() {
+		return juego;
+	}
 }

@@ -12,10 +12,9 @@ import GameObject.GameObject;
 public class Apu extends Enemigo {
 	
 	public Apu(Point posicion, MapaLogico ml) {
-		super(posicion, ml);
+		super(posicion, ml, new ApuGrafico());
 		vida= 100;
 		velocidad= 5;
-		miobjetografico = new ApuGrafico("apucaminandogif.gif");
 		
 		
 		
@@ -23,7 +22,7 @@ public class Apu extends Enemigo {
 	
 	public JLabel getGrafico(){
 		last_dir= still_key;
-		return miobjetografico;
+		return miObjetoGrafico;
 		
 	}
 	

@@ -7,8 +7,8 @@ import GameObjectGrafico.PersonajesGrafico.TorreGrafico;
 public class BartGrafico extends TorreGrafico {
 	String direccionImg;
 	
-	public BartGrafico(String s) {
-		super(s);
+	public BartGrafico() {
+		super("bart.png");
 	}
 	
 	public void setImagen(String img) {

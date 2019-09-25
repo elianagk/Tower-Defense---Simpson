@@ -6,8 +6,8 @@ import GameObjectGrafico.PersonajesGrafico.EnemigoGrafico;
 
 public class ApuGrafico extends EnemigoGrafico {
 	
-	public ApuGrafico(String s) {
-		super (s);
+	public ApuGrafico() {
+		super ("apucaminandogif.gif");
 		
 	}
 
