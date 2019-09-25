@@ -58,8 +58,10 @@ public class Juego {
 //			
 //			int dir = r.nextInt(4);
 			
-			
-				enemigos[0].mover(Enemigo.backward_key);
+			if (enemigos[i]!=null) {
+				enemigos[i].mover(Enemigo.backward_key);
+				}
+				
 			
 		}
 		//this.apply_gravity();
