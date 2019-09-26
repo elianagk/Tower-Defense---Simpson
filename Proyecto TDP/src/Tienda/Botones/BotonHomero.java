@@ -7,14 +7,16 @@ import java.awt.event.ActionListener;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 
+import GameObject.Personajes.Torres.Bart;
 import GameObject.Personajes.Torres.Homero;
 import Tienda.TiendaLogica;
 
 public class BotonHomero extends Boton {
 	
 	
-	public BotonHomero(String s, TiendaLogica tienda) {
-		super(s, tienda, new Homero());
+	public BotonHomero(String s, TiendaLogica tiendaLogica) {
+		super(s, tiendaLogica, new Homero(tiendaLogica.getMapaLogico()));
+		
 	}
 
 }

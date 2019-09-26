@@ -36,7 +36,7 @@ public class Apu extends Enemigo {
 	}
 	
 	public GameObject clone() {
-		return null;
+		return new Apu(mapaLogico);
 	}
 
 	@Override

@@ -2,9 +2,9 @@ package GameObjectGrafico;
 
 
 
-public class ObjectGrafico extends GameObjectGrafico {
+public class ObjetoGrafico extends GameObjectGrafico {
 
-	public ObjectGrafico(String s) {
+	public ObjetoGrafico(String s) {
 		super(s);
 		// TODO Auto-generated constructor stub
 	}

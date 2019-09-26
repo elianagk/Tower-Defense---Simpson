@@ -4,9 +4,18 @@ import GameObjectGrafico.PersonajesGrafico.TorreGrafico;
 
 public class MargeGrafico extends TorreGrafico {
 
-	public MargeGrafico(String s) {
-		super(s);
-		
+String direccionImg;
+	
+	public MargeGrafico() {
+		super("marge.png");
+	}
+	
+	public void setImagen(String img) {
+		imagen = img;
+	}
+	
+	public String getImagen() {
+		return direccionImg;
 	}
 	
 }

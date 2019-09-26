@@ -4,17 +4,18 @@ import java.awt.Point;
 
 import GameObject.GameObject;
 import GameObject.Personajes.Enemigo;
+import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.ApuGrafico;
 import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.BarneyGrafico;
+import Mapa.MapaLogico;
 import VISITOR.Visitor;
 
 public class Barney extends Enemigo {
 	
 	
-	public Barney(int velocidad, Point posicion) {
-		position= posicion;
-		miobjetografico= new BarneyGrafico("");
-		this.velocidad= velocidad;
-		
+	public Barney(MapaLogico ml) {
+		super(ml, new BarneyGrafico());
+		vida= 100;
+		velocidad= 5;
 	}
 	
 	
@@ -31,7 +32,7 @@ public class Barney extends Enemigo {
 	}
 	
 	public GameObject clone() {
-		return new Barney(velocidad, this.position);
+		return new Barney(mapaLogico);
 	}
 
 

@@ -17,10 +17,10 @@ import Tienda.TiendaLogica;
 
 public class Boton extends JButton {
 	
-	protected TiendaLogica tienda;
+	protected TiendaLogica tiendaLogica;
 	
-	public Boton(String s, TiendaLogica tienda, GameObject t) {
-		this.tienda= tienda;
+	public Boton(String s, TiendaLogica tiendaLogica, GameObject t) {
+		this.tiendaLogica= tiendaLogica;
 		this.setText("");
 		this.setSize(100, 100);
 		ImageIcon fot= new ImageIcon(getClass().getClassLoader().getResource(s));
@@ -30,7 +30,7 @@ public class Boton extends JButton {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				//HAY QUE PREGUNTAR SI LE ALCANZA LA PLATA AL JUGADOR PARA PODER PONER ESTO
-				tienda.setEntidad(t.clone());
+				tiendaLogica.setEntidad(t.clone());
 			}
 		});	
 	}

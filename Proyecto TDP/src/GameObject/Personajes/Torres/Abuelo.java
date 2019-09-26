@@ -3,13 +3,14 @@ package GameObject.Personajes.Torres;
 import GameObject.GameObject;
 import GameObject.Personajes.Torre;
 import GameObjectGrafico.PersonajesGrafico.TorresGrafico.AbueloGrafico;
+import GameObjectGrafico.PersonajesGrafico.TorresGrafico.BartGrafico;
+import Mapa.MapaLogico;
 import VISITOR.Visitor;
 
 public class Abuelo extends Torre {
 	
-	public Abuelo() {
-		super(50, 100, 65, 1);
-		miobjetografico = new AbueloGrafico("");
+	public Abuelo(MapaLogico mapaLogico) {
+		super(80, 30, 50, 1, mapaLogico, new AbueloGrafico());
 	}
 
 	@Override
@@ -19,7 +20,7 @@ public class Abuelo extends Torre {
 	}
 	
 	public GameObject clone() {
-		return new Abuelo();
+		return new Abuelo(mapaLogico);
 	}
 
 	@Override

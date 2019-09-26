@@ -2,14 +2,15 @@ package GameObject.Personajes.Torres;
 
 import GameObject.GameObject;
 import GameObject.Personajes.Torre;
+import GameObjectGrafico.PersonajesGrafico.TorresGrafico.BartGrafico;
 import GameObjectGrafico.PersonajesGrafico.TorresGrafico.LisaGrafico;
+import Mapa.MapaLogico;
 import VISITOR.Visitor;
 
 public class Lisa extends Torre {
 	
-	public Lisa() {
-		super(90, 65, 30, 1);
-		miobjetografico= new LisaGrafico("");
+	public Lisa(MapaLogico mapaLogico) {
+		super(80, 30, 50, 1, mapaLogico, new LisaGrafico());
 	}
 	
 	
@@ -20,7 +21,7 @@ public class Lisa extends Torre {
 	}
 
 	public GameObject clone() {
-		return new Lisa();
+		return new Lisa(mapaLogico);
 	}
 
 

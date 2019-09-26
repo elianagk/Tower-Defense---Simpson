@@ -4,15 +4,17 @@ import java.awt.Point;
 
 import GameObject.GameObject;
 import GameObject.Personajes.Enemigo;
+import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.ApuGrafico;
 import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.MrBurnsGrafico;
+import Mapa.MapaLogico;
 import VISITOR.Visitor;
 
 public class MrBurns extends Enemigo {
 	
-	public MrBurns(int velocidad, Point posicion) {
-		miobjetografico= new MrBurnsGrafico("");
-		this.velocidad= velocidad;
-		position= posicion;
+	public MrBurns(MapaLogico ml) {
+		super(ml, new MrBurnsGrafico());
+		vida= 100;
+		velocidad= 5;
 	}
 	
 	
@@ -28,7 +30,7 @@ public class MrBurns extends Enemigo {
 	}
 
 	public GameObject clone() {
-		return new MrBurns(velocidad, position);
+		return new MrBurns(mapaLogico);
 	}
 
 

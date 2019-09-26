@@ -30,32 +30,30 @@ public class TiendaGrafica extends JPanel {
 			if (tienda.getJuego().enemigos[0]==null) {
 				System.out.println("enemigos nulo");				
 			}
-			else
+			else {
 				System.out.println("enemigos no nulo");
-
-			tienda.getJuego().enemigos[0].aplicarDaño(100);
-			tienda.getJuego().enemigos[0]=null;
+				tienda.getJuego().enemigos[0].aplicarDaño(100);
+				tienda.getJuego().enemigos[0]=null;
+				botonEliminar.setEnabled(false);
+			}
 		}
 	});
+	this.add(botonEliminar);
+	
+	
+	
 	//-----
-	
-	//-----´
-//	botones[0]= new BotonHomero("homero.ico", tienda);
-	
+	botones[0]= new BotonHomero("homero.ico", tienda);
 	botones[1]= new BotonBart("bartsinfondo.png", tienda);
+	botones[2]= new BotonLisa("lisa.png", tienda);
+	botones[3]= new BotonMarge("marge.png", tienda);
+	botones[4]= new BotonAbuelo("abe.gif", tienda);
+	botones[5]= new Premio("donut.png", tienda); //arreglar
+
+	for (int i=0; i<botones.length; i++) {
+		this.add(botones[i]);
+	}
 	
-//	botones[2]= new BotonLisa("lisa.png", tienda);
-//	botones[3]= new BotonMarge("marge.png", tienda);
-//	botones[4]= new BotonAbuelo("abe.gif", tienda);
-//	botones[5]= new Premio("donut.png", tienda);
-	
-	add(botones[1]);
-	add(botonEliminar);
-	
-//	for (int i=0; i<botones.length; i++) {
-//		this.add(botones[i]);
-//	}
-//	
 	
 	
 	}

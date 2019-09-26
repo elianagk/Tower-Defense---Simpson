@@ -4,9 +4,18 @@ import GameObjectGrafico.PersonajesGrafico.TorreGrafico;
 
 public class HomeroGrafico extends TorreGrafico {
 
-	public HomeroGrafico(String s) {
-		super(s);
-		
+String direccionImg;
+	
+	public HomeroGrafico() {
+		super("homero.ico");
+	}
+	
+	public void setImagen(String img) {
+		imagen = img;
+	}
+	
+	public String getImagen() {
+		return direccionImg;
 	}
 	
 }

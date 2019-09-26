@@ -4,15 +4,17 @@ import java.awt.Point;
 
 import GameObject.GameObject;
 import GameObject.Personajes.Enemigo;
+import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.ApuGrafico;
 import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.ChiefGrafico;
+import Mapa.MapaLogico;
 import VISITOR.Visitor;
 
 public class Chief extends Enemigo {
 	
-	public Chief(int velocidad, Point posicion) {
-		miobjetografico= new ChiefGrafico("");
-		this.velocidad= velocidad;
-		position= posicion;
+	public Chief(MapaLogico ml) {
+		super(ml, new ChiefGrafico());
+		vida= 100;
+		velocidad= 5;
 	}
 	
 	
@@ -28,7 +30,7 @@ public class Chief extends Enemigo {
 	}
 
 	public GameObject clone() {
-		return new Chief(velocidad, position);
+		return new Chief(mapaLogico);
 	}
 
 

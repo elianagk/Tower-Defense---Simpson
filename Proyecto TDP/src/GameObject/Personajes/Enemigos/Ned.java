@@ -4,15 +4,17 @@ import java.awt.Point;
 
 import GameObject.GameObject;
 import GameObject.Personajes.Enemigo;
+import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.ApuGrafico;
 import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.NedGrafico;
+import Mapa.MapaLogico;
 import VISITOR.Visitor;
 
 public class Ned extends Enemigo {
 	
-	public Ned(int velocidad, Point posicion) {
-		miobjetografico= new NedGrafico("");
-		this.velocidad= velocidad;
-		position= posicion;
+	public Ned(MapaLogico ml) {
+		super(ml, new NedGrafico());
+		vida= 100;
+		velocidad= 5;
 	}
 
 	@Override
@@ -27,7 +29,7 @@ public class Ned extends Enemigo {
 	}
 
 	public GameObject clone() {
-		return new Ned(velocidad, position);
+		return new Ned(mapaLogico);
 	}
 
 	@Override
