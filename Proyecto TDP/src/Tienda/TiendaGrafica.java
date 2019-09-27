@@ -38,7 +38,7 @@ public class TiendaGrafica extends JPanel {
 			}
 		}
 	});
-	this.add(botonEliminar);
+	
 	
 	
 	
@@ -54,7 +54,7 @@ public class TiendaGrafica extends JPanel {
 		this.add(botones[i]);
 	}
 	
-	
+	this.add(botonEliminar);
 	
 	}
 	

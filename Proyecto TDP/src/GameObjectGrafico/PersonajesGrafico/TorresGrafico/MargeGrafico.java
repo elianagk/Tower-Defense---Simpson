@@ -7,7 +7,7 @@ public class MargeGrafico extends TorreGrafico {
 String direccionImg;
 	
 	public MargeGrafico() {
-		super("marge.png");
+		super("margeatacando.gif");
 	}
 	
 	public void setImagen(String img) {
