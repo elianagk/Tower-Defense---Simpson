@@ -7,7 +7,7 @@ public class HomeroGrafico extends TorreGrafico {
 String direccionImg;
 	
 	public HomeroGrafico() {
-		super("homero.ico");
+		super("homero.jpg");
 	}
 	
 	public void setImagen(String img) {
