@@ -43,7 +43,7 @@ public class TiendaGrafica extends JPanel {
 	
 	
 	//-----
-	botones[0]= new BotonHomero("homero.ico", tienda);
+	botones[0]= new BotonHomero("homero.jpg", tienda);
 	botones[1]= new BotonBart("bartsinfondo.png", tienda);
 	botones[2]= new BotonLisa("lisa.png", tienda);
 	botones[3]= new BotonMarge("marge.png", tienda);
