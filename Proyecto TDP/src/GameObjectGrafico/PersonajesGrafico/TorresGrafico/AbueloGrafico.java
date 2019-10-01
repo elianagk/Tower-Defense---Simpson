@@ -7,7 +7,7 @@ public class AbueloGrafico extends TorreGrafico {
 String direccionImg;
 	
 	public AbueloGrafico() {
-		super("abe.gif");
+		super("abe1.png");
 	}
 	
 	public void setImagen(String img) {
@@ -16,5 +16,9 @@ String direccionImg;
 	
 	public String getImagen() {
 		return direccionImg;
+	}
+	
+	public void atacar() {
+		super.atacar("abeatacando.gif");
 	}
 }

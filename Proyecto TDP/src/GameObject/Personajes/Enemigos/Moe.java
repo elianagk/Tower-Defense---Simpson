@@ -5,16 +5,16 @@ import java.awt.Point;
 import GameObject.GameObject;
 import GameObject.Personajes.Enemigo;
 import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.ApuGrafico;
-import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.NedGrafico;
+import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.MoeGrafico;
 import Mapa.MapaLogico;
 import VISITOR.Visitor;
 
-public class Ned extends Enemigo {
+public class Moe extends Enemigo {
 	
-	public Ned(MapaLogico ml) {
-		super(ml, new NedGrafico());
+	public Moe(MapaLogico ml) {
+		super(ml, new MoeGrafico());
 		vida= 100;
-		velocidad= 5;
+		velocidad= 6;
 	}
 
 	@Override
@@ -29,12 +29,12 @@ public class Ned extends Enemigo {
 	}
 
 	public GameObject clone() {
-		return new Ned(mapaLogico);
+		return new Moe(mapaLogico);
 	}
 
 	@Override
-	public void Aceptar(Visitor visitante) {
-		// TODO Auto-generated method stub
+	public void Aceptar(Visitor v) {
+		v.visitar(this);
 		
 	}
 

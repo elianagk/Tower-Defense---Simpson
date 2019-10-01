@@ -8,7 +8,7 @@ public class BartGrafico extends TorreGrafico {
 	String direccionImg;
 	
 	public BartGrafico() {
-		super("bartsinfondo.png");
+		super("bartt.png");
 	}
 	
 	public void setImagen(String img) {
@@ -18,4 +18,9 @@ public class BartGrafico extends TorreGrafico {
 	public String getImagen() {
 		return direccionImg;
 	}
+	
+	public void atacar() {
+		super.atacar("bartatacando.gif");
+	}
+
 }

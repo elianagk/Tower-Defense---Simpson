@@ -40,8 +40,8 @@ public class Apu extends Enemigo {
 	}
 
 	@Override
-	public void Aceptar(Visitor visitante) {
-		// TODO Auto-generated method stub
+	public void Aceptar(Visitor v) {
+		v.visitar(this);
 		
 	}
 

@@ -34,6 +34,7 @@ public class Juego {
 		niveles[0]= new Nivel(this, mapaLogico);
 		enemigos = new Enemigo[6];
 		mapaGrafico=gui;
+		this.mapaLogico= mapaLogico;
 		comenzarNiveles();
 		
 //		for(int i = 0; i < enemigos.length; i++){
@@ -54,13 +55,17 @@ public class Juego {
 		for(int i = 0; i < enemigos.length; i++){
 			
 			// Inteligencia de los enemigos
-//			Random r = new Random();
-//			
-//			int dir = r.nextInt(4);
+			Random r = new Random();
+			
+			int dir = r.nextInt(4);
 			
 			if (enemigos[i]!=null) {
 				enemigos[i].mover(Enemigo.backward_key);
+				
+				if (mapaLogico.hayenelrango(enemigos[i])) {
+					enemigos[i].mover(Enemigo.still_key);
 				}
+			}
 				
 			
 		}

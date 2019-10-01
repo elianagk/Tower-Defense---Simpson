@@ -25,11 +25,10 @@ public class Bart extends Torre {
 
 
 	@Override
-	public void Aceptar(Visitor visitante) {
-		// TODO Auto-generated method stub
+	public void Aceptar(Visitor v) {
+		v.visitar(this);
 		
 	}
-
 
 	@Override
 	public void aplicarDaño(int daño) {

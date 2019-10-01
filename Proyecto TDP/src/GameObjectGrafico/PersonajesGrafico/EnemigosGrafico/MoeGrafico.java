@@ -2,10 +2,10 @@ package GameObjectGrafico.PersonajesGrafico.EnemigosGrafico;
 
 import GameObjectGrafico.PersonajesGrafico.EnemigoGrafico;
 
-public class BumbleeManGrafico extends EnemigoGrafico {
+public class MoeGrafico extends EnemigoGrafico {
 
-	public BumbleeManGrafico() {
-		super("bmcaminando.gif");
+	public	MoeGrafico() {
+		super("moecaminando.gif");
 		
 	}
 	
@@ -14,6 +14,4 @@ public class BumbleeManGrafico extends EnemigoGrafico {
 	}
 
 
-	
-	
 }

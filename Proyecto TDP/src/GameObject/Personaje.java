@@ -2,6 +2,8 @@ package GameObject;
 
 import java.awt.Point;
 
+import javax.swing.ImageIcon;
+
 import GameObjectGrafico.GameObjectGrafico;
 import Mapa.MapaLogico;
 
@@ -18,6 +20,10 @@ public abstract class Personaje extends GameObject {
 	
 	public abstract void atacar();
 	//DEBERIAMOS SABER A QUIEN ATACAMOS PARA PODER SACARLE VIDA
+	
+	public int getDaño() {
+		return daño;
+	}
 	
 	public void aplicarDaño(int daño) {
 		if(vida>daño)

@@ -14,7 +14,7 @@ public class Chief extends Enemigo {
 	public Chief(MapaLogico ml) {
 		super(ml, new ChiefGrafico());
 		vida= 100;
-		velocidad= 5;
+		velocidad= 6;
 	}
 	
 	
@@ -35,8 +35,8 @@ public class Chief extends Enemigo {
 
 
 	@Override
-	public void Aceptar(Visitor visitante) {
-		// TODO Auto-generated method stub
+	public void Aceptar(Visitor v) {
+		v.visitar(this);
 		
 	}
 

@@ -7,7 +7,7 @@ public class HomeroGrafico extends TorreGrafico {
 String direccionImg;
 	
 	public HomeroGrafico() {
-		super("homero.jpg");
+		super("homeroparado.png");
 	}
 	
 	public void setImagen(String img) {
@@ -17,5 +17,10 @@ String direccionImg;
 	public String getImagen() {
 		return direccionImg;
 	}
+	
+	public void atacar() {
+		super.atacar("homeroatacando.gif");
+	}
+
 	
 }
