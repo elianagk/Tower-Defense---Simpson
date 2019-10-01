@@ -8,6 +8,11 @@ public class EnemigoGrafico extends PersonajeGrafico {
 		super(s);
 		
 	}
+	
+	public void atacar(String s) {
+		super.atacar(s);
+	}
+
 
 	
 }

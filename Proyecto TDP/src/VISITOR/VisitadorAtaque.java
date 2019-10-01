@@ -2,12 +2,12 @@ package VISITOR;
 
 import GameObject.Personajes.Enemigo;
 import GameObject.Personajes.Torre;
+import Mapa.MapaLogico;
 
-public class Visitador implements Visitor {
+public class VisitadorAtaque implements Visitor {
 
 	@Override
 	public void visitar(Enemigo e) {
-		
 		
 	}
 

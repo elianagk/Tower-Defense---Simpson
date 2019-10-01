@@ -20,9 +20,10 @@ public class ApuGrafico extends EnemigoGrafico {
 	
 	
 	
-	public void avanzar() {
-		
+	public void atacar() {
+		super.atacar("apugif.gif");
 	}
+
 	
 	
 

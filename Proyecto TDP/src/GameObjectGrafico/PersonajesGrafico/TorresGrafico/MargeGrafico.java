@@ -18,4 +18,9 @@ String direccionImg;
 		return direccionImg;
 	}
 	
+	public void atacar() {
+		super.atacar("");
+	}
+
+	
 }

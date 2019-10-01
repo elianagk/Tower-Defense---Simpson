@@ -76,4 +76,12 @@ public abstract class GameObject {
 	
 	public abstract void Aceptar(Visitor visitante) ;
 	
+	public void setVida(int vida) {
+		this.vida=vida;
+	}
+	
+	public int getVida() {
+		return vida;
+	}
+	
 }

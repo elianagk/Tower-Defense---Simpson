@@ -14,7 +14,7 @@ public class BumbleeMan extends Enemigo {
 	public BumbleeMan(MapaLogico ml) {
 		super(ml, new BumbleeManGrafico());
 		vida= 100;
-		velocidad= 5;
+		velocidad= 8;
 	}
 	
 	
@@ -35,11 +35,10 @@ public class BumbleeMan extends Enemigo {
 
 
 	@Override
-	public void Aceptar(Visitor visitante) {
-		// TODO Auto-generated method stub
+	public void Aceptar(Visitor v) {
+		v.visitar(this);
 		
 	}
-
 
 	@Override
 	public void aplicarDaño(int daño) {

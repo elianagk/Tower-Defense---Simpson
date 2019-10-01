@@ -15,7 +15,7 @@ public class Barney extends Enemigo {
 	public Barney(MapaLogico ml) {
 		super(ml, new BarneyGrafico());
 		vida= 100;
-		velocidad= 5;
+		velocidad= 3;
 	}
 	
 	
@@ -38,8 +38,8 @@ public class Barney extends Enemigo {
 
 
 	@Override
-	public void Aceptar(Visitor visitante) {
-		// TODO Auto-generated method stub
+	public void Aceptar(Visitor v) {
+		v.visitar(this);
 		
 	}
 

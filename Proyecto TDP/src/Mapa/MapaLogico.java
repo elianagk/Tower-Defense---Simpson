@@ -16,6 +16,7 @@ import java.awt.Point;
 import GRAFICA.ContadorTiempo;
 import GRAFICA.MapaGrafico;
 import java.util.ListIterator;
+import VISITOR.Visitor;
 
 public class MapaLogico  {
 	private ArrayList<GameObject> entidades;
@@ -45,6 +46,30 @@ public class MapaLogico  {
 		entidades.add(o);
 		mapaGrafico.agregarEntidad(o);		
 	}
+	
+	public void operarconEntidades(Visitor v) {
+		for (GameObject e: entidades) {
+			e.Aceptar(v);
+		}
+	}
+	
+	public boolean hayenelrango(Enemigo g) {
+		boolean hay=false;
+		Point posicion= g.getPosicion();
+		for (GameObject e: entidades) {
+			if (e.getX()==posicion.x ) {
+				hay=true;
+				break;
+				
+			}
+			
+		}
+		return hay;	
+		
+	}
+	
+	
+	
 	
 	
 	
@@ -84,9 +109,3 @@ public class MapaLogico  {
 	}
 }
 
-//Lista de personajes
-//lista de enemigos y lista de aliados
-//mover a los personajes
-//cuando terminan las hordas????????????'
-//PUEDOAVANZAR?
-//lospersonajes deberian conocer el mapaa para poder avanazar :D

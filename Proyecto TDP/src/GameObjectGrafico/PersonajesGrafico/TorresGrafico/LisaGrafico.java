@@ -17,5 +17,10 @@ String direccionImg;
 	public String getImagen() {
 		return direccionImg;
 	}
+	
+	public void atacar() {
+		super.atacar("");
+	}
+
 
 }
