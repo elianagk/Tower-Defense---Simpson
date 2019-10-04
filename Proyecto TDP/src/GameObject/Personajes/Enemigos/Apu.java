@@ -8,6 +8,7 @@ import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.ApuGrafico;
 import Mapa.MapaLogico;
 import VISITOR.Visitor;
 import GameObject.GameObject;
+import GameObject.Personaje;
 
 public class Apu extends Enemigo {
 	
@@ -30,7 +31,7 @@ public class Apu extends Enemigo {
 	}
 
 	@Override
-	public void atacar() {
+	public void atacar(Personaje e) {
 		// gif atacando
 		
 	}
@@ -43,6 +44,18 @@ public class Apu extends Enemigo {
 	public void Aceptar(Visitor v) {
 		v.visitar(this);
 		
+	}
+
+	@Override
+	public void accionar() {
+		super.mover(backward_key);
+		
+	}
+
+	@Override
+	public Visitor getVisitor() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	

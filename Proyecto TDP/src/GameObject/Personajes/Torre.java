@@ -3,9 +3,12 @@ package GameObject.Personajes;
 import GameObject.Personaje;
 import GameObjectGrafico.GameObjectGrafico;
 import Mapa.MapaLogico;
+import VISITOR.Visitor;
+import VISITOR.VisitorAliado;
 
 public abstract class Torre extends Personaje {
 	protected int precio;
+	protected VisitorAliado visitor;
 
 	public Torre(int precio, int vida, int daño, int alcance, MapaLogico mapaLogico, GameObjectGrafico gog) {
 		super(mapaLogico, gog);
@@ -18,7 +21,17 @@ public abstract class Torre extends Personaje {
 	
 	
 	@Override
-	public abstract void atacar() ;
+	public  void atacar(Personaje e) {
+		
+	}
 	//DEBERIAMOS SABER A QUIEN ATACAMOS PARA PODER SACARLE VIDA
 
+	
+	
+	public void aceptar(Visitor v) {
+		
+	}
+	
+	
+	
 }

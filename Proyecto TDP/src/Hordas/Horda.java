@@ -24,33 +24,32 @@ public class Horda {
 	
 	public GameObject crearEnemigo() {
 		Random r = new Random();
-		int n = r.nextInt(6);
-		GameObject g = null;
-		switch (n) {
-		case 1: g= new Apu(mapaLogico); 
-			break;	
-		case 2:
-			g= new Barney(mapaLogico);
-			break;
-			
-		case 3:
-			g= new BumbleeMan(mapaLogico);
-			break;
-			
-		case 4:
-			g= new Chief(mapaLogico);
-			break;
-			
-		case 5:
-			g= new MrBurns(mapaLogico);
-			break;
-			
-		case 6:
-			g= new Moe(mapaLogico);
-			break;
-			
-			
-		}
+		int n = r.nextInt(4);
+		GameObject g= new Moe(mapaLogico);
+//		GameObject g = null;
+//		switch (n) {
+//		case 1: g= new Apu(mapaLogico); 
+//			break;	
+//		case 2:
+//			g= new Barney(mapaLogico);
+//			break;
+//			
+//		case 3:
+//			g= new BumbleeMan(mapaLogico);
+//			break;
+//			
+//		case 4:
+//			g= new Chief(mapaLogico);
+//			break;
+//			
+//		case 5:
+//			g= new Moe(mapaLogico);
+//			break;
+//			
+//		
+//			
+//			
+//		}
 		
 		crearEnemigo(g);
 		
@@ -59,8 +58,10 @@ public class Horda {
 	}
 	
 	private void crearEnemigo(GameObject g) {
-		Point p= new Point(900, 400);
-		g.setPosicion(p);
+		if(g!=null) {
+			Point p= new Point(900, 400); //ESTO NO PUEDE ESTAR ACA, SINO ESTARIAN TODOS EN EL MISMO X E Y
+			g.setPosicion(p);
+		}
 	}
 	
 	

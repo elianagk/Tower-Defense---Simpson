@@ -2,9 +2,7 @@ package Mapa;
 
 
 import GameObject.*;
-import GameObject.Personajes.*;
-import GameObject.Personajes.Enemigos.*;
-import GameObject.Personajes.Torres.*;
+
 import Juego.Juego;
 
 import java.util.ArrayList;
@@ -13,10 +11,9 @@ import Tienda.TiendaLogica;
 
 import java.awt.Point;
 
-import GRAFICA.ContadorTiempo;
+
 import GRAFICA.MapaGrafico;
 import java.util.ListIterator;
-import VISITOR.Visitor;
 
 public class MapaLogico  {
 	private ArrayList<GameObject> entidades;
@@ -47,28 +44,28 @@ public class MapaLogico  {
 		mapaGrafico.agregarEntidad(o);		
 	}
 	
-	public void operarconEntidades(Visitor v) {
-		for (GameObject e: entidades) {
-			e.Aceptar(v);
-		}
-	}
+//	public void operarconEntidades(Visitor v) {
+//		for (GameObject e: entidades) {
+//			e.Aceptar(v);
+//		}
+//	}
 	
-	public boolean hayenelrango(Enemigo g) {
-		boolean hay=false;
+	public ArrayList hayenelrango(GameObject g) {
+		ArrayList<GameObject> toReturn = new ArrayList();
 		Point posicion= g.getPosicion();
 		for (GameObject e: entidades) {
-			if (e.getX()==posicion.x ) {
-				hay=true;
-				break;
-				
+			if (e.getX()+4==posicion.x ) {
+				toReturn.add(e);				
 			}
 			
 		}
-		return hay;	
+		return toReturn;	
 		
 	}
 	
-	
+	public ArrayList getEntidades() {
+		return entidades;
+	}
 	
 	
 	

@@ -1,6 +1,7 @@
 package GameObject.Personajes.Torres;
 
 import GameObject.GameObject;
+import GameObject.Personaje;
 import GameObject.Personajes.Torre;
 import GameObjectGrafico.PersonajesGrafico.TorresGrafico.BartGrafico;
 import GameObjectGrafico.PersonajesGrafico.TorresGrafico.HomeroGrafico;
@@ -15,7 +16,7 @@ public class Homero extends Torre {
 	
 	
 	@Override
-	public void atacar() {
+	public void atacar(Personaje e) {
 		// gif atacando
 		
 	}
@@ -36,6 +37,20 @@ public class Homero extends Torre {
 	public void aplicarDaño(int daño) {
 		// TODO Auto-generated method stub
 		
+	}
+
+
+	@Override
+	public void accionar() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public Visitor getVisitor() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 }
