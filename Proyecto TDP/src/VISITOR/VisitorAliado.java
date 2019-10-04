@@ -1,18 +1,18 @@
 package VISITOR;
 
+import GameObject.Objeto;
 import GameObject.Personajes.Enemigo;
 import GameObject.Personajes.Torre;
-import Mapa.MapaLogico;
 
-public class VisitadorColisiones implements Visitor {
-	private MapaLogico mapa;
+public class VisitorAliado extends Visitor {
 	
+	public VisitorAliado(Torre t) {
+		mipersonaje=t;
+	}
 
 	@Override
 	public void visitar(Enemigo e) {
-		if (mapa.HayColisiones(e.getX(), e.getY())) {
-			
-		}
+		// TODO Auto-generated method stub
 		
 	}
 
@@ -23,7 +23,7 @@ public class VisitadorColisiones implements Visitor {
 	}
 
 	@Override
-	public void visitar(Object o) {
+	public void visitar(Objeto o) {
 		// TODO Auto-generated method stub
 		
 	}

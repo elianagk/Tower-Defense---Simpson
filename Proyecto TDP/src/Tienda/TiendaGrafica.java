@@ -23,22 +23,22 @@ public class TiendaGrafica extends JPanel {
 	this.setBounds(0, 0, 600, 100);
 	botones = new Boton[6];
 	
-	JButton botonEliminar= new JButton(new ImageIcon(getClass().getClassLoader().getResource("apu1.png")));
-	botonEliminar.addActionListener(new ActionListener() {
-		@Override
-		public void actionPerformed(ActionEvent e) {
-			if (tienda.getJuego().enemigos[0]==null) {
-				System.out.println("enemigos nulo");				
-			}
-			else {
-				System.out.println("enemigos no nulo");
-				tienda.getJuego().enemigos[0].aplicarDaño(100);
-				tienda.getJuego().enemigos[0]=null;
-				botonEliminar.setEnabled(false);
-			}
-		}
-	});
-	
+//	JButton botonEliminar= new JButton(new ImageIcon(getClass().getClassLoader().getResource("apu1.png")));
+//	botonEliminar.addActionListener(new ActionListener() {
+//		@Override
+//		public void actionPerformed(ActionEvent e) {
+//			if (tienda.getJuego().enemigos[0]==null) {
+//				System.out.println("enemigos nulo");				
+//			}
+//			else {
+//				System.out.println("enemigos no nulo");
+//				tienda.getJuego().enemigos[0].aplicarDaño(100);
+//				tienda.getJuego().enemigos[0]=null;
+//				//botonEliminar.setEnabled(false);
+//			}
+//		}
+//	});
+//	
 	
 	
 	
@@ -54,7 +54,7 @@ public class TiendaGrafica extends JPanel {
 		this.add(botones[i]);
 	}
 	
-	this.add(botonEliminar);
+	//this.add(botonEliminar);
 	
 	}
 	

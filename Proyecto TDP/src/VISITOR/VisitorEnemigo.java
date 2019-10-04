@@ -1,13 +1,18 @@
 package VISITOR;
 
+import GameObject.Objeto;
 import GameObject.Personajes.Enemigo;
 import GameObject.Personajes.Torre;
-import Mapa.MapaLogico;
 
-public class VisitadorAtaque implements Visitor {
+public class VisitorEnemigo extends Visitor {
+	
+	public VisitorEnemigo(Enemigo e) {
+		mipersonaje= e;
+	}
 
 	@Override
 	public void visitar(Enemigo e) {
+		// TODO Auto-generated method stub
 		
 	}
 
@@ -18,11 +23,9 @@ public class VisitadorAtaque implements Visitor {
 	}
 
 	@Override
-	public void visitar(Object o) {
+	public void visitar(Objeto o) {
 		// TODO Auto-generated method stub
 		
 	}
-
-	
 
 }

@@ -52,24 +52,20 @@ public class Juego {
 	}
 	
 	public void mover(){
-		for(int i = 0; i < enemigos.length; i++){
+		ArrayList<GameObject> entidades = this.mapaLogico.getEntidades();
+		
+		for(GameObject e : entidades) {
+			ArrayList<GameObject> toCollide = this.mapaLogico.hayenelrango(e);
 			
-			// Inteligencia de los enemigos
-			Random r = new Random();
-			
-			int dir = r.nextInt(4);
-			
-			if (enemigos[i]!=null) {
-				enemigos[i].mover(Enemigo.backward_key);
-				
-				if (mapaLogico.hayenelrango(enemigos[i])) {
-					enemigos[i].mover(Enemigo.still_key);
+			if(toCollide.size() == 0) {
+				e.accionar();
+			}else {
+				for(GameObject toCollideElement: toCollide) {
+					toCollideElement.Aceptar(e.getVisitor());
 				}
 			}
-				
-			
 		}
-		//this.apply_gravity();
+
 	}
 	
 	

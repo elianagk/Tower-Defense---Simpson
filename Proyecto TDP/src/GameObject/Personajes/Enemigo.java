@@ -5,16 +5,20 @@ import java.awt.Point;
 import GameObject.Personaje;
 import GameObjectGrafico.GameObjectGrafico;
 import Mapa.MapaLogico;
+import VISITOR.Visitor;
+import VISITOR.VisitorEnemigo;
 
 public abstract  class Enemigo extends Personaje {
 	protected int velocidad;
 	protected int puntaje;
 	protected int monedas;
 	protected int jump_strenght = 10;
+	protected VisitorEnemigo visitor;
 	
 	
 	public Enemigo(MapaLogico ml, GameObjectGrafico gog) {
 		super(ml, gog);
+		
 	}
 	
 	public int getVelocidad() {
@@ -73,12 +77,16 @@ public abstract  class Enemigo extends Personaje {
 		this.cambiarGrafico(this.last_dir);
 	}
 	
+	public void aceptar(Visitor v) {
+		
+	}
+	
 	
 	
 	public abstract  void avanzar();
 	
 	@Override
-	public abstract void atacar() ;
+	public abstract void atacar(Personaje e) ;
 	//DEBERIAMOS SABER A QUIEN ATACAMOS PARA PODER SACARLE VIDA
 	
 	

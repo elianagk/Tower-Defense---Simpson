@@ -3,6 +3,7 @@ package GameObject.Personajes.Enemigos;
 import java.awt.Point;
 
 import GameObject.GameObject;
+import GameObject.Personaje;
 import GameObject.Personajes.Enemigo;
 import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.ApuGrafico;
 import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.BumbleeManGrafico;
@@ -24,7 +25,7 @@ public class BumbleeMan extends Enemigo {
 	}
 
 	@Override
-	public void atacar() {
+	public void atacar(Personaje e) {
 		// gif atacando
 		
 	}
@@ -44,6 +45,20 @@ public class BumbleeMan extends Enemigo {
 	public void aplicarDaño(int daño) {
 		// TODO Auto-generated method stub
 		
+	}
+
+
+	@Override
+	public void accionar() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public Visitor getVisitor() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
