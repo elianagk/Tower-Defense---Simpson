@@ -22,7 +22,8 @@ public abstract class Torre extends Personaje {
 	
 	@Override
 	public  void atacar(Personaje e) {
-		
+		//miObjetoGrafico.atacar();
+		e.setVida(e.getVida()-this.daño);
 	}
 	//DEBERIAMOS SABER A QUIEN ATACAMOS PARA PODER SACARLE VIDA
 

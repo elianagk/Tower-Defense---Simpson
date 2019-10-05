@@ -33,4 +33,6 @@ public class Objeto extends GameObject {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	
 }

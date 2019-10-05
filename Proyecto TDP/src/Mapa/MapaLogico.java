@@ -50,11 +50,11 @@ public class MapaLogico  {
 //		}
 //	}
 	
-	public ArrayList hayenelrango(GameObject g) {
+	public ArrayList hayEnElRango(GameObject g) {
 		ArrayList<GameObject> toReturn = new ArrayList();
 		Point posicion= g.getPosicion();
 		for (GameObject e: entidades) {
-			if (e.getX()+4==posicion.x ) {
+			if (e.getX()+10==posicion.x ) {
 				toReturn.add(e);				
 			}
 			

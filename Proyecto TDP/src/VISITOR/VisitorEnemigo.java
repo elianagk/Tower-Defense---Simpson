@@ -12,13 +12,13 @@ public class VisitorEnemigo extends Visitor {
 
 	@Override
 	public void visitar(Enemigo e) {
-		// TODO Auto-generated method stub
+		mipersonaje.accionar();
 		
 	}
 
 	@Override
 	public void visitar(Torre t) {
-		// TODO Auto-generated method stub
+		mipersonaje.atacar(t);
 		
 	}
 

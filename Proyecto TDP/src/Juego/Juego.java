@@ -55,7 +55,7 @@ public class Juego {
 		ArrayList<GameObject> entidades = this.mapaLogico.getEntidades();
 		
 		for(GameObject e : entidades) {
-			ArrayList<GameObject> toCollide = this.mapaLogico.hayenelrango(e);
+			ArrayList<GameObject> toCollide = this.mapaLogico.hayEnElRango(e);
 			
 			if(toCollide.size() == 0) {
 				e.accionar();
