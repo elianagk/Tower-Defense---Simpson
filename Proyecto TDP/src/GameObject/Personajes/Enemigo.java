@@ -86,9 +86,10 @@ public abstract  class Enemigo extends Personaje {
 	public abstract  void avanzar();
 	
 	@Override
-	public abstract void atacar(Personaje e) ;
-	//DEBERIAMOS SABER A QUIEN ATACAMOS PARA PODER SACARLE VIDA
-	
+	public void atacar(Personaje e) {
+		
+		e.setVida(e.getVida()-this.daño);
+	}
 	
 	
 }

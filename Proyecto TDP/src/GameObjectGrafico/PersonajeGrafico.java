@@ -21,4 +21,5 @@ public class PersonajeGrafico extends GameObjectGrafico {
 		this.setIcon(new ImageIcon(getClass().getClassLoader().getResource(imagen)));
 	}
 
+	
 }

@@ -6,6 +6,7 @@ import javax.swing.*;
 
 public abstract class GameObjectGrafico extends JLabel {
 	protected String imagen;
+	protected String imagenatacando;
 	
 	
 	public GameObjectGrafico(String s) {
@@ -19,6 +20,14 @@ public abstract class GameObjectGrafico extends JLabel {
 	public void setImagen(String img) {
 		imagen = img;
 	}
+	
+	public void setImagenAtacando(String s) {
+		imagenatacando=s;
+	}
+	
+	//public abstract void atacar(String s);
+	
+	
 	
 	
 	
