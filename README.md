@@ -3,4 +3,4 @@
   
   No estan puestas las posiciones, necesitamos una grilla o algo.
   Faltan los gifs de los aliados.
-  Estan los disparos y las clases disparos pero habria que ponerlos y que hagan daño
+  Por favor no toquen nada que tenga que ver con El visitor y accionar.
