@@ -39,6 +39,7 @@ public class MapaLogico  {
 	
 	public void agregarEntidad(GameObject o, int x, int y) {
 		Point p = new Point (x, y);
+		//System.out.println("X: "+x+" - Y: "+y);
 		o.setPosicion(p);
 		entidades.add(o);
 		mapaGrafico.agregarEntidad(o);		
