@@ -6,6 +6,8 @@ import GameObject.*;
 import Juego.Juego;
 
 import java.util.ArrayList;
+import java.util.Iterator;
+
 import Jugador.Jugador;
 import Tienda.TiendaLogica;
 
@@ -16,7 +18,7 @@ import GRAFICA.MapaGrafico;
 import java.util.ListIterator;
 
 public class MapaLogico  {
-	private ArrayList<GameObject> entidades;
+	private ArrayList<GameObject> entidades, entidadesAAgregar, entidadesAEliminar;
 	private Jugador jugador;
 	private MapaGrafico mapaGrafico;
 	private int width, height;
@@ -25,6 +27,8 @@ public class MapaLogico  {
 
 	public MapaLogico (int width, int height, MapaGrafico mapag) {
 		entidades= new ArrayList<GameObject> ();
+		entidadesAAgregar= new ArrayList<GameObject> ();
+		entidadesAEliminar= new ArrayList<GameObject> ();
 		jugador= new Jugador();
 		this.width=width;
 		this.height=height;
@@ -37,10 +41,14 @@ public class MapaLogico  {
 		mapaGrafico= m;
 	}
 	
-	public void agregarEntidad(GameObject o, int x, int y) {
+	public void entidadAAgregar(GameObject o, int x, int y) {
 		Point p = new Point (x, y);
 		//System.out.println("X: "+x+" - Y: "+y);
 		o.setPosicion(p);
+		entidadesAAgregar.add(o);
+	}
+	
+	public void agregarEntidad(GameObject o) {
 		entidades.add(o);
 		mapaGrafico.agregarEntidad(o);		
 	}
@@ -90,6 +98,10 @@ public class MapaLogico  {
 		return colisiones;
 	}
 	
+	public void entidadAEliminar(GameObject o) {
+		entidadesAEliminar.add(o);
+	}
+	
 	/**
 	 * remueve una entidad o del la lista de personajes y del mapa grafico
 	 * @param o entidad a remover
@@ -99,7 +111,18 @@ public class MapaLogico  {
 		mapaGrafico.removerEntidad(o);
 	}
 	
-	
+	public void actualizarListaDeEntidades() {
+		for (GameObject objEliminar : entidadesAEliminar) {
+			removerEntidad(objEliminar);
+		}
+		
+		for (GameObject objAgregar : entidadesAAgregar) {
+			agregarEntidad(objAgregar);
+		}
+		
+		entidadesAEliminar.clear();
+		entidadesAAgregar.clear();
+	}
 	
 	//Sirve para matar a apu desde un boton
 	public Juego getJuego() {

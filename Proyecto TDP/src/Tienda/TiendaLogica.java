@@ -21,7 +21,7 @@ public class TiendaLogica {
 	
 	public void revisarTienda(int x, int y) {
 		if (ProximaEntidad()) {
-			mapaLogico.agregarEntidad(g, x, y);
+			mapaLogico.entidadAAgregar(g, x, y);
 			g= null;
 		}
 	}
@@ -39,9 +39,6 @@ public class TiendaLogica {
 	public boolean ProximaEntidad() {
 		return g!=null;
 	}
-
-	
-	
 	
 	//Sirve para matar a apu desde un boton
 	public MapaLogico getMapaLogico() {
