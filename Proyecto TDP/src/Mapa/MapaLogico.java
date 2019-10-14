@@ -63,7 +63,7 @@ public class MapaLogico  {
 		ArrayList<GameObject> toReturn = new ArrayList();
 		Point posicion= g.getPosicion();
 		for (GameObject e: entidades) {
-			if (e.getX()+50==posicion.x ) {
+			if (e.getX()+100==posicion.x ) {
 				toReturn.add(e);				
 			}
 			
@@ -73,6 +73,7 @@ public class MapaLogico  {
 	}
 	
 	public ArrayList getEntidades() {
+		this.actualizarListaDeEntidades();
 		return entidades;
 	}
 	

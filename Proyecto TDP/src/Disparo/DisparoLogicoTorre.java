@@ -17,7 +17,7 @@ public class DisparoLogicoTorre extends DisparoLogico {
 	
 	public void atacar(GameObject g) {
 		
-		mapaLogico.agregarEntidad(this, g.getX()+50, g.getY());
+		mapaLogico.entidadAAgregar(this, g.getX()+50, g.getY());
 	}
 	
 	
