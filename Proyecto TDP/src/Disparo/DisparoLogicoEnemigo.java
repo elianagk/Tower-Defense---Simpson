@@ -15,7 +15,7 @@ public class DisparoLogicoEnemigo extends DisparoLogico {
 
 	@Override
 	public void atacar(GameObject g) {
-		mapaLogico.agregarEntidad(this, g.getX()-100, g.getY());
+		mapaLogico.entidadAAgregar(this, g.getX()-100, g.getY());
 		
 	}
 
