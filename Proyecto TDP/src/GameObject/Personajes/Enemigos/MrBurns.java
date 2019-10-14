@@ -1,32 +1,42 @@
 package GameObject.Personajes.Enemigos;
 
-import java.awt.Point;
 
+import javax.swing.JLabel;
+
+import Disparo.DisparoLogicoEnemigo;
 import GameObject.GameObject;
 import GameObject.Personaje;
 import GameObject.Personajes.Enemigo;
-import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.ApuGrafico;
+
 import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.MrBurnsGrafico;
 import Mapa.MapaLogico;
 import VISITOR.Visitor;
+import VISITOR.VisitorEnemigo;
 
 public class MrBurns extends Enemigo {
+	protected DisparoLogicoEnemigo disparo;
 	
 	public MrBurns(MapaLogico ml) {
 		super(ml, new MrBurnsGrafico());
 		vida= 100;
 		velocidad= 5;
+		visitor= new VisitorEnemigo(this);
+		disparo= new DisparoLogicoEnemigo(mapaLogico);
+		daño=95;
 	}
-	
 	
 	@Override
-	public void avanzar() {
-		//hilo de ejecucion avanzando con sus respectivas imagenes
+	public JLabel getGrafico() {
+		last_dir= still_key;
+		return miObjetoGrafico;
 	}
-
+	
+	
 	@Override
 	public void atacar(Personaje e) {
-		// gif atacando
+		miObjetoGrafico.atacar();
+		disparo.atacar(this);
+		e.aplicarDaño(daño);
 		
 	}
 
@@ -42,23 +52,18 @@ public class MrBurns extends Enemigo {
 	}
 
 
-	@Override
-	public void aplicarDaño(int daño) {
-		// TODO Auto-generated method stub
-		
-	}
-
+	
 
 	@Override
 	public void accionar() {
-		// TODO Auto-generated method stub
+		super.mover(backward_key);
 		
 	}
 
 
 	@Override
 	public Visitor getVisitor() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return visitor;
 	}
 }

@@ -37,17 +37,7 @@ public class Juego {
 		this.mapaLogico= mapaLogico;
 		comenzarNiveles();
 		
-//		for(int i = 0; i < enemigos.length; i++){
-//			Random r = new Random();
-//			enemigos[i] = new Enemigo(10, r.nextInt(gui.getWidth() - 32), r.nextInt(gui.getHeight() - 32));
-//			gui.add(enemigos[i].getGrafico());
-//		}
-		
-//		Point posicion= new Point (gui.getX()+900, ground_position);
-//		enemigos[0]= new Apu(posicion);
-//		mapa.add(enemigos[0].getGrafico());
-//		mapa.repaint();
-		
+
 		
 	}
 	
@@ -62,6 +52,8 @@ public class Juego {
 			}else {
 				for(GameObject toCollideElement: toCollide) {
 					toCollideElement.Aceptar(e.getVisitor());
+					e.Aceptar(toCollideElement.getVisitor());
+					
 				}
 			}
 		}

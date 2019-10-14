@@ -1,8 +1,9 @@
 package GameObjectGrafico.ObjetosGraficos;
 
-import GameObjectGrafico.GameObjectGrafico;
 
-public class PowerupGrafico extends GameObjectGrafico{
+import GameObjectGrafico.ObjetoGrafico;
+
+public class PowerupGrafico extends ObjetoGrafico{
 
 	public PowerupGrafico() {
 		super("donut.png");

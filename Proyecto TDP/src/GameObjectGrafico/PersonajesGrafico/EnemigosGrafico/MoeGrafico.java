@@ -10,7 +10,7 @@ public class MoeGrafico extends EnemigoGrafico {
 	}
 	
 	public void atacar() {
-		super.atacar("abeatacando");
+		super.atacar("moeatacando.png");
 	}
 
 

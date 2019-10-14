@@ -40,10 +40,7 @@ public abstract class GameObject {
 //		mapaLogico.agregarEntidad(this, (int)posicion.getX(), (int)posicion.getY());
 //	}
 
-	public JLabel getGrafico() {
-		last_dir = still_key;
-		return miObjetoGrafico;
-	}
+	public  abstract JLabel getGrafico() ;
 
 	public void setPosicion(Point p) {
 		posicion = p;

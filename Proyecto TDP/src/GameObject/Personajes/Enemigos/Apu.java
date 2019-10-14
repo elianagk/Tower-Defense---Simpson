@@ -7,6 +7,7 @@ import GameObject.Personajes.Enemigo;
 import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.ApuGrafico;
 import Mapa.MapaLogico;
 import VISITOR.Visitor;
+import VISITOR.VisitorEnemigo;
 import GameObject.GameObject;
 import GameObject.Personaje;
 
@@ -16,6 +17,8 @@ public class Apu extends Enemigo {
 		super(ml, new ApuGrafico());
 		vida= 100;
 		velocidad= 5;
+		visitor= new VisitorEnemigo(this);
+		daño=30;
 	}
 	
 	public JLabel getGrafico(){
@@ -25,14 +28,12 @@ public class Apu extends Enemigo {
 	}
 	
 	
-	@Override
-	public void avanzar() {
-		//hilo de ejecucion avanzando con sus respectivas imagenes
-	}
+	
 
 	@Override
 	public void atacar(Personaje e) {
-		// gif atacando
+		miObjetoGrafico.atacar();
+		e.aplicarDaño(daño);
 		
 	}
 	
@@ -54,8 +55,8 @@ public class Apu extends Enemigo {
 
 	@Override
 	public Visitor getVisitor() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return visitor ;
 	}
 
 	

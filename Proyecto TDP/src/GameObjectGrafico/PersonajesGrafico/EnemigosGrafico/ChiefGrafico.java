@@ -10,7 +10,7 @@ public class ChiefGrafico extends EnemigoGrafico {
 	}
 	
 	public void atacar() {
-		super.atacar("");
+		super.atacar("chiefatacando.gif");
 	}
 
 	
