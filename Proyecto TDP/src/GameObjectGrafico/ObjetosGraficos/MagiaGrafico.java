@@ -1,8 +1,9 @@
 package GameObjectGrafico.ObjetosGraficos;
 
-import GameObjectGrafico.GameObjectGrafico;
 
-public class MagiaGrafico extends GameObjectGrafico{
+import GameObjectGrafico.ObjetoGrafico;
+
+public class MagiaGrafico extends ObjetoGrafico{
 
 	public MagiaGrafico() {
 		super("");
@@ -14,4 +15,6 @@ public class MagiaGrafico extends GameObjectGrafico{
 		// TODO Auto-generated method stub
 		
 	}
+
+	
 }

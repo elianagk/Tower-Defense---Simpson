@@ -2,19 +2,12 @@ package GRAFICA;
 
 import java.awt.*;
 import javax.swing.*;
-
-import Hordas.Horda;
 import Juego.Juego;
 import Mapa.MapaLogico;
 import Tienda.TiendaGrafica;
 import Tienda.TiendaLogica;
 import Tienda.Botones.Boton;
-import Tienda.Botones.BotonHomero;
 
-import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
-import java.awt.event.MouseEvent;
-import java.awt.event.ActionEvent;
 
 
 public class DiseñoGeneral extends JFrame{

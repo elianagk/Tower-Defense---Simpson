@@ -25,7 +25,7 @@ public class Horda {
 	public GameObject crearEnemigo() {
 		Random r = new Random();
 		int n = r.nextInt(4);
-		GameObject g= new Moe(mapaLogico);
+		GameObject g= new Chief(mapaLogico);
 //		GameObject g = null;
 //		switch (n) {
 //		case 1: g= new Apu(mapaLogico); 
