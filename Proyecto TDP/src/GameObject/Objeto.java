@@ -4,7 +4,7 @@ import GameObjectGrafico.GameObjectGrafico;
 import Mapa.MapaLogico;
 import VISITOR.Visitor;
 
-public class Objeto extends GameObject {
+public abstract class Objeto extends GameObject {
 
 	public Objeto(MapaLogico ml, GameObjectGrafico gog) {
 		super(ml, gog);
