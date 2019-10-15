@@ -1,5 +1,6 @@
 package GameObject.Objetos;
 
+import GameObject.Objetos.ObjetoPrecioso;
 import GameObject.Objeto;
 import GameObjectGrafico.ObjetosGraficos.ObjetoPreciosoGrafico;
 import Mapa.MapaLogico;
