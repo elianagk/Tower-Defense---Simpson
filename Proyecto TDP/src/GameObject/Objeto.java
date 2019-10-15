@@ -23,10 +23,7 @@ public abstract class Objeto extends GameObject {
 	}
 
 	@Override
-	public void accionar() {
-		// TODO Auto-generated method stub
-		
-	}
+	public abstract void accionar() ;
 
 	@Override
 	public Visitor getVisitor() {

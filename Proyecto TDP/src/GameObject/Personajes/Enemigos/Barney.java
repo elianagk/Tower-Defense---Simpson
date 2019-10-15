@@ -1,14 +1,17 @@
 package GameObject.Personajes.Enemigos;
 
-import java.awt.Point;
+
+
+import javax.swing.JLabel;
 
 import GameObject.GameObject;
 import GameObject.Personaje;
 import GameObject.Personajes.Enemigo;
-import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.ApuGrafico;
+
 import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.BarneyGrafico;
 import Mapa.MapaLogico;
 import VISITOR.Visitor;
+import VISITOR.VisitorEnemigo;
 
 public class Barney extends Enemigo {
 	
@@ -17,18 +20,23 @@ public class Barney extends Enemigo {
 		super(ml, new BarneyGrafico());
 		vida= 100;
 		velocidad= 3;
+		visitor= new VisitorEnemigo(this);
+		daño=10;
 	}
-	
-	
 	
 	@Override
-	public void avanzar() {
-		//hilo de ejecucion avanzando con sus respectivas imagenes
+	public JLabel getGrafico() {
+		last_dir= still_key;
+		return miObjetoGrafico;
 	}
+	
+	
+	
 
 	@Override
 	public void atacar(Personaje e) {
-		// gif atacando
+		miObjetoGrafico.atacar();
+		e.aplicarDaño(daño);
 		
 	}
 	
@@ -47,16 +55,8 @@ public class Barney extends Enemigo {
 
 
 	@Override
-	public void aplicarDaño(int daño) {
-		// TODO Auto-generated method stub
-		
-	}
-
-
-
-	@Override
 	public void accionar() {
-		// TODO Auto-generated method stub
+		super.mover(backward_key);
 		
 	}
 
@@ -64,8 +64,7 @@ public class Barney extends Enemigo {
 
 	@Override
 	public Visitor getVisitor() {
-		// TODO Auto-generated method stub
-		return null;
+		return visitor;
 	}
 
 }

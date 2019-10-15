@@ -10,7 +10,7 @@ public class MrBurnsGrafico extends EnemigoGrafico {
 	}
 	
 	public void atacar() {
-		super.atacar("");
+		super.atacar("burnsatacando.gif");
 	}
 
 	

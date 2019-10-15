@@ -4,6 +4,7 @@ import GameObjectGrafico.GameObjectGrafico;
 
 public class ObjetoPreciosoGrafico extends GameObjectGrafico{
 
+
 	public ObjetoPreciosoGrafico() {
 		super("donut.png");
 		

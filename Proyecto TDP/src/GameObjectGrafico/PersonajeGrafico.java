@@ -3,7 +3,7 @@ package GameObjectGrafico;
 
 import javax.swing.ImageIcon;
 
-public class PersonajeGrafico extends GameObjectGrafico {
+public abstract class PersonajeGrafico extends GameObjectGrafico {
 	
 	
 	public PersonajeGrafico(String s) {
@@ -17,9 +17,14 @@ public class PersonajeGrafico extends GameObjectGrafico {
 	}
 	
 	public void atacar(String s) {
-		this.setImagen(s);
+		imagen=s;
 		this.setIcon(new ImageIcon(getClass().getClassLoader().getResource(imagen)));
+		repaint();
+		
 	}
+
+	
+	public abstract void atacar() ;
 
 	
 }

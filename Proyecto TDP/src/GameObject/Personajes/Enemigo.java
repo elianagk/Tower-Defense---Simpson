@@ -9,10 +9,10 @@ import VISITOR.Visitor;
 import VISITOR.VisitorEnemigo;
 
 public abstract  class Enemigo extends Personaje {
-	protected int velocidad;
+	
 	protected int puntaje;
 	protected int monedas;
-	protected int jump_strenght = 10;
+	
 	protected VisitorEnemigo visitor;
 	
 	
@@ -45,37 +45,9 @@ public abstract  class Enemigo extends Personaje {
 		this.monedas = monedas;
 	}
 	
-	protected void cambiarGrafico(String dir){
-		if(miObjetoGrafico != null) {
-			miObjetoGrafico.cambiarPosicion();
-			miObjetoGrafico.setBounds(posicion.x, posicion.y, 90, 100);
-		}
-	}
 	
-	public void mover(String dir){	
-		switch (dir) {
-			case jump_key : //Jump
-				posicion.setLocation(posicion.x, posicion.y - jump_strenght);
-				break;
-			case forward_key : //Avanzar
-				
-				posicion.setLocation(posicion.x + velocidad, posicion.y);
-				break;
-			case backward_key : //Retroceder
-				posicion.setLocation(posicion.x - velocidad, posicion.y);
-				break;
-			default : //Cualquier otra cosa - Quieto
-				dir = still_key;
-				break;
-		}
-		this.last_dir = dir;
-		cambiarGrafico(dir);
-	}
 	
-	public void fall(int gravity){
-		posicion.setLocation(posicion.x, posicion.y + gravity);
-		this.cambiarGrafico(this.last_dir);
-	}
+	
 	
 	public void aceptar(Visitor v) {
 		
@@ -83,12 +55,12 @@ public abstract  class Enemigo extends Personaje {
 	
 	
 	
-	public abstract  void avanzar();
+	
 	
 	@Override
 	public void atacar(Personaje e) {
 		
-		e.setVida(e.getVida()-this.daño);
+		
 	}
 	
 	

@@ -1,12 +1,16 @@
 package Disparo;
 
+import javax.swing.JLabel;
+
 import GameObject.GameObject;
 import GameObject.Objeto;
 import GameObjectGrafico.GameObjectGrafico;
 import Mapa.MapaLogico;
 import VISITOR.Visitor;
 
-public class DisparoLogico extends Objeto {
+public abstract class DisparoLogico extends Objeto {
+	
+	
 
 	public DisparoLogico(MapaLogico ml, GameObjectGrafico gog) {
 		super(ml, gog);
@@ -19,10 +23,17 @@ public class DisparoLogico extends Objeto {
 		return null;
 	}
 
-	@Override
-	public void Aceptar(Visitor visitor) {
-		visitor.visitar(this);
+	
+	
+	public  void accionar() {
 		
 	}
+	
+	public abstract void atacar(GameObject g);
+	
+	public JLabel getGrafico() {
+		return miObjetoGrafico;
+	}
+	
 
 }

@@ -10,7 +10,7 @@ public class BumbleeManGrafico extends EnemigoGrafico {
 	}
 	
 	public void atacar() {
-		super.atacar("");
+		super.atacar("bmatacando.gif");
 	}
 
 
