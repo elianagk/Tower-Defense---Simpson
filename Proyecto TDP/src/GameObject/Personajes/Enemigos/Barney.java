@@ -22,6 +22,7 @@ public class Barney extends Enemigo {
 		velocidad= 3;
 		visitor= new VisitorEnemigo(this);
 		daño=10;
+		System.out.println("2");
 	}
 	
 	@Override

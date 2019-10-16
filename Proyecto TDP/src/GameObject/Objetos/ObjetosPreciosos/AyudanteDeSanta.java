@@ -1,6 +1,6 @@
 package GameObject.Objetos.ObjetosPreciosos;
 
-import GameObject.Objetos.Magias.RejuvenecerGrafico;
+import GameObjectGrafico.ObjetosGraficos.ObjetosPreciososGraficos.AyudanteDeSantaGrafico;
 import Mapa.MapaLogico;
 
 public class AyudanteDeSanta {

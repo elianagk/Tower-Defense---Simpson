@@ -23,6 +23,7 @@ public class MrBurns extends Enemigo {
 		visitor= new VisitorEnemigo(this);
 		disparo= new DisparoLogicoEnemigo(mapaLogico);
 		daño=95;
+		System.out.println("6");
 	}
 	
 	@Override

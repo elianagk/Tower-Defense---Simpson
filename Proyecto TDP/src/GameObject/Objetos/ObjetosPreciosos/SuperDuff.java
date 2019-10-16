@@ -1,6 +1,6 @@
 package GameObject.Objetos.ObjetosPreciosos;
 
-import GameObject.Objetos.Magias.RejuvenecerGrafico;
+import GameObjectGrafico.ObjetosGraficos.ObjetosPreciososGraficos.SuperDuffGrafico;
 import Mapa.MapaLogico;
 
 public class SuperDuff {

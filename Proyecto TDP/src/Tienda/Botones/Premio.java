@@ -7,7 +7,7 @@ import GameObject.Objetos.ObjetoPrecioso;
 public class Premio extends Boton {
 
 	public Premio(String s, TiendaLogica tiendaLogica) {
-		super(s, tiendaLogica, new ObjetoPrecioso(tiendaLogica.getMapaLogico()));
+		super(s, tiendaLogica, null);
 		// TODO Auto-generated constructor stub
 	}
 

@@ -32,7 +32,7 @@ public class Juego {
 	public Juego(MapaGrafico gui, MapaLogico mapaLogico){
 		niveles= new Nivel[1];
 		niveles[0]= new Nivel(this, mapaLogico);
-		enemigos = new Enemigo[6];
+//		enemigos = new Enemigo[6];
 		mapaGrafico=gui;
 		this.mapaLogico= mapaLogico;
 		comenzarNiveles();
@@ -66,8 +66,8 @@ public class Juego {
 	}
 	
 	public void addEnemigo(GameObject o) {
-		enemigos[i]= (Enemigo)o;
-		i++;
+//		enemigos[i]= (Enemigo)o;
+//		i++;
 	}
 
 }
