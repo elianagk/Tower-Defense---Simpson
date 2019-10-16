@@ -87,5 +87,7 @@ public abstract class GameObject {
 	public abstract Visitor getVisitor();
 	
 	
+	
+	
 
 }

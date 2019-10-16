@@ -4,11 +4,14 @@ import javax.swing.JLabel;
 
 import GameObject.GameObject;
 import GameObject.Objeto;
+import GameObject.Personaje;
 import GameObjectGrafico.GameObjectGrafico;
 import Mapa.MapaLogico;
 import VISITOR.Visitor;
 
-public abstract class DisparoLogico extends Objeto {
+public abstract class DisparoLogico extends Personaje {
+	protected Personaje mipersonaje;
+	protected Visitor visitor;
 	
 	
 
@@ -25,11 +28,9 @@ public abstract class DisparoLogico extends Objeto {
 
 	
 	
-	public  void accionar() {
-		
-	}
+	public abstract void accionar() ;
 	
-	public abstract void atacar(GameObject g);
+	
 	
 	public JLabel getGrafico() {
 		return miObjetoGrafico;

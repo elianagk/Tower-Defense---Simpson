@@ -6,9 +6,10 @@ import javax.swing.ImageIcon;
 
 
 import GameObjectGrafico.ObjetoGrafico;
+import GameObjectGrafico.PersonajeGrafico;
 
 
-public abstract class DisparoGrafico extends ObjetoGrafico {
+public abstract class DisparoGrafico extends PersonajeGrafico {
 
 	
 	

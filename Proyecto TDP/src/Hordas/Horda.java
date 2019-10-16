@@ -24,7 +24,7 @@ public class Horda {
 	
 	public GameObject crearEnemigo() {
 		Random r = new Random();
-		int n = r.nextInt(4);
+		int n = r.nextInt(5);
 		GameObject g= new Chief(mapaLogico);
 //		GameObject g = null;
 //		switch (n) {
@@ -46,6 +46,10 @@ public class Horda {
 //			g= new Moe(mapaLogico);
 //			break;
 //			
+//		case 6:
+//			g= new MrBurns(mapaLogico);
+//			break;
+//			
 //		
 //			
 //			
@@ -61,6 +65,7 @@ public class Horda {
 		if(g!=null) {
 			Point p= new Point(900, 400); //ESTO NO PUEDE ESTAR ACA, SINO ESTARIAN TODOS EN EL MISMO X E Y
 			g.setPosicion(p);
+			
 		}
 	}
 	

@@ -23,7 +23,7 @@ public class Moe extends Enemigo {
 		vida= 100;
 		velocidad= 6;
 		visitor= new VisitorEnemigo(this);
-		disparo= new DisparoLogicoEnemigo(mapaLogico);
+		disparo= new DisparoLogicoEnemigo(mapaLogico, this);
 		daño=80;
 	}
 

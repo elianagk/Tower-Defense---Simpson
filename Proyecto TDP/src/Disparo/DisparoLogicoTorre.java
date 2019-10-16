@@ -1,23 +1,71 @@
 package Disparo;
 
+import javax.swing.JLabel;
+
 import GameObject.GameObject;
+import GameObject.Personaje;
+import GameObject.Personajes.Torre;
 import GameObjectGrafico.GameObjectGrafico;
 import Mapa.MapaLogico;
 import VISITOR.Visitor;
+import VISITOR.VisitorAliado;
 
 
-public class DisparoLogicoTorre extends DisparoLogico {
+public class DisparoLogicoTorre extends Torre {
 	
-	public DisparoLogicoTorre(MapaLogico ml) {
-		super(ml, new DisparoGraficoTorre());
+	protected Torre mipersonaje;
+	
+	public DisparoLogicoTorre(MapaLogico ml, Torre p) {
+		super(0, 0, 0, 0, ml, new DisparoGraficoTorre());
+		mipersonaje=p;
+		visitor= new VisitorAliado(this);
+		velocidad=5;
 		
 		
 	}
 
 	
-	public void atacar(GameObject g) {
+//	
+
+	@Override
+	public void accionar() {
 		
-		mapaLogico.entidadAAgregar(this, g.getX()+50, g.getY());
+		super.mover(forward_key);
+		
+	}
+
+
+	@Override
+	public void atacar(Personaje e) {
+		e.aplicarDaño(mipersonaje.getDaño());
+		mapaLogico.entidadAEliminar(this);
+		
+	}
+
+
+	@Override
+	public void Aceptar(Visitor visitor) {
+		visitor.visitar(this);
+	}
+
+
+	@Override
+	public Visitor getVisitor() {
+		
+		return visitor;
+	}
+
+
+	@Override
+	public JLabel getGrafico() {
+		return miObjetoGrafico;
+	}
+
+
+	@Override
+	public GameObject clone() {
+		
+		return new DisparoLogicoTorre(mapaLogico, mipersonaje);
 	}
 	
 	

@@ -21,7 +21,7 @@ public class MrBurns extends Enemigo {
 		vida= 100;
 		velocidad= 5;
 		visitor= new VisitorEnemigo(this);
-		disparo= new DisparoLogicoEnemigo(mapaLogico);
+		disparo= new DisparoLogicoEnemigo(mapaLogico, this);
 		daño=95;
 	}
 	

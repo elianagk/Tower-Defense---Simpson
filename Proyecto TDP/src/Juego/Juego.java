@@ -52,7 +52,7 @@ public class Juego {
 			}else {
 				for(GameObject toCollideElement: toCollide) {
 					toCollideElement.Aceptar(e.getVisitor());
-					e.Aceptar(toCollideElement.getVisitor());
+					
 					
 				}
 			}
