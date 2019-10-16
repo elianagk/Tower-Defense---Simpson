@@ -15,4 +15,10 @@ public class ObjetoPreciosoGrafico extends GameObjectGrafico{
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public void atacar() {
+		// TODO Auto-generated method stub
+		
+	}
 }

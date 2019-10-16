@@ -1,5 +1,6 @@
 package GameObject.Objetos.Magias;
 
+import GameObjectGrafico.ObjetosGraficos.MagiasGraficas.RejuvenecerGrafico;
 import Mapa.MapaLogico;
 
 public class Rejuvenecer {

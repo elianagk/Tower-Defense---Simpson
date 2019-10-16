@@ -10,8 +10,8 @@ import Mapa.MapaLogico;
 public abstract class Magia extends Objeto {
 	protected int duracion;
 	
-	public Magia(MapaLogico mapaLogico, GameObjectGrafico aumentoDeDañoGrafico, int duracion) {
-		super(mapaLogico, aumentoDeDañoGrafico);
+	public Magia(MapaLogico mapaLogico, GameObjectGrafico m, int duracion) {
+		super(mapaLogico, m);
 		this.duracion= duracion;
 	}
 
