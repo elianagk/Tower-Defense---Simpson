@@ -3,13 +3,16 @@ package GameObject.Objetos;
 import javax.swing.JLabel;
 
 import GameObject.Objeto;
+import GameObjectGrafico.GameObjectGrafico;
 import GameObjectGrafico.ObjetosGraficos.MagiaGrafico;
 import Mapa.MapaLogico;
 
-public class Magia extends Objeto {
-
-	public Magia(MapaLogico mapaLogico) {
-		super(mapaLogico, new MagiaGrafico());
+public abstract class Magia extends Objeto {
+	protected int duracion;
+	
+	public Magia(MapaLogico mapaLogico, GameObjectGrafico m, int duracion) {
+		super(mapaLogico, m);
+		this.duracion= duracion;
 	}
 
 	@Override

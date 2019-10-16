@@ -21,6 +21,7 @@ public class BumbleeMan extends Enemigo {
 		velocidad= 8;
 		visitor= new VisitorEnemigo(this);
 		daño=60; //solo por ser abeja
+		System.out.println("3");
 	}
 	
 	

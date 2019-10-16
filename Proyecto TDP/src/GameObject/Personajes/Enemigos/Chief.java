@@ -24,6 +24,7 @@ public class Chief extends Enemigo {
 		visitor= new VisitorEnemigo(this);
 		disparo= new DisparoLogicoEnemigo(mapaLogico, this);
 		daño=10;
+		System.out.println("4");
 	}
 	
 	

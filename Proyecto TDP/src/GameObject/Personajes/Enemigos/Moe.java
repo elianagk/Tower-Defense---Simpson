@@ -25,6 +25,7 @@ public class Moe extends Enemigo {
 		visitor= new VisitorEnemigo(this);
 		disparo= new DisparoLogicoEnemigo(mapaLogico, this);
 		daño=80;
+		System.out.println("5");
 	}
 
 	@Override
@@ -49,9 +50,6 @@ public class Moe extends Enemigo {
 		v.visitar(this);
 		
 	}
-
-	
-	
 
 	@Override
 	public void accionar() {

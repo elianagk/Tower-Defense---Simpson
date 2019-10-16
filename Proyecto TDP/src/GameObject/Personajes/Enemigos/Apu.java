@@ -19,6 +19,7 @@ public class Apu extends Enemigo {
 		velocidad= 5;
 		visitor= new VisitorEnemigo(this);
 		daño=30;
+		System.out.println("1");
 	}
 	
 	public JLabel getGrafico(){
