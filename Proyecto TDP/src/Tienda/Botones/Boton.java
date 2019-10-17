@@ -29,6 +29,7 @@ public class Boton extends JButton {
 		this.setSize(100, 100);
 		this.setBorder(new RoundedBorder(50));
 		this.setContentAreaFilled(false);
+		
 		ImageIcon fot= new ImageIcon(getClass().getClassLoader().getResource(s));
 		Icon i= new ImageIcon(fot.getImage().getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_DEFAULT));
 		this.setIcon(i);

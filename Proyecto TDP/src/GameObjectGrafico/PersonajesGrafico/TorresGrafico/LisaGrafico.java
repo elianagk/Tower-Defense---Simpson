@@ -7,7 +7,7 @@ public class LisaGrafico extends TorreGrafico {
 String direccionImg;
 	
 	public LisaGrafico() {
-		super("lisa.png");
+		super("lisa1.png");
 	}
 	
 	public void setImagen(String img) {
@@ -19,7 +19,7 @@ String direccionImg;
 	}
 	
 	public void atacar() {
-		super.atacar("");
+		super.atacar("lisaatacando.gif");
 	}
 
 

@@ -31,10 +31,6 @@ public class Nivel {
 			mapaLogico.entidadAAgregar(g, g.getX(), g.getY());
 		}
 		
-//		horda= new Horda(this, mapaLogico, 2);
-//		
-//		juego.addEnemigo(horda.crearEnemigo());
-//		juego.addEnemigo(horda.crearEnemigo());
 
 	}
 	

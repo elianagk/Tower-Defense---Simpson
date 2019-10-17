@@ -51,6 +51,7 @@ public class DisparoLogicoEnemigo extends Enemigo {
 	public void atacar(Personaje e) {
 		
 		e.aplicarDaño(mipersonaje.getDaño());
+		mapaLogico.entidadAEliminar(this);
 		
 	}
 
