@@ -19,7 +19,7 @@ String direccionImg;
 	}
 	
 	public void atacar() {
-		super.atacar("");
+		super.atacar("margeatacando.gif");
 	}
 
 	

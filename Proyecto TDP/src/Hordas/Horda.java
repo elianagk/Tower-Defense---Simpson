@@ -27,6 +27,7 @@ public class Horda {
 		GameObject g= null;
 		Point p;
 		Random r = new Random();
+
 		enemigo= r.nextInt(6)+1;
 			
 			switch(enemigo) {
@@ -49,11 +50,13 @@ public class Horda {
 			g.setPosicion(p);
 			cantEnemigos--;			
 			
+
 		
 		return g;
 		
 	}
 	
+
 	public boolean finalizarHorda( ) {
 		return cantEnemigos==0;	//cuando es 0 retorna falso y corta el while
 	}

@@ -28,7 +28,7 @@ public class Lisa extends Torre {
 	
 	@Override
 	public JLabel getGrafico() {
-		last_dir= still_key;
+		
 		return miObjetoGrafico;
 	}
 

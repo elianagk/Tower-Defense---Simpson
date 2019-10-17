@@ -1,5 +1,6 @@
 package VISITOR;
 
+import Disparo.DisparoLogico;
 import GameObject.Objeto;
 import GameObject.Personajes.Enemigo;
 import GameObject.Personajes.Torre;
@@ -27,5 +28,7 @@ public class VisitorAliado extends Visitor {
 		// TODO Auto-generated method stub
 		
 	}
+
+
 
 }

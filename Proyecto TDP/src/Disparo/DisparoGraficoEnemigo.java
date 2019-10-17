@@ -3,7 +3,13 @@ package Disparo;
 public class DisparoGraficoEnemigo extends DisparoGrafico {
 
 	public DisparoGraficoEnemigo() {
-		super("gifdisparo2.gif");
+		super("disparo3.png");
+		
+	}
+
+	@Override
+	public void atacar() {
+		// TODO Auto-generated method stub
 		
 	}
 
