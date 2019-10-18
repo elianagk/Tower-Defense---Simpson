@@ -25,7 +25,7 @@ public abstract class Personaje extends GameObject {
 			vida -= daño;
 		else {
 			vida = 0;
-			mapaLogico.removerEntidad(this);
+			mapaLogico.entidadAEliminar(this);
 		}
 	}
 	

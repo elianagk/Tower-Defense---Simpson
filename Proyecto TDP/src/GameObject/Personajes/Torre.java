@@ -27,7 +27,9 @@ public abstract class Torre extends Personaje {
 	}
 	//DEBERIAMOS SABER A QUIEN ATACAMOS PARA PODER SACARLE VIDA
 
-	
+	public int getCosto() {
+		return precio;
+	}
 	
 	public void aceptar(Visitor v) {
 		
