@@ -14,18 +14,23 @@ import VISITOR.VisitorAliado;
 
 public class Abuelo extends Torre {
 	protected DisparoLogicoTorre disparo;
+	protected int tiempo;
+	protected int contador;
 	
 	public Abuelo(MapaLogico mapaLogico) {
 		super(80, 30, 10, 1, mapaLogico, new AbueloGrafico());
 		visitor= new VisitorAliado(this);
-		disparo= new DisparoLogicoTorre(this.mapaLogico);
+		disparo= new DisparoLogicoTorre(this.mapaLogico, this);
+		tiempo=20;
+		contador=0;
 	}
 
 	@Override
 	public void atacar(Personaje e) {
-		miObjetoGrafico.atacar();
-		disparo.atacar(this);
-		e.aplicarDaño(daño);
+		//miObjetoGrafico.atacar();
+		//disparo.atacar(this);
+		//e.aplicarDaño(daño);
+		//EN REALIDAD EL Q ATACA ES EL DISPARO
 		
 	}
 	
@@ -50,7 +55,11 @@ public class Abuelo extends Torre {
 	@Override
 	public void accionar() {
 		miObjetoGrafico.atacar();
-		disparo.atacar(this);
+		contador++;
+		if (contador==tiempo) {
+			mapaLogico.entidadAAgregar(new DisparoLogicoTorre(mapaLogico, this), this.getX()+50, this.getY());
+			contador=0;
+		}
 		
 		
 	}

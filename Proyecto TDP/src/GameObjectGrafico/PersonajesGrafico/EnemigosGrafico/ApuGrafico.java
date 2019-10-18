@@ -21,7 +21,7 @@ public class ApuGrafico extends EnemigoGrafico {
 	
 	
 	public void atacar() {
-		super.atacar("apugif.gif");
+		super.atacar("apuatacando.gif");
 	}
 
 	

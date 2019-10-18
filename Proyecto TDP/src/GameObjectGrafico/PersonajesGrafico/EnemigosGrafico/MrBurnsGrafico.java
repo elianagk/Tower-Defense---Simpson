@@ -5,12 +5,12 @@ import GameObjectGrafico.PersonajesGrafico.EnemigoGrafico;
 public class MrBurnsGrafico extends EnemigoGrafico {
 
 	public MrBurnsGrafico() {
-		super("");
+		super("burnscaminando.gif");
 		
 	}
 	
 	public void atacar() {
-		super.atacar("burnsatacando.gif");
+		super.atacar("bursnatacando.gif");
 	}
 
 	

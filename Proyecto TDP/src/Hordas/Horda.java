@@ -7,7 +7,6 @@ import java.util.Random;
 
 import GameObject.GameObject;
 import GameObject.Personajes.Enemigos.*;
-import Juego.Juego;
 import Mapa.MapaLogico;
 
 public class Horda {
@@ -23,50 +22,42 @@ public class Horda {
 	}
 	
 	public GameObject crearEnemigo() {
+		int y;
+		int enemigo;
+		GameObject g= null;
+		Point p;
 		Random r = new Random();
-		int n = r.nextInt(4);
-		GameObject g= new Chief(mapaLogico);
-//		GameObject g = null;
-//		switch (n) {
-//		case 1: g= new Apu(mapaLogico); 
-//			break;	
-//		case 2:
-//			g= new Barney(mapaLogico);
-//			break;
-//			
-//		case 3:
-//			g= new BumbleeMan(mapaLogico);
-//			break;
-//			
-//		case 4:
-//			g= new Chief(mapaLogico);
-//			break;
-//			
-//		case 5:
-//			g= new Moe(mapaLogico);
-//			break;
-//			
-//		
-//			
-//			
-//		}
-		
-		crearEnemigo(g);
+
+		enemigo= r.nextInt(6)+1;
+			
+			switch(enemigo) {
+			case 1: g= new Apu(mapaLogico);
+				break;
+			case 2: g= new Barney(mapaLogico);
+				break;
+			case 3: g= new BumbleeMan(mapaLogico);
+				break;
+			case 4: g= new Chief(mapaLogico);
+				break;
+			case 5: g= new Moe(mapaLogico);
+				break;
+			case 6: g= new MrBurns(mapaLogico);
+				break;
+			}
+			
+			y= r.nextInt(301)+300;
+			p= new Point(1080, y);
+			g.setPosicion(p);
+			cantEnemigos--;			
+			
+
 		
 		return g;
 		
 	}
 	
-	private void crearEnemigo(GameObject g) {
-		if(g!=null) {
-			Point p= new Point(900, 400); //ESTO NO PUEDE ESTAR ACA, SINO ESTARIAN TODOS EN EL MISMO X E Y
-			g.setPosicion(p);
-		}
-	}
-	
-	
+
 	public boolean finalizarHorda( ) {
-		
-		return true;
+		return cantEnemigos==0;	//cuando es 0 retorna falso y corta el while
 	}
 }
