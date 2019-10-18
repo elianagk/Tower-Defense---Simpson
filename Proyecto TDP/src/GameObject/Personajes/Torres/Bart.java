@@ -31,13 +31,6 @@ public class Bart extends Torre {
 		return new Bart(mapaLogico);
 	}
 
-
-	@Override
-	public void Aceptar(Visitor v) {
-		v.visitar(this);
-		
-	}
-
 	@Override
 	public void aplicarDaño(int daño) {
 		// TODO Auto-generated method stub
@@ -49,18 +42,6 @@ public class Bart extends Torre {
 	public void accionar() {
 		super.mover(still_key);
 		
-	}
-
-
-	@Override
-	public Visitor getVisitor() {
-		return visitor;
-	}
-	
-	@Override
-	public JLabel getGrafico() {
-		last_dir= still_key;
-		return miObjetoGrafico;
 	}
 	
 }

@@ -13,7 +13,7 @@ public abstract  class Enemigo extends Personaje {
 	protected int puntaje;
 	protected int monedas;
 	
-	protected VisitorEnemigo visitor;
+//	protected VisitorEnemigo visitor;
 	
 	
 	public Enemigo(MapaLogico ml, GameObjectGrafico gog) {
@@ -45,23 +45,14 @@ public abstract  class Enemigo extends Personaje {
 		this.monedas = monedas;
 	}
 	
-	
-	
-	
-	
-	public void aceptar(Visitor v) {
-		
-	}
-	
-	
-	
-	
-	
 	@Override
-	public void atacar(Personaje e) {
-		
-		
+	public void Aceptar(Visitor v) {
+		v.visitar(this);
 	}
-	
-	
+
+	@Override
+	public void accionar() {
+		super.mover(backward_key);
+	}
+
 }

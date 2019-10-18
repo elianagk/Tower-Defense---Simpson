@@ -34,23 +34,9 @@ public class Abuelo extends Torre {
 		
 	}
 	
-	@Override
-	public JLabel getGrafico() {
-		last_dir= still_key;
-		return miObjetoGrafico;
-	}
-	
 	public GameObject clone() {
 		return new Abuelo(mapaLogico);
 	}
-
-	@Override
-	public void Aceptar(Visitor v) {
-		v.visitar(this);
-		
-	}
-
-	
 
 	@Override
 	public void accionar() {
@@ -60,13 +46,6 @@ public class Abuelo extends Torre {
 			mapaLogico.entidadAAgregar(new DisparoLogicoTorre(mapaLogico, this), this.getX()+50, this.getY());
 			contador=0;
 		}
-		
-		
 	}
-
-	@Override
-	public Visitor getVisitor() {
-		return visitor;
-	}
-
+	
 }

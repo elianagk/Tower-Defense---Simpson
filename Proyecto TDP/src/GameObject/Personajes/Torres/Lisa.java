@@ -26,21 +26,8 @@ public class Lisa extends Torre {
 		
 	}
 	
-	@Override
-	public JLabel getGrafico() {
-		
-		return miObjetoGrafico;
-	}
-
 	public GameObject clone() {
 		return new Lisa(mapaLogico);
-	}
-
-
-	@Override
-	public void Aceptar(Visitor v) {
-		v.visitar(this);
-		
 	}
 
 	@Override
@@ -56,10 +43,4 @@ public class Lisa extends Torre {
 		
 	}
 
-
-	@Override
-	public Visitor getVisitor() {
-		return visitor;
-	}
-	
 }

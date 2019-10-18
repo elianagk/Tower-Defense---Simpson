@@ -28,6 +28,7 @@ public abstract class GameObject {
 	public static final String still_key = "Still";
 
 	protected String last_dir = "";
+	protected Visitor visitor;
 
 	public GameObject(MapaLogico ml, GameObjectGrafico gog) {
 		posicion = null;
@@ -39,8 +40,6 @@ public abstract class GameObject {
 //	public void agregarEntidad() {
 //		mapaLogico.agregarEntidad(this, (int)posicion.getX(), (int)posicion.getY());
 //	}
-
-	public  abstract JLabel getGrafico() ;
 
 	public void setPosicion(Point p) {
 		posicion = p;
@@ -70,10 +69,6 @@ public abstract class GameObject {
 		miObjetoGrafico.setImagen(img);
 	}
 
-	public abstract GameObject clone();
-
-	public abstract void Aceptar(Visitor visitor);
-
 	public void setVida(int vida) {
 		this.vida = vida;
 	}
@@ -85,12 +80,21 @@ public abstract class GameObject {
 	public int getVidaTotal() {
 		return vidaTotal;
 	}
+	
+	public JLabel getGrafico() {
+		last_dir= still_key;
+		return miObjetoGrafico;
+	}
+	
+	public Visitor getVisitor() {	
+		return visitor ;
+	}
+	
+	public abstract void Aceptar(Visitor v);
+	
+	public abstract GameObject clone();
+	
 	public abstract void accionar();
 	
-	public abstract Visitor getVisitor();
 	
-	
-	
-	
-
 }

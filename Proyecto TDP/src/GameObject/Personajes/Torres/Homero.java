@@ -26,24 +26,10 @@ public class Homero extends Torre {
 		
 	}
 	
-	@Override
-	public JLabel getGrafico() {
-		last_dir= still_key;
-		return miObjetoGrafico;
-	}
-
 	public GameObject clone() {
 		return new Homero(mapaLogico);
 	}
-
-
-	@Override
-	public void Aceptar(Visitor v) {
-		v.visitar(this);
-		
-	}
-
-
+	
 	@Override
 	public void aplicarDaño(int daño) {
 		// TODO Auto-generated method stub
@@ -57,10 +43,4 @@ public class Homero extends Torre {
 		
 	}
 
-
-	@Override
-	public Visitor getVisitor() {
-		return visitor;
-	}
-	
 }

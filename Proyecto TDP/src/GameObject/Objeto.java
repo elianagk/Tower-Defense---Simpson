@@ -6,6 +6,7 @@ import VISITOR.Visitor;
 
 public abstract class Objeto extends GameObject {
 
+	
 	public Objeto(MapaLogico ml, GameObjectGrafico gog) {
 		super(ml, gog);
 	}
@@ -25,11 +26,4 @@ public abstract class Objeto extends GameObject {
 	@Override
 	public abstract void accionar() ;
 
-	@Override
-	public Visitor getVisitor() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	
 }

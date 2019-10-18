@@ -2,6 +2,7 @@ package VISITOR;
 
 import Disparo.DisparoLogico;
 import GameObject.Objeto;
+import GameObject.Objetos.ObjetoPrecioso;
 import GameObject.Personajes.Enemigo;
 import GameObject.Personajes.Torre;
 
@@ -24,7 +25,7 @@ public class VisitorAliado extends Visitor {
 	}
 
 	@Override
-	public void visitar(Objeto o) {
+	public void visitar(ObjetoPrecioso o) {
 		// TODO Auto-generated method stub
 		
 	}

@@ -8,7 +8,8 @@ import VISITOR.VisitorAliado;
 
 public abstract class Torre extends Personaje {
 	protected int precio;
-	protected VisitorAliado visitor;
+	
+//	protected VisitorAliado visitor;
 
 	public Torre(int precio, int vida, int daño, int alcance, MapaLogico mapaLogico, GameObjectGrafico gog) {
 		super(mapaLogico, gog);
@@ -31,10 +32,10 @@ public abstract class Torre extends Personaje {
 		return precio;
 	}
 	
-	public void aceptar(Visitor v) {
+	@Override
+	public void Aceptar(Visitor v) {
+		v.visitar(this);
 		
 	}
-	
-	
 	
 }

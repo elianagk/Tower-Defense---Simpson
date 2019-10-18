@@ -25,13 +25,6 @@ public class Moe extends Enemigo {
 		visitor= new VisitorEnemigo(this);
 		disparo= new DisparoLogicoEnemigo(mapaLogico, this);
 		daño=80;
-		System.out.println("5");
-	}
-
-	@Override
-	public JLabel getGrafico() {
-		last_dir= still_key;
-		return miObjetoGrafico;
 	}
 
 	@Override
@@ -45,23 +38,6 @@ public class Moe extends Enemigo {
 		return new Moe(mapaLogico);
 	}
 
-	@Override
-	public void Aceptar(Visitor v) {
-		v.visitar(this);
-		
-	}
-
-	@Override
-	public void accionar() {
-		super.mover(backward_key);
-		
-	}
-
-	@Override
-	public Visitor getVisitor() {
-		return visitor;
-	}
-	
 	public DisparoLogicoEnemigo getDisparo() {
 		return disparo;
 	}

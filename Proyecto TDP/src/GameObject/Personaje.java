@@ -15,7 +15,11 @@ public abstract class Personaje extends GameObject {
 		estaMuerto=false;
 	}
 
-	public abstract void atacar(Personaje e) ;
+
+	public void atacar(Personaje e) {
+		miObjetoGrafico.atacar();
+		e.aplicarDaño(daño);	
+	}
 	
 
 	public int getDaño() {
