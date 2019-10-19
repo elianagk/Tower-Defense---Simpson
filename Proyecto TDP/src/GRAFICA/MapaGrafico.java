@@ -57,10 +57,9 @@ public class MapaGrafico extends JLabel{
 	}
 	
 	public void removerEntidad(GameObject o) {
-		Container parent = o.getGrafico().getParent();
-		parent.remove(o.getGrafico());
-		parent.validate();
-		parent.repaint();
+		remove(o.getGrafico());
+		
+		repaint();
 	}
 	
 	public void setJuego(Juego juego) {

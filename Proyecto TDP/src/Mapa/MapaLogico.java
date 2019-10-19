@@ -26,6 +26,7 @@ public class MapaLogico  {
 	private String estado;
 
 
+
 	public MapaLogico (int width, int height, MapaGrafico mapag) {
 		entidades= new ArrayList<GameObject> ();
 		entidadesAAgregar= new ArrayList<GameObject> ();
@@ -34,6 +35,7 @@ public class MapaLogico  {
 		this.width=width;
 		this.height=height;
 		mapaGrafico= mapag;
+		
 		
 		
 	}
@@ -107,9 +109,12 @@ public class MapaLogico  {
 	}
 	
 	public void agregarEntidad(GameObject o) {
-		entidades.add(o);
-		mapaGrafico.agregarEntidad(o);		
-	}
+		
+			entidades.add(o);
+			mapaGrafico.agregarEntidad(o);
+			
+		}
+	
 	
 	public void actualizarListaDeEntidades() {
 		for (GameObject objEliminar : entidadesAEliminar) {

@@ -15,10 +15,12 @@ public class Horda {
 	protected int cantEnemigos;
 	
 	
+	
 	public Horda (Nivel nivel, MapaLogico mapaL, int cantEnemigos) {
 		this.mapaLogico=mapaL;
 		this.nivel=nivel;
 		this.cantEnemigos=cantEnemigos;
+		
 	}
 	
 	public GameObject crearEnemigo() {
