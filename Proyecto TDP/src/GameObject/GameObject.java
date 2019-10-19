@@ -15,6 +15,8 @@ public abstract class GameObject {
 	protected int vida, vidaTotal;
 	protected GameObjectGrafico miObjetoGrafico;
 	protected Point posicion;
+	protected Visitor visitor;
+	protected boolean esValido;		//para determinar si es valido hacer operaciones con el objeto
 
 	protected MapaLogico mapaLogico;
 
@@ -28,18 +30,14 @@ public abstract class GameObject {
 	public static final String still_key = "Still";
 
 	protected String last_dir = "";
-	protected Visitor visitor;
+	
 
 	public GameObject(MapaLogico ml, GameObjectGrafico gog) {
 		posicion = null;
 		mapaLogico = ml;
 		miObjetoGrafico = gog;
-//		mapaLogico.agregarEntidad(this, (int)posicion.getX(), (int)posicion.getY());
+		esValido=true;
 	}
-
-//	public void agregarEntidad() {
-//		mapaLogico.agregarEntidad(this, (int)posicion.getX(), (int)posicion.getY());
-//	}
 
 	public void setPosicion(Point p) {
 		posicion = p;
@@ -79,6 +77,14 @@ public abstract class GameObject {
 	
 	public int getVidaTotal() {
 		return vidaTotal;
+	}
+	
+	public boolean getEsValido() {
+		return esValido;
+	}
+	
+	public void setEsValido(boolean valido) {
+		esValido=valido;
 	}
 	
 	public JLabel getGrafico() {

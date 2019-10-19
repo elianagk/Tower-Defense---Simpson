@@ -2,17 +2,16 @@ package GameObject;
 
 import GameObjectGrafico.GameObjectGrafico;
 import Mapa.MapaLogico;
+import VISITOR.Visitor;
 
 public abstract class Personaje extends GameObject {
 	protected int velocidad;
 	protected int daño;
 	protected int alcance;
 	protected int jump_strenght = 10;
-	protected boolean estaMuerto;
 
 	public Personaje(MapaLogico ml, GameObjectGrafico gog) {
 		super(ml, gog);
-		estaMuerto=false;
 	}
 
 
@@ -67,7 +66,4 @@ public abstract class Personaje extends GameObject {
 		this.cambiarGrafico(this.last_dir);
 	}
 
-	public boolean estaMuerto() {
-		return estaMuerto;
-	}
 }

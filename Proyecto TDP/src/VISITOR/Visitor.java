@@ -18,14 +18,9 @@ public abstract class Visitor {
 	
 	
 	public abstract void visitar(Enemigo e);
+	
 	public  abstract void visitar(Torre t);
+	
 	public abstract void visitar(ObjetoPrecioso o);
 	
-	
-	
-
-	
-	
-	
-
 }
