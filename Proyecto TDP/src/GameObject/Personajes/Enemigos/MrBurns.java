@@ -23,15 +23,7 @@ public class MrBurns extends Enemigo {
 		visitor= new VisitorEnemigo(this);
 		disparo= new DisparoLogicoEnemigo(mapaLogico, this);
 		daño=95;
-		System.out.println("6");
 	}
-	
-	@Override
-	public JLabel getGrafico() {
-		last_dir= still_key;
-		return miObjetoGrafico;
-	}
-	
 	
 	@Override
 	public void atacar(Personaje e) {
@@ -44,27 +36,8 @@ public class MrBurns extends Enemigo {
 	public GameObject clone() {
 		return new MrBurns(mapaLogico);
 	}
-
-
-	@Override
-	public void Aceptar(Visitor v) {
-		v.visitar(this);
-		
-	}
-
-
 	
-
-	@Override
-	public void accionar() {
-		super.mover(backward_key);
-		
-	}
-
-
-	@Override
-	public Visitor getVisitor() {
-		
-		return visitor;
+	public DisparoLogicoEnemigo getDisparo() {
+		return disparo;
 	}
 }

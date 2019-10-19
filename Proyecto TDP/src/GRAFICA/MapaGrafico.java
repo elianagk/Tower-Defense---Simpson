@@ -63,7 +63,6 @@ public class MapaGrafico extends JLabel{
 		parent.repaint();
 	}
 	
-	
 	public void setJuego(Juego juego) {
 		this.juego=juego;
 	}

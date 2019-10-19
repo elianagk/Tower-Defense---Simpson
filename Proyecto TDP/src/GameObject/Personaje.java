@@ -8,12 +8,18 @@ public abstract class Personaje extends GameObject {
 	protected int daño;
 	protected int alcance;
 	protected int jump_strenght = 10;
+	protected boolean estaMuerto;
 
 	public Personaje(MapaLogico ml, GameObjectGrafico gog) {
 		super(ml, gog);
+		estaMuerto=false;
 	}
 
-	public abstract void atacar(Personaje e) ;
+
+	public void atacar(Personaje e) {
+		miObjetoGrafico.atacar();
+		e.aplicarDaño(daño);	
+	}
 	
 
 	public int getDaño() {
@@ -25,7 +31,7 @@ public abstract class Personaje extends GameObject {
 			vida -= daño;
 		else {
 			vida = 0;
-			mapaLogico.removerEntidad(this);
+			mapaLogico.entidadAEliminar(this);
 		}
 	}
 	
@@ -35,7 +41,6 @@ public abstract class Personaje extends GameObject {
 			miObjetoGrafico.setBounds(posicion.x, posicion.y, 90, 100);
 		}
 	}
-	
 	
 	public void mover(String dir){	
 		switch (dir) {
@@ -62,4 +67,7 @@ public abstract class Personaje extends GameObject {
 		this.cambiarGrafico(this.last_dir);
 	}
 
+	public boolean estaMuerto() {
+		return estaMuerto;
+	}
 }

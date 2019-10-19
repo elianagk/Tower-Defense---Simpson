@@ -42,26 +42,14 @@ public class MapaLogico  {
 		mapaGrafico= m;
 	}
 	
-	public void entidadAAgregar(GameObject o, int x, int y) {
-		Point p = new Point (x, y);
-		//System.out.println("X: "+x+" - Y: "+y);
-		o.setPosicion(p);
-		entidadesAAgregar.add(o);
-	}
-	
-	public void agregarEntidad(GameObject o) {
-		entidades.add(o);
-		mapaGrafico.agregarEntidad(o);		
-	}
-	
 //	public void operarconEntidades(Visitor v) {
 //		for (GameObject e: entidades) {
 //			e.Aceptar(v);
 //		}
 //	}
 	
-	public ArrayList hayEnElRango(GameObject g) {
-		ArrayList<GameObject> toReturn = new ArrayList();
+	public ArrayList<GameObject> hayEnElRango(GameObject g) {
+		ArrayList<GameObject> toReturn = new ArrayList<GameObject>();
 		Point posicion= g.getPosicion();
 		for (GameObject e: entidades) {
 			if (e.getX()+100==posicion.x ) {
@@ -73,13 +61,11 @@ public class MapaLogico  {
 		
 	}
 	
-	public ArrayList getEntidades() {
-		this.actualizarListaDeEntidades();
-		return entidades;
+	public ArrayList<GameObject> getEntidades() {
+		actualizarListaDeEntidades();
+		ArrayList<GameObject> entidadesActualizada = (ArrayList<GameObject>) entidades.clone();
+		return entidadesActualizada;
 	}
-	
-	
-	
 	
 	/**
 	 * recorre la lista de personajes para chequear colisiones
@@ -92,7 +78,7 @@ public class MapaLogico  {
 		ListIterator<GameObject> it= entidades.listIterator();
 		GameObject o;
 		while (!colisiones && it.hasNext()) {
-			o=it.next();
+			o=it.next(); 
 			colisiones= (x!=o.getPosicion().x && y!=o.getPosicion().y);
 		}
 		
@@ -111,6 +97,18 @@ public class MapaLogico  {
 	public void removerEntidad(GameObject o) {
 		entidades.remove(o);
 		mapaGrafico.removerEntidad(o);
+	}
+	
+	public void entidadAAgregar(GameObject o, int x, int y) {
+		Point p = new Point (x, y);
+		//System.out.println("X: "+x+" - Y: "+y);
+		o.setPosicion(p);
+		entidadesAAgregar.add(o);
+	}
+	
+	public void agregarEntidad(GameObject o) {
+		entidades.add(o);
+		mapaGrafico.agregarEntidad(o);		
 	}
 	
 	public void actualizarListaDeEntidades() {

@@ -31,23 +31,9 @@ public class Marge extends Torre {
 		
 	}
 	
-	@Override
-	public JLabel getGrafico() {
-		
-		return miObjetoGrafico;
-	}
-	
 	public GameObject clone() {
 		return new Marge(mapaLogico);
 	}
-
-
-	@Override
-	public void Aceptar(Visitor v) {
-		v.visitar(this);
-		
-	}
-
 
 	@Override
 	public void aplicarDaño(int daño) {
@@ -58,20 +44,12 @@ public class Marge extends Torre {
 
 	@Override
 	public void accionar() {
-		
 		miObjetoGrafico.atacar();
 		contador++;
 		if (contador==tiempo) {
 			mapaLogico.entidadAAgregar(new DisparoLogicoTorre(mapaLogico, this), this.getX()+50, this.getY());
 			contador=0;
 		}
-		
 	}
 
-
-	@Override
-	public Visitor getVisitor() {
-		return visitor;
-	}
-	
 }

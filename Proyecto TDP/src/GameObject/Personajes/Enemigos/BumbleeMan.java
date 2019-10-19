@@ -21,47 +21,10 @@ public class BumbleeMan extends Enemigo {
 		velocidad= 8;
 		visitor= new VisitorEnemigo(this);
 		daño=60; //solo por ser abeja
-		System.out.println("3");
-	}
-	
-	
-	@Override
-	public JLabel getGrafico() {
-		last_dir= still_key;
-		return miObjetoGrafico;
-	}
-
-	@Override
-	public void atacar(Personaje e) {
-		miObjetoGrafico.atacar();
-		e.aplicarDaño(daño);
-		
 	}
 	
 	public GameObject clone() {
 		return new BumbleeMan(mapaLogico);
-	}
-
-
-	@Override
-	public void Aceptar(Visitor v) {
-		v.visitar(this);
-		
-	}
-
-	
-
-
-	@Override
-	public void accionar() {
-		super.mover(backward_key);
-		
-	}
-
-
-	@Override
-	public Visitor getVisitor() {
-		return visitor;
 	}
 
 }

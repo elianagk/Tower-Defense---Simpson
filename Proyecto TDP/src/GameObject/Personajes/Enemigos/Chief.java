@@ -24,58 +24,20 @@ public class Chief extends Enemigo {
 		visitor= new VisitorEnemigo(this);
 		disparo= new DisparoLogicoEnemigo(mapaLogico, this);
 		daño=10;
-		System.out.println("4");
 	}
 	
-	
-	
-
 	@Override
 	public void atacar(Personaje e) {
 		miObjetoGrafico.atacar();
-		
-		
 		disparo.atacar(this);
-		
-		
 		e.aplicarDaño(daño);
-		
-		
 	}
 
 	public GameObject clone() {
 		return new Chief(mapaLogico);
 	}
-
-
-	@Override
-	public void Aceptar(Visitor v) {
-		v.visitar(this);
-		
-	}
-
-
 	
-
-
-	@Override
-	public void accionar() {
-		super.mover(backward_key);
-		
-	}
-
-
-	@Override
-	public Visitor getVisitor() {
-		return visitor;
-	}
-
-
-
-
-	@Override
-	public JLabel getGrafico() {
-		last_dir= still_key;
-		return miObjetoGrafico;
+	public DisparoLogicoEnemigo getDisparo() {
+		return disparo;
 	}
 }
