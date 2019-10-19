@@ -23,6 +23,7 @@ public class MapaLogico  {
 	private MapaGrafico mapaGrafico;
 	private int width, height;
 	private TiendaLogica tienda;
+	private String estado;
 
 
 	public MapaLogico (int width, int height, MapaGrafico mapag) {
@@ -119,6 +120,7 @@ public class MapaLogico  {
 			agregarEntidad(objAgregar);
 		}
 		
+		
 		entidadesAEliminar.clear();
 		entidadesAAgregar.clear();
 	}
@@ -126,6 +128,14 @@ public class MapaLogico  {
 	//Sirve para matar a apu desde un boton
 	public Juego getJuego() {
 		return mapaGrafico.getJuego();
+	}
+	
+	public void setEstado(String e) {
+		estado=e;
+	}
+	
+	public String getEstado() {
+		return estado;
 	}
 }
 

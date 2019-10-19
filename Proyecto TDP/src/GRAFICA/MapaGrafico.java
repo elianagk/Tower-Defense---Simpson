@@ -30,7 +30,7 @@ public class MapaGrafico extends JLabel{
 		this.setIcon(mapa);
 		this.addMouseListener(new Mouse() {
 		    @Override
-		    public void mouseClicked(MouseEvent e) {
+		    public void mouseClicked(MouseEvent e) {//Esto sirve para comprar
 		    	int x= e.getX();
 		    	int y= e.getY();
 		    	if(x<=600 && y>=300 && y<=600)
