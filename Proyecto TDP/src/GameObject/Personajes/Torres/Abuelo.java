@@ -27,10 +27,7 @@ public class Abuelo extends Torre {
 
 	@Override
 	public void atacar(Personaje e) {
-		//miObjetoGrafico.atacar();
-		//disparo.atacar(this);
-		//e.aplicarDaño(daño);
-		//EN REALIDAD EL Q ATACA ES EL DISPARO
+		accionar();
 		
 	}
 	
