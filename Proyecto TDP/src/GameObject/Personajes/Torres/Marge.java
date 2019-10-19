@@ -26,8 +26,7 @@ public class Marge extends Torre {
 	
 	@Override
 	public void atacar(Personaje e) {
-//		miObjetoGrafico.atacar();
-//		e.aplicarDaño(daño);
+		accionar();
 		
 		
 	}
