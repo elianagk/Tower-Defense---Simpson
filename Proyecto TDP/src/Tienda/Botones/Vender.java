@@ -1,5 +1,30 @@
 package Tienda.Botones;
 
-public class Vender {
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import State.Comprando;
+import State.Vendiendo;
+import Tienda.TiendaLogica;
+
+public class Vender extends Boton {
+	
+	
+	public Vender(TiendaLogica tiendaLogica, String s) {
+		super(tiendaLogica, s);
+		this.setEnabled(true);
+		
+		
+		this.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				tiendaLogica.getMapaLogico().setEstado(new Vendiendo(tiendaLogica.getMapaLogico()));
+				
+			}
+		});	
+	}
+	
+	
+	
 
 }

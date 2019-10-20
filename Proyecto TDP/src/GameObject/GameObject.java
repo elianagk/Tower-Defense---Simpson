@@ -12,7 +12,7 @@ import VISITOR.Visitor;
 
 public abstract class GameObject {
 
-	protected int vida, vidaTotal;
+	protected int vida, vidaTotal,costo;
 	protected GameObjectGrafico miObjetoGrafico;
 	protected Point posicion;
 	protected Visitor visitor;
@@ -95,6 +95,11 @@ public abstract class GameObject {
 	public Visitor getVisitor() {	
 		return visitor ;
 	}
+	
+	public int getCosto() {
+		return costo;
+	}
+	
 	
 	public abstract void Aceptar(Visitor v);
 	

@@ -7,7 +7,7 @@ import GameObject.Personajes.Torres.Homero;
 import GameObject.Personajes.Torres.Marge;
 import Tienda.TiendaLogica;
 
-public class BotonMarge extends Boton {
+public class BotonMarge extends BotonComprar {
 	
 	
 	public BotonMarge(String s, TiendaLogica tiendaLogica) {

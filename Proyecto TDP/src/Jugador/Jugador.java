@@ -10,7 +10,7 @@ public class Jugador  {
 	protected int puntaje;
 	
 	public Jugador () {
-		puntaje=0;
+		puntaje=600;
 	}
 	
 	public void setNombre (String nombre) {
