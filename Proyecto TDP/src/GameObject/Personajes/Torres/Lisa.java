@@ -30,12 +30,7 @@ public class Lisa extends Torre {
 		return new Lisa(mapaLogico);
 	}
 
-	@Override
-	public void aplicarDaño(int daño) {
-		// TODO Auto-generated method stub
-		
-	}
-
+	
 
 	@Override
 	public void accionar() {

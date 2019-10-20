@@ -14,22 +14,28 @@ import VISITOR.Visitor;
 import VISITOR.VisitorEnemigo;
 
 public class MrBurns extends Enemigo {
-	protected DisparoLogicoEnemigo disparo;
+	private int tiempo;
+	private int contador;
 	
 	public MrBurns(MapaLogico ml) {
 		super(ml, new MrBurnsGrafico());
 		vida= 100;
 		velocidad= 5;
 		visitor= new VisitorEnemigo(this);
-		disparo= new DisparoLogicoEnemigo(mapaLogico, this);
+		tiempo=10;
+		contador=0;
 		daño=95;
 	}
 	
 	@Override
 	public void atacar(Personaje e) {
+		super.mover(still_key);
 		miObjetoGrafico.atacar();
-		disparo.atacar(this);
-		e.aplicarDaño(daño);
+		contador++;
+		if (contador==tiempo) {
+			mapaLogico.entidadAAgregar(new DisparoLogicoEnemigo(mapaLogico, this), this.getX()+50, this.getY());
+			contador=0;
+		}
 		
 	}
 
@@ -37,7 +43,4 @@ public class MrBurns extends Enemigo {
 		return new MrBurns(mapaLogico);
 	}
 	
-	public DisparoLogicoEnemigo getDisparo() {
-		return disparo;
-	}
 }

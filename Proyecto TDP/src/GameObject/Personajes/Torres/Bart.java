@@ -31,11 +31,6 @@ public class Bart extends Torre {
 		return new Bart(mapaLogico);
 	}
 
-	@Override
-	public void aplicarDaño(int daño) {
-		// TODO Auto-generated method stub
-		
-	}
 
 
 	@Override
