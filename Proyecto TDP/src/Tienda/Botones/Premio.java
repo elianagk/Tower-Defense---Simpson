@@ -4,7 +4,7 @@ import Tienda.TiendaLogica;
 
 import GameObject.Objeto;
 import GameObject.Objetos.ObjetoPrecioso;
-public class Premio extends Boton {
+public class Premio extends BotonComprar {
 	
 	public Premio(String s, TiendaLogica tiendaLogica) {
 		super(s, tiendaLogica, null);

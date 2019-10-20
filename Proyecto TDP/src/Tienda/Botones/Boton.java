@@ -1,31 +1,26 @@
 package Tienda.Botones;
 
-
-
 import java.awt.Component;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.Insets;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.border.Border;
 
-import GameObject.GameObject;
-import GameObject.Personajes.Torre;
-import GameObject.Personajes.Torres.Bart;
 import Tienda.TiendaLogica;
+
 
 public class Boton extends JButton {
 	
 	protected TiendaLogica tiendaLogica;
 	
-	public Boton(String s, TiendaLogica tiendaLogica, GameObject t) {
-		this.tiendaLogica= tiendaLogica;
-		this.setText("");
+	
+	public Boton(TiendaLogica tienda, String s) {
+		tiendaLogica= tienda;
+		
 		this.setSize(100, 100);
 		this.setBorder(new RoundedBorder(50));
 		this.setContentAreaFilled(false);
@@ -33,14 +28,13 @@ public class Boton extends JButton {
 		ImageIcon fot= new ImageIcon(getClass().getClassLoader().getResource(s));
 		Icon i= new ImageIcon(fot.getImage().getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_DEFAULT));
 		this.setIcon(i);
-		this.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent arg0) {
-				//HAY QUE PREGUNTAR SI LE ALCANZA LA PLATA AL JUGADOR PARA PODER PONER ESTO
-				tiendaLogica.setEntidad(t.clone());
-			}
-		});	
 	}
+	
+	
+	
+	
+	
+	
 	
 	
 	private static class RoundedBorder implements Border {
@@ -67,6 +61,7 @@ public class Boton extends JButton {
 	        g.drawRoundRect(x, y, width-1, height-1, radius, radius);
 	    }
 	}
+	
 	
 	
 

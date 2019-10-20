@@ -7,7 +7,7 @@ import GameObject.Personajes.Torres.Homero;
 import GameObject.Personajes.Torres.Lisa;
 import Tienda.TiendaLogica;
 
-public class BotonLisa extends Boton {
+public class BotonLisa extends BotonComprar {
 	
 	
 	public BotonLisa(String s, TiendaLogica tiendaLogica) {

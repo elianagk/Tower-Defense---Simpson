@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 import Jugador.Jugador;
+import State.State;
 import Tienda.TiendaLogica;
 
 import java.awt.Point;
@@ -23,8 +24,7 @@ public class MapaLogico  {
 	private MapaGrafico mapaGrafico;
 	private int width, height;
 	private TiendaLogica tienda;
-	private String estado;
-
+	private State estado;
 
 
 	public MapaLogico (int width, int height, MapaGrafico mapag) {
@@ -38,6 +38,10 @@ public class MapaLogico  {
 		
 		
 		
+	}
+	
+	public MapaGrafico getMapaGrafico() {
+		return mapaGrafico;
 	}
 	
 	public void setMapaGrafico(MapaGrafico m) {
@@ -135,12 +139,18 @@ public class MapaLogico  {
 		return mapaGrafico.getJuego();
 	}
 	
-	public void setEstado(String e) {
-		estado=e;
+	public void setEstado(State s) {
+		estado=s;
+		estado.actuar();
 	}
 	
-	public String getEstado() {
-		return estado;
+	public TiendaLogica getTiendaLogica() {
+		return tienda;
 	}
+	
+	public Jugador getJugador() {
+		return jugador;
+	}
+	
 }
 

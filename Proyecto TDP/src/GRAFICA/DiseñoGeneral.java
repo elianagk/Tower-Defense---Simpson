@@ -6,7 +6,7 @@ import Juego.Juego;
 import Mapa.MapaLogico;
 import Tienda.TiendaGrafica;
 import Tienda.TiendaLogica;
-import Tienda.Botones.Boton;
+import Tienda.Botones.BotonComprar;
 
 
 
@@ -18,7 +18,7 @@ public class DiseñoGeneral extends JFrame{
 	 */
 	private JFrame frmJuego;
 	private MapaGrafico MAPA;
-	private Boton btnHomero;
+	private BotonComprar btnHomero;
 	private JLayeredPane PANELPRINCIPAL;
 	private TiendaGrafica PANELTIENDA;
 	int index=0;

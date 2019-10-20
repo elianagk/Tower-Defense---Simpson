@@ -7,13 +7,13 @@ import VISITOR.Visitor;
 import VISITOR.VisitorAliado;
 
 public abstract class Torre extends Personaje {
-	protected int precio;
+	
 	
 //	protected VisitorAliado visitor;
 
 	public Torre(int precio, int vida, int daño, int alcance, MapaLogico mapaLogico, GameObjectGrafico gog) {
 		super(mapaLogico, gog);
-		this.precio= precio;
+		costo= precio;
 		this.vida= vida;
 		this.daño= daño;
 		this.alcance=alcance;
@@ -28,9 +28,7 @@ public abstract class Torre extends Personaje {
 	}
 	//DEBERIAMOS SABER A QUIEN ATACAMOS PARA PODER SACARLE VIDA
 
-	public int getCosto() {
-		return precio;
-	}
+	
 	
 	@Override
 	public void Aceptar(Visitor v) {
