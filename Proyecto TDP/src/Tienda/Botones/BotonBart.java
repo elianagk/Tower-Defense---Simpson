@@ -10,7 +10,7 @@ import javax.swing.ImageIcon;
 import GameObject.Personajes.Torres.Bart;
 import Tienda.TiendaLogica;
 
-public class BotonBart extends Boton {
+public class BotonBart extends BotonComprar {
 	
 	public BotonBart(String s, TiendaLogica tiendaLogica) {
 		super(s, tiendaLogica, new Bart(tiendaLogica.getMapaLogico()));
