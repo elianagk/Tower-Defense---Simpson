@@ -30,6 +30,7 @@ public abstract class Personaje extends GameObject {
 			vida -= daño;
 		else {
 			vida = 0;
+			esValido=false;
 			mapaLogico.entidadAEliminar(this);
 		}
 	}

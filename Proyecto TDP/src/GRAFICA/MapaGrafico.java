@@ -47,7 +47,6 @@ public class MapaGrafico extends JLabel{
 	public void agregarEntidad(GameObject o) {
 		JLabel toAdd= o.getGrafico();
 		toAdd.setBounds(o.getX(), o.getY(), 100, 100);
-		//System.out.println("Coordenada x: "+o.getX()+" // Coordenada y: "+o.getY());
 		this.add(toAdd);	
 		this.repaint();
 	}
