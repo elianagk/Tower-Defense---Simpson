@@ -35,11 +35,7 @@ public class Marge extends Torre {
 		return new Marge(mapaLogico);
 	}
 
-	@Override
-	public void aplicarDaño(int daño) {
-		// TODO Auto-generated method stub
-		
-	}
+	
 
 
 	@Override

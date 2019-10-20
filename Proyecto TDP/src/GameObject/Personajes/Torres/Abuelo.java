@@ -13,14 +13,12 @@ import VISITOR.Visitor;
 import VISITOR.VisitorAliado;
 
 public class Abuelo extends Torre {
-	protected DisparoLogicoTorre disparo;
 	protected int tiempo;
 	protected int contador;
 	
 	public Abuelo(MapaLogico mapaLogico) {
-		super(80, 30, 10, 1, mapaLogico, new AbueloGrafico());
+		super(80, 30, 50, 1, mapaLogico, new AbueloGrafico());
 		visitor= new VisitorAliado(this);
-		disparo= new DisparoLogicoTorre(this.mapaLogico, this);
 		tiempo=20;
 		contador=0;
 	}
