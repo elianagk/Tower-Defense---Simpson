@@ -30,12 +30,7 @@ public class Homero extends Torre {
 		return new Homero(mapaLogico);
 	}
 	
-	@Override
-	public void aplicarDaño(int daño) {
-		// TODO Auto-generated method stub
-		
-	}
-
+	
 
 	@Override
 	public void accionar() {

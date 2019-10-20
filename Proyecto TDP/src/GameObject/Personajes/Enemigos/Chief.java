@@ -5,6 +5,7 @@ package GameObject.Personajes.Enemigos;
 import javax.swing.JLabel;
 
 import Disparo.DisparoLogicoEnemigo;
+import Disparo.DisparoLogicoTorre;
 import GameObject.GameObject;
 import GameObject.Personaje;
 import GameObject.Personajes.Enemigo;
@@ -15,29 +16,33 @@ import VISITOR.Visitor;
 import VISITOR.VisitorEnemigo;
 
 public class Chief extends Enemigo {
-	protected DisparoLogicoEnemigo disparo;
+	private int tiempo;
+	private int contador;
 	
 	public Chief(MapaLogico ml) {
 		super(ml, new ChiefGrafico());
 		vida= 100;
 		velocidad= 6;
 		visitor= new VisitorEnemigo(this);
-		disparo= new DisparoLogicoEnemigo(mapaLogico, this);
+		tiempo=10;
+		contador=0;
 		daño=10;
 	}
 	
 	@Override
 	public void atacar(Personaje e) {
+		super.mover(still_key);
 		miObjetoGrafico.atacar();
-		disparo.atacar(this);
-		e.aplicarDaño(daño);
+		contador++;
+		if (contador==tiempo) {
+			mapaLogico.entidadAAgregar(new DisparoLogicoEnemigo(mapaLogico, this), this.getX()+50, this.getY());
+			contador=0;
+		}
 	}
 
 	public GameObject clone() {
 		return new Chief(mapaLogico);
 	}
 	
-	public DisparoLogicoEnemigo getDisparo() {
-		return disparo;
-	}
+	
 }
