@@ -58,6 +58,9 @@ public class Horda {
 		
 	}
 	
+	public int getCantEnemigos() {
+		return cantEnemigos;
+	}
 
 	public boolean finalizarHorda( ) {
 		return cantEnemigos==0;	//cuando es 0 retorna falso y corta el while
