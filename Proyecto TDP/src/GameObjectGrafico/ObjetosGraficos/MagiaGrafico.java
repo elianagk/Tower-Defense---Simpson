@@ -5,8 +5,8 @@ import GameObjectGrafico.ObjetoGrafico;
 
 public class MagiaGrafico extends ObjetoGrafico{
 
-	public MagiaGrafico() {
-		super("");
+	public MagiaGrafico(String s) {
+		super(s);
 		
 	}
 
