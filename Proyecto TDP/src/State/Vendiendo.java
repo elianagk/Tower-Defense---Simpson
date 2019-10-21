@@ -42,13 +42,12 @@ public class Vendiendo implements State {
 		    	
 		    	while (it.hasNext() && !encontre) {
 		    		GameObject t= it.next();
+		    		
 		    		if (t.getX()==((x/100)*100) && t.getY()==((y/100)*100)) {
-		    			encontre=true;
-		    			t.Aceptar(tienda.getVisitor());
-		    			
+		    			encontre=true;		    			
+		    			t.Aceptar(tienda.getVisitor());		    			
 		    		}
-		    	}
-		    	juego.setJugar();		    	
+		    	}		    			    
 		    }
 		});
 		

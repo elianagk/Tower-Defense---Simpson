@@ -79,6 +79,10 @@ public class MapaGrafico extends JLabel{
 		return juego;
 	}
 	
+	public TiendaLogica getTiendaLogica() {
+		return tiendaLogica;
+	}
+	
 	public void setMouseListener(MouseListener m) {
 		actualMouseListener=m;
 	}

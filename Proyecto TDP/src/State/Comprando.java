@@ -29,9 +29,10 @@ public class Comprando implements State {
 		    public void mouseClicked(MouseEvent e) {
 		    	int x= e.getX();
 		    	int y= e.getY();
-		    	if(y>=300 && y<=600) 
+		    	if(y>=300 && y<=600) {
 		    		mapaGrafico.avisarTienda((x/100)*100, (y/100)*100);
-		    	juego.setJugar();
+		    		juego.setJugar();
+		    	}
 		    	
 		    }
 		});

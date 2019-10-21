@@ -6,28 +6,26 @@ import GameObject.Personajes.Torre;
 import Tienda.TiendaLogica;
 
 public class VisitorVender extends Visitor {
-	protected TiendaLogica tienda;
+	protected TiendaLogica tiendaLogica;
 	
 	public VisitorVender(TiendaLogica tienda) {
-		this.tienda=tienda;
+		this.tiendaLogica=tienda;
 	}
 
 	@Override
 	public void visitar(Enemigo e) {
-		tienda.vender(e);
-		
+
 	}
 
 	@Override
 	public void visitar(Torre t) {
-		tienda.vender(t);
-		
+		tiendaLogica.vender(t);	
+		tiendaLogica.getJuego().setJugar();
 	}
 
 	@Override
 	public void visitar(ObjetoPrecioso o) {
-		tienda.vender(o);
-		
+
 	}
 
 }

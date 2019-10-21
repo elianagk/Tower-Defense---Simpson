@@ -74,11 +74,15 @@ public class DiseñoGeneral extends JFrame{
 		frmJuego.setVisible(true);
 		PANELPRINCIPAL.setLayout(null);
 		
-		mapal= new MapaLogico(PANELPRINCIPAL.getWidth(), PANELPRINCIPAL.getHeight(), null); 
+		mapal= new MapaLogico(PANELPRINCIPAL.getWidth(), PANELPRINCIPAL.getHeight()); 
 		tiendaLogica= new TiendaLogica(mapal);
 		MAPA = new MapaGrafico(tiendaLogica, "casa.png", PANELPRINCIPAL.getWidth(), PANELPRINCIPAL.getHeight());
 		mapal.setMapaGrafico(MAPA);
-
+		mapal.setTiendaLogica(tiendaLogica);
+		
+		juego = new Juego(MAPA, mapal);
+		tiendaLogica.setJugador(juego.getJugador());
+		
 		PANELTIENDA= new TiendaGrafica(tiendaLogica);
 		PANELPRINCIPAL.add(PANELTIENDA);
 		PANELPRINCIPAL.setLayer(PANELTIENDA, 0);
@@ -97,7 +101,7 @@ public class DiseñoGeneral extends JFrame{
 		//Icon icono = new ImageIcon(fot.getImage().getScaledInstance(jLabel1.getWidth(), jLabel1.getHeight(), Image.SCALE_DEFAULT));
 		//jLabel1.setIcon(icono);
 		
-		juego = new Juego(MAPA, mapal);
+		
 		tiempo = new ContadorTiempo(juego);
 		tiempo.start();
 		

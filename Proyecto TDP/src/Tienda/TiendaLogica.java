@@ -29,7 +29,11 @@ public class TiendaLogica {
 		g= null;
 		mapaLogico= mapa;
 		visitor= new VisitorVender(this);
-		jugador= mapaLogico.getJuego().getJugador();
+		jugador=null;
+	}
+	
+	public void setJugador(Jugador jugador) {
+		this.jugador=jugador;
 	}
 	
 	public void revisarTienda(int x, int y) {

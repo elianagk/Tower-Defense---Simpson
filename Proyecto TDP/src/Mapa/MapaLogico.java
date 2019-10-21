@@ -23,21 +23,27 @@ public class MapaLogico  {
 	private Jugador jugador;
 	private MapaGrafico mapaGrafico;
 	private int width, height;
-	private TiendaLogica tienda;
+	private TiendaLogica tiendaLogica;
 	
 
 
-	public MapaLogico (int width, int height, MapaGrafico mapag) {
+	public MapaLogico (int width, int height) {
 		entidades= new ArrayList<GameObject> ();
 		entidadesAAgregar= new ArrayList<GameObject> ();
 		entidadesAEliminar= new ArrayList<GameObject> ();
 		this.width=width;
 		this.height=height;
-		mapaGrafico= mapag;
+		mapaGrafico=null;
+		tiendaLogica=null;
+		jugador=null;
 	}
 	
 	public MapaGrafico getMapaGrafico() {
 		return mapaGrafico;
+	}
+	
+	public void setTiendaLogica(TiendaLogica tiendaLogica) {
+		this.tiendaLogica=tiendaLogica;
 	}
 	
 	public void setMapaGrafico(MapaGrafico m) {
@@ -132,7 +138,7 @@ public class MapaLogico  {
 	
 	
 	public TiendaLogica getTiendaLogica() {
-		return tienda;
+		return tiendaLogica;
 	}
 	
 }
