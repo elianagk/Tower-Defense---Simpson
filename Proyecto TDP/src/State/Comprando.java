@@ -1,34 +1,45 @@
 package State;
 
 import java.awt.event.MouseEvent;
+import java.util.Random;
 
+import GRAFICA.MapaGrafico;
 import GRAFICA.Mouse;
+import Juego.Juego;
 import Mapa.MapaLogico;
 
 public class Comprando extends State {
 	
-	protected MapaLogico mapa;
+	protected Juego juego;
+	protected MapaGrafico mapa;
 	
-	public Comprando(MapaLogico mapa) {
-		this.mapa= mapa;
+	public Comprando(Juego j) {
+		juego=j;
+		mapa= j.getMapag();
 	}
 
 	@Override
 	public void actuar() {
-		mapa.getMapaGrafico().removeMouseListener(actualMouseListener);
-		mapa.getMapaGrafico().addMouseListener(actualMouseListener= new Mouse() {
+
+		mapa.removeMouseListener(actualMouseListener);
+		mapa.addMouseListener(actualMouseListener= new Mouse() {
+
 		    @Override
 		    public void mouseClicked(MouseEvent e) {
 		    	int x= e.getX();
 		    	int y= e.getY();
-		    	if( y>=300 && y<=700)
-		    		mapa.getMapaGrafico().avisarTienda((x/100)*100, (y/100)*100);
+		    	if( y>=300 && y<=600) 
+		    		mapa.avisarTienda((x/100)*100, (y/100)*100);
+		    	
 		    }
 		});
 		
-		mapa.setEstado(new Jugando(mapa));
+		juego.setJugar();
 		
 	}
+	
+	
+	
 
 	
 
