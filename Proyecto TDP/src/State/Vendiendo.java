@@ -12,7 +12,7 @@ import Mapa.MapaLogico;
 import Tienda.TiendaLogica;
 
 
-public class Vendiendo extends State {
+public class Vendiendo implements State {
 	protected MapaLogico mapaL;
 	protected TiendaLogica tienda;
 	protected Juego juego;
@@ -28,8 +28,8 @@ public class Vendiendo extends State {
 	@Override
 	public void actuar() {
 
-		mapaG.removeMouseListener(actualMouseListener);
-		mapaG.addMouseListener(actualMouseListener= new Mouse() {
+		mapaG.removeMouseListener(mapaG.getMouseListener());
+		mapaG.setMouseListener( new Mouse() {
 
 		    @Override
 		    public void mouseClicked(MouseEvent e) {

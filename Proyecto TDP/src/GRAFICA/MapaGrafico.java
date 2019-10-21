@@ -13,6 +13,7 @@ import javax.swing.JPanel;
 
 import java.awt.*;
 import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
 
 public class MapaGrafico extends JLabel{
@@ -20,6 +21,7 @@ public class MapaGrafico extends JLabel{
 	private TiendaLogica tiendaLogica;
 	private Juego juego;
 	private ContadorTiempo tiempo;
+	protected static MouseListener actualMouseListener;
 	
 	public MapaGrafico(TiendaLogica tiendal, String s, int ancho, int alto) {
 		tiendaLogica= tiendal;
@@ -68,5 +70,13 @@ public class MapaGrafico extends JLabel{
 	//Sirve para matar a apu desde un boton
 	public Juego getJuego() {
 		return juego;
+	}
+	
+	public void setMouseListener(MouseListener m) {
+		actualMouseListener=m;
+	}
+	
+	public MouseListener getMouseListener() {
+		return actualMouseListener;
 	}
 }

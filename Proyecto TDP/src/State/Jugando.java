@@ -5,7 +5,7 @@ import Juego.Juego;
 import Mapa.MapaLogico;
 
 
-public class Jugando extends State {
+public class Jugando implements State {
 	
 	protected Juego juego;
 	protected MapaGrafico mapa;
@@ -15,14 +15,14 @@ public class Jugando extends State {
 	public Jugando(Juego j) {
 		juego =j;
 		mapa=juego.getMapag();
-		actualMouseListener=null;		//suponiendo que se inicializa el juego con este estado
+		mapa.setMouseListener(null);		//suponiendo que se inicializa el juego con este estado
 
 	}
 
 	@Override
 	public void actuar() {
-		mapa.removeMouseListener(actualMouseListener);
-		actualMouseListener=null;
+		mapa.removeMouseListener(mapa.getMouseListener());
+		mapa.setMouseListener(null);
 	}
 
 	
