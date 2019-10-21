@@ -23,7 +23,7 @@ public class MapaGrafico extends JLabel{
 	private TiendaLogica tiendaLogica;
 	private Juego juego;
 	private ContadorTiempo tiempo;
-	protected static MouseListener actualMouseListener;
+	protected MouseListener actualMouseListener;
 	protected State queHagoConElClick;
 	
 	public MapaGrafico(TiendaLogica tiendal, String s, int ancho, int alto) {
@@ -33,20 +33,20 @@ public class MapaGrafico extends JLabel{
 		ImageIcon fot1= new ImageIcon(getClass().getClassLoader().getResource("CASA.png"));
 		Icon mapa= new ImageIcon(fot1.getImage().getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_DEFAULT));
 		this.setIcon(mapa);
-		queHagoConElClick= new Jugando(juego);	//se rompe porque el jugando requiere del mapa grafico que se esta inicializando...
+		
 		
 		//---------------------------------------------
-		this.addMouseListener(new Mouse() {
-		    @Override
-		    public void mouseClicked(MouseEvent e) {//Esto sirve para comprar
-		    	queHagoConElClick.actuar();	//el mouse listener deberia funcionar y le tenemos que decir como
-//		    	int x= e.getX();
-//		    	int y= e.getY();
-//		    	if(x<=600 && y>=300 && y<=600)
+//		this.addMouseListener(new Mouse() {
+//		    @Override
+//		    public void mouseClicked(MouseEvent e) {//Esto sirve para comprar
+//		    	queHagoConElClick.actuar();	//el mouse listener deberia funcionar y le tenemos que decir como
+////		    	int x= e.getX();
+////		    	int y= e.getY();
+////		    	if(x<=600 && y>=300 && y<=600)
 //		    		avisarTienda((x/100)*100, (y/100)*100);
-		    }
-		});
-		
+//		    }
+//		});
+//		
 
 //		juego = new Juego(this);
 //		tiempo = new ContadorTiempo(juego);
@@ -87,7 +87,4 @@ public class MapaGrafico extends JLabel{
 		return actualMouseListener;
 	}
 	
-	public void setState(State s) {
-		queHagoConElClick= s;
-	}
 }

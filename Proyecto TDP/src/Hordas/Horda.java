@@ -48,7 +48,7 @@ public class Horda {
 			}
 			
 			y= r.nextInt(301)+300;
-			p= new Point(1080, y);
+			p= new Point(1080, (y/100)*100);
 			g.setPosicion(p);
 			cantEnemigos--;			
 			

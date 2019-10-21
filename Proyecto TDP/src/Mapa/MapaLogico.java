@@ -31,13 +31,9 @@ public class MapaLogico  {
 		entidades= new ArrayList<GameObject> ();
 		entidadesAAgregar= new ArrayList<GameObject> ();
 		entidadesAEliminar= new ArrayList<GameObject> ();
-		jugador= new Jugador();
 		this.width=width;
 		this.height=height;
 		mapaGrafico= mapag;
-		
-		
-		
 	}
 	
 	public MapaGrafico getMapaGrafico() {
@@ -47,12 +43,6 @@ public class MapaLogico  {
 	public void setMapaGrafico(MapaGrafico m) {
 		mapaGrafico= m;
 	}
-	
-//	public void operarconEntidades(Visitor v) {
-//		for (GameObject e: entidades) {
-//			e.Aceptar(v);
-//		}
-//	}
 	
 	public ArrayList<GameObject> hayEnElRango(GameObject g) {
 		ArrayList<GameObject> toReturn = new ArrayList<GameObject>();
@@ -143,10 +133,6 @@ public class MapaLogico  {
 	
 	public TiendaLogica getTiendaLogica() {
 		return tienda;
-	}
-	
-	public Jugador getJugador() {
-		return jugador;
 	}
 	
 }

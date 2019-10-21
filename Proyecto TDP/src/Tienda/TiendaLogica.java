@@ -29,16 +29,15 @@ public class TiendaLogica {
 		g= null;
 		mapaLogico= mapa;
 		visitor= new VisitorVender(this);
-		jugador= mapa.getJugador();
+		jugador= mapaLogico.getJuego().getJugador();
 	}
 	
 	public void revisarTienda(int x, int y) {
-		if (ProximaEntidad()) {
+		if (ProximaEntidad() && g.getCosto()<=jugador.getMonedas()) {
 			mapaLogico.entidadAAgregar(g, x, y);
-			jugador.setPuntaje(jugador.getPuntaje()-g.getCosto());
+			jugador.setMonedas(jugador.getMonedas()-g.getCosto());
 			
 			g= null;
-			
 		}
 	}
 	
@@ -50,16 +49,16 @@ public class TiendaLogica {
 			retornoDinero=torre.getCosto()/2;
 		
 		mapaLogico.entidadAEliminar(torre);
-		jugador.setPuntaje(jugador.getPuntaje()+retornoDinero);
+		jugador.setMonedas(jugador.getMonedas()+retornoDinero);
 		
 	}
 	
 	public void vender(Enemigo e) {		// por si se selecciona a un enemigo, retorna -1 para mostrar que no es valido y siga esperando que se venda una torre
-		jugador.setPuntaje(jugador.getPuntaje());
+
 	}
 	
 	public void vender(Objeto e) {
-		jugador.setPuntaje(jugador.getPuntaje());
+	
 	}
 	
 	public void setEntidad(GameObject o) {

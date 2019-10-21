@@ -32,16 +32,16 @@ public class Juego {
 	
 	
 	
-	public Juego(MapaGrafico gui, MapaLogico mapaLogico){
+	public Juego(MapaGrafico mapaGrafico, MapaLogico mapaLogico){
 		niveles= new Nivel[1];
 		niveles[0]= new Nivel(this, mapaLogico);
-		mapaGrafico=gui;
+		jugador=new Jugador();
+		this.mapaGrafico=mapaGrafico;
 		this.mapaLogico= mapaLogico;
 		comenzarNiveles();
 		jugar= new Jugando(this);
 		comprar= new Comprando(this);
 		vender= new Vendiendo(this);
-		estado= jugar;
 	}
 	
 	public void mover(){
@@ -67,7 +67,7 @@ public class Juego {
 		niveles[0].ejecutarHordas();
 	}
 	
-	public MapaGrafico getMapag() {
+	public MapaGrafico getMapaGrafico() {
 		return mapaGrafico;
 	}
 	
@@ -88,5 +88,9 @@ public class Juego {
 	public void setVender() {
 		estado= vender;
 		estado.actuar();
+	}
+	
+	public Jugador getJugador() {
+		return jugador;
 	}
 }

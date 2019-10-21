@@ -1,6 +1,7 @@
 package State;
 
 import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -13,29 +14,29 @@ import Tienda.TiendaLogica;
 
 
 public class Vendiendo implements State {
-	protected MapaLogico mapaL;
+	protected MapaLogico mapaLogico;
 	protected TiendaLogica tienda;
 	protected Juego juego;
-	protected MapaGrafico mapaG;
+	protected MapaGrafico mapaGrafico;
 	
 	public Vendiendo(Juego j) {
 		juego=j;
-		mapaG= j.getMapag();
-		mapaL=j.getMapaL();
-		tienda=mapaL.getTiendaLogica();
+		mapaGrafico= j.getMapaGrafico();
+		mapaLogico=j.getMapaL();
+		tienda=mapaLogico.getTiendaLogica();
 	}
 
 	@Override
 	public void actuar() {
-
-		mapaG.removeMouseListener(mapaG.getMouseListener());
-		mapaG.addMouseListener( new Mouse() {
+		MouseListener mouseListener;
+		mapaGrafico.removeMouseListener(mapaGrafico.getMouseListener());
+		mapaGrafico.addMouseListener( mouseListener= new Mouse() {
 
 		    @Override
 		    public void mouseClicked(MouseEvent e) {
 		    	int x= e.getX();
 		    	int y= e.getY();
-		    	ArrayList<GameObject> entidades= mapaL.getEntidades();
+		    	ArrayList<GameObject> entidades= mapaLogico.getEntidades();
 		    	Iterator<GameObject> it= entidades.iterator();
 		    	boolean encontre= false;
 		    	
@@ -47,12 +48,11 @@ public class Vendiendo implements State {
 		    			
 		    		}
 		    	}
-		    	
+		    	juego.setJugar();		    	
 		    }
 		});
 		
-		juego.setJugar();
-		
+		mapaGrafico.setMouseListener(mouseListener);		
 	}
 
 	

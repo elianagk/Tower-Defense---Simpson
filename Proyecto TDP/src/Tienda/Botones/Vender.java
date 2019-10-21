@@ -11,15 +11,14 @@ public class Vender extends Boton {
 	
 	
 	public Vender(TiendaLogica tiendaLogica, String s) {
-		super(tiendaLogica, s, new Vendiendo(tiendaLogica.getJuego()));
+		super(tiendaLogica, s);
 		this.setEnabled(true);
 		
 		
 		this.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				tiendaLogica.getMapaLogico().getMapaGrafico().setState(estado);
-				tiendaLogica.getMapaLogico().getJuego().setVender();
+				tiendaLogica.getJuego().setVender();
 				
 			}
 		});	
