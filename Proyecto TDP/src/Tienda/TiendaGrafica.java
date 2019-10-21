@@ -47,7 +47,7 @@ public class TiendaGrafica extends JPanel {
 	
 	dinero= new JLabel("Puntaje=");
 	String p=Integer.toString(tienda.monedas());
-	 monedas = new JLabel();
+	monedas = new JLabel();
 	this.add(dinero);
 	this.add(monedas);
 	

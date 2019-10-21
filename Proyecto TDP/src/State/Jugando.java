@@ -14,7 +14,7 @@ public class Jugando implements State {
 
 	public Jugando(Juego j) {
 		juego =j;
-		mapa=juego.getMapag();
+		mapa= juego.getMapag();
 		mapa.setMouseListener(null);		//suponiendo que se inicializa el juego con este estado
 
 	}

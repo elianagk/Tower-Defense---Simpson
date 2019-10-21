@@ -25,13 +25,14 @@ public class BotonComprar extends Boton {
 	
 	
 	public BotonComprar(String s, TiendaLogica tiendaLogica, GameObject t) {
-		super(tiendaLogica, s);
+		super(tiendaLogica, s, new Comprando(tiendaLogica.getMapaLogico().getJuego()));
 		
 		
 		
 		this.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
+				tiendaLogica.getMapaLogico().getMapaGrafico().setState(estado);
 				tiendaLogica.getMapaLogico().getJuego().setComprar();
 				tiendaLogica.setEntidad(t.clone());
 			}

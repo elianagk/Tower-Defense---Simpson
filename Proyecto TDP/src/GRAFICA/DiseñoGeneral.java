@@ -7,7 +7,8 @@ import Mapa.MapaLogico;
 import Tienda.TiendaGrafica;
 import Tienda.TiendaLogica;
 import Tienda.Botones.BotonComprar;
-
+import State.State;
+import State.Vendiendo;
 
 
 public class DiseñoGeneral extends JFrame{
@@ -26,6 +27,10 @@ public class DiseñoGeneral extends JFrame{
 	private ContadorTiempo tiempo;
 	private TiendaLogica tiendaLogica;
 	private MapaLogico mapal;
+	
+	private State vendiendo;
+	private State comprando;
+	private State jugando;
 	
 
 	/**
@@ -73,8 +78,7 @@ public class DiseñoGeneral extends JFrame{
 		tiendaLogica= new TiendaLogica(mapal);
 		MAPA = new MapaGrafico(tiendaLogica, "casa.png", PANELPRINCIPAL.getWidth(), PANELPRINCIPAL.getHeight());
 		mapal.setMapaGrafico(MAPA);
-		
-		
+
 		PANELTIENDA= new TiendaGrafica(tiendaLogica);
 		PANELPRINCIPAL.add(PANELTIENDA);
 		PANELPRINCIPAL.setLayer(PANELTIENDA, 0);

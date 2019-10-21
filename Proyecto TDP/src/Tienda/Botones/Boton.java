@@ -11,15 +11,16 @@ import javax.swing.JButton;
 import javax.swing.border.Border;
 
 import Tienda.TiendaLogica;
-
+import State.State;
 
 public class Boton extends JButton {
 	
 	protected TiendaLogica tiendaLogica;
+	protected State estado;
 	
-	
-	public Boton(TiendaLogica tienda, String s) {
+	public Boton(TiendaLogica tienda, String s, State es) {
 		tiendaLogica= tienda;
+		estado= es;
 		
 		this.setSize(100, 100);
 		this.setBorder(new RoundedBorder(50));
