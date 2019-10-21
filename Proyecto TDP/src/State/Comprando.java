@@ -5,7 +5,7 @@ import java.awt.event.MouseEvent;
 import GRAFICA.Mouse;
 import Mapa.MapaLogico;
 
-public class Comprando implements State {
+public class Comprando extends State {
 	
 	protected MapaLogico mapa;
 	
@@ -15,7 +15,8 @@ public class Comprando implements State {
 
 	@Override
 	public void actuar() {
-		mapa.getMapaGrafico().addMouseListener(new Mouse() {
+		mapa.getMapaGrafico().removeMouseListener(actualMouseListener);
+		mapa.getMapaGrafico().addMouseListener(actualMouseListener= new Mouse() {
 		    @Override
 		    public void mouseClicked(MouseEvent e) {
 		    	int x= e.getX();

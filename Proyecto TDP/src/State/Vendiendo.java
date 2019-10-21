@@ -9,7 +9,7 @@ import GameObject.GameObject;
 import Mapa.MapaLogico;
 import Tienda.TiendaLogica;
 
-public class Vendiendo implements State {
+public class Vendiendo extends State {
 	protected MapaLogico mapa;
 	protected TiendaLogica tienda;
 	
@@ -22,7 +22,8 @@ public class Vendiendo implements State {
 
 	@Override
 	public void actuar() {
-		mapa.getMapaGrafico().addMouseListener(new Mouse() {
+		mapa.getMapaGrafico().removeMouseListener(actualMouseListener);
+		mapa.getMapaGrafico().addMouseListener(actualMouseListener= new Mouse() {
 		    @Override
 		    public void mouseClicked(MouseEvent e) {
 		    	int x= e.getX();
