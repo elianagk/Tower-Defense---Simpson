@@ -4,30 +4,34 @@ import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+import GRAFICA.MapaGrafico;
 import GRAFICA.Mouse;
 import GameObject.GameObject;
+import Juego.Juego;
 import Mapa.MapaLogico;
 import Tienda.TiendaLogica;
 
 public class Vendiendo implements State {
-	protected MapaLogico mapa;
+	protected Juego juego;
+	protected MapaGrafico mapaG;
+	protected MapaLogico mapaL;
 	protected TiendaLogica tienda;
 	
-	
-	
-	public Vendiendo(MapaLogico mapa) {
-		this.mapa= mapa;
-		tienda= mapa.getTiendaLogica();
+	public Vendiendo(Juego j) {
+		juego=j;
+		mapaG= j.getMapag();
+		mapaL=j.getMapaL();
+		tienda=mapaL.getTiendaLogica();
 	}
 
 	@Override
 	public void actuar() {
-		mapa.getMapaGrafico().addMouseListener(new Mouse() {
+		mapaG.addMouseListener(new Mouse() {
 		    @Override
 		    public void mouseClicked(MouseEvent e) {
 		    	int x= e.getX();
 		    	int y= e.getY();
-		    	ArrayList<GameObject> entidades= mapa.getEntidades();
+		    	ArrayList<GameObject> entidades= mapaL.getEntidades();
 		    	Iterator<GameObject> it= entidades.iterator();
 		    	boolean encontre= false;
 		    	
@@ -43,7 +47,7 @@ public class Vendiendo implements State {
 		    }
 		});
 		
-		mapa.setEstado(new Jugando(mapa));
+		juego.setJugar();
 		
 	}
 

@@ -18,7 +18,7 @@ public class Vender extends Boton {
 		this.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				tiendaLogica.getMapaLogico().setEstado(new Vendiendo(tiendaLogica.getMapaLogico()));
+				tiendaLogica.getMapaLogico().getJuego().setVender();
 				
 			}
 		});	

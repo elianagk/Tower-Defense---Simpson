@@ -1,19 +1,17 @@
 package Juego;
 
-import java.awt.Point;
-import java.util.ArrayList;
-import java.util.Random;
 
-import GRAFICA.ContadorTiempo;
+import java.util.ArrayList;
 import GRAFICA.MapaGrafico;
 import GameObject.GameObject;
-import GameObject.Personaje;
 import GameObject.Personajes.Enemigo;
-import GameObject.Personajes.Enemigos.Apu;
 import Jugador.Jugador;
 import Mapa.MapaLogico;
 import Nivel.Nivel;
-import VISITOR.Visitor;
+import State.Comprando;
+import State.Jugando;
+import State.State;
+import State.Vendiendo;
 
 
 
@@ -27,6 +25,10 @@ public class Juego {
 	private MapaLogico mapaLogico;
 	private final int gravity_force = 5;
 	private final int ground_position = 400;
+	private State estado;
+	private static State jugar;
+	private static State comprar;
+	private static State vender;
 	
 	
 	
@@ -36,6 +38,10 @@ public class Juego {
 		mapaGrafico=gui;
 		this.mapaLogico= mapaLogico;
 		comenzarNiveles();
+		jugar= new Jugando(this);
+		comprar= new Comprando(this);
+		vender= new Vendiendo(this);
+		estado= jugar;
 	}
 	
 	public void mover(){
@@ -61,4 +67,26 @@ public class Juego {
 		niveles[0].ejecutarHordas();
 	}
 	
+	public MapaGrafico getMapag() {
+		return mapaGrafico;
+	}
+	
+	public MapaLogico getMapaL() {
+		return mapaLogico;
+	}
+	
+	public void setJugar() {
+		estado=jugar;
+		estado.actuar();
+	}
+	
+	public void setComprar() {
+		estado= comprar;
+		estado.actuar();
+	}
+	
+	public void setVender() {
+		estado= vender;
+		estado.actuar();
+	}
 }

@@ -32,7 +32,7 @@ public class BotonComprar extends Boton {
 		this.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				tiendaLogica.getMapaLogico().setEstado(new Comprando(tiendaLogica.getMapaLogico()));
+				tiendaLogica.getMapaLogico().getJuego().setComprar();
 				tiendaLogica.setEntidad(t.clone());
 			}
 		});	
