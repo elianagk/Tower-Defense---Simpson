@@ -11,11 +11,12 @@ import Juego.Juego;
 import Mapa.MapaLogico;
 import Tienda.TiendaLogica;
 
-public class Vendiendo implements State {
-	protected Juego juego;
-	protected MapaGrafico mapaG;
+
+public class Vendiendo extends State {
 	protected MapaLogico mapaL;
 	protected TiendaLogica tienda;
+	protected Juego juego;
+	protected MapaGrafico mapaG;
 	
 	public Vendiendo(Juego j) {
 		juego=j;
@@ -26,7 +27,10 @@ public class Vendiendo implements State {
 
 	@Override
 	public void actuar() {
-		mapaG.addMouseListener(new Mouse() {
+
+		mapaG.removeMouseListener(actualMouseListener);
+		mapaG.addMouseListener(actualMouseListener= new Mouse() {
+
 		    @Override
 		    public void mouseClicked(MouseEvent e) {
 		    	int x= e.getX();

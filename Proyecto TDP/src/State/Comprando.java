@@ -8,7 +8,7 @@ import GRAFICA.Mouse;
 import Juego.Juego;
 import Mapa.MapaLogico;
 
-public class Comprando implements State {
+public class Comprando extends State {
 	
 	protected Juego juego;
 	protected MapaGrafico mapa;
@@ -20,7 +20,10 @@ public class Comprando implements State {
 
 	@Override
 	public void actuar() {
-		mapa.addMouseListener(new Mouse() {
+
+		mapa.removeMouseListener(actualMouseListener);
+		mapa.addMouseListener(actualMouseListener= new Mouse() {
+
 		    @Override
 		    public void mouseClicked(MouseEvent e) {
 		    	int x= e.getX();
