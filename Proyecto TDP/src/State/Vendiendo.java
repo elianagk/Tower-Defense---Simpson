@@ -29,7 +29,7 @@ public class Vendiendo implements State {
 	public void actuar() {
 
 		mapaG.removeMouseListener(mapaG.getMouseListener());
-		mapaG.setMouseListener( new Mouse() {
+		mapaG.addMouseListener( new Mouse() {
 
 		    @Override
 		    public void mouseClicked(MouseEvent e) {
@@ -41,7 +41,7 @@ public class Vendiendo implements State {
 		    	
 		    	while (it.hasNext() && !encontre) {
 		    		GameObject t= it.next();
-		    		if (t.getX()==x && t.getY()==y) {
+		    		if (t.getX()==((x/100)*100) && t.getY()==((y/100)*100)) {
 		    			encontre=true;
 		    			t.Aceptar(tienda.getVisitor());
 		    			

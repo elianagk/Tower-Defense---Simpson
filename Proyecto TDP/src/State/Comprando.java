@@ -22,7 +22,7 @@ public class Comprando implements State {
 	public void actuar() {
 
 		mapa.removeMouseListener(mapa.getMouseListener());
-		mapa.setMouseListener( new Mouse() {
+		mapa.addMouseListener( new Mouse() {
 
 		    @Override
 		    public void mouseClicked(MouseEvent e) {
