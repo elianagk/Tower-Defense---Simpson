@@ -5,7 +5,7 @@ import GameObjectGrafico.ObjetoGrafico;
 public class SuperDuffGrafico extends ObjetoGrafico{
 
 	public SuperDuffGrafico() {
-		super("");	
+		super("duff.png");	
 		// TODO setear la label
 	}
 }

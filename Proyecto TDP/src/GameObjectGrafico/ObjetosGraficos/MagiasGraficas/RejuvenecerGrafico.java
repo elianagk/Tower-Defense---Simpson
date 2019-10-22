@@ -8,7 +8,7 @@ import Mapa.MapaLogico;
 public class RejuvenecerGrafico extends ObjetoGrafico{
 
 	public RejuvenecerGrafico() {
-		super("");	
+		super("fuerza.png");	
 		// TODO setear la label
 	}
 

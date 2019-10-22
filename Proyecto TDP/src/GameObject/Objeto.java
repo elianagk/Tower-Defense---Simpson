@@ -25,5 +25,7 @@ public abstract class Objeto extends GameObject {
 
 	@Override
 	public abstract void accionar() ;
+	
+	public abstract void accionar(Personaje c);
 
 }

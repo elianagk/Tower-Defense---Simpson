@@ -17,7 +17,7 @@ public class Marge extends Torre {
 	private int contador;
 	
 	public Marge(MapaLogico mapaLogico) {
-		super(80, 30, 100, 1, mapaLogico, new MargeGrafico());
+		super(80, 300, 150, 1, mapaLogico, new MargeGrafico());
 		visitor= new VisitorAliado(this);
 		tiempo=12;
 		contador=0;
@@ -46,6 +46,11 @@ public class Marge extends Torre {
 			mapaLogico.entidadAAgregar(new DisparoLogicoTorre(mapaLogico, this), this.getX()+50, this.getY());
 			contador=0;
 		}
+	}
+	
+	public void Aceptar(Visitor v) {
+		v.visitar(this);
+		
 	}
 
 }

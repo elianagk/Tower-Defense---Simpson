@@ -14,7 +14,7 @@ import VISITOR.VisitorAliado;
 public class Homero extends Torre {
 	
 	public Homero(MapaLogico mapaLogico) {
-		super(80, 30, 50, 1, mapaLogico, new HomeroGrafico());
+		super(80, 150, 40, 1, mapaLogico, new HomeroGrafico());
 		visitor= new VisitorAliado(this);
 	}
 	
