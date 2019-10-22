@@ -1,5 +1,6 @@
 package GameObject.Personajes;
 
+import GameObject.GameObject;
 import GameObject.Personaje;
 import GameObjectGrafico.GameObjectGrafico;
 import Mapa.MapaLogico;
@@ -34,6 +35,11 @@ public abstract class Torre extends Personaje {
 	public void Aceptar(Visitor v) {
 		v.visitar(this);
 		
+	}
+	//mirar el alto , linea
+	public boolean estaEnRango(GameObject g) {
+		//(this.posicion.y >= g.getY() && (this.posicion.y+this.height) <= g.getY())
+		return (g.getX()==this.posicion.x+100 && g.getY()==this.posicion.y);
 	}
 	
 }

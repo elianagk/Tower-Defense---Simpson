@@ -32,7 +32,7 @@ public class Moe extends Enemigo {
 
 	@Override
 	public void atacar(Personaje e) {
-		super.mover(still_key);
+		super.mover(backward_key);
 		miObjetoGrafico.atacar();
 		contador++;
 		if (contador==tiempo) {

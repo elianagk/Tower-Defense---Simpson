@@ -27,5 +27,9 @@ public abstract class Objeto extends GameObject {
 	public abstract void accionar() ;
 	
 	public abstract void accionar(Personaje c);
+	
+	public boolean estaEnRango(GameObject g) {
+		return false;
+	}
 
 }

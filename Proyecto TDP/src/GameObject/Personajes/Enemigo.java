@@ -2,6 +2,7 @@ package GameObject.Personajes;
 
 import java.awt.Point;
 
+import GameObject.GameObject;
 import GameObject.Personaje;
 import GameObjectGrafico.GameObjectGrafico;
 import Mapa.MapaLogico;
@@ -53,6 +54,10 @@ public abstract  class Enemigo extends Personaje {
 	@Override
 	public void accionar() {
 		super.mover(backward_key);
+	}
+	
+	public boolean estaEnRango(GameObject g) {
+		return (g.getX()==posicion.x && g.getY()==posicion.y); 
 	}
 
 }

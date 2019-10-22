@@ -34,7 +34,7 @@ public class DisparoLogicoEnemigo extends Enemigo {
 
 		@Override
 	public void Aceptar(Visitor visitor) {
-		visitor.visitar(this);
+		visitor.visitarDisparo(this);
 		
 	}
 
@@ -49,7 +49,7 @@ public class DisparoLogicoEnemigo extends Enemigo {
 
 	@Override
 	public void atacar(Personaje e) {
-		
+		super.mover(backward_key);
 		e.aplicarDaño(mipersonaje.getDaño());
 		mapaLogico.entidadAEliminar(this);
 		

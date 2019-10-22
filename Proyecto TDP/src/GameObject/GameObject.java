@@ -107,5 +107,7 @@ public abstract class GameObject {
 	
 	public abstract void accionar();
 	
+	public abstract boolean estaEnRango(GameObject g);
+	
 	
 }

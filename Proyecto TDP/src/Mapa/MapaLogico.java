@@ -54,7 +54,7 @@ public class MapaLogico  {
 		ArrayList<GameObject> toReturn = new ArrayList<GameObject>();
 		Point posicion= g.getPosicion();
 		for (GameObject e: entidades) {
-			if (e.getX()+100==posicion.x  ) {
+			if (e.estaEnRango(g)) {
 				toReturn.add(e);				
 			}
 			
@@ -69,24 +69,7 @@ public class MapaLogico  {
 		return entidadesActualizada;
 	}
 	
-	/**
-	 * recorre la lista de personajes para chequear colisiones
-	 * @param x coordenada x dentro del mapa, donde se va a chequear la colision
-	 * @param y coordenada y dentro del mapa, donde se va a chequear la colision
-	 * @return true si hay colisiones (no se puede agregar el objeto), false caso contrario
-	 */
-	public boolean HayColisiones (int x, int y) {
-		boolean colisiones=false;
-		ListIterator<GameObject> it= entidades.listIterator();
-		GameObject o;
-		while (!colisiones && it.hasNext()) {
-			o=it.next(); 
-			colisiones= (x!=o.getPosicion().x && y!=o.getPosicion().y);
-		}
-		
-		
-		return colisiones;
-	}
+	
 	
 	public void entidadAEliminar(GameObject o) {
 		entidadesAEliminar.add(o);
@@ -103,7 +86,7 @@ public class MapaLogico  {
 	
 	public void entidadAAgregar(GameObject o, int x, int y) {
 		Point p = new Point (x, y);
-		//System.out.println("X: "+x+" - Y: "+y);
+		System.out.println("X: "+x+" - Y: "+y);
 		o.setPosicion(p);
 		entidadesAAgregar.add(o);
 	}

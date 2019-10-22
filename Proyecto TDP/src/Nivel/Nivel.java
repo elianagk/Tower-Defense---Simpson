@@ -1,6 +1,8 @@
 package Nivel;
 
 import java.awt.Point;
+import java.util.ArrayList;
+import java.util.Random;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
@@ -18,13 +20,19 @@ public class Nivel {
 	private Horda horda;
 	private Juego juego;
 	private MapaLogico mapaLogico;
+	private ArrayList<ArrayList<GameObject>> listaentidades;
+	private int cantHordas;
+	
 
 
 	
 	public Nivel(Juego juego, MapaLogico mapaLogico) {
 		this.juego= juego;
 		this.mapaLogico= mapaLogico;
-		horda= new Horda(this, mapaLogico, 100);
+		cantHordas=3;
+		
+		this.ejecutarHordas();
+		
 		
 		
 		
@@ -36,6 +44,10 @@ public class Nivel {
 	}
 	
 	public void ejecutarHorda() {
+		
+		
+	
+		horda= new Horda(this, mapaLogico, 20);
 		
 		final ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
 //		final ScheduledExecutorService executorService = Executors.newSingleThreadScheduledExecutor();
@@ -49,8 +61,12 @@ public class Nivel {
 	     
 	    scheduler.schedule(new Runnable() {public void run() { crearHorda.cancel(true); }
 	    }, horda.getCantEnemigos()*5-5, TimeUnit.SECONDS);
-	     
-
+	    
+	  
+	    
+	
+	    
+		}
 //
 //	    	     final Runnable beeper = new Runnable() {
 //	    	       public void run() { System.out.println("beep"); }
@@ -60,16 +76,53 @@ public class Nivel {
 //	    	     scheduler.schedule(new Runnable() {
 //	    	       public void run() { horda.finalizarHorda(); }
 //	    	     }, horda.getCantEnemigos()*5, SECONDS);
+		
+//		int i=0;
+//		while(i!=3) {
+//	
+//			int tiempo=100;
+//			int cont=0;
+//			int tiempo2=10;
+//			int cont2=0;
+//			Random r= new Random();
+//			int n= r.nextInt(4);
+//			horda= new Horda(this, mapaLogico, n);
+//			
+//				while(!horda.finalizarHorda()) {
+//					int m= r.nextInt(10000);
+//					if ((m>150) && (m<175))
+//						this.crearEnemigo();
+//					
+//							
+//				}	
+//				
+//				this.esperar();
+//				i++;
+//		}
 
 	
-//			while(!horda.finalizarHorda()) {
-//				
-//					g= horda.crearEnemigo();
-//					mapaLogico.entidadAAgregar(g, g.getX(), g.getY());
-//					
-//						
-//			}	
 
+
+	
+//	private void horda(int cantEnemigos) {
+//		
+//		horda= new Horda(this, mapaLogico, cantEnemigos);
+//		
+//	}
+	
+	
+	private void llenarLista() {
+		ArrayList<GameObject> enemigo= new ArrayList<GameObject>();
+		Random r= new Random();
+		int n= r.nextInt(30);
+		int i=0;
+		while (i<n) {
+			
+			enemigo.add(horda.crearEnemigo());
+			i++;
+		}
+		
+		listaentidades.add(enemigo);
 	}
 	
 	public void ejecutarHordas() {

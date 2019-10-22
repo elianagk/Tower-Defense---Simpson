@@ -37,6 +37,7 @@ public class DisparoLogicoTorre extends Torre {
 
 	@Override
 	public void atacar(Personaje e) {
+		super.mover(forward_key);
 		e.aplicarDaño(mipersonaje.getDaño());
 		mapaLogico.entidadAEliminar(this);
 		
@@ -45,7 +46,7 @@ public class DisparoLogicoTorre extends Torre {
 
 	@Override
 	public void Aceptar(Visitor visitor) {
-		visitor.visitar(this);
+		visitor.visitarDisparo(this);
 	}
 
 
