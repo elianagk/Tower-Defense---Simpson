@@ -10,7 +10,7 @@ public class BarneyGrafico extends EnemigoGrafico {
 	}
 	
 	public void atacar() {
-		super.atacar("barneyatacando.gif");
+		super.atacar("barneyatacando3.gif");
 	}
 
 
