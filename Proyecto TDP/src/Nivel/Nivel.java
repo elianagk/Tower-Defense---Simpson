@@ -77,6 +77,6 @@ public class Nivel {
 	}
 	
 	public void finalizarNivel() {
-		
+		//Si un enemigo llega a x entre 0 y 30 creo, se pierde el nivel
 	}
 }
