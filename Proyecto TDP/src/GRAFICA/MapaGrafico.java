@@ -4,6 +4,8 @@ import Tienda.TiendaGrafica;
 import Tienda.TiendaLogica;
 import GameObject.GameObject;
 import Juego.Juego;
+import State.Jugando;
+import State.State;
 
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
@@ -21,25 +23,30 @@ public class MapaGrafico extends JLabel{
 	private TiendaLogica tiendaLogica;
 	private Juego juego;
 	private ContadorTiempo tiempo;
-	protected static MouseListener actualMouseListener;
+	protected MouseListener actualMouseListener;
+	protected State queHagoConElClick;
 	
 	public MapaGrafico(TiendaLogica tiendal, String s, int ancho, int alto) {
 		tiendaLogica= tiendal;
 		this.setBounds(0, 0, ancho, alto);
 		this.setLayout(null);
-		ImageIcon fot1= new ImageIcon(getClass().getClassLoader().getResource("CASA.png"));
+		ImageIcon fot1= new ImageIcon(getClass().getClassLoader().getResource("CASA2.png"));
 		Icon mapa= new ImageIcon(fot1.getImage().getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_DEFAULT));
 		this.setIcon(mapa);
+		
+		
+		//---------------------------------------------
 //		this.addMouseListener(new Mouse() {
 //		    @Override
 //		    public void mouseClicked(MouseEvent e) {//Esto sirve para comprar
-//		    	int x= e.getX();
-//		    	int y= e.getY();
-//		    	if(x<=600 && y>=300 && y<=600)
+//		    	queHagoConElClick.actuar();	//el mouse listener deberia funcionar y le tenemos que decir como
+////		    	int x= e.getX();
+////		    	int y= e.getY();
+////		    	if(x<=600 && y>=300 && y<=600)
 //		    		avisarTienda((x/100)*100, (y/100)*100);
 //		    }
 //		});
-		
+//		
 
 //		juego = new Juego(this);
 //		tiempo = new ContadorTiempo(juego);
@@ -72,6 +79,10 @@ public class MapaGrafico extends JLabel{
 		return juego;
 	}
 	
+	public TiendaLogica getTiendaLogica() {
+		return tiendaLogica;
+	}
+	
 	public void setMouseListener(MouseListener m) {
 		actualMouseListener=m;
 	}
@@ -79,4 +90,5 @@ public class MapaGrafico extends JLabel{
 	public MouseListener getMouseListener() {
 		return actualMouseListener;
 	}
+	
 }

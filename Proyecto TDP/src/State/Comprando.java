@@ -1,6 +1,7 @@
 package State;
 
 import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.util.Random;
 
 import GRAFICA.MapaGrafico;
@@ -11,33 +12,33 @@ import Mapa.MapaLogico;
 public class Comprando implements State {
 	
 	protected Juego juego;
-	protected MapaGrafico mapa;
+	protected MapaGrafico mapaGrafico;
 	
 	public Comprando(Juego j) {
 		juego=j;
-		mapa= j.getMapag();
+		mapaGrafico= j.getMapaGrafico();
 	}
 
 
 	public void actuar() {
-
-		mapa.removeMouseListener(mapa.getMouseListener());
-		mapa.addMouseListener( new Mouse() {
+		MouseListener mouseListener;
+		mapaGrafico.removeMouseListener(mapaGrafico.getMouseListener());
+		mapaGrafico.addMouseListener(mouseListener= new Mouse() {
 
 		    @Override
 		    public void mouseClicked(MouseEvent e) {
 		    	int x= e.getX();
 		    	int y= e.getY();
-		    	if( y>=300 && y<=600) {
-		    		System.out.println("x: "+ x+ " y: "+ y);
-		    		mapa.avisarTienda((x/100)*100, (y/100)*100);
+
+		    	if(y>=170 && y<=650) {
+		    		mapaGrafico.avisarTienda((x/100)*100, (y/100)*100);
+		    		juego.setJugar();
+
 		    	}
 		    	
 		    }
 		});
-		
-		juego.setJugar();
-		
+		mapaGrafico.setMouseListener(mouseListener);	
 	}
 	
 	

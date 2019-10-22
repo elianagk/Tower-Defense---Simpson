@@ -7,10 +7,12 @@ import GameObject.GameObject;
 public class Jugador  {
 
 	protected String nombre;
-	protected int puntaje;
+	protected int puntaje, monedas;
+	
 	
 	public Jugador () {
-		puntaje=600;
+		puntaje=0;
+		monedas=600;
 	}
 	
 	public void setNombre (String nombre) {
@@ -26,5 +28,13 @@ public class Jugador  {
 	
 	public void setPuntaje(int puntaje) {
 		this.puntaje=puntaje;
+	}
+	
+	public int getMonedas() {
+		return monedas;
+	}
+	
+	public void setMonedas(int monedas) {
+		this.monedas=monedas;
 	}
 }

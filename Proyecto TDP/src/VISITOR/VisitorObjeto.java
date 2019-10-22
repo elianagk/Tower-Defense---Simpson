@@ -1,31 +1,32 @@
 package VISITOR;
 
+import GameObject.Objeto;
 import GameObject.Objetos.ObjetoPrecioso;
 import GameObject.Personajes.Enemigo;
 import GameObject.Personajes.Torre;
-import Tienda.TiendaLogica;
 
-public class VisitorVender extends Visitor {
-	protected TiendaLogica tiendaLogica;
+public class VisitorObjeto extends Visitor {
 	
-	public VisitorVender(TiendaLogica tienda) {
-		this.tiendaLogica=tienda;
+	public VisitorObjeto(Objeto o) {
+		miobjeto=o;
 	}
 
 	@Override
 	public void visitar(Enemigo e) {
-
+		
+		
 	}
 
 	@Override
 	public void visitar(Torre t) {
-		tiendaLogica.vender(t);	
-		tiendaLogica.getJuego().setJugar();
+		miobjeto.accionar(t);
+		
 	}
 
 	@Override
 	public void visitar(ObjetoPrecioso o) {
-
+		
+		
 	}
 
 }

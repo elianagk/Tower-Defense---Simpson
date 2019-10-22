@@ -2,10 +2,10 @@ package GameObjectGrafico.ObjetosGraficos.ObjetosPreciososGraficos;
 
 import GameObjectGrafico.ObjetoGrafico;
 
-public class SuperDuffGrafico extends ObjetoGrafico{
+public class DonaExplosivaGrafica extends ObjetoGrafico {
 
-	public SuperDuffGrafico() {
-		super("duff.png");	
+	public DonaExplosivaGrafica() {
+		super("");	
 		// TODO setear la label
 	}
 }

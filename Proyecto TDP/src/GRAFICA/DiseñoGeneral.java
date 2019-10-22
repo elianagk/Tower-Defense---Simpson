@@ -7,7 +7,8 @@ import Mapa.MapaLogico;
 import Tienda.TiendaGrafica;
 import Tienda.TiendaLogica;
 import Tienda.Botones.BotonComprar;
-
+import State.State;
+import State.Vendiendo;
 
 
 public class DiseñoGeneral extends JFrame{
@@ -26,6 +27,10 @@ public class DiseñoGeneral extends JFrame{
 	private ContadorTiempo tiempo;
 	private TiendaLogica tiendaLogica;
 	private MapaLogico mapal;
+	
+	private State vendiendo;
+	private State comprando;
+	private State jugando;
 	
 
 	/**
@@ -59,7 +64,7 @@ public class DiseñoGeneral extends JFrame{
 		frmJuego = new JFrame();
 		frmJuego.setTitle("Juego");
 		frmJuego.setResizable(false);
-		frmJuego.setBounds(100, 100, 1080, 720);
+		frmJuego.setBounds(100, 100, 1080, 800);
 		frmJuego.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmJuego.getContentPane().setLayout(null);
 		
@@ -69,11 +74,14 @@ public class DiseñoGeneral extends JFrame{
 		frmJuego.setVisible(true);
 		PANELPRINCIPAL.setLayout(null);
 		
-		mapal= new MapaLogico(PANELPRINCIPAL.getWidth(), PANELPRINCIPAL.getHeight(), null); 
+		mapal= new MapaLogico(PANELPRINCIPAL.getWidth(), PANELPRINCIPAL.getHeight()); 
 		tiendaLogica= new TiendaLogica(mapal);
 		MAPA = new MapaGrafico(tiendaLogica, "casa.png", PANELPRINCIPAL.getWidth(), PANELPRINCIPAL.getHeight());
 		mapal.setMapaGrafico(MAPA);
+		mapal.setTiendaLogica(tiendaLogica);
 		
+		juego = new Juego(MAPA, mapal);
+		tiendaLogica.setJugador(juego.getJugador());
 		
 		PANELTIENDA= new TiendaGrafica(tiendaLogica);
 		PANELPRINCIPAL.add(PANELTIENDA);
@@ -93,7 +101,7 @@ public class DiseñoGeneral extends JFrame{
 		//Icon icono = new ImageIcon(fot.getImage().getScaledInstance(jLabel1.getWidth(), jLabel1.getHeight(), Image.SCALE_DEFAULT));
 		//jLabel1.setIcon(icono);
 		
-		juego = new Juego(MAPA, mapal);
+		
 		tiempo = new ContadorTiempo(juego);
 		tiempo.start();
 		

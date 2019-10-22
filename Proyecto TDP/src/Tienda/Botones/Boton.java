@@ -11,12 +11,11 @@ import javax.swing.JButton;
 import javax.swing.border.Border;
 
 import Tienda.TiendaLogica;
-
+import State.State;
 
 public class Boton extends JButton {
 	
 	protected TiendaLogica tiendaLogica;
-	
 	
 	public Boton(TiendaLogica tienda, String s) {
 		tiendaLogica= tienda;

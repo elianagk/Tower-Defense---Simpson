@@ -18,7 +18,7 @@ public class DisparoLogicoEnemigo extends Enemigo {
 		super(ml, new DisparoGraficoEnemigo());
 		mipersonaje=p;
 		visitor= new VisitorEnemigo(this);
-		velocidad=5;
+		velocidad= mipersonaje.getVelocidad()+3;
 		
 	}
 

@@ -24,7 +24,7 @@ public class Nivel {
 	public Nivel(Juego juego, MapaLogico mapaLogico) {
 		this.juego= juego;
 		this.mapaLogico= mapaLogico;
-		horda= new Horda(this, mapaLogico, 10);
+		horda= new Horda(this, mapaLogico, 100);
 		
 		
 		
@@ -51,7 +51,7 @@ public class Nivel {
 	    }, horda.getCantEnemigos()*5-5, TimeUnit.SECONDS);
 	     
 
-
+//
 //	    	     final Runnable beeper = new Runnable() {
 //	    	       public void run() { System.out.println("beep"); }
 //	    	     };
