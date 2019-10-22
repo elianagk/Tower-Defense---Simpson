@@ -1,13 +1,14 @@
 package VISITOR;
 
 import GameObject.Objeto;
+import GameObject.Objetos.Magia;
 import GameObject.Objetos.ObjetoPrecioso;
 import GameObject.Personajes.Enemigo;
 import GameObject.Personajes.Torre;
 
-public class VisitorObjeto extends Visitor {
+public class VisitorMagia extends Visitor {
 	
-	public VisitorObjeto(Objeto o) {
+	public VisitorMagia(Magia o) {
 		miobjeto=o;
 	}
 
