@@ -18,7 +18,7 @@ public class BumbleeMan extends Enemigo {
 	public BumbleeMan(MapaLogico ml) {
 		super(ml, new BumbleeManGrafico());
 		vida= 100;
-		velocidad= 8;
+		velocidad= 3;
 		visitor= new VisitorEnemigo(this);
 		daño=30; //solo por ser abeja
 	}

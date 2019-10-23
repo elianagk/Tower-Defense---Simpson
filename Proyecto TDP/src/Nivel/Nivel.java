@@ -31,7 +31,6 @@ public class Nivel {
 		this.mapaLogico= mapaLogico;
 		cantHordas=3;
 		
-		this.ejecutarHordas();
 		
 		
 		
@@ -41,13 +40,15 @@ public class Nivel {
 	public void crearEnemigo() {
 		GameObject g= horda.crearEnemigo();
 		mapaLogico.entidadAAgregar(g, g.getX(), g.getY());
+		
+		
 	}
 	
 	public void ejecutarHorda() {
 		
 		
 	
-		horda= new Horda(this, mapaLogico, 20);
+		horda= new Horda(this, mapaLogico, 10);
 		
 		final ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
 //		final ScheduledExecutorService executorService = Executors.newSingleThreadScheduledExecutor();
@@ -111,22 +112,31 @@ public class Nivel {
 //	}
 	
 	
-	private void llenarLista() {
-		ArrayList<GameObject> enemigo= new ArrayList<GameObject>();
-		Random r= new Random();
-		int n= r.nextInt(30);
-		int i=0;
-		while (i<n) {
-			
-			enemigo.add(horda.crearEnemigo());
-			i++;
-		}
-		
-		listaentidades.add(enemigo);
-	}
+//	private void llenarLista() {
+//		ArrayList<GameObject> enemigo= new ArrayList<GameObject>();
+//		Random r= new Random();
+//		int n= r.nextInt(30);
+//		int i=0;
+//		while (i<n) {
+//			
+//			enemigo.add(crearEnemigo());
+//			i++;
+//		}
+//		
+//		listaentidades.add(enemigo);
+//	}
 	
 	public void ejecutarHordas() {
-		ejecutarHorda();
+		Random r= new Random();
+		int n=0;
+		for (int i=0; i<3; i++) {
+			ejecutarHorda();
+			while (n!=2) {
+			 n= r.nextInt(15000);
+			}
+			
+		}
+		
 	}
 	
 	public void finalizarNivel() {

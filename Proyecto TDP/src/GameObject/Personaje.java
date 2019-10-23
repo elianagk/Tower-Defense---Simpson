@@ -66,8 +66,5 @@ public abstract class Personaje extends GameObject {
 		cambiarGrafico(dir);
 	}
 	
-	public void fall(int gravity){
-		posicion.setLocation(posicion.x, posicion.y + gravity);
-		this.cambiarGrafico(this.last_dir);
-	}
+	
 }

@@ -86,7 +86,7 @@ public class MapaLogico  {
 	
 	public void entidadAAgregar(GameObject o, int x, int y) {
 		Point p = new Point (x, y);
-		System.out.println("X: "+x+" - Y: "+y);
+		//System.out.println("X: "+x+" - Y: "+y);
 		o.setPosicion(p);
 		entidadesAAgregar.add(o);
 	}
