@@ -25,7 +25,8 @@ public class TiendaGrafica extends JPanel {
 	
 	public TiendaGrafica(TiendaLogica tienda) {
 	this.setLayout(new GridLayout(1, 9));
-	this.setBounds(0, 0, 1100, 100);
+	this.setBounds(0, 0, 1100, 90);
+	this.setOpaque(false);
 	botones = new Boton[7];
 	
 
@@ -33,21 +34,25 @@ public class TiendaGrafica extends JPanel {
 	
 	
 	//-----
-	botones[0]= new BotonHomero("homero.jpg", tienda);
-	botones[1]= new BotonBart("bartsinfondo.png", tienda);
+	botones[0]= new BotonHomero("homero.png", tienda);
+	botones[1]= new BotonBart("bart.png", tienda);
 	botones[2]= new BotonLisa("lisa.png", tienda);
 	botones[3]= new BotonMarge("marge.png", tienda);
-	botones[4]= new BotonAbuelo("abe.gif", tienda);
+	botones[4]= new BotonAbuelo("abe.png", tienda);
 	botones[5]= new Premio("donut.png", tienda); //arreglar
-	botones[6]= new Vender(tienda, "vender.jpg");
+	botones[6]= new Vender(tienda, "vender.png");
 
 	for (int i=0; i<botones.length; i++) {
 		this.add(botones[i]);
 	}
 	
 	dinero= new JLabel("Puntaje=");
+	dinero.setBackground(Color.white);
+	dinero.setOpaque(true);
 	String p=Integer.toString(tienda.monedas());
 	monedas = new JLabel();
+	monedas.setBackground(Color.white);
+	monedas.setOpaque(true);
 	this.add(dinero);
 	this.add(monedas);
 	

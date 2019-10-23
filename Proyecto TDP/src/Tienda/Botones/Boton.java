@@ -15,7 +15,7 @@ import State.State;
 
 public class Boton extends JButton {
 	
-	protected TiendaLogica tiendaLogica;
+	protected static TiendaLogica tiendaLogica;
 	
 	public Boton(TiendaLogica tienda, String s) {
 		tiendaLogica= tienda;

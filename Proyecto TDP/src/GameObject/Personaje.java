@@ -24,6 +24,10 @@ public abstract class Personaje extends GameObject {
 	public int getDaño() {
 		return daño;
 	}
+	
+	public void setDaño(int d) {
+		daño+=d;
+	}
 
 	public void aplicarDaño(int daño) {
 		if (vida > daño)

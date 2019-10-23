@@ -7,7 +7,7 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import static java.util.concurrent.TimeUnit.*;
+//import static java.util.concurrent.TimeUnit.*;
 
 import GameObject.GameObject;
 
@@ -51,7 +51,7 @@ public class Nivel {
 	    }, horda.getCantEnemigos()*5-5, TimeUnit.SECONDS);
 	     
 
-
+//
 //	    	     final Runnable beeper = new Runnable() {
 //	    	       public void run() { System.out.println("beep"); }
 //	    	     };
@@ -88,6 +88,6 @@ public class Nivel {
 	}
 	
 	public void finalizarNivel() {
-		
+		//Si un enemigo llega a x entre 0 y 30 creo, se pierde el nivel
 	}
 }

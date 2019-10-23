@@ -2,13 +2,13 @@ package GameObject.Objetos.ObjetosPreciosos;
 
 import GameObject.Personaje;
 import GameObject.Objetos.ObjetoPrecioso;
-import GameObjectGrafico.ObjetosGraficos.ObjetosPreciososGraficos.SuperDuffGrafico;
+import GameObjectGrafico.ObjetosGraficos.ObjetosPreciososGraficos.DonaExplosivaGrafica;
 import Mapa.MapaLogico;
 
-public class SuperDuff extends ObjetoPrecioso {
+public class DonaExplosiva extends ObjetoPrecioso {
 
-	public SuperDuff(MapaLogico mapaLogico) {
-		super(mapaLogico, new SuperDuffGrafico(), 200);	//3°vida
+	public DonaExplosiva(MapaLogico mapaLogico) {
+		super(mapaLogico, new DonaExplosivaGrafica(), 100);	//3°vida
 	}
 
 	@Override

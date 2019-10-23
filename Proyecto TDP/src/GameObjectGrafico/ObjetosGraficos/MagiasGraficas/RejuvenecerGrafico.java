@@ -2,13 +2,14 @@ package GameObjectGrafico.ObjetosGraficos.MagiasGraficas;
 
 import GameObject.Objetos.Magia;
 import GameObjectGrafico.GameObjectGrafico;
+import GameObjectGrafico.ObjetoGrafico;
 import Mapa.MapaLogico;
 
-public class RejuvenecerGrafico extends Magia{
+public class RejuvenecerGrafico extends ObjetoGrafico{
 
 	public RejuvenecerGrafico() {
-		super(algunLabel);
-		// TODO Auto-generated constructor stub
+		super("fuerza.png");	
+		// TODO setear la label
 	}
 
 }

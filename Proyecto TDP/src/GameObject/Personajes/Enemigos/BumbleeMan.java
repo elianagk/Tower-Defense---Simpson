@@ -20,7 +20,7 @@ public class BumbleeMan extends Enemigo {
 		vida= 100;
 		velocidad= 8;
 		visitor= new VisitorEnemigo(this);
-		daño=60; //solo por ser abeja
+		daño=30; //solo por ser abeja
 	}
 	
 	public GameObject clone() {

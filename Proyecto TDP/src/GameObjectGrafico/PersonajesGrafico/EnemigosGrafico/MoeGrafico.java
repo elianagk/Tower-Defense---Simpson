@@ -8,7 +8,7 @@ public class MoeGrafico extends EnemigoGrafico {
 		super("moecaminando.gif");
 		
 	}
-	
+//	hola
 	public void atacar() {
 		super.atacar("moeatacando.png");
 	}
