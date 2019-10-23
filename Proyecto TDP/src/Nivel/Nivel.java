@@ -5,6 +5,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import static java.util.concurrent.TimeUnit.*;
 
@@ -15,7 +16,8 @@ import Juego.Juego;
 import Mapa.MapaLogico;
 
 public class Nivel {
-	private Horda horda;
+	private Horda [] hordas;
+	
 	private Juego juego;
 	private MapaLogico mapaLogico;
 
@@ -24,26 +26,24 @@ public class Nivel {
 	public Nivel(Juego juego, MapaLogico mapaLogico) {
 		this.juego= juego;
 		this.mapaLogico= mapaLogico;
-		horda= new Horda(this, mapaLogico, 10);
-		
-		
-		
+		hordas= new Horda[3];
+		hordas[0]= new Horda(this, mapaLogico, 10);
+		hordas[1]= new Horda(this, mapaLogico, 15);
+		hordas[2]= new Horda(this, mapaLogico, 20);
 	}
 	
-	public void crearEnemigo() {
+	public void crearEnemigo(Horda horda) {
 		GameObject g= horda.crearEnemigo();
 		mapaLogico.entidadAAgregar(g, g.getX(), g.getY());
 	}
 	
-	public void ejecutarHorda() {
-		
+	public void ejecutarHorda(Horda horda) {
 		final ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
-//		final ScheduledExecutorService executorService = Executors.newSingleThreadScheduledExecutor();
 		
 		final ScheduledFuture<?> crearHorda = 
 	    scheduler.scheduleAtFixedRate(new Runnable() {
 	    	 @Override
-	    	 public void run() { crearEnemigo(); }
+	    	 public void run() { crearEnemigo(horda); }
 	     }, 0, 5, TimeUnit.SECONDS);
 		
 	     
@@ -73,7 +73,18 @@ public class Nivel {
 	}
 	
 	public void ejecutarHordas() {
-		ejecutarHorda();
+		final ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
+		final AtomicInteger cont = new AtomicInteger(0);
+
+		final ScheduledFuture<?> crearHordas = 
+	    scheduler.scheduleAtFixedRate(new Runnable() {
+	    	 @Override
+	    	 public void run() { 
+	    		 ejecutarHorda(hordas[cont.getAndIncrement()]);  //llamo al metodo con una posicion del arreglo cuyo contador luego incremento
+	    		 if (cont.get()==3)
+	    			 scheduler.shutdown();		//cuando el contador llega a tres, la repeticion para
+	    	}
+	     }, 5, hordas[cont.get()].getCantEnemigos()*5, TimeUnit.SECONDS);		
 	}
 	
 	public void finalizarNivel() {
