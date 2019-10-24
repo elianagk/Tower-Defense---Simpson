@@ -21,7 +21,7 @@ public class Chief extends Enemigo {
 	
 	public Chief(MapaLogico ml) {
 		super(ml, new ChiefGrafico());
-		vida= 300;
+		vida= 50;
 		velocidad= 6;
 		visitor= new VisitorEnemigo(this);
 		tiempo=20;
@@ -31,7 +31,7 @@ public class Chief extends Enemigo {
 	
 	@Override
 	public void atacar(Personaje e) {
-		super.mover(still_key);
+		super.mover(backward_key);
 		miObjetoGrafico.atacar();
 		contador++;
 		if (contador==tiempo) {
@@ -46,6 +46,7 @@ public class Chief extends Enemigo {
 	
 	@Override
 	public void accionar() {
+	
 		super.mover(backward_key);
 		miObjetoGrafico.atacar();
 		contador++;
@@ -54,6 +55,7 @@ public class Chief extends Enemigo {
 			contador=0;
 		}
 		
+	
 	}
 	
 	

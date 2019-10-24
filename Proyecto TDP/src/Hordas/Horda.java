@@ -24,7 +24,7 @@ public class Horda {
 	}
 	
 	public GameObject crearEnemigo() {
-		int y;
+		int y=0;
 		int enemigo;
 		GameObject g= null;
 		Point p;
@@ -46,10 +46,10 @@ public class Horda {
 			case 6: g= new MrBurns(mapaLogico);
 				break;
 			}
-			
-			y= r.nextInt(301)+300;
-			p= new Point(1080, (y/100)*100);
+			y=r.nextInt(350)+200;
+			p= new Point(1400, y);
 			g.setPosicion(p);
+			
 			cantEnemigos--;			
 			
 

@@ -13,4 +13,6 @@ public abstract class ObjetoPrecioso extends Objeto {
 		super(mapaLogico, objP);
 		this.vida=vida;
 	}
+	
+	
 }

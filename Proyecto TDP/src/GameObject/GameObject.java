@@ -36,11 +36,14 @@ public abstract class GameObject {
 		posicion = null;
 		mapaLogico = ml;
 		miObjetoGrafico = gog;
+		
 		esValido=true;
+		
 	}
 
 	public void setPosicion(Point p) {
 		posicion = p;
+		miObjetoGrafico.setBounds(posicion.x, posicion.y, width, height);
 	}
 
 	public Point getPosicion() {
@@ -109,6 +112,8 @@ public abstract class GameObject {
 	public abstract GameObject clone();
 	
 	public abstract void accionar();
+	
+	public abstract boolean estaEnRango(GameObject g);
 	
 	
 }

@@ -5,12 +5,12 @@ import GameObjectGrafico.PersonajesGrafico.EnemigoGrafico;
 public class MoeGrafico extends EnemigoGrafico {
 
 	public	MoeGrafico() {
-		super("moecaminando.gif");
+		super("moeatacando.gif");
 		
 	}
-//	hola
+
 	public void atacar() {
-		super.atacar("moeatacando.png");
+		super.atacar("moeatacando.gif");
 	}
 
 

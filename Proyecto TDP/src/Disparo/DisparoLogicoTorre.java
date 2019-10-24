@@ -11,6 +11,7 @@ import VISITOR.Visitor;
 import VISITOR.VisitorAliado;
 
 
+
 public class DisparoLogicoTorre extends Torre {
 	
 	protected Torre mipersonaje;
@@ -37,7 +38,9 @@ public class DisparoLogicoTorre extends Torre {
 
 	@Override
 	public void atacar(Personaje e) {
+		super.mover(forward_key);
 		e.aplicarDaño(mipersonaje.getDaño());
+		System.out.println("daño a enemigo");
 		mapaLogico.entidadAEliminar(this);
 		
 	}
@@ -45,7 +48,7 @@ public class DisparoLogicoTorre extends Torre {
 
 	@Override
 	public void Aceptar(Visitor visitor) {
-		visitor.visitar(this);
+		visitor.visitarDisparo(this);
 	}
 
 
