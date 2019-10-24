@@ -12,6 +12,7 @@ import State.Comprando;
 import State.Jugando;
 import State.State;
 import State.Vendiendo;
+import Tienda.TiendaGrafica;
 
 
 
@@ -29,19 +30,28 @@ public class Juego {
 	private static State jugar;
 	private static State comprar;
 	private static State vender;
+	private TiendaGrafica tienda;
 	
 	
 	
 	public Juego(MapaGrafico mapaGrafico, MapaLogico mapaLogico){
-		niveles= new Nivel[1];
-		niveles[0]= new Nivel(this, mapaLogico);
-		jugador=new Jugador();
+		niveles= new Nivel[2];
 		this.mapaGrafico=mapaGrafico;
 		this.mapaLogico= mapaLogico;
-		comenzarNiveles();
+		niveles[0]= new Nivel(this, mapaLogico);
+		niveles[1]= new Nivel(this, mapaLogico);
 		jugar= new Jugando(this);
 		comprar= new Comprando(this);
 		vender= new Vendiendo(this);
+		comenzarJuego();
+	}
+	
+	private void comenzarJuego() {
+		jugador= new Jugador();
+		jugador.setMonedas(1500);
+		tienda= new TiendaGrafica(mapaLogico.getTiendaLogica());
+		tienda.actualizarPuntaje(jugador.getMonedas());
+		comenzarNiveles();
 	}
 	
 	public void mover(){
@@ -65,6 +75,7 @@ public class Juego {
 	
 	public void comenzarNiveles() {
 		niveles[0].ejecutarHordas();
+		niveles[1].ejecutarHordas();
 	}
 	
 	public MapaGrafico getMapaGrafico() {

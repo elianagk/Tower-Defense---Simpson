@@ -11,17 +11,12 @@ public abstract class Objeto extends GameObject {
 		super(ml, gog);
 	}
 
-	@Override
-	public void Aceptar(Visitor visitante) {
-		// TODO Auto-generated method stub
+	
+	public abstract void Aceptar(Visitor visitante) ;
 
-	}
-
-	@Override
-	public GameObject clone() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
+	
+	public abstract GameObject clone() ;
 
 	@Override
 	public abstract void accionar() ;
@@ -29,7 +24,13 @@ public abstract class Objeto extends GameObject {
 	public abstract void accionar(Personaje c);
 	
 	public boolean estaEnRango(GameObject g) {
-		return false;
+		
+			return (g.getX()==posicion.x && g.getY()==this.posicion.y); 
+		
 	}
+	
+	
+	
+	
 
 }

@@ -20,6 +20,7 @@ public class TiendaLogica {
 	private GameObject g;
 	private Visitor visitor;
 	private Jugador jugador;
+	private TiendaGrafica tienda;
 	
 	
 	
@@ -29,17 +30,20 @@ public class TiendaLogica {
 		g= null;
 		mapaLogico= mapa;
 		visitor= new VisitorVender(this);
-		jugador=null;
+		tienda= new TiendaGrafica(this);
+		
 	}
 	
-	public void setJugador(Jugador jugador) {
-		this.jugador=jugador;
+	public void setJugador(Jugador j) {
+		jugador=j;
 	}
+	
 	
 	public void revisarTienda(int x, int y) {
 		if (ProximaEntidad() && g.getCosto()<=jugador.getMonedas()) {
 			mapaLogico.entidadAAgregar(g, x, y);
 			jugador.setMonedas(jugador.getMonedas()-g.getCosto());
+			tienda.actualizarPuntaje(jugador.getMonedas());
 			
 			g= null;
 		}
@@ -54,6 +58,7 @@ public class TiendaLogica {
 		
 		mapaLogico.entidadAEliminar(torre);
 		jugador.setMonedas(jugador.getMonedas()+retornoDinero);
+		tienda.actualizarPuntaje(jugador.getMonedas());
 		
 	}
 	

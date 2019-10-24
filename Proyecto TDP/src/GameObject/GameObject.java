@@ -36,11 +36,14 @@ public abstract class GameObject {
 		posicion = null;
 		mapaLogico = ml;
 		miObjetoGrafico = gog;
+		
 		esValido=true;
+		
 	}
 
 	public void setPosicion(Point p) {
 		posicion = p;
+		miObjetoGrafico.setBounds(posicion.x, posicion.y, width, height);
 	}
 
 	public Point getPosicion() {

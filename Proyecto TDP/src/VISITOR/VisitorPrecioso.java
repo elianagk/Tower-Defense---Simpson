@@ -14,7 +14,7 @@ public class VisitorPrecioso extends Visitor {
 
 	@Override
 	public void visitar(Enemigo e) {
-		// TODO Auto-generated method stub
+		miobjeto.accionar(e);
 		
 	}
 
@@ -24,11 +24,7 @@ public class VisitorPrecioso extends Visitor {
 		
 	}
 
-	@Override
-	public void visitar(ObjetoPrecioso o) {
-		// TODO Auto-generated method stub
-		
-	}
+	
 
 	@Override
 	public void visitarDisparo(DisparoLogicoTorre e) {
@@ -38,6 +34,12 @@ public class VisitorPrecioso extends Visitor {
 
 	@Override
 	public void visitarDisparo(DisparoLogicoEnemigo e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void visitar(ObjetoPrecioso o) {
 		// TODO Auto-generated method stub
 		
 	}

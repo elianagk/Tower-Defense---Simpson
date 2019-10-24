@@ -20,7 +20,6 @@ import java.util.ListIterator;
 
 public class MapaLogico  {
 	private ArrayList<GameObject> entidades, entidadesAAgregar, entidadesAEliminar;
-	private Jugador jugador;
 	private MapaGrafico mapaGrafico;
 	private int width, height;
 	private TiendaLogica tiendaLogica;
@@ -35,7 +34,7 @@ public class MapaLogico  {
 		this.height=height;
 		mapaGrafico=null;
 		tiendaLogica=null;
-		jugador=null;
+		
 	}
 	
 	public MapaGrafico getMapaGrafico() {
@@ -52,7 +51,7 @@ public class MapaLogico  {
 	
 	public ArrayList<GameObject> hayEnElRango(GameObject g) {
 		ArrayList<GameObject> toReturn = new ArrayList<GameObject>();
-		Point posicion= g.getPosicion();
+		
 		for (GameObject e: entidades) {
 			if (e.estaEnRango(g)) {
 				toReturn.add(e);				
@@ -64,9 +63,9 @@ public class MapaLogico  {
 	}
 	
 	public ArrayList<GameObject> getEntidades() {
-		actualizarListaDeEntidades();
-		ArrayList<GameObject> entidadesActualizada = (ArrayList<GameObject>) entidades.clone();
-		return entidadesActualizada;
+		ArrayList<GameObject> entidadesActualizada = actualizarListaDeEntidades();
+		entidades= entidadesActualizada;
+		return entidades;
 	}
 	
 	
@@ -79,8 +78,8 @@ public class MapaLogico  {
 	 * remueve una entidad o del la lista de personajes y del mapa grafico
 	 * @param o entidad a remover
 	 */
-	public void removerEntidad(GameObject o) {
-		entidades.remove(o);
+	public void removerEntidad(GameObject o, ArrayList<GameObject> lista) {
+		lista.remove(o);
 		mapaGrafico.removerEntidad(o);
 	}
 	
@@ -91,26 +90,29 @@ public class MapaLogico  {
 		entidadesAAgregar.add(o);
 	}
 	
-	public void agregarEntidad(GameObject o) {
+	public void agregarEntidad(GameObject o, ArrayList<GameObject> lista) {
 		
-			entidades.add(o);
+			lista.add(o);
 			mapaGrafico.agregarEntidad(o);
 			
 		}
 	
 	
-	public void actualizarListaDeEntidades() {
+	public ArrayList<GameObject> actualizarListaDeEntidades() {
+		ArrayList<GameObject> clon= (ArrayList<GameObject>) entidades.clone();
 		for (GameObject objEliminar : entidadesAEliminar) {
-			removerEntidad(objEliminar);
+			removerEntidad(objEliminar, clon);
 		}
 		
 		for (GameObject objAgregar : entidadesAAgregar) {
-			agregarEntidad(objAgregar);
+			agregarEntidad(objAgregar, clon);
 		}
 		
 		
 		entidadesAEliminar.clear();
 		entidadesAAgregar.clear();
+		
+		return clon;
 	}
 	
 	//Sirve para matar a apu desde un boton

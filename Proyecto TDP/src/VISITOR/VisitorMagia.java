@@ -26,11 +26,7 @@ public class VisitorMagia extends Visitor {
 		
 	}
 
-	@Override
-	public void visitar(ObjetoPrecioso o) {
-		
-		
-	}
+	
 
 	@Override
 	public void visitarDisparo(DisparoLogicoTorre e) {
@@ -40,6 +36,12 @@ public class VisitorMagia extends Visitor {
 
 	@Override
 	public void visitarDisparo(DisparoLogicoEnemigo e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void visitar(ObjetoPrecioso o) {
 		// TODO Auto-generated method stub
 		
 	}

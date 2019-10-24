@@ -26,6 +26,7 @@ public class MapaGrafico extends JLabel{
 	protected MouseListener actualMouseListener;
 	protected State queHagoConElClick;
 	
+	
 	public MapaGrafico(TiendaLogica tiendal, String s, int ancho, int alto) {
 		tiendaLogica= tiendal;
 		this.setBounds(0, 0, ancho, alto);
@@ -65,8 +66,7 @@ public class MapaGrafico extends JLabel{
 	}
 	
 	public void removerEntidad(GameObject o) {
-		remove(o.getGrafico());
-		
+		this.remove(o.getGrafico());
 		repaint();
 	}
 	

@@ -109,21 +109,4 @@ public class DiseñoGeneral extends JFrame{
 		
 		index++;
 	}
-	
-	
-	
-	//-------------METODOS----------------------
-//	
-//	public void agregarHomero(int x, int y) {
-//		JLabel h= new JLabel();
-//		h.setBounds(x, y, 30, 30);
-//		ImageIcon fot0= new ImageIcon(getClass().getClassLoader().getResource("bartsinfondo.png"));
-//		Icon homero= new ImageIcon(fot0.getImage().getScaledInstance(h.getWidth(), h.getHeight(), Image.SCALE_DEFAULT));
-//		h.setIcon(homero);
-//		PANELPRINCIPAL.add(h);
-//		PANELPRINCIPAL.setLayer(h,  1);
-//		btnHomero.setEnabled(true);
-//	}
-//	
-	
 }

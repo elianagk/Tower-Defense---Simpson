@@ -2,24 +2,22 @@ package State;
 
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import java.util.Random;
 
 import GRAFICA.MapaGrafico;
 import GRAFICA.Mouse;
-import Juego.Juego;
-import Mapa.MapaLogico;
 
-public class Comprando implements State {
-	
-	protected Juego juego;
+import Juego.Juego;
+
+public class Magias implements State{
 	protected MapaGrafico mapaGrafico;
+	protected Juego juego;
 	
-	public Comprando(Juego j) {
+	public Magias(Juego j) {
 		juego=j;
-		mapaGrafico= j.getMapaGrafico();
+		mapaGrafico= juego.getMapaGrafico();
 	}
 
-
+	@Override
 	public void actuar() {
 		MouseListener mouseListener;
 		mapaGrafico.removeMouseListener(mapaGrafico.getMouseListener());
@@ -39,11 +37,7 @@ public class Comprando implements State {
 		    }
 		});
 		mapaGrafico.setMouseListener(mouseListener);	
+		
 	}
-	
-	
-	
-
-	
 
 }

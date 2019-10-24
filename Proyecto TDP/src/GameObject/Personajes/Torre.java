@@ -18,16 +18,13 @@ public abstract class Torre extends Personaje {
 		this.vida= vida;
 		this.daño= daño;
 		this.alcance=alcance;
+		
 	}
 	
 	
 	
 	@Override
-	public  void atacar(Personaje e) {
-		//miObjetoGrafico.atacar();
-		
-	}
-	//DEBERIAMOS SABER A QUIEN ATACAMOS PARA PODER SACARLE VIDA
+	public abstract void atacar(Personaje e);
 
 	
 	
@@ -39,7 +36,7 @@ public abstract class Torre extends Personaje {
 	//mirar el alto , linea
 	public boolean estaEnRango(GameObject g) {
 		//(this.posicion.y >= g.getY() && (this.posicion.y+this.height) <= g.getY())
-		return (g.getX()==this.posicion.x+100 && g.getY()==this.posicion.y);
+		return (g.getX()==this.posicion.x+miObjetoGrafico.getWidth() && g.getY()==this.posicion.y  );
 	}
 	
 }
