@@ -20,7 +20,7 @@ import Tienda.TiendaGrafica;
 public class Juego {
 	
 	public Enemigo enemigos[];
-	private int i;
+	private int nivelActual;
 	private Nivel niveles[];
 	private Jugador jugador;
 	private MapaGrafico mapaGrafico;
@@ -37,7 +37,12 @@ public class Juego {
 	
 	
 	public Juego(MapaGrafico mapaGrafico, MapaLogico mapaLogico){
-		niveles= new Nivel[2];
+
+		nivelActual=0;
+		niveles= new Nivel[1];
+		niveles[0]= new Nivel(this, mapaLogico);
+		jugador=new Jugador();
+
 		this.mapaGrafico=mapaGrafico;
 		this.mapaLogico= mapaLogico;
 		niveles[0]= new Nivel(this, mapaLogico);
@@ -112,4 +117,13 @@ public class Juego {
 	public Jugador getJugador() {
 		return jugador;
 	}
+	
+	public void gameOver() {
+		niveles[nivelActual].shutdown();
+	}
+	
+	public void victory() {
+		
+	}
+	
 }

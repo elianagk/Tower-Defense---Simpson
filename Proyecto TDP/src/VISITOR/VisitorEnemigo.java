@@ -10,14 +10,20 @@ import GameObject.Personajes.Torre;
 
 public class VisitorEnemigo extends Visitor {
 	
+	
 	public VisitorEnemigo(Enemigo e) {
 		mipersonaje= e;
 	}
 
 	@Override
 	public void visitar(Enemigo e) {
-		mipersonaje.accionar();
-		
+//		System.out.println(e.getX());
+//		if (e.getX()>0) 
+			mipersonaje.accionar();
+//		else {
+//			e.gameOver();
+//			System.out.println("GAMEOVER");
+//		}
 	}
 
 	@Override

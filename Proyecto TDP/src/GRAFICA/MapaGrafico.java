@@ -35,6 +35,7 @@ public class MapaGrafico extends JLabel{
 		ImageIcon fot1= new ImageIcon(getClass().getClassLoader().getResource("CASA2.png"));
 		Icon mapa= new ImageIcon(fot1.getImage().getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_DEFAULT));
 		this.setIcon(mapa);
+
 		lineas= new Point [6];
 		lineas[0]= new Point(231,325);
 		lineas[1]= new Point (330, 418);
@@ -45,6 +46,7 @@ public class MapaGrafico extends JLabel{
 		
 		
 		//---------------------------------------------
+
 
 	}
 	
@@ -85,7 +87,19 @@ public class MapaGrafico extends JLabel{
 		return actualMouseListener;
 	}
 	
+
 	public Point[] getLineas() {
 		return lineas;
+	}
+
+	public void gameOver() {
+		juego.gameOver();
+		ImageIcon fot1= new ImageIcon(getClass().getClassLoader().getResource("gameover.gif"));
+		Icon mapa= new ImageIcon(fot1.getImage().getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_DEFAULT));
+		this.setIcon(mapa);
+	}
+	
+	public void victory() {
+		
 	}
 }

@@ -6,11 +6,13 @@ import GameObject.Objetos.ObjetoPrecioso;
 import GameObjectGrafico.ObjetosGraficos.ObjetosPreciososGraficos.SuperDuffGrafico;
 import Mapa.MapaLogico;
 import VISITOR.Visitor;
+import VISITOR.VisitorPrecioso;
 
 public class SuperDuff extends ObjetoPrecioso {
 
 	public SuperDuff(MapaLogico mapaLogico) {
 		super(mapaLogico, new SuperDuffGrafico(), 200);	//3°vida
+		visitor= new VisitorPrecioso(this);
 	}
 
 	@Override

@@ -7,11 +7,13 @@ import GameObjectGrafico.ObjetosGraficos.MagiaGrafico;
 import GameObjectGrafico.ObjetosGraficos.MagiasGraficas.AumentoDeDañoGrafico;
 import Mapa.MapaLogico;
 import VISITOR.Visitor;
+import VISITOR.VisitorMagia;
 
 public class AumentoDeDaño extends Magia{
 
 	public AumentoDeDaño(MapaLogico mapaLogico) {
 		super(mapaLogico, new AumentoDeDañoGrafico(), 25);	//3°duracion seg
+		visitor= new VisitorMagia(this);
 	}
 
 	@Override

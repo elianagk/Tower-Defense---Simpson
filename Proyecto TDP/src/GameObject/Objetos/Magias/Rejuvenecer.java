@@ -6,11 +6,13 @@ import GameObject.Objetos.Magia;
 import GameObjectGrafico.ObjetosGraficos.MagiasGraficas.RejuvenecerGrafico;
 import Mapa.MapaLogico;
 import VISITOR.Visitor;
+import VISITOR.VisitorMagia;
 
 public class Rejuvenecer extends Magia {
 
 	public Rejuvenecer(MapaLogico mapaLogico) {
 		super(mapaLogico, new RejuvenecerGrafico(), 20);	//3°duracion seg
+		visitor= new VisitorMagia(this);
 	}
 
 	@Override

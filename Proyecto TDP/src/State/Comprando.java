@@ -31,6 +31,7 @@ public class Comprando implements State {
 		    	int y= e.getY();
 
 		    	if(y>=170 && y<=800) {
+
 		    		mapaGrafico.avisarTienda((x/100)*100, (y/100)*100);
 		    		juego.setJugar();
 

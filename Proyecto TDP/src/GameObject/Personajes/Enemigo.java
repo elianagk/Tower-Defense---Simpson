@@ -60,9 +60,12 @@ public abstract  class Enemigo extends Personaje {
 
 	@Override
 	public void accionar() {
-		
-		super.mover(backward_key);
-		
+
+		if (posicion.x<=0)
+			mapaLogico.gameOver();
+		else
+			super.mover(backward_key);
+
 	}
 	
 	public boolean estaEnRango(GameObject g) {
@@ -127,4 +130,7 @@ public abstract  class Enemigo extends Personaje {
 	}
 	
 
+//	public void gameOver() {
+//		mapaLogico.gameOver();
+//	}
 }
