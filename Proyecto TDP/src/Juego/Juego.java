@@ -42,16 +42,12 @@ public class Juego {
 		niveles= new Nivel[1];
 		niveles[0]= new Nivel(this, mapaLogico);
 		jugador=new Jugador();
-
 		this.mapaGrafico=mapaGrafico;
 		this.mapaLogico= mapaLogico;
-		niveles[0]= new Nivel(this, mapaLogico);
-		niveles[1]= new Nivel(this, mapaLogico);
+		comenzarNiveles();
 		jugar= new Jugando(this);
 		comprar= new Comprando(this);
 		vender= new Vendiendo(this);
-		magia= new Magias(this);
-		comenzarJuego();
 	}
 	
 	private void comenzarJuego() {
@@ -83,7 +79,7 @@ public class Juego {
 	
 	public void comenzarNiveles() {
 		niveles[0].ejecutarHordas();
-		niveles[1].ejecutarHordas();
+
 	}
 	
 	public MapaGrafico getMapaGrafico() {
