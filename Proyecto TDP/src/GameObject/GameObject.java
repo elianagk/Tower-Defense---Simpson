@@ -100,6 +100,9 @@ public abstract class GameObject {
 		return costo;
 	}
 	
+	public void gameOver() {
+		mapaLogico.gameOver();
+	}
 	
 	public abstract void Aceptar(Visitor v);
 	

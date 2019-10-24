@@ -33,24 +33,6 @@ public class MapaGrafico extends JLabel{
 		ImageIcon fot1= new ImageIcon(getClass().getClassLoader().getResource("CASA2.png"));
 		Icon mapa= new ImageIcon(fot1.getImage().getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_DEFAULT));
 		this.setIcon(mapa);
-		
-		
-		//---------------------------------------------
-//		this.addMouseListener(new Mouse() {
-//		    @Override
-//		    public void mouseClicked(MouseEvent e) {//Esto sirve para comprar
-//		    	queHagoConElClick.actuar();	//el mouse listener deberia funcionar y le tenemos que decir como
-////		    	int x= e.getX();
-////		    	int y= e.getY();
-////		    	if(x<=600 && y>=300 && y<=600)
-//		    		avisarTienda((x/100)*100, (y/100)*100);
-//		    }
-//		});
-//		
-
-//		juego = new Juego(this);
-//		tiempo = new ContadorTiempo(juego);
-//		tiempo.start();
 	}
 	
 	public void agregarEntidad(GameObject o) {
@@ -91,4 +73,14 @@ public class MapaGrafico extends JLabel{
 		return actualMouseListener;
 	}
 	
+	public void gameOver() {
+		juego.gameOver();
+		ImageIcon fot1= new ImageIcon(getClass().getClassLoader().getResource("gameover.gif"));
+		Icon mapa= new ImageIcon(fot1.getImage().getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_DEFAULT));
+		this.setIcon(mapa);
+	}
+	
+	public void victory() {
+		
+	}
 }

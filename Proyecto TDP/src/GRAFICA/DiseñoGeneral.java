@@ -88,7 +88,7 @@ public class DiseñoGeneral extends JFrame{
 		PANELPRINCIPAL.setLayer(PANELTIENDA, 0);
 		
 		
-		PANELPRINCIPAL.add(MAPA);
+		PANELPRINCIPAL.add(MAPA); 
 		PANELPRINCIPAL.setLayer(MAPA, 0);
 
 		

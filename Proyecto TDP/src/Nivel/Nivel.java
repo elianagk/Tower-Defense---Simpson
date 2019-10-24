@@ -54,11 +54,11 @@ public class Nivel {
 		
 		
 		scheduler.schedule(new Runnable() {public void run() { ejecutarHorda(hordas[1]);	 }
-	    }, hordas[0].getCantEnemigos()*5+15, TimeUnit.SECONDS);
+	    }, hordas[0].getCantEnemigos()*5+20, TimeUnit.SECONDS);
 			
 		
 		scheduler.schedule(new Runnable() {public void run() { ejecutarHorda(hordas[2]); }
-	    }, hordas[0].getCantEnemigos()*5+15+hordas[1].getCantEnemigos()*5+10, TimeUnit.SECONDS);
+	    }, hordas[0].getCantEnemigos()*5+20+hordas[1].getCantEnemigos()*5+15, TimeUnit.SECONDS);
 		
 		
 //	    scheduler.scheduleAtFixedRate(new Runnable() {
@@ -74,4 +74,9 @@ public class Nivel {
 	public void finalizarNivel() {
 		//Si un enemigo llega a x entre 0 y 30 creo, se pierde el nivel
 	}
+	
+	public void shutdown() {
+		scheduler.shutdown();
+	}
+	
 }

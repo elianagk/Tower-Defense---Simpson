@@ -141,5 +141,16 @@ public class MapaLogico  {
 		return tiendaLogica;
 	}
 	
+	public void gameOver() {
+		entidadesAEliminar=(ArrayList<GameObject>) entidades.clone();
+		entidadesAAgregar.clear();
+		actualizarListaDeEntidades();
+		mapaGrafico.gameOver();
+		
+	}
+	
+	public void victory() {
+		
+	}
 }
 
