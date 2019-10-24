@@ -1,5 +1,7 @@
 package GameObject.Personajes;
 
+import java.awt.Point;
+
 import GameObject.GameObject;
 import GameObject.Personaje;
 import GameObjectGrafico.GameObjectGrafico;
@@ -36,7 +38,23 @@ public abstract class Torre extends Personaje {
 	//mirar el alto , linea
 	public boolean estaEnRango(GameObject g) {
 		//(this.posicion.y >= g.getY() && (this.posicion.y+this.height) <= g.getY())
-		return (g.getX()==this.posicion.x+miObjetoGrafico.getWidth() && g.getY()==this.posicion.y  );
+		return (g.getX()==this.getX()+100 && g.getY()== this.getY())   ;
+	}
+	
+	private boolean lineas(int y, int yy) {
+		Point[] p= mapaLogico.getMapaGrafico().getLineas();
+		boolean toReturn =false;
+		for (int i=0; i<p.length; i++) {
+			if (y>p[i].getX() && y<p[i].getY()) {
+				if (yy>p[i].getX() && yy<p[i].getY()) {
+					toReturn =true;
+				}
+				
+			}
+		}
+			
+			
+		return toReturn;
 	}
 	
 }

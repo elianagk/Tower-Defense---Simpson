@@ -25,7 +25,7 @@ public abstract  class Enemigo extends Personaje {
 	
 	public Enemigo(MapaLogico ml, GameObjectGrafico gog) {
 		super(ml, gog);
-		tiempo=10;
+		tiempo=3;
 		contador=0;
 	}
 	
@@ -60,11 +60,29 @@ public abstract  class Enemigo extends Personaje {
 
 	@Override
 	public void accionar() {
+		
 		super.mover(backward_key);
+		
 	}
 	
 	public boolean estaEnRango(GameObject g) {
-		return (g.getX()==posicion.x-100 && g.getY()==this.posicion.y); 
+		return (g.getX()+100==this.getX() && g.getY()==this.getY()); 
+	}
+	
+	private boolean lineas(int y, int yy) {
+		Point[] p= mapaLogico.getMapaGrafico().getLineas();
+		boolean toReturn =false;
+		for (int i=0; i<p.length; i++) {
+			if (y>p[i].getX() && y<p[i].getY()) {
+				if (yy>p[i].getX() && yy<p[i].getY()) {
+					toReturn =true;
+				}
+				
+			}
+		}
+			
+			
+		return toReturn;
 	}
 	
 	@Override
@@ -78,6 +96,7 @@ public abstract  class Enemigo extends Personaje {
 			contador++;
 			if (contador==tiempo) {
 				mapaLogico.entidadAAgregar(powerup(), this.getX(), this.getY());
+				mapaLogico.getJuego().setMagias();
 			}
 			
 		}

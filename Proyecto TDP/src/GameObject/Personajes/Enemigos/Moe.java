@@ -22,7 +22,7 @@ public class Moe extends Enemigo {
 	
 	public Moe(MapaLogico ml) {
 		super(ml, new MoeGrafico());
-		vida= 100;
+		vida= 50;
 		velocidad= 6;
 		visitor= new VisitorEnemigo(this);
 		tiempo=35;
@@ -47,6 +47,7 @@ public class Moe extends Enemigo {
 	
 	@Override
 	public void accionar() {
+		
 		super.mover(backward_key);
 		
 		contador++;
@@ -54,6 +55,7 @@ public class Moe extends Enemigo {
 			mapaLogico.entidadAAgregar(new DisparoLogicoEnemigo(mapaLogico, this), this.getX()-50, this.getY());
 			contador=0;
 		}
+	
 	}
 
 	

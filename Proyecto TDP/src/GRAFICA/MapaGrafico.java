@@ -25,6 +25,7 @@ public class MapaGrafico extends JLabel{
 	private ContadorTiempo tiempo;
 	protected MouseListener actualMouseListener;
 	protected State queHagoConElClick;
+	private Point[] lineas;
 	
 	
 	public MapaGrafico(TiendaLogica tiendal, String s, int ancho, int alto) {
@@ -34,24 +35,17 @@ public class MapaGrafico extends JLabel{
 		ImageIcon fot1= new ImageIcon(getClass().getClassLoader().getResource("CASA2.png"));
 		Icon mapa= new ImageIcon(fot1.getImage().getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_DEFAULT));
 		this.setIcon(mapa);
+		lineas= new Point [6];
+		lineas[0]= new Point(231,325);
+		lineas[1]= new Point (330, 418);
+		lineas[2]= new Point (424,511);
+		lineas[3]= new Point (519,607);
+		lineas[4]= new Point (615,694);
+		lineas[5]=new Point(709, 756);
 		
 		
 		//---------------------------------------------
-//		this.addMouseListener(new Mouse() {
-//		    @Override
-//		    public void mouseClicked(MouseEvent e) {//Esto sirve para comprar
-//		    	queHagoConElClick.actuar();	//el mouse listener deberia funcionar y le tenemos que decir como
-////		    	int x= e.getX();
-////		    	int y= e.getY();
-////		    	if(x<=600 && y>=300 && y<=600)
-//		    		avisarTienda((x/100)*100, (y/100)*100);
-//		    }
-//		});
-//		
 
-//		juego = new Juego(this);
-//		tiempo = new ContadorTiempo(juego);
-//		tiempo.start();
 	}
 	
 	public void agregarEntidad(GameObject o) {
@@ -91,4 +85,7 @@ public class MapaGrafico extends JLabel{
 		return actualMouseListener;
 	}
 	
+	public Point[] getLineas() {
+		return lineas;
+	}
 }

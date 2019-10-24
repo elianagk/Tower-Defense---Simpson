@@ -23,6 +23,7 @@ public class MapaLogico  {
 	private MapaGrafico mapaGrafico;
 	private int width, height;
 	private TiendaLogica tiendaLogica;
+	private Juego juego;
 	
 
 
@@ -32,14 +33,13 @@ public class MapaLogico  {
 		entidadesAEliminar= new ArrayList<GameObject> ();
 		this.width=width;
 		this.height=height;
-		mapaGrafico=null;
 		tiendaLogica=null;
+		
+		
 		
 	}
 	
-	public MapaGrafico getMapaGrafico() {
-		return mapaGrafico;
-	}
+	
 	
 	public void setTiendaLogica(TiendaLogica tiendaLogica) {
 		this.tiendaLogica=tiendaLogica;
@@ -49,11 +49,14 @@ public class MapaLogico  {
 		mapaGrafico= m;
 	}
 	
+	public MapaGrafico getMapaGrafico() {
+		return mapaGrafico;
+	}
 	public ArrayList<GameObject> hayEnElRango(GameObject g) {
 		ArrayList<GameObject> toReturn = new ArrayList<GameObject>();
 		
 		for (GameObject e: entidades) {
-			if (e.estaEnRango(g)) {
+			if (e.getX()+100==g.getX() && e.getY()==g.getY()) {
 				toReturn.add(e);				
 			}
 			
@@ -115,9 +118,13 @@ public class MapaLogico  {
 		return clon;
 	}
 	
+	public void setJuego(Juego j) {
+		juego=j;
+	}
+	
 	//Sirve para matar a apu desde un boton
 	public Juego getJuego() {
-		return mapaGrafico.getJuego();
+		return juego;
 	}
 	
 	

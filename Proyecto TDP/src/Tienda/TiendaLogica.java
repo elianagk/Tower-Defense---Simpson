@@ -49,6 +49,10 @@ public class TiendaLogica {
 		}
 	}
 	
+	public void aplicarMagia() {
+		
+	}
+	
 	public void vender(Torre torre) {
 		int retornoDinero=0;
 		if (torre.getVida()>=torre.getVidaTotal()/2)

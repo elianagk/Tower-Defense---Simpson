@@ -31,6 +31,7 @@ public class DiseñoGeneral extends JFrame{
 	private State vendiendo;
 	private State comprando;
 	private State jugando;
+	private JLabel lblNewLabel;
 	
 
 	/**
@@ -63,8 +64,8 @@ public class DiseñoGeneral extends JFrame{
 	private void initialize() {
 		frmJuego = new JFrame();
 		frmJuego.setTitle("Juego");
-		frmJuego.setResizable(false);
-		frmJuego.setBounds(100, 100, 1080, 800);
+		//frmJuego.setResizable(false);
+		frmJuego.setBounds(100, 100, 1400, 800);
 		frmJuego.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmJuego.getContentPane().setLayout(null);
 		
@@ -74,14 +75,17 @@ public class DiseñoGeneral extends JFrame{
 		frmJuego.setVisible(true);
 		PANELPRINCIPAL.setLayout(null);
 		
-		mapal= new MapaLogico(PANELPRINCIPAL.getWidth(), PANELPRINCIPAL.getHeight()); 
+		mapal= new MapaLogico(PANELPRINCIPAL.getWidth(), PANELPRINCIPAL.getHeight());
 		tiendaLogica= new TiendaLogica(mapal);
 		MAPA = new MapaGrafico(tiendaLogica, "casa.png", PANELPRINCIPAL.getWidth(), PANELPRINCIPAL.getHeight());
+		 
 		mapal.setMapaGrafico(MAPA);
 		mapal.setTiendaLogica(tiendaLogica);
 		
+		
 		juego = new Juego(MAPA, mapal);
 		tiendaLogica.setJugador(juego.getJugador());
+		mapal.setJuego(juego);
 		
 		PANELTIENDA= new TiendaGrafica(tiendaLogica);
 		PANELPRINCIPAL.add(PANELTIENDA);
@@ -107,6 +111,12 @@ public class DiseñoGeneral extends JFrame{
 		
 		MAPA.setJuego(juego);
 		
+		lblNewLabel = new JLabel("New label");
+		lblNewLabel.setBounds(305, 730, 46, 22);
+		PANELPRINCIPAL.add(lblNewLabel);
+		
 		index++;
 	}
+	
+	
 }

@@ -15,9 +15,9 @@ public class DonaExplosiva extends ObjetoPrecioso {
 	public DonaExplosiva(MapaLogico mapaLogico) {
 		super(mapaLogico, new DonaExplosivaGrafica(), 100);	//3°vida
 		visitor= new VisitorPrecioso(this);
-		hilo= new HiloAnimacion(mapaLogico, miObjetoGrafico);
-		hilo.start();
-		
+//		hilo= new HiloAnimacion(mapaLogico.getMapaGrafico(), miObjetoGrafico);
+//		hilo.start();
+//		
 		
 	}
 

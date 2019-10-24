@@ -46,8 +46,8 @@ public class Horda {
 			case 6: g= new MrBurns(mapaLogico);
 				break;
 			}
-			y=r.nextInt(301)+300;
-			p= new Point(1080, y);
+			y=r.nextInt(350)+200;
+			p= new Point(1400, y);
 			g.setPosicion(p);
 			
 			cantEnemigos--;			

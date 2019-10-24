@@ -60,6 +60,7 @@ public class TiendaGrafica extends JPanel {
 	public void actualizarPuntaje(int p) {
 		
 		monedas.setText(""+p);
+		
 	}
 	
 	
