@@ -1,3 +1,4 @@
+
 package Hordas;
 
 import Nivel.Nivel;
@@ -66,3 +67,4 @@ public class Horda {
 		return cantEnemigos==0;	//cuando es 0 retorna falso y corta el while
 	}
 }
+
