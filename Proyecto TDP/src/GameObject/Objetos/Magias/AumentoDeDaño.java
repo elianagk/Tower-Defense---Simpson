@@ -31,7 +31,6 @@ public class AumentoDeDaño extends Magia{
 
 	@Override
 	public GameObject clone() {
-		// TODO Auto-generated method stub
-		return null;
+		return new AumentoDeDaño(mapaLogico);
 	}
 }

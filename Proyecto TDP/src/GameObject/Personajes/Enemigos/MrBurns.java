@@ -19,7 +19,7 @@ public class MrBurns extends Enemigo {
 	
 	public MrBurns(MapaLogico ml) {
 		super(ml, new MrBurnsGrafico());
-		vida= 50;
+		vida= 1;
 		velocidad= 6;
 		visitor= new VisitorEnemigo(this);
 		tiempo=20;

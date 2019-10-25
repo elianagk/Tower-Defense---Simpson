@@ -48,6 +48,7 @@ public class Juego {
 		jugar= new Jugando(this);
 		comprar= new Comprando(this);
 		vender= new Vendiendo(this);
+		magia= new Magias(this);
 	}
 	
 	private void comenzarJuego() {

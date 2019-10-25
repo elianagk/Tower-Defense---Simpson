@@ -65,7 +65,7 @@ public class DiseñoGeneral extends JFrame{
 		frmJuego = new JFrame();
 		frmJuego.setTitle("Juego");
 		//frmJuego.setResizable(false);
-		frmJuego.setBounds(100, 100, 1400, 800);
+		frmJuego.setBounds(100, 100, 1080, 800);
 		frmJuego.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmJuego.getContentPane().setLayout(null);
 		
