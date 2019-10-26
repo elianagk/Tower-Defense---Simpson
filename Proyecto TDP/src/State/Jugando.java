@@ -16,7 +16,6 @@ public class Jugando implements State {
 		juego =j;
 		mapaGrafico= juego.getMapaGrafico();
 		mapaGrafico.setMouseListener(null);		//suponiendo que se inicializa el juego con este estado
-
 	}
 
 	@Override

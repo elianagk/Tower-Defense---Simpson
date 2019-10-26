@@ -17,7 +17,7 @@ import State.Vendiendo;
 
 public class Juego {
 	
-	public Enemigo enemigos[];
+//	public Enemigo enemigos[];
 	private int nivelActual;
 	private Nivel niveles[];
 	private Jugador jugador;
@@ -41,6 +41,7 @@ public class Juego {
 		this.mapaLogico= mapaLogico;
 		comenzarNiveles();
 		jugar= new Jugando(this);
+		estado=jugar;
 		comprar= new Comprando(this);
 		vender= new Vendiendo(this);
 	}

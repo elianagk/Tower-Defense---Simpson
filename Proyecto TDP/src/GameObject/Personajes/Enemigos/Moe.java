@@ -47,12 +47,16 @@ public class Moe extends Enemigo {
 	
 	@Override
 	public void accionar() {
-		super.mover(backward_key);
-		
-		contador++;
-		if (contador==tiempo) {
-			mapaLogico.entidadAAgregar(new DisparoLogicoEnemigo(mapaLogico, this), this.getX()-50, this.getY());
-			contador=0;
+		if (posicion.x<=0) 
+			mapaLogico.gameOver();
+		else {
+			super.mover(backward_key);
+			
+			contador++;
+			if (contador==tiempo) {
+				mapaLogico.entidadAAgregar(new DisparoLogicoEnemigo(mapaLogico, this), this.getX()-50, this.getY());
+				contador=0;
+			}
 		}
 	}
 

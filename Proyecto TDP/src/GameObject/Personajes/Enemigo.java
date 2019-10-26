@@ -58,7 +58,4 @@ public abstract  class Enemigo extends Personaje {
 			super.mover(backward_key);
 	}
 
-//	public void gameOver() {
-//		mapaLogico.gameOver();
-//	}
 }

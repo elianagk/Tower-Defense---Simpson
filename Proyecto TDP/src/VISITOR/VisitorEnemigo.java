@@ -14,14 +14,8 @@ public class VisitorEnemigo extends Visitor {
 	}
 
 	@Override
-	public void visitar(Enemigo e) {
-//		System.out.println(e.getX());
-//		if (e.getX()>0) 
-			mipersonaje.accionar();
-//		else {
-//			e.gameOver();
-//			System.out.println("GAMEOVER");
-//		}
+	public void visitar(Enemigo e) {	
+		mipersonaje.accionar();
 	}
 
 	@Override

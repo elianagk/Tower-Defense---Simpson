@@ -34,7 +34,6 @@ public class Nivel {
 	}
 	
 	public void ejecutarHorda(Horda horda) {
-//		final ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
 		
 		final ScheduledFuture<?> crearHorda = 
 	    scheduler.scheduleAtFixedRate(new Runnable() {
