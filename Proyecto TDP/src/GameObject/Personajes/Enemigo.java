@@ -101,7 +101,7 @@ public abstract  class Enemigo extends Personaje {
 //			if (contador==tiempo) {
 				Magia m= new Rejuvenecer(mapaLogico);
 				mapaLogico.entidadAAgregar(m, this.getX(), this.getY());
-				mapaLogico.proximaMagia(m);
+				//mapaLogico.proximaMagia(m);
 				mapaLogico.getJuego().setMagias();
 				
 //			}

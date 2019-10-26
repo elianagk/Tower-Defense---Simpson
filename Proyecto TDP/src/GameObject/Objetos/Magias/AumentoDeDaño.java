@@ -33,4 +33,10 @@ public class AumentoDeDaño extends Magia{
 	public GameObject clone() {
 		return new AumentoDeDaño(mapaLogico);
 	}
+
+	@Override
+	public void terminarMagia() {
+		// TODO Auto-generated method stub
+		
+	}
 }

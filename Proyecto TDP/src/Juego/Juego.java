@@ -111,6 +111,10 @@ public class Juego {
 		estado.actuar();
 	}
 	
+	public Magias getMagias() {
+		return (Magias) magia;
+	}
+	
 	public Jugador getJugador() {
 		return jugador;
 	}
@@ -122,5 +126,7 @@ public class Juego {
 	public void victory() {
 		
 	}
+	
+	
 	
 }

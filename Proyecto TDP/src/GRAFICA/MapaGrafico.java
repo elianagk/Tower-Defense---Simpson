@@ -50,6 +50,10 @@ public class MapaGrafico extends JLabel{
 
 	}
 	
+	public void setTiendaLogica(TiendaLogica tienda) {
+		tiendaLogica=tienda;
+	}
+	
 	public void agregarEntidad(GameObject o) {
 		JLabel toAdd= o.getGrafico();
 		toAdd.setBounds(o.getX(), o.getY(), 100, 100);

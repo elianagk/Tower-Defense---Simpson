@@ -1,24 +1,15 @@
 package GameObjectGrafico.ObjetosGraficos;
 
 import GameObjectGrafico.GameObjectGrafico;
+import GameObjectGrafico.ObjetoGrafico;
 
-public class ObjetoPreciosoGrafico extends GameObjectGrafico{
+public class ObjetoPreciosoGrafico extends ObjetoGrafico{
 
 
-	public ObjetoPreciosoGrafico() {
-		super("donut.png");
+	public ObjetoPreciosoGrafico(String s) {
+		super(s);
 		
 	}
 
-	@Override
-	public void cambiarPosicion() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void atacar() {
-		// TODO Auto-generated method stub
-		
-	}
+	
 }

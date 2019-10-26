@@ -24,18 +24,18 @@ public class MapaLogico  {
 	private int width, height;
 	private TiendaLogica tiendaLogica;
 	private Juego juego;
-	private Magia proxMagia;
+	private GameObject proxMagia;
 	
 
 
-	public MapaLogico (int width, int height) {
+	public MapaLogico (int width, int height, MapaGrafico mapa) {
 		entidades= new ArrayList<GameObject> ();
 		entidadesAAgregar= new ArrayList<GameObject> ();
 		entidadesAEliminar= new ArrayList<GameObject> ();
 		this.width=width;
 		this.height=height;
 		tiendaLogica=null;
-		
+		mapaGrafico=mapa;
 		
 		
 	}
@@ -146,12 +146,12 @@ public class MapaLogico  {
 		
 	}
 	
-	public void proximaMagia(Magia m) {
+	public void proximaMagia(GameObject m) {
 		proxMagia=m;
 		
 	}
 	
-	public Magia getProximaMagia() {
+	public GameObject getProximaMagia() {
 		return proxMagia;
 	}
 	

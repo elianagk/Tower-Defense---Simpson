@@ -1,11 +1,13 @@
 package GameObjectGrafico.ObjetosGraficos.ObjetosPreciososGraficos;
 
 import GameObjectGrafico.ObjetoGrafico;
+import GameObjectGrafico.ObjetosGraficos.ObjetoPreciosoGrafico;
 
-public class SuperDuffGrafico extends ObjetoGrafico{
+public class SuperDuffGrafico extends ObjetoPreciosoGrafico{
 
 	public SuperDuffGrafico() {
 		super("duff.png");	
-		// TODO setear la label
+		this.setSize(50, 100);
+		
 	}
 }

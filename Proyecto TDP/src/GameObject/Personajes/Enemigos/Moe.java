@@ -28,6 +28,7 @@ public class Moe extends Enemigo {
 		tiempo=35;
 		contador=0;
 		daño=25;
+		
 	}
 
 	@Override
