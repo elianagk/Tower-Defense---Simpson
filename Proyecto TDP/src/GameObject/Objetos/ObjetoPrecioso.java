@@ -8,9 +8,14 @@ import Mapa.MapaLogico;
 
 public abstract class ObjetoPrecioso extends Objeto {
 	protected int vida;
+	protected HiloAnimacionPrecioso hilo;
 	
 	public ObjetoPrecioso(MapaLogico mapaLogico, GameObjectGrafico objP, int vida) {
 		super(mapaLogico, objP);
 		this.vida=vida;
 	}
+	
+	
+	public abstract void empezarHilo() ;
+	
 }

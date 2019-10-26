@@ -19,8 +19,8 @@ public class MrBurns extends Enemigo {
 	
 	public MrBurns(MapaLogico ml) {
 		super(ml, new MrBurnsGrafico());
-		vida= 400;
-		velocidad= 5;
+		vida= 1;
+		velocidad= 6;
 		visitor= new VisitorEnemigo(this);
 		tiempo=20;
 		contador=0;
@@ -29,7 +29,7 @@ public class MrBurns extends Enemigo {
 	
 	@Override
 	public void atacar(Personaje e) {
-		super.mover(still_key);
+		super.mover(backward_key);
 		miObjetoGrafico.atacar();
 		contador++;
 		if (contador==tiempo) {
@@ -55,7 +55,7 @@ public class MrBurns extends Enemigo {
 				mapaLogico.entidadAAgregar(new DisparoLogicoEnemigo(mapaLogico, this), this.getX()-50, this.getY());
 				contador=0;
 			}
-		}
 	}
+	
 	
 }

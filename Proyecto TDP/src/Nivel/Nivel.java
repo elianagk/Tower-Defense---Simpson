@@ -23,9 +23,9 @@ public class Nivel {
 		this.juego= juego;
 		this.mapaLogico= mapaLogico;
 		hordas= new Horda[3];
-		hordas[0]= new Horda(this, mapaLogico, 1);
-		hordas[1]= new Horda(this, mapaLogico, 2);
-		hordas[2]= new Horda(this, mapaLogico, 3);
+		hordas[0]= new Horda(this, mapaLogico, 15);
+		hordas[1]= new Horda(this, mapaLogico, 20);
+		hordas[2]= new Horda(this, mapaLogico, 25);
 	}
 	
 	public void crearEnemigo(Horda horda) {
@@ -73,9 +73,11 @@ public class Nivel {
 	public void finalizarNivel() {
 		//Si un enemigo llega a x entre 0 y 30 creo, se pierde el nivel
 	}
+
 	
 	public void shutdown() {
 		scheduler.shutdown();
 	}
 	
 }
+

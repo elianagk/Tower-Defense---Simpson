@@ -17,7 +17,7 @@ public class Abuelo extends Torre {
 	protected int contador;
 	
 	public Abuelo(MapaLogico mapaLogico) {
-		super(80, 200, 50, 1, mapaLogico, new AbueloGrafico());
+		super(80, 100, 50, 1, mapaLogico, new AbueloGrafico());
 		visitor= new VisitorAliado(this);
 		tiempo=20;
 		contador=0;

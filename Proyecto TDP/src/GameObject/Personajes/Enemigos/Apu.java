@@ -15,7 +15,7 @@ public class Apu extends Enemigo {
 	
 	public Apu(MapaLogico ml) {
 		super(ml, new ApuGrafico());
-		vida=200;
+		vida=1;
 		velocidad= 5;
 		visitor= new VisitorEnemigo(this);
 		daño=30;

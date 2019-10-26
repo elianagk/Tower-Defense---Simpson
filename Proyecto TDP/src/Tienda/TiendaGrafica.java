@@ -49,8 +49,7 @@ public class TiendaGrafica extends JPanel {
 	dinero= new JLabel("Puntaje=");
 	dinero.setBackground(Color.white);
 	dinero.setOpaque(true);
-	String p=Integer.toString(tienda.monedas());
-	monedas = new JLabel();
+	monedas = new JLabel("");
 	monedas.setBackground(Color.white);
 	monedas.setOpaque(true);
 	this.add(dinero);
@@ -59,8 +58,9 @@ public class TiendaGrafica extends JPanel {
 	}
 	
 	public void actualizarPuntaje(int p) {
-		String e= Integer.toString(p);
-		monedas.setText(e);
+		
+		monedas.setText(""+p);
+		
 	}
 	
 	

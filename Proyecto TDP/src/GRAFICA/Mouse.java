@@ -3,6 +3,7 @@ package GRAFICA;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
+
 public class Mouse implements MouseListener{
 
 	@Override
@@ -27,7 +28,7 @@ public class Mouse implements MouseListener{
 
 	@Override
 	public void mousePressed(MouseEvent e) {
-		// TODO Auto-generated method stub
+		 
 		
 	}
 

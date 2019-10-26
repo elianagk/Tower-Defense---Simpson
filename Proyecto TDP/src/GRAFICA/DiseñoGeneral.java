@@ -31,6 +31,7 @@ public class DiseñoGeneral extends JFrame{
 	private State vendiendo;
 	private State comprando;
 	private State jugando;
+	private JLabel lblNewLabel;
 	
 
 	/**
@@ -63,7 +64,7 @@ public class DiseñoGeneral extends JFrame{
 	private void initialize() {
 		frmJuego = new JFrame();
 		frmJuego.setTitle("Juego");
-		frmJuego.setResizable(false);
+		//frmJuego.setResizable(false);
 		frmJuego.setBounds(100, 100, 1080, 800);
 		frmJuego.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmJuego.getContentPane().setLayout(null);
@@ -74,14 +75,19 @@ public class DiseñoGeneral extends JFrame{
 		frmJuego.setVisible(true);
 		PANELPRINCIPAL.setLayout(null);
 		
-		mapal= new MapaLogico(PANELPRINCIPAL.getWidth(), PANELPRINCIPAL.getHeight()); 
-		tiendaLogica= new TiendaLogica(mapal);
 		MAPA = new MapaGrafico(tiendaLogica, "casa.png", PANELPRINCIPAL.getWidth(), PANELPRINCIPAL.getHeight());
-		mapal.setMapaGrafico(MAPA);
+		mapal= new MapaLogico(PANELPRINCIPAL.getWidth(), PANELPRINCIPAL.getHeight(),MAPA);
+		tiendaLogica= new TiendaLogica(mapal);
+		
+		 
+		//mapal.setMapaGrafico(MAPA);
 		mapal.setTiendaLogica(tiendaLogica);
+		MAPA.setTiendaLogica(tiendaLogica);
+		
 		
 		juego = new Juego(MAPA, mapal);
 		tiendaLogica.setJugador(juego.getJugador());
+		mapal.setJuego(juego);
 		
 		PANELTIENDA= new TiendaGrafica(tiendaLogica);
 		PANELPRINCIPAL.add(PANELTIENDA);
@@ -107,23 +113,12 @@ public class DiseñoGeneral extends JFrame{
 		
 		MAPA.setJuego(juego);
 		
+		lblNewLabel = new JLabel("New label");
+		lblNewLabel.setBounds(305, 730, 46, 22);
+		PANELPRINCIPAL.add(lblNewLabel);
+		
 		index++;
 	}
 	
-	
-	
-	//-------------METODOS----------------------
-//	
-//	public void agregarHomero(int x, int y) {
-//		JLabel h= new JLabel();
-//		h.setBounds(x, y, 30, 30);
-//		ImageIcon fot0= new ImageIcon(getClass().getClassLoader().getResource("bartsinfondo.png"));
-//		Icon homero= new ImageIcon(fot0.getImage().getScaledInstance(h.getWidth(), h.getHeight(), Image.SCALE_DEFAULT));
-//		h.setIcon(homero);
-//		PANELPRINCIPAL.add(h);
-//		PANELPRINCIPAL.setLayer(h,  1);
-//		btnHomero.setEnabled(true);
-//	}
-//	
 	
 }

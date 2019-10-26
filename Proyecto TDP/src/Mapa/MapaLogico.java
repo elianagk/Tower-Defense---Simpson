@@ -2,7 +2,7 @@ package Mapa;
 
 
 import GameObject.*;
-
+import GameObject.Objetos.Magia;
 import Juego.Juego;
 
 import java.util.ArrayList;
@@ -20,27 +20,27 @@ import java.util.ListIterator;
 
 public class MapaLogico  {
 	private ArrayList<GameObject> entidades, entidadesAAgregar, entidadesAEliminar;
-	private Jugador jugador;
 	private MapaGrafico mapaGrafico;
 	private int width, height;
 	private TiendaLogica tiendaLogica;
+	private Juego juego;
+	private GameObject proxMagia;
 	
 
 
-	public MapaLogico (int width, int height) {
+	public MapaLogico (int width, int height, MapaGrafico mapa) {
 		entidades= new ArrayList<GameObject> ();
 		entidadesAAgregar= new ArrayList<GameObject> ();
 		entidadesAEliminar= new ArrayList<GameObject> ();
 		this.width=width;
 		this.height=height;
-		mapaGrafico=null;
 		tiendaLogica=null;
-		jugador=null;
+		mapaGrafico=mapa;
+		
+		
 	}
 	
-	public MapaGrafico getMapaGrafico() {
-		return mapaGrafico;
-	}
+	
 	
 	public void setTiendaLogica(TiendaLogica tiendaLogica) {
 		this.tiendaLogica=tiendaLogica;
@@ -50,11 +50,14 @@ public class MapaLogico  {
 		mapaGrafico= m;
 	}
 	
+	public MapaGrafico getMapaGrafico() {
+		return mapaGrafico;
+	}
 	public ArrayList<GameObject> hayEnElRango(GameObject g) {
 		ArrayList<GameObject> toReturn = new ArrayList<GameObject>();
-		Point posicion= g.getPosicion();
+		
 		for (GameObject e: entidades) {
-			if (e.getX()+100==posicion.x  ) {
+			if (e.estaEnRango(g)) {
 				toReturn.add(e);				
 			}
 			
@@ -64,29 +67,12 @@ public class MapaLogico  {
 	}
 	
 	public ArrayList<GameObject> getEntidades() {
-		actualizarListaDeEntidades();
-		ArrayList<GameObject> entidadesActualizada = (ArrayList<GameObject>) entidades.clone();
-		return entidadesActualizada;
+		ArrayList<GameObject> entidadesActualizada = actualizarListaDeEntidades();
+		entidades= entidadesActualizada;
+		return entidades;
 	}
 	
-	/**
-	 * recorre la lista de personajes para chequear colisiones
-	 * @param x coordenada x dentro del mapa, donde se va a chequear la colision
-	 * @param y coordenada y dentro del mapa, donde se va a chequear la colision
-	 * @return true si hay colisiones (no se puede agregar el objeto), false caso contrario
-	 */
-	public boolean HayColisiones (int x, int y) {
-		boolean colisiones=false;
-		ListIterator<GameObject> it= entidades.listIterator();
-		GameObject o;
-		while (!colisiones && it.hasNext()) {
-			o=it.next(); 
-			colisiones= (x!=o.getPosicion().x && y!=o.getPosicion().y);
-		}
-		
-		
-		return colisiones;
-	}
+	
 	
 	public void entidadAEliminar(GameObject o) {
 		entidadesAEliminar.add(o);
@@ -96,8 +82,8 @@ public class MapaLogico  {
 	 * remueve una entidad o del la lista de personajes y del mapa grafico
 	 * @param o entidad a remover
 	 */
-	public void removerEntidad(GameObject o) {
-		entidades.remove(o);
+	public void removerEntidad(GameObject o, ArrayList<GameObject> lista) {
+		lista.remove(o);
 		mapaGrafico.removerEntidad(o);
 	}
 	
@@ -107,31 +93,38 @@ public class MapaLogico  {
 		entidadesAAgregar.add(o);
 	}
 	
-	public void agregarEntidad(GameObject o) {
+	public void agregarEntidad(GameObject o, ArrayList<GameObject> lista) {
 		
-			entidades.add(o);
+			lista.add(o);
 			mapaGrafico.agregarEntidad(o);
 			
 		}
 	
 	
-	public void actualizarListaDeEntidades() {
+	public ArrayList<GameObject> actualizarListaDeEntidades() {
+		ArrayList<GameObject> clon= (ArrayList<GameObject>) entidades.clone();
 		for (GameObject objEliminar : entidadesAEliminar) {
-			removerEntidad(objEliminar);
+			removerEntidad(objEliminar, clon);
 		}
 		
 		for (GameObject objAgregar : entidadesAAgregar) {
-			agregarEntidad(objAgregar);
+			agregarEntidad(objAgregar, clon);
 		}
 		
 		
 		entidadesAEliminar.clear();
 		entidadesAAgregar.clear();
+		
+		return clon;
+	}
+	
+	public void setJuego(Juego j) {
+		juego=j;
 	}
 	
 	//Sirve para matar a apu desde un boton
 	public Juego getJuego() {
-		return mapaGrafico.getJuego();
+		return juego;
 	}
 	
 	
@@ -151,5 +144,17 @@ public class MapaLogico  {
 	public void victory() {
 		
 	}
+	
+	public void proximaMagia(GameObject m) {
+		proxMagia=m;
+		
+	}
+	
+	public GameObject getProximaMagia() {
+		return proxMagia;
+	}
+	
+	
+	
 }
 
