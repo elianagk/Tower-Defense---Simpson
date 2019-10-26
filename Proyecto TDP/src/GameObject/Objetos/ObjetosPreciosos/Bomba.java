@@ -4,17 +4,20 @@ import GameObject.GameObject;
 import GameObject.Personaje;
 import GameObject.Objetos.ObjetoPrecioso;
 import GameObjectGrafico.GameObjectGrafico;
+import GameObjectGrafico.ObjetoGrafico;
+import GameObjectGrafico.ObjetosGraficos.ObjetosPreciososGraficos.BombaGrafica;
 import Mapa.MapaLogico;
 import VISITOR.Visitor;
 import VISITOR.VisitorPrecioso;
 
 public class Bomba extends ObjetoPrecioso {
 
-	public Bomba(MapaLogico mapaLogico, GameObjectGrafico objP, int vida) {
-		super(mapaLogico, objP, vida);
+	public Bomba(MapaLogico mapaLogico) {
+		super(mapaLogico, new BombaGrafica(mapaLogico), 100);
 		hilo= new BombaHilo(mapaLogico.getMapaGrafico(), miObjetoGrafico);
 		visitor= new VisitorPrecioso(this);
-		
+		ObjetoGrafico o= (ObjetoGrafico) miObjetoGrafico;
+		o.setEntidad(this);
 	}
 
 	@Override

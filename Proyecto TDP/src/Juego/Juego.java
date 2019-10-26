@@ -10,7 +10,6 @@ import Mapa.MapaLogico;
 import Nivel.Nivel;
 import State.Comprando;
 import State.Jugando;
-import State.Magias;
 import State.State;
 import State.Vendiendo;
 import Tienda.TiendaGrafica;
@@ -32,7 +31,6 @@ public class Juego {
 	private static State comprar;
 	private static State vender;
 	private TiendaGrafica tienda;
-	private static State magia;
 	
 	
 	
@@ -49,7 +47,6 @@ public class Juego {
 		estado=jugar;
 		comprar= new Comprando(this);
 		vender= new Vendiendo(this);
-		magia= new Magias(this);
 	}
 	
 	private void comenzarJuego() {
@@ -105,15 +102,6 @@ public class Juego {
 	public void setVender() {
 		estado= vender;
 		estado.actuar();
-	}
-	
-	public void setMagias() {
-		estado=magia;
-		estado.actuar();
-	}
-	
-	public Magias getMagias() {
-		return (Magias) magia;
 	}
 	
 	public Jugador getJugador() {

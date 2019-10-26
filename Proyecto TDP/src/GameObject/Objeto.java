@@ -29,7 +29,7 @@ public abstract class Objeto extends GameObject {
 		
 	}
 	
-	
+	public abstract void activar();
 	
 	
 

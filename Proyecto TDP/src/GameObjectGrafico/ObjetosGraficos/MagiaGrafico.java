@@ -1,12 +1,14 @@
 package GameObjectGrafico.ObjetosGraficos;
 
 
+import GameObject.Objeto;
 import GameObjectGrafico.ObjetoGrafico;
+import Mapa.MapaLogico;
 
-public class MagiaGrafico extends ObjetoGrafico{
+public abstract class MagiaGrafico extends ObjetoGrafico{
 
-	public MagiaGrafico(String s) {
-		super(s);
+	public MagiaGrafico(String s, MapaLogico ml) {
+		super(s, ml);
 		
 	}
 

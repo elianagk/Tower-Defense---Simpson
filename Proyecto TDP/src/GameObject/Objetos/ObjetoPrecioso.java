@@ -18,4 +18,5 @@ public abstract class ObjetoPrecioso extends Objeto {
 	
 	public abstract void empezarHilo() ;
 	
+	public abstract void activar();
 }

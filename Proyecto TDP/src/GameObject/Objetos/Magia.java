@@ -31,4 +31,6 @@ public abstract class Magia extends Objeto {
 	}
 	
 	public abstract void terminarMagia();
+	
+	public abstract void activar();
 }

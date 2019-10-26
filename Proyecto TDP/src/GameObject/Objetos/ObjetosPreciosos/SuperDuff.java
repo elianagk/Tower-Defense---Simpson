@@ -3,6 +3,7 @@ package GameObject.Objetos.ObjetosPreciosos;
 import GameObject.GameObject;
 import GameObject.Personaje;
 import GameObject.Objetos.ObjetoPrecioso;
+import GameObjectGrafico.ObjetoGrafico;
 import GameObjectGrafico.ObjetosGraficos.ObjetosPreciososGraficos.SuperDuffGrafico;
 import Mapa.MapaLogico;
 import VISITOR.Visitor;
@@ -11,9 +12,11 @@ import VISITOR.VisitorPrecioso;
 public class SuperDuff extends ObjetoPrecioso {
 
 	public SuperDuff(MapaLogico mapaLogico) {
-		super(mapaLogico, new SuperDuffGrafico(), 200);	//3°vida
+		super(mapaLogico, new SuperDuffGrafico(mapaLogico), 200);	//3°vida
 		visitor= new VisitorPrecioso(this);
 		hilo= new DuffHilo(mapaLogico.getMapaGrafico(), miObjetoGrafico);
+		ObjetoGrafico o= (ObjetoGrafico) miObjetoGrafico;
+		o.setEntidad(this);
 	}
 
 	@Override

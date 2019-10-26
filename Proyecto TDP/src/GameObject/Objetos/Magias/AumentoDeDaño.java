@@ -3,6 +3,7 @@ package GameObject.Objetos.Magias;
 import GameObject.GameObject;
 import GameObject.Personaje;
 import GameObject.Objetos.Magia;
+import GameObjectGrafico.ObjetoGrafico;
 import GameObjectGrafico.ObjetosGraficos.MagiaGrafico;
 import GameObjectGrafico.ObjetosGraficos.MagiasGraficas.AumentoDeDañoGrafico;
 import Mapa.MapaLogico;
@@ -12,8 +13,10 @@ import VISITOR.VisitorMagia;
 public class AumentoDeDaño extends Magia{
 
 	public AumentoDeDaño(MapaLogico mapaLogico) {
-		super(mapaLogico, new AumentoDeDañoGrafico(), 25);	//3°duracion seg
+		super(mapaLogico, new AumentoDeDañoGrafico(mapaLogico), 25);	//3°duracion seg
 		visitor= new VisitorMagia(this);
+		ObjetoGrafico o= (ObjetoGrafico) miObjetoGrafico;
+		o.setEntidad(this);
 	}
 
 	@Override
@@ -37,6 +40,10 @@ public class AumentoDeDaño extends Magia{
 	@Override
 	public void terminarMagia() {
 		// TODO Auto-generated method stub
+		
+	}
+	
+	public void activar() {
 		
 	}
 }
