@@ -55,6 +55,7 @@ public class MrBurns extends Enemigo {
 				mapaLogico.entidadAAgregar(new DisparoLogicoEnemigo(mapaLogico, this), this.getX()-50, this.getY());
 				contador=0;
 			}
+		}
 	}
 	
 	

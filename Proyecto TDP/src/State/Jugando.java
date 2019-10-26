@@ -20,13 +20,9 @@ public class Jugando implements State {
 	public Jugando(Juego j) {
 		juego =j;
 		mapaGrafico= juego.getMapaGrafico();
-<<<<<<< HEAD
 		mapaGrafico.setMouseListener(null);		//suponiendo que se inicializa el juego con este estado
-=======
-		mapaLogico= juego.getMapaL();
-		mapaGrafico.setMouseListener(null);		//suponiendo que se inicializa el juego con este estado
-
->>>>>>> ab11875d121da54d93cb870d5d2a1968aa89de02
+		
+//		mapaLogico= juego.getMapaL();   //para que tiene un mapaLogico
 	}
 
 	@Override
