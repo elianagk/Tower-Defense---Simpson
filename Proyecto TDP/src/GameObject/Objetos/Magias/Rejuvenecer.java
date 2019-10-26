@@ -23,13 +23,10 @@ public class Rejuvenecer extends Magia {
 	}
 
 	@Override
-	public void accionar(Personaje c) {
-		mipersonaje=c;
-		vida= mipersonaje.getVida();
-		mipersonaje.setVida(mipersonaje.getVidaTotal());
-		hilo.start();
-		
-		
+	public void accionar(GameObject o) {
+		Personaje p= (Personaje) o;
+		p.setVida(p.getVida()+50);
+		mapaLogico.entidadAEliminar(this);
 	}
 
 	@Override
@@ -49,5 +46,16 @@ public class Rejuvenecer extends Magia {
 		mipersonaje.setVida(vida);
 	}
 	
-	
+	public void activar() {
+		for(GameObject o: mapaLogico.getEntidades()) {
+			o.Aceptar(visitor);
+		}
+	}
+
+	@Override
+	public void accionar() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

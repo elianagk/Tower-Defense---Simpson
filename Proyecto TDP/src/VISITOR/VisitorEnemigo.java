@@ -26,10 +26,6 @@ public class VisitorEnemigo extends Visitor {
 		
 	}
 	
-	
-
-	
-
 	@Override
 	public void visitarDisparo(DisparoLogicoTorre e) {
 		mipersonaje.accionar();
@@ -43,7 +39,7 @@ public class VisitorEnemigo extends Visitor {
 	}
 
 	@Override
-	public void visitar(ObjetoPrecioso o) {
+	public void visitar(Objeto o) {
 		o.accionar(mipersonaje);
 		
 	}

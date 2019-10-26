@@ -2,6 +2,7 @@ package GameObject.Objetos;
 
 import javax.swing.JLabel;
 
+import GameObject.GameObject;
 import GameObject.Objeto;
 import GameObject.Personaje;
 import GameObjectGrafico.GameObjectGrafico;
@@ -19,16 +20,14 @@ public abstract class Magia extends Objeto {
 	}
 
 	@Override
-	public void accionar() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
 	public JLabel getGrafico() {
 		last_dir= still_key;
 		return miObjetoGrafico;
 	}
+	
+	public abstract void accionar(GameObject o);
+	
+	public abstract void accionar();
 	
 	public abstract void terminarMagia();
 	

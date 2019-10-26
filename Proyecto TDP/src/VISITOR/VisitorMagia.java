@@ -41,7 +41,7 @@ public class VisitorMagia extends Visitor {
 	}
 
 	@Override
-	public void visitar(ObjetoPrecioso o) {
+	public void visitar(Objeto o) {
 		// TODO Auto-generated method stub
 		
 	}

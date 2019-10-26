@@ -20,10 +20,10 @@ public class AumentoDeDaño extends Magia{
 	}
 
 	@Override
-	public void accionar(Personaje c) {
-		c.setDaño(50);
+	public void accionar(GameObject o) {
+		Personaje p= (Personaje) o;
+		p.setDaño(p.getDaño()+30);
 		mapaLogico.entidadAEliminar(this);
-		
 	}
 
 	@Override
@@ -42,8 +42,17 @@ public class AumentoDeDaño extends Magia{
 		// TODO Auto-generated method stub
 		
 	}
-	
+
 	public void activar() {
+		for(GameObject o: mapaLogico.getEntidades()) {
+			o.Aceptar(visitor);
+		}
+	}
+
+	@Override
+	public void accionar() {
+		// TODO Auto-generated method stub
 		
 	}
+
 }

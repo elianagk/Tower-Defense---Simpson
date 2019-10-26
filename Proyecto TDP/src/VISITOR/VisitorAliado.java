@@ -4,6 +4,7 @@ import Disparo.DisparoLogico;
 import Disparo.DisparoLogicoEnemigo;
 import Disparo.DisparoLogicoTorre;
 import GameObject.Objeto;
+import GameObject.Objetos.Magia;
 import GameObject.Objetos.ObjetoPrecioso;
 import GameObject.Personajes.Enemigo;
 import GameObject.Personajes.Torre;
@@ -26,8 +27,6 @@ public class VisitorAliado extends Visitor {
 		
 	}
 
-	
-
 	@Override
 	public void visitarDisparo(DisparoLogicoTorre e) {
 		mipersonaje.accionar();
@@ -41,11 +40,11 @@ public class VisitorAliado extends Visitor {
 	}
 
 	@Override
-	public void visitar(ObjetoPrecioso o) {
+	public void visitar(Objeto o) {
 		// TODO Auto-generated method stub
 		
 	}
 
-
+	
 
 }
