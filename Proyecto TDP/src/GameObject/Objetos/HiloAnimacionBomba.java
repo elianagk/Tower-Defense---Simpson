@@ -3,32 +3,32 @@ package GameObject.Objetos;
 import javax.swing.JLabel;
 
 import GRAFICA.MapaGrafico;
+import GameObject.Objetos.ObjetosPreciosos.Bomba;
 import Mapa.MapaLogico;
 
-public class HiloAnimacion extends Thread {
-	
-	protected MapaLogico mapaLogico;
-	protected MapaGrafico mapa;
+public class HiloAnimacionBomba extends HiloAnimacionPrecioso {
 	protected JLabel label;
+	protected MapaGrafico mapaGrafico;
 	protected int tiempo;
 	
-	public HiloAnimacion(MapaGrafico mapa, JLabel j) {
-		this.mapa= mapa;
-		this.label =j;
+	public HiloAnimacionBomba(MapaGrafico mapa, JLabel j) {
+		super(mapa, j);
 	}
 	
+	@Override
 	@SuppressWarnings("deprecation")
 	public void run() {
-		mapa.add(label);
+		
 		
 		try {
 			Thread.sleep(tiempo);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
+		mapaGrafico.remove(label);
 		
-		mapa.remove(label);
 		this.stop();
 
 	}
+
 }

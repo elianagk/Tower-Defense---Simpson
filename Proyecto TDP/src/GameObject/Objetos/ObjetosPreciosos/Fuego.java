@@ -1,23 +1,23 @@
 package GameObject.Objetos.ObjetosPreciosos;
 
 import GameObject.Personaje;
-import GameObject.Objetos.HiloAnimacion;
+import GameObject.Objetos.HiloAnimacionPrecioso;
 import GameObject.Objetos.ObjetoPrecioso;
 import GameObjectGrafico.ObjetosGraficos.ObjetosPreciososGraficos.DonaExplosivaGrafica;
 import Mapa.MapaLogico;
 import VISITOR.Visitor;
 import VISITOR.VisitorPrecioso;
 
-public class DonaExplosiva extends ObjetoPrecioso {
-	protected HiloAnimacion hilo;
+public class Fuego extends ObjetoPrecioso {
+	protected HiloAnimacionPrecioso hilo;
 	
 
-	public DonaExplosiva(MapaLogico mapaLogico) {
+	public Fuego(MapaLogico mapaLogico) {
 		super(mapaLogico, new DonaExplosivaGrafica(), 100);	//3°vida
 		visitor= new VisitorPrecioso(this);
-//		hilo= new HiloAnimacion(mapaLogico.getMapaGrafico(), miObjetoGrafico);
-//		hilo.start();
-//		
+		hilo= new FuegoHilo(mapaLogico.getMapaGrafico(), miObjetoGrafico);
+		//hilo.start();
+		
 		
 	}
 
@@ -39,7 +39,13 @@ public class DonaExplosiva extends ObjetoPrecioso {
 		
 	}
 	
-	public DonaExplosiva clone() {
-		return new DonaExplosiva(mapaLogico);
+	public Fuego clone() {
+		return new Fuego(mapaLogico);
+	}
+
+	@Override
+	public void empezarHilo() {
+		hilo.start();
+		
 	}
 }

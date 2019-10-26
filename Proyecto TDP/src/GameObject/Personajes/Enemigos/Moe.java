@@ -22,12 +22,13 @@ public class Moe extends Enemigo {
 	
 	public Moe(MapaLogico ml) {
 		super(ml, new MoeGrafico());
-		vida= 50;
+		vida=1;
 		velocidad= 6;
 		visitor= new VisitorEnemigo(this);
 		tiempo=35;
 		contador=0;
 		daño=25;
+		
 	}
 
 	@Override

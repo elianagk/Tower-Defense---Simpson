@@ -13,6 +13,7 @@ public class SuperDuff extends ObjetoPrecioso {
 	public SuperDuff(MapaLogico mapaLogico) {
 		super(mapaLogico, new SuperDuffGrafico(), 200);	//3°vida
 		visitor= new VisitorPrecioso(this);
+		hilo= new DuffHilo(mapaLogico.getMapaGrafico(), miObjetoGrafico);
 	}
 
 	@Override
@@ -37,5 +38,11 @@ public class SuperDuff extends ObjetoPrecioso {
 	public GameObject clone() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public void empezarHilo() {
+		hilo.start();
+		
 	}
 }

@@ -2,7 +2,7 @@ package Mapa;
 
 
 import GameObject.*;
-
+import GameObject.Objetos.Magia;
 import Juego.Juego;
 
 import java.util.ArrayList;
@@ -24,17 +24,18 @@ public class MapaLogico  {
 	private int width, height;
 	private TiendaLogica tiendaLogica;
 	private Juego juego;
+	private GameObject proxMagia;
 	
 
 
-	public MapaLogico (int width, int height) {
+	public MapaLogico (int width, int height, MapaGrafico mapa) {
 		entidades= new ArrayList<GameObject> ();
 		entidadesAAgregar= new ArrayList<GameObject> ();
 		entidadesAEliminar= new ArrayList<GameObject> ();
 		this.width=width;
 		this.height=height;
 		tiendaLogica=null;
-		
+		mapaGrafico=mapa;
 		
 		
 	}
@@ -56,7 +57,7 @@ public class MapaLogico  {
 		ArrayList<GameObject> toReturn = new ArrayList<GameObject>();
 		
 		for (GameObject e: entidades) {
-			if (e.getX()+100==g.getX() && e.getY()==g.getY()) {
+			if (e.estaEnRango(g)) {
 				toReturn.add(e);				
 			}
 			
@@ -144,5 +145,17 @@ public class MapaLogico  {
 	public void victory() {
 		
 	}
+	
+	public void proximaMagia(GameObject m) {
+		proxMagia=m;
+		
+	}
+	
+	public GameObject getProximaMagia() {
+		return proxMagia;
+	}
+	
+	
+	
 }
 

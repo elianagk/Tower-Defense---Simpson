@@ -1,6 +1,5 @@
 package State;
 
-import java.awt.Point;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.ArrayList;
@@ -9,24 +8,18 @@ import java.util.Iterator;
 import GRAFICA.MapaGrafico;
 import GRAFICA.Mouse;
 import GameObject.GameObject;
-import GameObject.Objetos.HiloAnimacionMagias;
 import Juego.Juego;
 import Mapa.MapaLogico;
-import VISITOR.Visitor;
 
-public class Magias implements State{
-	protected MapaGrafico mapaGrafico;
-	protected MapaLogico mapaLogico;
-	protected Juego juego;
-	protected Visitor visitor;
+public class AgarrarClick implements State {
+	private MapaGrafico mapaGrafico;
+	private Juego juego;
+	private MapaLogico mapaLogico;
 	
-	
-	
-	public Magias(Juego j) {
-		juego=j;
-		mapaGrafico= juego.getMapaGrafico();
-		mapaLogico= juego.getMapaL();
-		
+	public AgarrarClick(MapaLogico mapa) {
+		mapaLogico=mapa;
+		mapaGrafico= mapa.getMapaGrafico();
+		juego= mapaLogico.getJuego();
 	}
 
 	@Override
@@ -39,7 +32,7 @@ public class Magias implements State{
 		    public void mouseClicked(MouseEvent e) {
 		    	int x= e.getX();
 		    	int y= e.getY();
-//visitor para buscar el aliado, aplicar magia al aliado
+		    	
 		    	ArrayList<GameObject> entidades= mapaLogico.getEntidades();
 		    	Iterator<GameObject> it= entidades.iterator();
 		    	boolean encontre= false;
@@ -47,23 +40,20 @@ public class Magias implements State{
 		    	while (it.hasNext() && !encontre) {
 		    		GameObject t= it.next();
 		    		
-		    		if (t.getX()==((x/100)*100) && t.getY()==((y/100)*100)) {
-		    			encontre=true;		    			
-		    			t.Aceptar(mapaLogico.getProximaMagia().getVisitor());	
-		    			
+		    		if (t.getX()==x && t.getY()==y) {
+		    			encontre=true;		
+		    			mapaLogico.proximaMagia(t);
+		    			mapaGrafico.removerEntidad(mapaLogico.getProximaMagia());
 		    		}
 		    	}
 		    	
-		    	juego.setJugar();
+		    	
+		    	juego.setMagias();
+		    	
 		    	
 		    }
 		});
-		mapaGrafico.setMouseListener(mouseListener);	
 		
 	}
-	
-	
-	
-	
 
 }

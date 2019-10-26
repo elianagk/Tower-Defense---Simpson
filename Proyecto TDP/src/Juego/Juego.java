@@ -48,6 +48,7 @@ public class Juego {
 		jugar= new Jugando(this);
 		comprar= new Comprando(this);
 		vender= new Vendiendo(this);
+		magia= new Magias(this);
 	}
 	
 	private void comenzarJuego() {
@@ -110,6 +111,10 @@ public class Juego {
 		estado.actuar();
 	}
 	
+	public Magias getMagias() {
+		return (Magias) magia;
+	}
+	
 	public Jugador getJugador() {
 		return jugador;
 	}
@@ -121,5 +126,7 @@ public class Juego {
 	public void victory() {
 		
 	}
+	
+	
 	
 }

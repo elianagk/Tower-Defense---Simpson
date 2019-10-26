@@ -21,7 +21,7 @@ public class Chief extends Enemigo {
 	
 	public Chief(MapaLogico ml) {
 		super(ml, new ChiefGrafico());
-		vida= 50;
+		vida= 1;
 		velocidad= 6;
 		visitor= new VisitorEnemigo(this);
 		tiempo=20;

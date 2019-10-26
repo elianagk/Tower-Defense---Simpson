@@ -61,15 +61,16 @@ public abstract  class Enemigo extends Personaje {
 	@Override
 	public void accionar() {
 
-		if (posicion.x<=0)
-			mapaLogico.gameOver();
-		else
+//		if (posicion.x<=0)
+//			mapaLogico.gameOver();
+//		else
 			super.mover(backward_key);
 
 	}
 	
 	public boolean estaEnRango(GameObject g) {
-		return (g.getX()+100==this.getX() && g.getY()==this.getY()); 
+		//System.out.println(this+" - "+g+" - Collide: "+(this.getY() <= g.getY() && (this.getY()+this.height) >= g.getY()));
+		return (g.getX()+100==this.getX() && g.getY()<=this.getY()); 
 	}
 	
 	private boolean lineas(int y, int yy) {
@@ -96,11 +97,14 @@ public abstract  class Enemigo extends Personaje {
 			vida = 0;
 			esValido=false;
 			mapaLogico.entidadAEliminar(this);
-			contador++;
-			if (contador==tiempo) {
-				mapaLogico.entidadAAgregar(powerup(), this.getX(), this.getY());
+//			contador++;
+//			if (contador==tiempo) {
+				Magia m= new Rejuvenecer(mapaLogico);
+				mapaLogico.entidadAAgregar(m, this.getX(), this.getY());
+				//mapaLogico.proximaMagia(m);
 				mapaLogico.getJuego().setMagias();
-			}
+				
+//			}
 			
 		}
 	}
