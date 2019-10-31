@@ -1,5 +1,6 @@
 package GameObject.Objetos.ObjetosPreciosos;
 
+import GameObject.GameObject;
 import GameObject.Personaje;
 import GameObject.Objetos.HiloAnimacionPrecioso;
 import GameObject.Objetos.ObjetoPrecioso;
@@ -48,6 +49,18 @@ public class Fuego extends ObjetoPrecioso {
 	@Override
 	public void empezarHilo() {
 		hilo.start();
+		
+	}
+
+	@Override
+	public void activar() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void accionar(GameObject o) {
+		// TODO Auto-generated method stub
 		
 	}
 }

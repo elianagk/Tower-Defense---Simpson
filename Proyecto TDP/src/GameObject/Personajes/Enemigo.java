@@ -70,7 +70,7 @@ public abstract  class Enemigo extends Personaje {
 	
 	public boolean estaEnRango(GameObject g) {
 		//System.out.println(this+" - "+g+" - Collide: "+(this.getY() <= g.getY() && (this.getY()+this.height) >= g.getY()));
-		return (g.getX()+100==this.getX() && g.getY()<=this.getY()); 
+		return (g.getX()==this.getX() && lineas (g.getY(), this.getY())); 
 	}
 	
 	private boolean lineas(int y, int yy) {
@@ -79,6 +79,7 @@ public abstract  class Enemigo extends Personaje {
 		for (int i=0; i<p.length; i++) {
 			if (y>p[i].getX() && y<p[i].getY()) {
 				if (yy>p[i].getX() && yy<p[i].getY()) {
+					System.out.println("Enemigos : Y : "+ y + " YY: " + yy);
 					toReturn =true;
 				}
 				

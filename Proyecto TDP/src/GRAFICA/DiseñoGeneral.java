@@ -31,7 +31,6 @@ public class DiseñoGeneral extends JFrame{
 	private State vendiendo;
 	private State comprando;
 	private State jugando;
-	private JLabel lblNewLabel;
 	
 
 	/**
@@ -112,10 +111,6 @@ public class DiseñoGeneral extends JFrame{
 		tiempo.start();
 		
 		MAPA.setJuego(juego);
-		
-		lblNewLabel = new JLabel("New label");
-		lblNewLabel.setBounds(305, 730, 46, 22);
-		PANELPRINCIPAL.add(lblNewLabel);
 		
 		index++;
 	}

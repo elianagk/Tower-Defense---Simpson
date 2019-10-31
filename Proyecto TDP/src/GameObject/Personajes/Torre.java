@@ -37,8 +37,8 @@ public abstract class Torre extends Personaje {
 	}
 	//mirar el alto , linea
 	public boolean estaEnRango(GameObject g) {
-		//(this.posicion.y >= g.getY() && (this.posicion.y+this.height) <= g.getY())
-		return (g.getX()==this.getX()+100 && g.getY()== this.getY())   ;
+		
+		return (g.getX()==this.getX()+100 && (g.getY()>=this.getY() || g.getY()-20<=this.getY()))   ;
 	}
 	
 	private boolean lineas(int y, int yy) {
@@ -47,6 +47,7 @@ public abstract class Torre extends Personaje {
 		for (int i=0; i<p.length; i++) {
 			if (y>p[i].getX() && y<p[i].getY()) {
 				if (yy>p[i].getX() && yy<p[i].getY()) {
+					System.out.println("Torre : Y : "+ y + " YY: " + yy);
 					toReturn =true;
 				}
 				

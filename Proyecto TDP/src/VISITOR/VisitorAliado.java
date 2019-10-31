@@ -41,7 +41,7 @@ public class VisitorAliado extends Visitor {
 
 	@Override
 	public void visitar(Objeto o) {
-		// TODO Auto-generated method stub
+		mipersonaje.accionar();
 		
 	}
 
