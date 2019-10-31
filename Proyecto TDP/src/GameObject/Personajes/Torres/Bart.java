@@ -25,6 +25,8 @@ public class Bart extends Torre {
 			
 			e.aplicarDaño(daño);
 			
+			
+			
 	}
 	
 	public GameObject clone() {
@@ -33,9 +35,12 @@ public class Bart extends Torre {
 
 
 
+	
+
+
 	@Override
-	public void accionar() {
-		super.mover(still_key);
+	public void Aceptar(Visitor v) {
+		v.visitar(this);
 		
 	}
 	

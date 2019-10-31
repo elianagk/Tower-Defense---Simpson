@@ -12,11 +12,6 @@ public abstract class MagiaGrafico extends ObjetoGrafico{
 		
 	}
 
-	@Override
-	public void cambiarPosicion() {
-		// TODO Auto-generated method stub
-		
-	}
-
+	
 	
 }

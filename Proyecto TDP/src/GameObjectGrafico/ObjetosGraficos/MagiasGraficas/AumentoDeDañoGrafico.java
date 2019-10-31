@@ -10,5 +10,7 @@ public class AumentoDeDañoGrafico extends ObjetoGrafico{
 		super("", ml);	
 		//TODO setear la label
 	}
+
+	
 	
 }

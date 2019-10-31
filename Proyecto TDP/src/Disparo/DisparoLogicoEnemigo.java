@@ -30,7 +30,11 @@ public class DisparoLogicoEnemigo extends Enemigo {
 		
 	}
 
-
+	@Override
+	public boolean estaEnRango(GameObject g) {
+		//System.out.println("disparoenemigo "  + this.getX());
+		return (g.getX()==this.getX()-50 && g.getY()==this.getY())   ;
+	}
 
 		@Override
 	public void Aceptar(Visitor visitor) {
@@ -49,13 +53,14 @@ public class DisparoLogicoEnemigo extends Enemigo {
 
 	@Override
 	public void atacar(Personaje e) {
-		super.mover(backward_key);
+		//super.mover(backward_key);
 		e.aplicarDaño(mipersonaje.getDaño());
 		System.out.println("daño a torre");
 		mapaLogico.entidadAEliminar(this);
 		
 	}
-
+	
+	
 
 
 

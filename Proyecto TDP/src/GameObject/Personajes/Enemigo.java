@@ -64,13 +64,14 @@ public abstract  class Enemigo extends Personaje {
 //		if (posicion.x<=0)
 //			mapaLogico.gameOver();
 //		else
+			miObjetoGrafico.accionar();
 			super.mover(backward_key);
 
 	}
 	
 	public boolean estaEnRango(GameObject g) {
 		//System.out.println(this+" - "+g+" - Collide: "+(this.getY() <= g.getY() && (this.getY()+this.height) >= g.getY()));
-		return (g.getX()==this.getX() && lineas (g.getY(), this.getY())); 
+		return (g.getX()==this.getX()-100 && g.getY()==this.getY()); 
 	}
 	
 	private boolean lineas(int y, int yy) {

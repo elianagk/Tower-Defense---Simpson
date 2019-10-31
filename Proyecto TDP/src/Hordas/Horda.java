@@ -31,26 +31,27 @@ public class Horda {
 		Point p;
 		Random r = new Random();
 
-//		enemigo= r.nextInt(6)+1;
-//			
-//			switch(enemigo) {
-//			case 1: g= new Apu(mapaLogico);
-//				break;
-//			case 2: g= new Barney(mapaLogico);
-//				break;
-//			case 3: g= new BumbleeMan(mapaLogico);
-//				break;
-//			case 4: g= new Chief(mapaLogico);
-//				break;
-//			case 5: g= new Moe(mapaLogico);
-//				break;
-//			case 6: g= new MrBurns(mapaLogico);
-//				break;
-//			}
-		
-			g= new Chief(mapaLogico);
-			y=r.nextInt(351)+250;
-			p= new Point(1080, (y*100)/100);
+
+		enemigo= r.nextInt(6)+1;
+			
+			switch(enemigo) {
+			case 1: g= new Apu(mapaLogico);
+				break;
+			case 2: g= new Barney(mapaLogico);
+				break;
+			case 3: g= new BumbleeMan(mapaLogico);
+				break;
+			case 4: g= new Chief(mapaLogico);
+				break;
+			case 5: g= new Moe(mapaLogico);
+				break;
+			case 6: g= new MrBurns(mapaLogico);
+				break;
+			}
+			y=r.nextInt(600-250+1)+250;
+			p= new Point(1080, (y/100)*100);
+			//System.out.println("Enemigo: "+ p.getY());
+
 			g.setPosicion(p);
 			
 			cantEnemigos--;			

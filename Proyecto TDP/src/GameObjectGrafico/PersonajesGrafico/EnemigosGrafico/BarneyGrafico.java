@@ -13,6 +13,12 @@ public class BarneyGrafico extends EnemigoGrafico {
 		super.atacar("barneyatacando3.gif");
 	}
 
+	@Override
+	public void accionar() {
+		super.accionar("barneycaminando.gif");
+		
+	}
+
 
 	
 	

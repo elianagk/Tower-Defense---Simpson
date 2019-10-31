@@ -27,18 +27,20 @@ public abstract class Torre extends Personaje {
 	
 	@Override
 	public abstract void atacar(Personaje e);
+	
+	public void accionar() {
+		miObjetoGrafico.accionar();
+		super.mover(still_key);
+	}
 
 	
 	
 	@Override
-	public void Aceptar(Visitor v) {
-		v.visitar(this);
-		
-	}
+	public abstract void Aceptar(Visitor v) ;
 	//mirar el alto , linea
 	public boolean estaEnRango(GameObject g) {
-		
-		return (g.getX()==this.getX()+100 && (g.getY()>=this.getY() || g.getY()-20<=this.getY()))   ;
+		//System.out.println("torre: "+ this+ " Y " + this.getY());
+		return (g.getX()==this.getX()+100 && g.getY()==this.getY())   ;
 	}
 	
 	private boolean lineas(int y, int yy) {

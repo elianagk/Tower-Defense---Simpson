@@ -21,4 +21,10 @@ String direccionImg;
 	public void atacar() {
 		super.atacar("abeatacando.gif");
 	}
+
+	@Override
+	public void accionar() {
+		this.atacar();
+		
+	}
 }
