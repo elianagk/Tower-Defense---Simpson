@@ -22,5 +22,11 @@ String direccionImg;
 		super.atacar("lisaatacando.gif");
 	}
 
+	@Override
+	public void accionar() {
+		super.accionar("lisa1.png");
+		
+	}
+
 
 }

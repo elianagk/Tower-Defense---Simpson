@@ -13,15 +13,19 @@ public class ApuGrafico extends EnemigoGrafico {
 
 	
 	
-	public void cambiarPosicion() {
-		this.setImagen("apucaminandogif.gif");
-		this.setIcon(new ImageIcon(getClass().getClassLoader().getResource(imagen)));
-	}
 	
 	
 	
 	public void atacar() {
 		super.atacar("apuatacando.gif");
+	}
+
+
+
+	@Override
+	public void accionar() {
+		super.accionar("apucaminandogif.gif");
+		
 	}
 
 	

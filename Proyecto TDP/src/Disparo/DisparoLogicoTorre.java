@@ -34,11 +34,17 @@ public class DisparoLogicoTorre extends Torre {
 		super.mover(forward_key);
 		
 	}
+	
+	@Override
+	public boolean estaEnRango(GameObject g) {
+		//System.out.println(" son iguales X " + (this.getX()==g.getX()) + " son iguales y " + (this.getY()==g.getY()));
+		return (g.getX()==this.getX() && g.getY()==this.getY())   ;
+	}
 
 
 	@Override
 	public void atacar(Personaje e) {
-		super.mover(forward_key);
+		//super.mover(forward_key);
 		e.aplicarDaño(mipersonaje.getDaño());
 		System.out.println("daño a enemigo");
 		mapaLogico.entidadAEliminar(this);

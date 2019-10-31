@@ -10,11 +10,7 @@ public abstract class PersonajeGrafico extends GameObjectGrafico {
 		super(s);
 	}
 
-	@Override
-	public void cambiarPosicion() {
-		// TODO Auto-generated method stub
-		
-	}
+	
 	
 	public void atacar(String s) {
 		imagen=s;
@@ -22,9 +18,19 @@ public abstract class PersonajeGrafico extends GameObjectGrafico {
 		repaint();
 		
 	}
+	
+	
+	public void accionar(String s) {
+		imagen= s;
+		this.setIcon(new ImageIcon(getClass().getClassLoader().getResource(imagen)));
+		repaint();
+	}
+	
 
 	
 	public abstract void atacar() ;
+	
+	public abstract void accionar();
 
 	
 }

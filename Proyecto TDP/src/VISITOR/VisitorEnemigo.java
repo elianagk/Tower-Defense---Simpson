@@ -40,7 +40,7 @@ public class VisitorEnemigo extends Visitor {
 
 	@Override
 	public void visitar(Objeto o) {
-		o.accionar(mipersonaje);
+		mipersonaje.accionar();
 		
 	}
 

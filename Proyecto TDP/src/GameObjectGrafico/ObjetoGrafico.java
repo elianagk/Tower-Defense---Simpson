@@ -20,17 +20,14 @@ public abstract class ObjetoGrafico extends GameObjectGrafico {
 		});
 	}
 
-	@Override
-	public void cambiarPosicion() {
-		// TODO Auto-generated method stub
+	public void atacar() {
 		
 	}
 
-	@Override
-	public void atacar() {
-		// TODO Auto-generated method stub
+	public void accionar() {
 		
 	}
+	
 
 	public void setEntidad(Objeto o) {
 		objeto= o;

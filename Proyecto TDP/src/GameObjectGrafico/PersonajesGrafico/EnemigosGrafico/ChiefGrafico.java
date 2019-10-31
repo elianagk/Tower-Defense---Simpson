@@ -13,6 +13,12 @@ public class ChiefGrafico extends EnemigoGrafico {
 		super.atacar("chiefatacando.gif");
 	}
 
+	@Override
+	public void accionar() {
+		super.accionar("chiefcaminando.gif");
+		
+	}
+
 	
 	
 

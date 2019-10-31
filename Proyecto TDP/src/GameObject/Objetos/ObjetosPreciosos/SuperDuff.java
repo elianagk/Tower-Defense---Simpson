@@ -48,4 +48,16 @@ public class SuperDuff extends ObjetoPrecioso {
 		hilo.start();
 		
 	}
+
+	@Override
+	public void activar() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void accionar(GameObject o) {
+		// TODO Auto-generated method stub
+		
+	}
 }

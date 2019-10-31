@@ -13,6 +13,12 @@ public class BumbleeManGrafico extends EnemigoGrafico {
 		super.atacar("bmatacando.gif");
 	}
 
+	@Override
+	public void accionar() {
+		super.accionar("bmcaminando.gif");
+		
+	}
+
 
 	
 	

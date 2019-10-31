@@ -13,4 +13,10 @@ public class DisparoGraficoEnemigo extends DisparoGrafico {
 		
 	}
 
+	@Override
+	public void accionar() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
