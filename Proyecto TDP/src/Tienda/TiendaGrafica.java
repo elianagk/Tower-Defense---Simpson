@@ -18,7 +18,7 @@ import Tienda.Botones.Vender;
 
 public class TiendaGrafica extends JPanel {
 	protected Boton[] botones;
-	JLabel monedas;
+	JLabel puntaje;
 	JLabel dinero;
 	protected TiendaLogica tienda;
 	
@@ -28,6 +28,7 @@ public class TiendaGrafica extends JPanel {
 	this.setBounds(0, 0, 1100, 90);
 	this.setOpaque(false);
 	botones = new Boton[7];
+	this.tienda=tienda;
 	
 
 	
@@ -46,22 +47,36 @@ public class TiendaGrafica extends JPanel {
 		this.add(botones[i]);
 	}
 	
-	dinero= new JLabel("Puntaje=");
+	
+	puntaje= new JLabel("Puntaje = " );
+	puntaje.setBackground(Color.white);
+	puntaje.setOpaque(true);
+	this.add(puntaje);
+	dinero= new JLabel("Plata =");
 	dinero.setBackground(Color.white);
 	dinero.setOpaque(true);
-	monedas = new JLabel("");
-	monedas.setBackground(Color.white);
-	monedas.setOpaque(true);
 	this.add(dinero);
-	this.add(monedas);
 	
+	
+	
+	}
+	
+	
+	
+	public void actualizarPlata(int p) {
+		String s= String.valueOf(p);
+		dinero.setText("Plata= "+s);
+		tienda.getMapaLogico().getMapaGrafico().repaint();
+		
 	}
 	
 	public void actualizarPuntaje(int p) {
-		
-		monedas.setText(""+p);
-		
+		String s= String.valueOf(p);
+		puntaje.setText("Puntaje= "+ s);
+		tienda.getMapaLogico().getMapaGrafico().repaint();
 	}
+	
+	
 	
 	
 	

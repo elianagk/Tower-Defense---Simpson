@@ -36,6 +36,12 @@ public class TiendaLogica {
 	
 	public void setJugador(Jugador j) {
 		jugador=j;
+		tienda.actualizarPlata(jugador.getMonedas());
+		tienda.actualizarPuntaje(jugador.getPuntaje());
+	}
+	
+	public Jugador getJugador() {
+		return jugador;
 	}
 	
 	
@@ -43,7 +49,7 @@ public class TiendaLogica {
 		if (ProximaEntidad() && g.getCosto()<=jugador.getMonedas()) {
 			mapaLogico.entidadAAgregar(g, x, y);
 			jugador.setMonedas(jugador.getMonedas()-g.getCosto());
-			tienda.actualizarPuntaje(jugador.getMonedas());
+			tienda.actualizarPlata(jugador.getMonedas());
 			
 			g= null;
 		}
@@ -62,7 +68,7 @@ public class TiendaLogica {
 		
 		mapaLogico.entidadAEliminar(torre);
 		jugador.setMonedas(jugador.getMonedas()+retornoDinero);
-		tienda.actualizarPuntaje(jugador.getMonedas());
+		tienda.actualizarPlata(jugador.getMonedas());
 		
 	}
 	

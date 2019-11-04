@@ -19,12 +19,6 @@ public class Homero extends Torre {
 	}
 	
 	
-	@Override
-	public void atacar(Personaje e) {
-		miObjetoGrafico.atacar();
-		e.aplicarDaño(daño);
-		
-	}
 	
 	public GameObject clone() {
 		return new Homero(mapaLogico);
@@ -34,10 +28,5 @@ public class Homero extends Torre {
 
 	
 
-	@Override
-	public void Aceptar(Visitor v) {
-		v.visitar(this);
-		
-	}
-
+	
 }

@@ -74,22 +74,6 @@ public abstract  class Enemigo extends Personaje {
 		return (g.getX()==this.getX()-100 && g.getY()==this.getY()); 
 	}
 	
-	private boolean lineas(int y, int yy) {
-		Point[] p= mapaLogico.getMapaGrafico().getLineas();
-		boolean toReturn =false;
-		for (int i=0; i<p.length; i++) {
-			if (y>p[i].getX() && y<p[i].getY()) {
-				if (yy>p[i].getX() && yy<p[i].getY()) {
-					System.out.println("Enemigos : Y : "+ y + " YY: " + yy);
-					toReturn =true;
-				}
-				
-			}
-		}
-			
-			
-		return toReturn;
-	}
 	
 	@Override
 	public void aplicarDaño(int daño) {
@@ -98,13 +82,14 @@ public abstract  class Enemigo extends Personaje {
 		else {
 			vida = 0;
 			esValido=false;
+			mapaLogico.getJuego().getJugador().setPuntaje(mapaLogico.getJuego().getJugador().getPuntaje()+100);
 			mapaLogico.entidadAEliminar(this);
-//			contador++;
-//			if (contador==tiempo) {
+			contador++;
+			if (contador==tiempo) {
 				Magia m= new Rejuvenecer(mapaLogico);
 				mapaLogico.entidadAAgregar(m, this.getX(), this.getY());
-				//mapaLogico.proximaMagia(m);	
-//			}
+				mapaLogico.proximaMagia(m);	
+			}
 			
 		}
 	}
@@ -113,21 +98,13 @@ public abstract  class Enemigo extends Personaje {
 		
 		
 		Random r=new Random();
-		int n= r.nextInt(10);
+		int n= r.nextInt(2);
 		Magia g=null;
 		switch (n) {
-		 case 1:
-         case 3:
-         case 5:
-         case 7:
-         case 8: g= new AumentoDeDaño(mapaLogico);
+		 case 1: g= new AumentoDeDaño(mapaLogico);
          break;
          
-         case 2:
-         case 4:
-         case 6:
-         case 9:
-         case 10: g= new Rejuvenecer(mapaLogico);
+         case 2: g= new Rejuvenecer(mapaLogico);
 		}
 		
 		return g;

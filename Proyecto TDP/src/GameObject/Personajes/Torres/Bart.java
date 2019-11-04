@@ -18,30 +18,11 @@ public class Bart extends Torre {
 	}
 	
 	
-	@Override
-	public void atacar(Personaje e) {
-		
-			miObjetoGrafico.atacar();
-			
-			e.aplicarDaño(daño);
-			
-			
-			
-	}
+	
 	
 	public GameObject clone() {
 		return new Bart(mapaLogico);
 	}
 
 
-
-	
-
-
-	@Override
-	public void Aceptar(Visitor v) {
-		v.visitar(this);
-		
-	}
-	
 }

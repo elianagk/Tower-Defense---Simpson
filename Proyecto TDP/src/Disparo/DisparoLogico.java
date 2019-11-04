@@ -3,7 +3,6 @@ package Disparo;
 import javax.swing.JLabel;
 
 import GameObject.GameObject;
-import GameObject.Objeto;
 import GameObject.Personaje;
 import GameObjectGrafico.GameObjectGrafico;
 import Mapa.MapaLogico;
@@ -21,11 +20,11 @@ public abstract class DisparoLogico extends Personaje {
 	}
 
 	@Override
-	public GameObject clone() {
-		
-		return null;
+	public boolean estaEnRango(GameObject g) {
+		return (g.getX()==this.getX() && g.getY()==this.getY())   ;
 	}
-
+	
+	public abstract GameObject clone() ;
 	
 	
 	public abstract void accionar() ;

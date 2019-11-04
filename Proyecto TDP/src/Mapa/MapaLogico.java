@@ -19,7 +19,7 @@ import GRAFICA.MapaGrafico;
 import java.util.ListIterator;
 
 public class MapaLogico  {
-	private ArrayList<GameObject> entidades, entidadesAAgregar, entidadesAEliminar, clonada;
+	private ArrayList<GameObject> entidades, entidadesAAgregar, entidadesAEliminar;
 	private MapaGrafico mapaGrafico;
 	private int width, height;
 	private TiendaLogica tiendaLogica;
@@ -58,7 +58,6 @@ public class MapaLogico  {
 		
 		for (GameObject e: entidades) {
 			if (e.estaEnRango(g)) {
-				//System.out.println("esta en rango " + e.estaEnRango(g));
 				toReturn.add(e);				
 			}
 			
@@ -68,9 +67,8 @@ public class MapaLogico  {
 	}
 	
 	public ArrayList<GameObject> getEntidades() {
-		//ArrayList<GameObject> entidadesActualizada = actualizarListaDeEntidades();
-		actualizarListaDeEntidades();
-		entidades= clonada;
+		ArrayList<GameObject> entidadesActualizada = actualizarListaDeEntidades();
+		entidades= entidadesActualizada;
 		return entidades;
 	}
 	
@@ -103,8 +101,8 @@ public class MapaLogico  {
 		}
 	
 	
-	public  void actualizarListaDeEntidades() {
-		clonada= (ArrayList<GameObject>) entidades.clone();
+	public  ArrayList<GameObject> actualizarListaDeEntidades() {
+		ArrayList<GameObject> clonada= (ArrayList<GameObject>) entidades.clone();
 		for (GameObject objEliminar : entidadesAEliminar) {
 			removerEntidad(objEliminar, clonada);
 		}
@@ -117,7 +115,7 @@ public class MapaLogico  {
 		entidadesAEliminar.clear();
 		entidadesAAgregar.clear();
 		
-		//return clonada;
+		return clonada;
 	}
 	
 	public void setJuego(Juego j) {
