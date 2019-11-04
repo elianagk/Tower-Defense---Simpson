@@ -53,7 +53,7 @@ public class Juego {
 		jugador= new Jugador();
 		jugador.setMonedas(1500);
 		tienda= new TiendaGrafica(mapaLogico.getTiendaLogica());
-		tienda.actualizarPuntaje(jugador.getMonedas());
+		tienda.actualizarPlata(jugador.getMonedas());
 		comenzarNiveles();
 	}
 	
@@ -61,6 +61,7 @@ public class Juego {
 		ArrayList<GameObject> entidades = this.mapaLogico.getEntidades();
 		ArrayList<GameObject> toCollide;
 		for(GameObject e : entidades) {
+	
 			if (e.getEsValido()) {
 				toCollide= this.mapaLogico.hayEnElRango(e);
 			

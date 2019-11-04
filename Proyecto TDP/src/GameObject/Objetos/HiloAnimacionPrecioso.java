@@ -3,6 +3,7 @@ package GameObject.Objetos;
 import javax.swing.JLabel;
 
 import GRAFICA.MapaGrafico;
+import GameObject.GameObject;
 import Mapa.MapaLogico;
 
 public abstract class HiloAnimacionPrecioso extends Thread {
@@ -11,10 +12,13 @@ public abstract class HiloAnimacionPrecioso extends Thread {
 	protected MapaGrafico mapa;
 	protected JLabel label;
 	protected int tiempo;
+	protected ObjetoPrecioso miobjeto;
 	
-	public HiloAnimacionPrecioso(MapaGrafico mapa, JLabel j) {
-		this.mapa= mapa;
-		this.label =j;
+	public HiloAnimacionPrecioso(MapaLogico mapa, ObjetoPrecioso g) {
+		mapaLogico=mapa;
+		this.mapa= mapaLogico.getMapaGrafico();
+		miobjeto=g;
+		this.label =g.getGrafico();
 		
 	}
 	
@@ -28,7 +32,7 @@ public abstract class HiloAnimacionPrecioso extends Thread {
 			e.printStackTrace();
 		}
 		
-		
+		mapa.remove(label);
 		this.stop();
 
 	}

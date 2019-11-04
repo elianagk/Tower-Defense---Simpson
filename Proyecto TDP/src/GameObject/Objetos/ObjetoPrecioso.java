@@ -8,7 +8,6 @@ import GameObjectGrafico.ObjetosGraficos.ObjetoPreciosoGrafico;
 import Mapa.MapaLogico;
 
 public abstract class ObjetoPrecioso extends Objeto {
-	protected int vida;
 	protected HiloAnimacionPrecioso hilo;
 	
 	public ObjetoPrecioso(MapaLogico mapaLogico, GameObjectGrafico objP, int vida) {
@@ -18,7 +17,14 @@ public abstract class ObjetoPrecioso extends Objeto {
 	
 	public abstract void accionar(Personaje c);
 	
-	public abstract void empezarHilo() ;
+	public  void empezarHilo() {
+		hilo.start();
+	}
 	
 	public abstract void activar();
+	
+	
+	public int getCosto() {
+		return costo;
+	}
 }

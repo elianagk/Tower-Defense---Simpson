@@ -17,10 +17,11 @@ public class Fuego extends ObjetoPrecioso {
 	public Fuego(MapaLogico mapaLogico) {
 		super(mapaLogico, new DonaExplosivaGrafica(mapaLogico), 100);	//3°vida
 		visitor= new VisitorPrecioso(this);
-		hilo= new FuegoHilo(mapaLogico.getMapaGrafico(), miObjetoGrafico);
+		hilo= new FuegoHilo(mapaLogico, this);
 		//hilo.start();
 		ObjetoGrafico o= (ObjetoGrafico) miObjetoGrafico;
 		o.setEntidad(this);
+		costo=500;
 		
 	}
 
@@ -46,11 +47,7 @@ public class Fuego extends ObjetoPrecioso {
 		return new Fuego(mapaLogico);
 	}
 
-	@Override
-	public void empezarHilo() {
-		hilo.start();
-		
-	}
+	
 
 	@Override
 	public void activar() {

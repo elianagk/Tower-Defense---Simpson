@@ -48,9 +48,6 @@ public class Marge extends Torre {
 		}
 	}
 	
-	public void Aceptar(Visitor v) {
-		v.visitar(this);
-		
-	}
+	
 
 }

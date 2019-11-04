@@ -18,6 +18,9 @@ public abstract class GameObjectGrafico extends JLabel {
 		
 	}
 	
+	public abstract void accionar();
+	public abstract void atacar();
+	
 	
 	
 	public void setImagen(String img) {
@@ -28,9 +31,7 @@ public abstract class GameObjectGrafico extends JLabel {
 		imagenatacando=s;
 	}
 	
-	public abstract void atacar();
 	
-	public abstract void accionar();
 	
 	//public abstract void atacar(String s);
 	

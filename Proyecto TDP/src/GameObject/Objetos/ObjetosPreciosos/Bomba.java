@@ -1,5 +1,7 @@
 package GameObject.Objetos.ObjetosPreciosos;
 
+import java.util.ArrayList;
+
 import GameObject.GameObject;
 import GameObject.Personaje;
 import GameObject.Objetos.ObjetoPrecioso;
@@ -14,17 +16,12 @@ public class Bomba extends ObjetoPrecioso {
 
 	public Bomba(MapaLogico mapaLogico) {
 		super(mapaLogico, new BombaGrafica(mapaLogico), 100);
-		hilo= new BombaHilo(mapaLogico.getMapaGrafico(), miObjetoGrafico);
+		hilo= new BombaHilo(mapaLogico, this);
 		visitor= new VisitorPrecioso(this);
-		ObjetoGrafico o= (ObjetoGrafico) miObjetoGrafico;
-		o.setEntidad(this);
+		costo=1000;
 	}
 
-	@Override
-	public void empezarHilo() {
-		// TODO Auto-generated method stub
-		
-	}
+	
 
 	@Override
 	public void Aceptar(Visitor visitante) {
@@ -34,8 +31,7 @@ public class Bomba extends ObjetoPrecioso {
 
 	@Override
 	public GameObject clone() {
-		// TODO Auto-generated method stub
-		return null;
+		return new Bomba(mapaLogico);
 	}
 
 	@Override
@@ -52,7 +48,10 @@ public class Bomba extends ObjetoPrecioso {
 
 	@Override
 	public void activar() {
-		// TODO Auto-generated method stub
+		ArrayList<GameObject> entidades=mapaLogico.getEntidades();
+		for (GameObject e: entidades) {
+			mapaLogico.entidadAEliminar(e);
+		}
 		
 	}
 
@@ -61,5 +60,7 @@ public class Bomba extends ObjetoPrecioso {
 		// TODO Auto-generated method stub
 		
 	}
+
+	
 
 }

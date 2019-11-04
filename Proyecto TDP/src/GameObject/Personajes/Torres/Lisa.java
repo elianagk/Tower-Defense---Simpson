@@ -14,17 +14,12 @@ import VISITOR.VisitorAliado;
 public class Lisa extends Torre {
 	
 	public Lisa(MapaLogico mapaLogico) {
-		super(80, 100, 10, 1, mapaLogico, new LisaGrafico());
+		super(80, 100, 30, 1, mapaLogico, new LisaGrafico());
 		visitor= new VisitorAliado(this);
 	}
 	
 	
-	@Override
-	public void atacar(Personaje e) {
-		miObjetoGrafico.atacar();
-		e.aplicarDaño(daño);
-		
-	}
+	
 	
 	public GameObject clone() {
 		return new Lisa(mapaLogico);
@@ -35,10 +30,5 @@ public class Lisa extends Torre {
 	
 
 
-	@Override
-	public void Aceptar(Visitor v) {
-		v.visitar(this);
-		
-	}
 
 }

@@ -3,6 +3,7 @@ package GRAFICA;
 import java.awt.*;
 import javax.swing.*;
 import Juego.Juego;
+import Jugador.Jugador;
 import Mapa.MapaLogico;
 import Tienda.TiendaGrafica;
 import Tienda.TiendaLogica;
@@ -27,6 +28,7 @@ public class DiseñoGeneral extends JFrame{
 	private ContadorTiempo tiempo;
 	private TiendaLogica tiendaLogica;
 	private MapaLogico mapal;
+	
 	
 	private State vendiendo;
 	private State comprando;

@@ -43,10 +43,6 @@ public class Abuelo extends Torre {
 		}
 	}
 
-	@Override
-	public void Aceptar(Visitor v) {
-		v.visitar(this);
-		
-	}
+	
 	
 }
