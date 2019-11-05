@@ -9,6 +9,7 @@ public abstract class GameObjectGrafico extends JLabel {
 	protected String imagenatacando;
 	
 	
+	
 	public GameObjectGrafico(String s) {
 		imagen= s;
 		this.setIcon(new ImageIcon(getClass().getClassLoader().getResource(imagen)));

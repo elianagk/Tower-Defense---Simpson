@@ -22,6 +22,7 @@ public class DisparoLogicoTorre extends DisparoLogico {
 		mipersonaje=p;
 		visitor= new VisitorDisparoAliado(this);
 		velocidad=5;
+		contador=0;
 		
 		
 	}
@@ -29,6 +30,7 @@ public class DisparoLogicoTorre extends DisparoLogico {
 	
 	@Override
 	public void atacar(Personaje e) {
+		super.mover(still_key);
 		e.aplicarDaño(mipersonaje.getDaño());
 		mapaLogico.entidadAEliminar(this);
 		
@@ -36,8 +38,11 @@ public class DisparoLogicoTorre extends DisparoLogico {
 
 	@Override
 	public void accionar() {
-		
 		super.mover(forward_key);
+		contador++;
+		if (contador==mipersonaje.getAlcance()) {
+			mapaLogico.entidadAEliminar(this);
+		}
 		
 	}
 	

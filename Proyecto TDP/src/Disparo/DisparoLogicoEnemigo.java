@@ -1,5 +1,7 @@
 package Disparo;
 
+import java.awt.Point;
+
 import javax.swing.JLabel;
 
 import GameObject.GameObject;
@@ -20,13 +22,17 @@ public class DisparoLogicoEnemigo extends DisparoLogico {
 		mipersonaje=p;
 		visitor= new VisitorDisparoEnemigo(this);
 		velocidad= mipersonaje.getVelocidad()+3;
+		contador=0;
+		
 		
 	}
 
 	@Override
 	public void atacar(Personaje e) {
+		super.mover(still_key);
 		e.aplicarDaño(mipersonaje.getDaño());
 		mapaLogico.entidadAEliminar(this);
+		
 		
 	}
 
@@ -34,7 +40,10 @@ public class DisparoLogicoEnemigo extends DisparoLogico {
 	@Override
 	public void accionar() {
 		super.mover(backward_key);
-		
+		contador++;
+		if (contador==mipersonaje.getAlcance()) {
+			mapaLogico.entidadAEliminar(this);
+		}
 	}
 
 	

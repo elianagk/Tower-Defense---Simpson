@@ -22,9 +22,10 @@ public abstract class HiloAnimacionPrecioso extends Thread {
 		
 	}
 	
-	@SuppressWarnings("deprecation")
+	
 	public void run() {
 		mapa.add(label);
+		miobjeto.activar();
 		
 		try {
 			Thread.sleep(tiempo);

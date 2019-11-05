@@ -24,22 +24,21 @@ public class Premio extends BotonComprar {
 	
 	private static Objeto generarObjeto() {
 		Random r= new Random();
-		ObjetoPrecioso o = new Bomba(tiendaLogica.getMapaLogico());
+		ObjetoPrecioso o =null;
 		
 		
-//		int n= r.nextInt(4);
-//		System.out.print(n);
-//		switch (n) {
-//		case 0: o= new Bomba(tiendaLogica.getMapaLogico());
-//			break;
-//		case 1: o= new Fuego(tiendaLogica.getMapaLogico());
-//			break;
-//		case 2: o= new SuperDuff(tiendaLogica.getMapaLogico());
-//			break;
-//		case 3: o= new SuperDuff(tiendaLogica.getMapaLogico());
-//			break;
-//		
-//		}
+		int n= r.nextInt(4);
+		switch (n) {
+		case 0: o= new Bomba(tiendaLogica.getMapaLogico());
+			break;
+		case 1: o= new Fuego(tiendaLogica.getMapaLogico());
+			break;
+		case 2: o= new SuperDuff(tiendaLogica.getMapaLogico());
+			break;
+		case 3: o= new SuperDuff(tiendaLogica.getMapaLogico());
+			break;
+		
+		}
 		//o.empezarHilo();
 		return o;
 		

@@ -12,8 +12,8 @@ public class BombaHilo extends HiloAnimacionPrecioso {
 
 	public BombaHilo(MapaLogico mapa, Bomba b) {
 		super(mapa, b);
-		this.tiempo=10000;
-		miobjeto.activar();
+		this.tiempo=100;
+		
 	}
 
 }

@@ -11,6 +11,7 @@ import VISITOR.Visitor;
 public abstract class DisparoLogico extends Personaje {
 	protected Personaje mipersonaje;
 	protected Visitor visitor;
+	protected int contador;
 	
 	
 

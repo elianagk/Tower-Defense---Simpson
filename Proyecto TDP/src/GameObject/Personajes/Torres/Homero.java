@@ -14,8 +14,11 @@ import VISITOR.VisitorAliado;
 public class Homero extends Torre {
 	
 	public Homero(MapaLogico mapaLogico) {
-		super(80, 150, 40, 1, mapaLogico, new HomeroGrafico());
+		super(mapaLogico, new HomeroGrafico());
 		visitor= new VisitorAliado(this);
+		vida= 100;
+		daño=50;
+		costo=150;
 	}
 	
 	
