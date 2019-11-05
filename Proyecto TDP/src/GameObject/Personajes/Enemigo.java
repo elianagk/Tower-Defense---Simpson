@@ -27,6 +27,7 @@ public abstract  class Enemigo extends Personaje {
 		super(ml, gog);
 		tiempo=3;
 		contador=0;
+		alcance=50;
 	}
 	
 	public int getVelocidad() {
@@ -70,7 +71,7 @@ public abstract  class Enemigo extends Personaje {
 	}
 	
 	public boolean estaEnRango(GameObject g) {
-		//System.out.println(this+" - "+g+" - Collide: "+(this.getY() <= g.getY() && (this.getY()+this.height) >= g.getY()));
+		
 		return (g.getX()==this.getX()-100 && g.getY()==this.getY()); 
 	}
 	

@@ -11,15 +11,13 @@ import VISITOR.VisitorAliado;
 
 public abstract class Torre extends Personaje {
 	
-	
-//	protected VisitorAliado visitor;
 
-	public Torre(int precio, int vida, int daño, int alcance, MapaLogico mapaLogico, GameObjectGrafico gog) {
+	public Torre(MapaLogico mapaLogico, GameObjectGrafico gog) {
 		super(mapaLogico, gog);
-		costo= precio;
-		this.vida= vida;
-		this.daño= daño;
-		this.alcance=alcance;
+		velocidad=0;
+		alcance=50;
+		
+		
 		
 	}
 	
@@ -40,7 +38,6 @@ public abstract class Torre extends Personaje {
 	}
 	
 	public boolean estaEnRango(GameObject g) {
-		//System.out.println("torre: "+ this+ " Y " + this.getY());
 		return (g.getX()==this.getX()+100 && g.getY()==this.getY())   ;
 	}
 	

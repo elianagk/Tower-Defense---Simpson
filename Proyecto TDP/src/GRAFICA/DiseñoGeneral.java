@@ -23,7 +23,6 @@ public class DiseñoGeneral extends JFrame{
 	private BotonComprar btnHomero;
 	private JLayeredPane PANELPRINCIPAL;
 	private TiendaGrafica PANELTIENDA;
-	int index=0;
 	private Juego juego;
 	private ContadorTiempo tiempo;
 	private TiendaLogica tiendaLogica;
@@ -114,7 +113,7 @@ public class DiseñoGeneral extends JFrame{
 		
 		MAPA.setJuego(juego);
 		
-		index++;
+		
 	}
 	
 	

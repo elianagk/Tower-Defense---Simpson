@@ -8,6 +8,15 @@ public abstract class Personaje extends GameObject {
 	protected int velocidad;
 	protected int daño;
 	protected int alcance;
+	public int getAlcance() {
+		return alcance;
+	}
+
+
+	public void setAlcance(int alcance) {
+		this.alcance = alcance;
+	}
+
 	protected int jump_strenght = 10;
 
 	public Personaje(MapaLogico ml, GameObjectGrafico gog) {
@@ -16,8 +25,10 @@ public abstract class Personaje extends GameObject {
 
 
 	public void atacar(Personaje e) {
-		miObjetoGrafico.atacar();
-		e.aplicarDaño(daño);	
+	
+			miObjetoGrafico.atacar();
+			e.aplicarDaño(daño);	
+		
 	}
 	
 
