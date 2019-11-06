@@ -16,7 +16,7 @@ public class Premio extends BotonComprar {
 
 	
 	public Premio(String s, TiendaLogica tiendaLogica) {
-		super(s, tiendaLogica, generarObjeto());
+		super(s, tiendaLogica, new SuperDuff(tiendaLogica.getMapaLogico()));
 		
 	}
 	
@@ -27,7 +27,7 @@ public class Premio extends BotonComprar {
 		ObjetoPrecioso o =null;
 		
 		
-		int n= r.nextInt(4);
+		int n= r.nextInt(3);
 		switch (n) {
 		case 0: o= new Bomba(tiendaLogica.getMapaLogico());
 			break;
@@ -35,13 +35,10 @@ public class Premio extends BotonComprar {
 			break;
 		case 2: o= new SuperDuff(tiendaLogica.getMapaLogico());
 			break;
-		case 3: o= new SuperDuff(tiendaLogica.getMapaLogico());
-			break;
 		
 		}
 		//o.empezarHilo();
-		return o;
-		
+		return o;		
 		
 	}
 	

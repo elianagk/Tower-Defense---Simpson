@@ -21,9 +21,9 @@ public abstract class ObjetoGrafico extends GameObjectGrafico {
 	}
 
 	public  void accionar() {}
+	
 	public void atacar() {}
 	
-
 	public void setEntidad(Objeto o) {
 		objeto= o;
 	}

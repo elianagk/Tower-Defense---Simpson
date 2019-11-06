@@ -142,7 +142,10 @@ public class MapaLogico  {
 	}
 	
 	public void victory() {
-		
+		entidadesAEliminar=(ArrayList<GameObject>) entidades.clone();
+		entidadesAAgregar.clear();
+		actualizarListaDeEntidades();
+		mapaGrafico.victory();
 	}
 	
 	public void proximaMagia(GameObject m) {

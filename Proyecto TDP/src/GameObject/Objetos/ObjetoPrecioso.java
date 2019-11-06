@@ -24,7 +24,4 @@ public abstract class ObjetoPrecioso extends Objeto {
 	public abstract void activar();
 	
 	
-	public int getCosto() {
-		return costo;
-	}
 }

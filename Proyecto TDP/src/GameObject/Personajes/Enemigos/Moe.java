@@ -49,9 +49,9 @@ public class Moe extends Enemigo {
 	
 	@Override
 	public void accionar() {
-//		if (posicion.x<=0) 
-//			mapaLogico.gameOver();
-//		else {
+		if (posicion.x<=0) 
+			mapaLogico.gameOver();
+		else {
 			super.mover(backward_key);
 			
 			contador++;
@@ -59,7 +59,7 @@ public class Moe extends Enemigo {
 				mapaLogico.entidadAAgregar(new DisparoLogicoEnemigo(mapaLogico, this), this.getX()-50, this.getY());
 				contador=0;
 			}
-		//}
+		}
 	
 	}
 

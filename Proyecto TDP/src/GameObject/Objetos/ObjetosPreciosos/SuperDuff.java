@@ -17,7 +17,6 @@ public class SuperDuff extends ObjetoPrecioso {
 		hilo= new DuffHilo(mapaLogico, this);
 		ObjetoGrafico o= (ObjetoGrafico) miObjetoGrafico;
 		o.setEntidad(this);
-		costo=100;
 	}
 
 	@Override
