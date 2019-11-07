@@ -36,18 +36,12 @@ public class Juego {
 		niveles[0]= new Nivel(this, mapaLogico);
 		jugador=new Jugador();
 		this.mapaGrafico=mapaGrafico;
-		this.mapaLogico= mapaLogico;		
+		this.mapaLogico= mapaLogico;
 		estado= new Jugando(this);
 		comenzarNiveles();
 	}
 	
-	private void comenzarJuego() {
-		jugador= new Jugador();
-		jugador.setMonedas(1500);
-		tienda= new TiendaGrafica(mapaLogico.getTiendaLogica());
-		tienda.actualizarPlata(jugador.getMonedas());
-		comenzarNiveles();
-	}
+	
 	
 	public void mover(){
 		ArrayList<GameObject> entidades = this.mapaLogico.getEntidades();

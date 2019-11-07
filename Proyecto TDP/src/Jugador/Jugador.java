@@ -12,6 +12,7 @@ public class Jugador  {
 	
 	
 	public Jugador () {
+		nombre="Hola";
 		puntaje=0;
 		monedas=10000;
 		

@@ -31,10 +31,14 @@ public class TiendaLogica {
 		g= null;
 		mapaLogico= mapa;
 		visitor= new VisitorVender(this);
-		tienda= new TiendaGrafica(this);
 		
 		
 		
+		
+	}
+	
+	public void setTiendaGrafica(TiendaGrafica g) {
+		tienda= g;
 	}
 	
 	public void setJugador() {
