@@ -25,9 +25,7 @@ public abstract class Objeto extends GameObject {
 	public abstract void accionar(GameObject o);
 	
 	public boolean estaEnRango(GameObject g) {
-		
-			return (g.getX()==posicion.x && g.getY()==this.posicion.y); 
-		
+		return (g.getX()>=getX() && g.getX()<=this.getX()+100 && g.getY()==this.getY())   ;
 	}
 	
 	public abstract void activar();

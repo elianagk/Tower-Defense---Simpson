@@ -32,7 +32,7 @@ public abstract class Torre extends Personaje {
 	}
 	
 	public boolean estaEnRango(GameObject g) {
-		return (g.getX()==this.getX()+100 && g.getY()==this.getY())   ;
+		return (g.getX()>=getX() && g.getX()<=this.getX()+100 && g.getY()==this.getY())   ;
 	}
 	
 	
