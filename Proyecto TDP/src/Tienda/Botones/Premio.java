@@ -30,8 +30,8 @@ public class Premio extends Boton {
 		this.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				new SuperDuff(tiendaLogica.getMapaLogico());
-//				generarObjeto();
+//				new SuperDuff(tiendaLogica.getMapaLogico());
+				generarObjeto();
 			}
 		});	
 	
