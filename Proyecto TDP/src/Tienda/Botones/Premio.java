@@ -39,19 +39,19 @@ public class Premio extends Boton {
 	
 	private static void generarObjeto() {
 		Random r= new Random();
-		ObjetoPrecioso o = null;
+		ObjetoPrecioso o = new SuperDuff(tiendaLogica.getMapaLogico());
 		
-		int n= r.nextInt(3);
-		System.out.println(n);
-		switch (n) {
-		case 0: o= new Bomba(tiendaLogica.getMapaLogico());
-			break;
-		case 1: o= new Fuego(tiendaLogica.getMapaLogico());
-			break;
-		case 2: o= new SuperDuff(tiendaLogica.getMapaLogico());
-			break;
-		
-		}
+//		int n= r.nextInt(3);
+//		System.out.println(n);
+//		switch (n) {
+//		case 0: o= new Bomba(tiendaLogica.getMapaLogico());
+//			break;
+//		case 1: o= new Fuego(tiendaLogica.getMapaLogico());
+//			break;
+//		case 2: o= new SuperDuff(tiendaLogica.getMapaLogico());
+//			break;
+//		
+//		}
 
 		tiendaLogica.getJuego().cambiarEstado(new Preciosos(tiendaLogica.getJuego(), o));
 		
