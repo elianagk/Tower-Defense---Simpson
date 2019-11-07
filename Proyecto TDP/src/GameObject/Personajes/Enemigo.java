@@ -72,7 +72,7 @@ public abstract  class Enemigo extends Personaje {
 	
 	public boolean estaEnRango(GameObject g) {
 		
-		return (g.getX()==this.getX()-50 && g.getY()==this.getY()); 
+		return (g.getX()>=this.getX()-100 && g.getX()<=getX() && g.getY()==this.getY()); 
 	}
 	
 	

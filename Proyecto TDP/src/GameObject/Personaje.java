@@ -53,7 +53,7 @@ public abstract class Personaje extends GameObject {
 	protected void cambiarGrafico(String dir){
 		if(miObjetoGrafico != null) {
 			miObjetoGrafico.accionar();
-			miObjetoGrafico.setBounds(posicion.x, posicion.y, 90, 100);
+			miObjetoGrafico.setBounds(posicion.x, posicion.y, 100, 100);
 		}
 	}
 	
