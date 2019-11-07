@@ -17,31 +17,27 @@ public class VisitorAliado extends Visitor {
 
 	@Override
 	public void visitar(Enemigo e) {
-		mipersonaje.atacar(e);
-		
+		mipersonaje.atacar(e);		
 	}
 
 	@Override
 	public void visitar(Torre t) {
-		mipersonaje.accionar();
-		
+		mipersonaje.accionar();		
 	}
 
 	@Override
 	public void visitarDisparo(DisparoLogicoTorre e) {
-		mipersonaje.accionar();
-		
+		mipersonaje.accionar();		
 	}
 
 	@Override
 	public void visitarDisparo(DisparoLogicoEnemigo e) {
-		mipersonaje.accionar();
-		
+//		mipersonaje.accionar();		
 	}
 
 	@Override
 	public void visitar(Objeto o) {
-		mipersonaje.accionar();
+//		mipersonaje.accionar();
 		
 	}
 

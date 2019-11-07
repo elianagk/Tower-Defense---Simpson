@@ -20,11 +20,22 @@ public abstract class Torre extends Personaje {
 	
 	
 	public void accionar() {
-		miObjetoGrafico.accionar();
-		super.mover(still_key);
+		if (accionar) {
+			miObjetoGrafico.accionar();
+			super.mover(still_key);
+		}
 	}
 
-	
+	@Override
+	public void atacar(Personaje e) {
+		accionar=false;
+		miObjetoGrafico.atacar();				
+		e.aplicarDaño(daño);	
+		if (!e.getEsValido()) { 
+			accionar=true;		
+			mover(still_key);
+		}
+	}
 	
 	@Override
 	public void Aceptar(Visitor v) {

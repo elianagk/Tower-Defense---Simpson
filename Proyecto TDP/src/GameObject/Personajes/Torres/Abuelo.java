@@ -28,8 +28,7 @@ public class Abuelo extends Torre {
 	}
 
 	@Override
-	public void atacar(Personaje e) {
-		e.aplicarDaño(daño);
+	public void atacar(Personaje e) {		
 		accionar();
 		
 	}

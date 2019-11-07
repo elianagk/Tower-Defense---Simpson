@@ -20,8 +20,6 @@ public abstract  class Enemigo extends Personaje {
 	private int contador;
 	private int tiempo;
 	
-//	protected VisitorEnemigo visitor;
-	
 	
 	public Enemigo(MapaLogico ml, GameObjectGrafico gog) {
 		super(ml, gog);
@@ -58,16 +56,17 @@ public abstract  class Enemigo extends Personaje {
 	public void Aceptar(Visitor v) {
 		v.visitar(this);
 	}
-
+	
 	@Override
-	public void accionar() {
-
+	public void accionar() {		
 		if (posicion.x<=0)
 			mapaLogico.gameOver();
-		else
-			miObjetoGrafico.accionar();
+		else {
+			if (accionar)
+				miObjetoGrafico.accionar();			
+		}
+		if (accionar)
 			super.mover(backward_key);
-
 	}
 	
 	public boolean estaEnRango(GameObject g) {

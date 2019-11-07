@@ -28,15 +28,16 @@ public class MrBurns extends Enemigo {
 	
 	@Override
 	public void atacar(Personaje e) {
-		
-			super.mover(still_key);
-			miObjetoGrafico.atacar();
-			contador++;
-			if (contador==tiempo) {
-				mapaLogico.entidadAAgregar(new DisparoLogicoEnemigo(mapaLogico, this), this.getX()-50, this.getY());
-				contador=0;
-			}
-		
+		accionar=false;
+		super.mover(still_key);
+		miObjetoGrafico.atacar();
+		contador++;
+		if (contador==tiempo) {
+			mapaLogico.entidadAAgregar(new DisparoLogicoEnemigo(mapaLogico, this), this.getX()-50, this.getY());
+			contador=0;
+		}
+		if (!e.getEsValido())
+			accionar=true;
 	}
 
 	public GameObject clone() {
@@ -46,14 +47,11 @@ public class MrBurns extends Enemigo {
 	@Override
 	public void accionar() {
 		if (posicion.x<=0) 
-			mapaLogico.gameOver();
+			mapaLogico.gameOver();		
 		else {
-			super.mover(backward_key);
-			miObjetoGrafico.atacar();
-			contador++;
-			if (contador==tiempo) {
-				mapaLogico.entidadAAgregar(new DisparoLogicoEnemigo(mapaLogico, this), this.getX()-50, this.getY());
-				contador=0;
+			if (accionar==true) {	
+				super.mover(backward_key);
+				miObjetoGrafico.accionar();				
 			}
 		}
 	}

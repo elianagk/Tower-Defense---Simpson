@@ -8,29 +8,31 @@ public abstract class Personaje extends GameObject {
 	protected int velocidad;
 	protected int daño;
 	protected int alcance;
-	public int getAlcance() {
-		return alcance;
-	}
-
-
-	public void setAlcance(int alcance) {
-		this.alcance = alcance;
-	}
+	protected boolean accionar;		
 
 	protected int jump_strenght = 10;
 
 	public Personaje(MapaLogico ml, GameObjectGrafico gog) {
 		super(ml, gog);
+		accionar=true;
 	}
 
+	public int getAlcance() {
+		return alcance;
+	}
 
-	public void atacar(Personaje e) {
-			this.mover(still_key);
-			miObjetoGrafico.atacar();
-			e.aplicarDaño(daño);	
-		
+	public void setAlcance(int alcance) {
+		this.alcance = alcance;
 	}
 	
+	public void atacar(Personaje e) {
+		accionar=false;
+		miObjetoGrafico.atacar();
+		mover(still_key);
+		e.aplicarDaño(daño);
+		if (!e.getEsValido())
+			accionar=true;
+	}
 
 	public int getDaño() {
 		return daño;

@@ -31,15 +31,17 @@ public class Moe extends Enemigo {
 
 	@Override
 	public void atacar(Personaje e) {
+		accionar=false;
+		super.mover(still_key);
+		miObjetoGrafico.atacar();
+		contador++;
+		if (contador==tiempo) {
+			mapaLogico.entidadAAgregar(new DisparoLogicoEnemigo(mapaLogico, this), this.getX()-50, this.getY());
+			contador=0;
+		}
 		
-			super.mover(still_key);
-			miObjetoGrafico.atacar();
-			contador++;
-			if (contador==tiempo) {
-				mapaLogico.entidadAAgregar(new DisparoLogicoEnemigo(mapaLogico, this), this.getX()-50, this.getY());
-				contador=0;
-			}
-		
+		if (!e.getEsValido())
+			accionar=true;		
 	}
 
 	public GameObject clone() {
