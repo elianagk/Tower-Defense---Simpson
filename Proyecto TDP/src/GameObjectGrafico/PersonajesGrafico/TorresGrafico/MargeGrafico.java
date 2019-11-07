@@ -22,5 +22,13 @@ String direccionImg;
 		super.atacar("margeatacando.gif");
 	}
 
+	@Override
+	public void accionar() {
+		this.atacar();
+		
+	}
+
+	
+
 	
 }

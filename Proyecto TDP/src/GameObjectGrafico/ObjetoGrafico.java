@@ -13,25 +13,17 @@ public abstract class ObjetoGrafico extends GameObjectGrafico {
 	public ObjetoGrafico(String s, MapaLogico ml) {
 		super(s);
 		mapaLogico= ml;
-		this.addMouseListener(new MouseAdapter() {
-			public void mouseClicked(MouseEvent e) {
-				activar();	//this referencia a mouse adapter lol
-			}
-		});
+//		this.addMouseListener(new MouseAdapter() {
+//			public void mouseClicked(MouseEvent e) {
+//				activar();	//this referencia a mouse adapter lol
+//			}
+//		});
 	}
 
-	@Override
-	public void cambiarPosicion() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void atacar() {
-		// TODO Auto-generated method stub
-		
-	}
-
+	public  void accionar() {}
+	
+	public void atacar() {}
+	
 	public void setEntidad(Objeto o) {
 		objeto= o;
 	}

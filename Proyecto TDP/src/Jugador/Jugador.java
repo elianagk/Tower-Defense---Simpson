@@ -3,19 +3,18 @@ package Jugador;
 import javax.swing.ImageIcon;
 
 import GameObject.GameObject;
-import Tienda.Mochila;
+
 
 public class Jugador  {
 
 	protected String nombre;
 	protected int puntaje, monedas;
-	protected Mochila mochila;
 	
 	
 	public Jugador () {
 		puntaje=0;
-		monedas=600;
-		mochila= new Mochila();
+		monedas=10000;
+		
 	}
 	
 	public void setNombre (String nombre) {
@@ -41,7 +40,5 @@ public class Jugador  {
 		this.monedas=monedas;
 	}
 	
-	public Mochila getMochila(){
-		return mochila;
-	}
+	
 }

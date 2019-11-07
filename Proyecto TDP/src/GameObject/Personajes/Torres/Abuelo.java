@@ -11,16 +11,20 @@ import GameObjectGrafico.PersonajesGrafico.TorresGrafico.AbueloGrafico;
 import Mapa.MapaLogico;
 import VISITOR.Visitor;
 import VISITOR.VisitorAliado;
+import VISITOR.VisitorEnemigo;
 
 public class Abuelo extends Torre {
 	protected int tiempo;
 	protected int contador;
 	
 	public Abuelo(MapaLogico mapaLogico) {
-		super(80, 100, 50, 1, mapaLogico, new AbueloGrafico());
+		super(mapaLogico, new AbueloGrafico());
 		visitor= new VisitorAliado(this);
 		tiempo=20;
 		contador=0;
+		vida= 300;
+		daño=95;
+		costo=1000;
 	}
 
 	@Override
@@ -42,5 +46,7 @@ public class Abuelo extends Torre {
 			contador=0;
 		}
 	}
+
+	
 	
 }

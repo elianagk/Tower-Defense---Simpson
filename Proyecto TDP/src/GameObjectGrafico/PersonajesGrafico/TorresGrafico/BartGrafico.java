@@ -23,4 +23,10 @@ public class BartGrafico extends TorreGrafico {
 		super.atacar("bartatacando.gif");
 	}
 
+	@Override
+	public void accionar() {
+		super.accionar("bartt.png");
+		
+	}
+
 }

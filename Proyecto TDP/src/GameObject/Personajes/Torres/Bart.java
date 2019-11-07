@@ -13,30 +13,19 @@ import VISITOR.VisitorAliado;;
 public class Bart extends Torre {
 	
 	public Bart(MapaLogico mapaLogico) {
-		super(80, 100, 10, 1, mapaLogico, new BartGrafico());
+		super(mapaLogico, new BartGrafico());
 		visitor= new VisitorAliado(this);
+		vida= 200;
+		daño=40;
+		costo=500;
 	}
 	
 	
-	@Override
-	public void atacar(Personaje e) {
-		
-			miObjetoGrafico.atacar();
-			
-			e.aplicarDaño(daño);
-			
-	}
+	
 	
 	public GameObject clone() {
 		return new Bart(mapaLogico);
 	}
 
 
-
-	@Override
-	public void accionar() {
-		super.mover(still_key);
-		
-	}
-	
 }

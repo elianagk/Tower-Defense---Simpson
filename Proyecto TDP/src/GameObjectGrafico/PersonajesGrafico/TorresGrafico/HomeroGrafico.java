@@ -22,5 +22,11 @@ String direccionImg;
 		super.atacar("homeroatacando.gif");
 	}
 
+	@Override
+	public void accionar() {
+		super.accionar("homeroparado.png");
+		
+	}
+
 	
 }

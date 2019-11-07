@@ -21,7 +21,7 @@ public class Chief extends Enemigo {
 	
 	public Chief(MapaLogico ml) {
 		super(ml, new ChiefGrafico());
-		vida= 1;
+		vida= 300;
 		velocidad= 6;
 		visitor= new VisitorEnemigo(this);
 		tiempo=20;
@@ -31,13 +31,15 @@ public class Chief extends Enemigo {
 	
 	@Override
 	public void atacar(Personaje e) {
-		super.mover(backward_key);
-		miObjetoGrafico.atacar();
-		contador++;
-		if (contador==tiempo) {
-			mapaLogico.entidadAAgregar(new DisparoLogicoEnemigo(mapaLogico, this), this.getX()-50, this.getY());
-			contador=0;
-		}
+		
+			super.mover(still_key);
+			miObjetoGrafico.atacar();
+			contador++;
+			if (contador==tiempo) {
+				mapaLogico.entidadAAgregar(new DisparoLogicoEnemigo(mapaLogico, this), this.getX()-50, this.getY());
+				contador=0;
+			}
+		
 	}
 
 	public GameObject clone() {

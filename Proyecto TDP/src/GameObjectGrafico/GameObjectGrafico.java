@@ -9,6 +9,7 @@ public abstract class GameObjectGrafico extends JLabel {
 	protected String imagenatacando;
 	
 	
+	
 	public GameObjectGrafico(String s) {
 		imagen= s;
 		this.setIcon(new ImageIcon(getClass().getClassLoader().getResource(imagen)));
@@ -18,7 +19,10 @@ public abstract class GameObjectGrafico extends JLabel {
 		
 	}
 	
-	public abstract void cambiarPosicion() ; //cambia la posicion grafica, onda el dibujo
+	public abstract void accionar();
+	public abstract void atacar();
+	
+	
 	
 	public void setImagen(String img) {
 		imagen = img;
@@ -28,7 +32,7 @@ public abstract class GameObjectGrafico extends JLabel {
 		imagenatacando=s;
 	}
 	
-	public abstract void atacar();
+	
 	
 	//public abstract void atacar(String s);
 	

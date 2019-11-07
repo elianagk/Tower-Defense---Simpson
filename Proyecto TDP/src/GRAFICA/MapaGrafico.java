@@ -25,7 +25,7 @@ public class MapaGrafico extends JLabel{
 	private ContadorTiempo tiempo;
 	protected MouseListener actualMouseListener;
 	protected State queHagoConElClick;
-	private Point[] lineas;
+	
 	
 	
 	public MapaGrafico(TiendaLogica tiendal, String s, int ancho, int alto) {
@@ -36,13 +36,7 @@ public class MapaGrafico extends JLabel{
 		Icon mapa= new ImageIcon(fot1.getImage().getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_DEFAULT));
 		this.setIcon(mapa);
 
-		lineas= new Point [6];
-		lineas[0]= new Point(231,325);
-		lineas[1]= new Point (330, 418);
-		lineas[2]= new Point (424,511);
-		lineas[3]= new Point (519,607);
-		lineas[4]= new Point (615,694);
-		lineas[5]=new Point(709, 756);
+		
 		
 		
 		//---------------------------------------------
@@ -92,9 +86,7 @@ public class MapaGrafico extends JLabel{
 	}
 	
 
-	public Point[] getLineas() {
-		return lineas;
-	}
+	
 
 	public void gameOver() {
 		juego.gameOver();
@@ -104,6 +96,8 @@ public class MapaGrafico extends JLabel{
 	}
 	
 	public void victory() {
-		
+		ImageIcon fot1= new ImageIcon(getClass().getClassLoader().getResource("victory.gif"));
+		Icon mapa= new ImageIcon(fot1.getImage().getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_DEFAULT));
+		this.setIcon(mapa);
 	}
 }

@@ -14,17 +14,14 @@ import VISITOR.VisitorAliado;
 public class Homero extends Torre {
 	
 	public Homero(MapaLogico mapaLogico) {
-		super(80, 150, 40, 1, mapaLogico, new HomeroGrafico());
+		super(mapaLogico, new HomeroGrafico());
 		visitor= new VisitorAliado(this);
+		vida= 100;
+		daño=50;
+		costo=150;
 	}
 	
 	
-	@Override
-	public void atacar(Personaje e) {
-		miObjetoGrafico.atacar();
-		e.aplicarDaño(daño);
-		
-	}
 	
 	public GameObject clone() {
 		return new Homero(mapaLogico);
@@ -32,10 +29,7 @@ public class Homero extends Torre {
 	
 	
 
-	@Override
-	public void accionar() {
-		super.mover(still_key);
-		
-	}
+	
 
+	
 }

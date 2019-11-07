@@ -3,6 +3,7 @@ package GRAFICA;
 import java.awt.*;
 import javax.swing.*;
 import Juego.Juego;
+import Jugador.Jugador;
 import Mapa.MapaLogico;
 import Tienda.TiendaGrafica;
 import Tienda.TiendaLogica;
@@ -22,16 +23,15 @@ public class DiseñoGeneral extends JFrame{
 	private BotonComprar btnHomero;
 	private JLayeredPane PANELPRINCIPAL;
 	private TiendaGrafica PANELTIENDA;
-	int index=0;
 	private Juego juego;
 	private ContadorTiempo tiempo;
 	private TiendaLogica tiendaLogica;
 	private MapaLogico mapal;
 	
+	
 	private State vendiendo;
 	private State comprando;
 	private State jugando;
-	private JLabel lblNewLabel;
 	
 
 	/**
@@ -113,11 +113,7 @@ public class DiseñoGeneral extends JFrame{
 		
 		MAPA.setJuego(juego);
 		
-		lblNewLabel = new JLabel("New label");
-		lblNewLabel.setBounds(305, 730, 46, 22);
-		PANELPRINCIPAL.add(lblNewLabel);
 		
-		index++;
 	}
 	
 	

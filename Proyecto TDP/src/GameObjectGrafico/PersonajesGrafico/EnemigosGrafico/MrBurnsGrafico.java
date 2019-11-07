@@ -13,6 +13,12 @@ public class MrBurnsGrafico extends EnemigoGrafico {
 		super.atacar("bursnatacando.gif");
 	}
 
+	@Override
+	public void accionar() {
+		super.accionar("burnscaminando.gif");
+		
+	}
+
 	
 	
 

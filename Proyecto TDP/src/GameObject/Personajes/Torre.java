@@ -11,50 +11,36 @@ import VISITOR.VisitorAliado;
 
 public abstract class Torre extends Personaje {
 	
-	
-//	protected VisitorAliado visitor;
 
-	public Torre(int precio, int vida, int daño, int alcance, MapaLogico mapaLogico, GameObjectGrafico gog) {
+	public Torre(MapaLogico mapaLogico, GameObjectGrafico gog) {
 		super(mapaLogico, gog);
-		costo= precio;
-		this.vida= vida;
-		this.daño= daño;
-		this.alcance=alcance;
+		velocidad=0;
+		alcance=50;
+		
+		
 		
 	}
 	
 	
 	
-	@Override
-	public abstract void atacar(Personaje e);
+	
+	
+	public void accionar() {
+		miObjetoGrafico.accionar();
+		super.mover(still_key);
+	}
 
 	
 	
 	@Override
 	public void Aceptar(Visitor v) {
 		v.visitar(this);
-		
-	}
-	//mirar el alto , linea
-	public boolean estaEnRango(GameObject g) {
-		//(this.posicion.y >= g.getY() && (this.posicion.y+this.height) <= g.getY())
-		return (g.getX()==this.getX()+100 && g.getY()== this.getY())   ;
 	}
 	
-	private boolean lineas(int y, int yy) {
-		Point[] p= mapaLogico.getMapaGrafico().getLineas();
-		boolean toReturn =false;
-		for (int i=0; i<p.length; i++) {
-			if (y>p[i].getX() && y<p[i].getY()) {
-				if (yy>p[i].getX() && yy<p[i].getY()) {
-					toReturn =true;
-				}
-				
-			}
-		}
-			
-			
-		return toReturn;
+	public boolean estaEnRango(GameObject g) {
+		return (g.getX()==this.getX()+100 && g.getY()==this.getY())   ;
 	}
+	
+	
 	
 }

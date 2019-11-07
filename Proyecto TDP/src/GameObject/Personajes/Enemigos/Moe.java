@@ -4,7 +4,6 @@ package GameObject.Personajes.Enemigos;
 
 import javax.swing.JLabel;
 
-import Disparo.DisparoLogico;
 import Disparo.DisparoLogicoEnemigo;
 import GameObject.GameObject;
 import GameObject.Personaje;
@@ -22,7 +21,7 @@ public class Moe extends Enemigo {
 	
 	public Moe(MapaLogico ml) {
 		super(ml, new MoeGrafico());
-		vida=1;
+		vida=300;
 		velocidad= 6;
 		visitor= new VisitorEnemigo(this);
 		tiempo=35;
@@ -33,13 +32,15 @@ public class Moe extends Enemigo {
 
 	@Override
 	public void atacar(Personaje e) {
-		super.mover(backward_key);
-		miObjetoGrafico.atacar();
-		contador++;
-		if (contador==tiempo) {
-			mapaLogico.entidadAAgregar(new DisparoLogicoEnemigo(mapaLogico, this), this.getX()-50, this.getY());
-			contador=0;
-		}
+	
+			super.mover(still_key);
+			miObjetoGrafico.atacar();
+			contador++;
+			if (contador==tiempo) {
+				mapaLogico.entidadAAgregar(new DisparoLogicoEnemigo(mapaLogico, this), this.getX()-50, this.getY());
+				contador=0;
+			}
+		
 	}
 
 	public GameObject clone() {

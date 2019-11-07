@@ -13,5 +13,11 @@ public class MoeGrafico extends EnemigoGrafico {
 		super.atacar("moeatacando.gif");
 	}
 
+	@Override
+	public void accionar() {
+		super.accionar("moeatacando.gif");
+		
+	}
+
 
 }
