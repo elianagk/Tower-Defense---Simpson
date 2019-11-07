@@ -8,6 +8,7 @@ public class DonaExplosivaGrafica extends ObjetoGrafico {
 
 	public DonaExplosivaGrafica(MapaLogico ml) {
 		super("fuego.png", ml);	
+		this.setSize(100,100);
 		
 	}
 	

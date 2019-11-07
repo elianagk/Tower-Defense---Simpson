@@ -1,10 +1,12 @@
-package GameObject.Objetos;
+package GameObject.Objetos.ObjetosPreciosos.Hilos;
 
 import javax.swing.JLabel;
 
 import GRAFICA.MapaGrafico;
 import GameObject.GameObject;
+import GameObject.Objetos.ObjetoPrecioso;
 import Mapa.MapaLogico;
+import State.Jugando;
 
 public abstract class HiloAnimacionPrecioso extends Thread {
 	
@@ -19,13 +21,17 @@ public abstract class HiloAnimacionPrecioso extends Thread {
 		this.mapa= mapaLogico.getMapaGrafico();
 		miobjeto=g;
 		this.label =g.getGrafico();
+		this.label.setBounds(miobjeto.getX(), miobjeto.getY(), 200, 200);
+		
+		
 		
 	}
 	
 	
+	@SuppressWarnings("deprecation")
 	public void run() {
-		mapa.add(label);
-		miobjeto.activar();
+		mapaLogico.entidadAAgregar(miobjeto, miobjeto.getX(), miobjeto.getY());
+		miobjeto.accionar();
 		
 		try {
 			Thread.sleep(tiempo);
@@ -33,8 +39,10 @@ public abstract class HiloAnimacionPrecioso extends Thread {
 			e.printStackTrace();
 		}
 		
-		mapa.remove(label);
+		mapaLogico.entidadAEliminar(miobjeto);
+		
 		this.stop();
-
+		mapaLogico.getJuego().cambiarEstado(new Jugando(mapaLogico.getJuego()));
 	}
+	
 }

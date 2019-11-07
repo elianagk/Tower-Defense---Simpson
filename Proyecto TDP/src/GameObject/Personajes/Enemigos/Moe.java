@@ -4,11 +4,10 @@ package GameObject.Personajes.Enemigos;
 
 import javax.swing.JLabel;
 
-import Disparo.DisparoLogicoEnemigo;
 import GameObject.GameObject;
 import GameObject.Personaje;
 import GameObject.Personajes.Enemigo;
-
+import GameObject.Personajes.Disparos.DisparoLogicoEnemigo;
 import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.MoeGrafico;
 import Mapa.MapaLogico;
 import VISITOR.Visitor;
@@ -32,7 +31,7 @@ public class Moe extends Enemigo {
 
 	@Override
 	public void atacar(Personaje e) {
-	
+		
 			super.mover(still_key);
 			miObjetoGrafico.atacar();
 			contador++;

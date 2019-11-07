@@ -16,13 +16,7 @@ public abstract class Torre extends Personaje {
 		super(mapaLogico, gog);
 		velocidad=0;
 		alcance=50;
-		
-		
-		
 	}
-	
-	
-	
 	
 	
 	public void accionar() {

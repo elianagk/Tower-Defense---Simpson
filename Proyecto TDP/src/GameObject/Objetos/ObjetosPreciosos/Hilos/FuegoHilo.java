@@ -1,9 +1,9 @@
-package GameObject.Objetos.ObjetosPreciosos;
+package GameObject.Objetos.ObjetosPreciosos.Hilos;
 
 import javax.swing.JLabel;
 
 import GRAFICA.MapaGrafico;
-import GameObject.Objetos.HiloAnimacionPrecioso;
+import GameObject.Objetos.ObjetosPreciosos.Fuego;
 import Mapa.MapaLogico;
 
 public class FuegoHilo extends HiloAnimacionPrecioso {

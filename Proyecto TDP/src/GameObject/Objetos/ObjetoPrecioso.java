@@ -1,6 +1,7 @@
 package GameObject.Objetos;
 
 import GameObject.Objetos.ObjetoPrecioso;
+import GameObject.Objetos.ObjetosPreciosos.Hilos.HiloAnimacionPrecioso;
 import GameObject.Objeto;
 import GameObject.Personaje;
 import GameObjectGrafico.GameObjectGrafico;
@@ -17,9 +18,7 @@ public abstract class ObjetoPrecioso extends Objeto {
 	
 	public abstract void accionar(Personaje c);
 	
-	public  void empezarHilo() {
-		hilo.start();
-	}
+	public abstract void empezarHilo();
 	
 	public abstract void activar();
 	

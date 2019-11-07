@@ -15,8 +15,7 @@ public class AumentoDeDaño extends Magia{
 	public AumentoDeDaño(MapaLogico mapaLogico) {
 		super(mapaLogico, new AumentoDeDañoGrafico(mapaLogico), 25);	//3°duracion seg
 		visitor= new VisitorMagia(this);
-		ObjetoGrafico o= (ObjetoGrafico) miObjetoGrafico;
-		o.setEntidad(this);
+		
 	}
 
 	@Override

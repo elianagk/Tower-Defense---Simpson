@@ -29,9 +29,6 @@ public class DiseñoGeneral extends JFrame{
 	private MapaLogico mapal;
 	
 	
-	private State vendiendo;
-	private State comprando;
-	private State jugando;
 	
 
 	/**
@@ -86,8 +83,8 @@ public class DiseñoGeneral extends JFrame{
 		
 		
 		juego = new Juego(MAPA, mapal);
-		tiendaLogica.setJugador(juego.getJugador());
 		mapal.setJuego(juego);
+		tiendaLogica.setJugador();
 		
 		PANELTIENDA= new TiendaGrafica(tiendaLogica);
 		PANELPRINCIPAL.add(PANELTIENDA);

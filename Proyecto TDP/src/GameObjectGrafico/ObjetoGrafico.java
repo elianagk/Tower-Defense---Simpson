@@ -8,7 +8,7 @@ import Mapa.MapaLogico;
 
 public abstract class ObjetoGrafico extends GameObjectGrafico {
 	protected MapaLogico mapaLogico;
-	protected Objeto objeto;
+	
 	
 	public ObjetoGrafico(String s, MapaLogico ml) {
 		super(s);
@@ -23,12 +23,6 @@ public abstract class ObjetoGrafico extends GameObjectGrafico {
 	public  void accionar() {}
 	
 	public void atacar() {}
+
 	
-	public void setEntidad(Objeto o) {
-		objeto= o;
-	}
-	
-	public void activar() {
-		objeto.activar();
-	}
 }

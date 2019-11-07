@@ -3,11 +3,10 @@ package GameObject.Personajes.Enemigos;
 
 import javax.swing.JLabel;
 
-import Disparo.DisparoLogicoEnemigo;
 import GameObject.GameObject;
 import GameObject.Personaje;
 import GameObject.Personajes.Enemigo;
-
+import GameObject.Personajes.Disparos.DisparoLogicoEnemigo;
 import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.MrBurnsGrafico;
 import Mapa.MapaLogico;
 import VISITOR.Visitor;

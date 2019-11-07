@@ -1,11 +1,12 @@
 package VISITOR;
 
-import Disparo.DisparoLogicoEnemigo;
-import Disparo.DisparoLogicoTorre;
 import GameObject.Objeto;
 import GameObject.Objetos.ObjetoPrecioso;
 import GameObject.Personajes.Enemigo;
 import GameObject.Personajes.Torre;
+import GameObject.Personajes.Disparos.DisparoLogicoEnemigo;
+import GameObject.Personajes.Disparos.DisparoLogicoTorre;
+import State.Jugando;
 import Tienda.TiendaLogica;
 
 public class VisitorVender extends Visitor {
@@ -23,7 +24,7 @@ public class VisitorVender extends Visitor {
 	@Override
 	public void visitar(Torre t) {
 		tiendaLogica.vender(t);	
-		tiendaLogica.getJuego().setJugar();
+		tiendaLogica.getJuego().cambiarEstado(new Jugando(tiendaLogica.getJuego()));
 	}
 
 	

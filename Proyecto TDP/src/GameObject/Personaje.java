@@ -25,7 +25,7 @@ public abstract class Personaje extends GameObject {
 
 
 	public void atacar(Personaje e) {
-	
+			this.mover(still_key);
 			miObjetoGrafico.atacar();
 			e.aplicarDaño(daño);	
 		

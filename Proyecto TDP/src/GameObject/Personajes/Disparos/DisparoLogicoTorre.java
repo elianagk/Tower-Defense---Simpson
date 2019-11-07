@@ -1,26 +1,27 @@
-package Disparo;
+package GameObject.Personajes.Disparos;
 
 import javax.swing.JLabel;
 
+import Disparo.DisparoGraficoTorre;
 import GameObject.GameObject;
 import GameObject.Personaje;
 import GameObject.Personajes.Torre;
-import GameObjectGrafico.GameObjectGrafico;
 import Mapa.MapaLogico;
 import VISITOR.Visitor;
 import VISITOR.VisitorAliado;
-import VISITOR.VisitorDisparoAliado;
 
 
 
-public class DisparoLogicoTorre extends DisparoLogico {
+
+public class DisparoLogicoTorre extends Torre {
 	
 	protected Torre mipersonaje;
+	protected int contador;
 	
 	public DisparoLogicoTorre(MapaLogico ml, Torre p) {
 		super(ml, new DisparoGraficoTorre());
 		mipersonaje=p;
-		visitor= new VisitorDisparoAliado(this);
+		visitor= new VisitorAliado(this);
 		velocidad=5;
 		contador=0;
 		

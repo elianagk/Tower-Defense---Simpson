@@ -25,10 +25,10 @@ public class Nivel {
 		this.juego= juego;
 		this.mapaLogico= mapaLogico;
 		hordas= new Horda[3];
-		hordas[0]= new Horda(this, mapaLogico, 0);
+		hordas[0]= new Horda(this, mapaLogico, 15);
 		hordaActual= hordas[0];
-		hordas[1]= new Horda(this, mapaLogico, 0);
-		hordas[2]= new Horda(this, mapaLogico, 1);
+		hordas[1]= new Horda(this, mapaLogico, 20);
+		hordas[2]= new Horda(this, mapaLogico, 25);
 	}
 	
 	public void crearEnemigo(Horda horda) {

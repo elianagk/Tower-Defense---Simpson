@@ -2,10 +2,10 @@ package GameObject.Personajes.Torres;
 
 import javax.swing.JLabel;
 
-import Disparo.DisparoLogicoTorre;
 import GameObject.GameObject;
 import GameObject.Personaje;
 import GameObject.Personajes.Torre;
+import GameObject.Personajes.Disparos.DisparoLogicoTorre;
 import GameObjectGrafico.PersonajesGrafico.TorresGrafico.BartGrafico;
 import GameObjectGrafico.PersonajesGrafico.TorresGrafico.MargeGrafico;
 import Mapa.MapaLogico;

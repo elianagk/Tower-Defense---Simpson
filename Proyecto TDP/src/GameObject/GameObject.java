@@ -21,8 +21,8 @@ public abstract class GameObject {
 	protected MapaLogico mapaLogico;
 
 	;// imagen statica, gif caminando, gif atacando
-	protected final int width = 50;
-	protected final int height = 50;
+	protected final int width = 100;
+	protected final int height = 100;
 
 	public static final String jump_key = "Jump";
 	public static final String forward_key = "Froward";
