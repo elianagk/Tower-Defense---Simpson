@@ -17,9 +17,7 @@ public abstract class ObjetoPrecioso extends Objeto {
 	
 	public abstract void accionar(Personaje c);
 	
-	public  void empezarHilo() {
-		hilo.start();
-	}
+	public abstract void empezarHilo();
 	
 	public abstract void activar();
 	

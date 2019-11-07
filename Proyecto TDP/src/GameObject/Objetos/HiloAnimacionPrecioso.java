@@ -5,6 +5,7 @@ import javax.swing.JLabel;
 import GRAFICA.MapaGrafico;
 import GameObject.GameObject;
 import Mapa.MapaLogico;
+import State.Jugando;
 
 public abstract class HiloAnimacionPrecioso extends Thread {
 	
@@ -19,10 +20,13 @@ public abstract class HiloAnimacionPrecioso extends Thread {
 		this.mapa= mapaLogico.getMapaGrafico();
 		miobjeto=g;
 		this.label =g.getGrafico();
+		this.label.setBounds(miobjeto.getX(), miobjeto.getY(), 100, 100);
+		
 		
 	}
 	
 	
+	@SuppressWarnings("deprecation")
 	public void run() {
 		mapa.add(label);
 		miobjeto.activar();
@@ -33,8 +37,10 @@ public abstract class HiloAnimacionPrecioso extends Thread {
 			e.printStackTrace();
 		}
 		
-		mapa.remove(label);
+		mapa.remove(label);;
+		
 		this.stop();
-
+		mapaLogico.getJuego().cambiarEstado(new Jugando(mapaLogico.getJuego()));
 	}
+	
 }

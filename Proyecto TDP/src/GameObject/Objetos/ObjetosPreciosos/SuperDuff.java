@@ -14,12 +14,22 @@ public class SuperDuff extends ObjetoPrecioso {
 	public SuperDuff(MapaLogico mapaLogico) {
 		super(mapaLogico, new SuperDuffGrafico(mapaLogico), 200);	//3°vida
 		visitor= new VisitorPrecioso(this);
-		hilo= new DuffHilo(mapaLogico, this);
+		
 		ObjetoGrafico o= (ObjetoGrafico) miObjetoGrafico;
 		o.setEntidad(this);
 		costo=100;
 	}
 
+	
+	@Override
+	public void empezarHilo() {
+		hilo= new DuffHilo(mapaLogico, this);
+		hilo.start();
+		
+	}
+	
+	
+	
 	@Override
 	public void accionar() {
 		// TODO Auto-generated method stub
@@ -56,4 +66,6 @@ public class SuperDuff extends ObjetoPrecioso {
 		// TODO Auto-generated method stub
 		
 	}
+
+	
 }

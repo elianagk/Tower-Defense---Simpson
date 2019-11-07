@@ -27,9 +27,6 @@ public class Juego {
 	private final int gravity_force = 5;
 	private final int ground_position = 400;
 	private State estado;
-	private static State jugar;
-	private static State comprar;
-	private static State vender;
 	private TiendaGrafica tienda;
 	
 	
@@ -43,10 +40,7 @@ public class Juego {
 		this.mapaGrafico=mapaGrafico;
 		this.mapaLogico= mapaLogico;
 		comenzarNiveles();
-		jugar= new Jugando(this);
-		estado=jugar;
-		comprar= new Comprando(this);
-		vender= new Vendiendo(this);
+		estado= new Jugando(this);
 	}
 	
 	private void comenzarJuego() {
@@ -90,18 +84,8 @@ public class Juego {
 		return mapaLogico;
 	}
 	
-	public void setJugar() {
-		estado=jugar;
-		estado.actuar();
-	}
-	
-	public void setComprar() {
-		estado= comprar;
-		estado.actuar();
-	}
-	
-	public void setVender() {
-		estado= vender;
+	public void cambiarEstado(State s) {
+		estado=s;
 		estado.actuar();
 	}
 	

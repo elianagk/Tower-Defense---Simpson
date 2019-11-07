@@ -50,7 +50,7 @@ public class Vendiendo implements State {
 		    	}		    			    
 		    }
 		});
-		
+		juego.cambiarEstado(new Jugando(juego));
 		mapaGrafico.setMouseListener(mouseListener);		
 	}
 

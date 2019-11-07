@@ -16,12 +16,15 @@ public class Bomba extends ObjetoPrecioso {
 
 	public Bomba(MapaLogico mapaLogico) {
 		super(mapaLogico, new BombaGrafica(mapaLogico), 100);
-		hilo= new BombaHilo(mapaLogico, this);
+		
 		visitor= new VisitorPrecioso(this);
 		costo=1000;
 	}
 
-	
+	public  void empezarHilo() {
+		hilo= new BombaHilo(mapaLogico, this);
+		hilo.start();
+	}
 
 	@Override
 	public void Aceptar(Visitor visitante) {

@@ -17,12 +17,17 @@ public class Fuego extends ObjetoPrecioso {
 	public Fuego(MapaLogico mapaLogico) {
 		super(mapaLogico, new DonaExplosivaGrafica(mapaLogico), 100);	//3°vida
 		visitor= new VisitorPrecioso(this);
-		hilo= new FuegoHilo(mapaLogico, this);
+		
 		//hilo.start();
 		ObjetoGrafico o= (ObjetoGrafico) miObjetoGrafico;
 		o.setEntidad(this);
 		costo=500;
 		
+	}
+	
+	public  void empezarHilo() {
+		hilo= new FuegoHilo(mapaLogico, this);
+		hilo.start();
 	}
 
 	@Override
