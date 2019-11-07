@@ -36,9 +36,9 @@ public class Juego {
 		niveles[0]= new Nivel(this, mapaLogico);
 		jugador=new Jugador();
 		this.mapaGrafico=mapaGrafico;
-		this.mapaLogico= mapaLogico;
-		comenzarNiveles();
+		this.mapaLogico= mapaLogico;		
 		estado= new Jugando(this);
+		comenzarNiveles();
 	}
 	
 	private void comenzarJuego() {
