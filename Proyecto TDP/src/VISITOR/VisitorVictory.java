@@ -1,10 +1,10 @@
 package VISITOR;
 
-import Disparo.DisparoLogicoEnemigo;
-import Disparo.DisparoLogicoTorre;
 import GameObject.Objeto;
 import GameObject.Personajes.Enemigo;
 import GameObject.Personajes.Torre;
+import GameObject.Personajes.Disparos.DisparoLogicoEnemigo;
+import GameObject.Personajes.Disparos.DisparoLogicoTorre;
 import Juego.Juego;
 
 public class VisitorVictory extends Visitor{

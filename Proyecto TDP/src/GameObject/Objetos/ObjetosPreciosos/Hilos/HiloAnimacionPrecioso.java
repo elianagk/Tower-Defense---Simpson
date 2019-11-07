@@ -30,8 +30,8 @@ public abstract class HiloAnimacionPrecioso extends Thread {
 	
 	@SuppressWarnings("deprecation")
 	public void run() {
-		mapa.add(label);
-		miobjeto.activar();
+		mapaLogico.entidadAAgregar(miobjeto, miobjeto.getX(), miobjeto.getY());
+		miobjeto.accionar();
 		
 		try {
 			Thread.sleep(tiempo);
@@ -39,7 +39,7 @@ public abstract class HiloAnimacionPrecioso extends Thread {
 			e.printStackTrace();
 		}
 		
-		mapa.remove(label);;
+		mapaLogico.entidadAEliminar(miobjeto);
 		
 		this.stop();
 		mapaLogico.getJuego().cambiarEstado(new Jugando(mapaLogico.getJuego()));

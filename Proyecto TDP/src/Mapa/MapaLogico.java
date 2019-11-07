@@ -2,21 +2,11 @@ package Mapa;
 
 
 import GameObject.*;
-import GameObject.Objetos.Magia;
 import Juego.Juego;
-
 import java.util.ArrayList;
-import java.util.Iterator;
-
-import Jugador.Jugador;
-import State.State;
 import Tienda.TiendaLogica;
-
 import java.awt.Point;
-
-
 import GRAFICA.MapaGrafico;
-import java.util.ListIterator;
 
 public class MapaLogico  {
 	private ArrayList<GameObject> entidades, entidadesAAgregar, entidadesAEliminar, clonada;

@@ -4,17 +4,14 @@ package Juego;
 import java.util.ArrayList;
 import GRAFICA.MapaGrafico;
 import GameObject.GameObject;
-import GameObject.Personajes.Enemigo;
 import Jugador.Jugador;
 import Mapa.MapaLogico;
 import Nivel.Nivel;
-import State.Comprando;
 import State.Jugando;
 import State.State;
-import State.Vendiendo;
 import Tienda.TiendaGrafica;
 import VISITOR.Visitor;
-//import VISITOR.VisitorVictory;
+import VISITOR.VisitorVictory;
 
 
 
@@ -27,15 +24,13 @@ public class Juego {
 	private MapaGrafico mapaGrafico;
 	private MapaLogico mapaLogico;
 	private boolean hayEnemigos;
-	private final int gravity_force = 5;
-	private final int ground_position = 400;
 	private State estado;
 	private TiendaGrafica tienda;
 	private Visitor visitorVictoria;
 	
 	
 	public Juego(MapaGrafico mapaGrafico, MapaLogico mapaLogico){
-		//visitorVictoria=new VisitorVictory(this);
+		visitorVictoria=new VisitorVictory(this);
 		nivelActual=0;
 		niveles= new Nivel[1];
 		niveles[0]= new Nivel(this, mapaLogico);
@@ -62,9 +57,9 @@ public class Juego {
 	
 			if (e.getEsValido()) {
 				toCollide= this.mapaLogico.hayEnElRango(e);
-//				if (nivelActual==1 && niveles[nivelActual].ultimaHorda()) {
-//					e.Aceptar(visitorVictoria);
-//				}
+				if (nivelActual==0 && niveles[nivelActual].ultimaHorda()) {
+					e.Aceptar(visitorVictoria);
+				}
 					
 					
 					
@@ -77,7 +72,7 @@ public class Juego {
 				}
 			}
 		}
-		if (!hayEnemigos && nivelActual==1 && niveles[nivelActual].ultimaHorda())
+		if (!hayEnemigos && nivelActual==0 && niveles[nivelActual].ultimaHorda())
 			victory();
 	}
 	

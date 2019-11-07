@@ -4,12 +4,11 @@ package GameObject.Personajes.Enemigos;
 
 import javax.swing.JLabel;
 
-import Disparo.DisparoLogicoEnemigo;
-import Disparo.DisparoLogicoTorre;
 import GameObject.GameObject;
 import GameObject.Personaje;
 import GameObject.Personajes.Enemigo;
-
+import GameObject.Personajes.Disparos.DisparoLogicoEnemigo;
+import GameObject.Personajes.Disparos.DisparoLogicoTorre;
 import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.ChiefGrafico;
 import Mapa.MapaLogico;
 import VISITOR.Visitor;
@@ -52,12 +51,9 @@ public class Chief extends Enemigo {
 			mapaLogico.gameOver();
 		else {
 			super.mover(backward_key);
-			miObjetoGrafico.atacar();
+			miObjetoGrafico.accionar();
 			contador++;
-			if (contador==tiempo) {
-				mapaLogico.entidadAAgregar(new DisparoLogicoEnemigo(mapaLogico, this), this.getX()-50, this.getY());
-				contador=0;
-			}
+			
 		}
 		
 	

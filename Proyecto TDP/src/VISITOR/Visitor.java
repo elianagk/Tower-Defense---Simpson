@@ -3,14 +3,14 @@ package VISITOR;
 
 
 
-import Disparo.DisparoLogicoEnemigo;
-import Disparo.DisparoLogicoTorre;
 import GameObject.GameObject;
 import GameObject.Objeto;
 import GameObject.Personaje;
 import GameObject.Objetos.ObjetoPrecioso;
 import GameObject.Personajes.Enemigo;
 import GameObject.Personajes.Torre;
+import GameObject.Personajes.Disparos.DisparoLogicoEnemigo;
+import GameObject.Personajes.Disparos.DisparoLogicoTorre;
 
 
 public abstract class Visitor {

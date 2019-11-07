@@ -1,13 +1,13 @@
 package VISITOR;
 
 
-import Disparo.DisparoLogicoEnemigo;
-import Disparo.DisparoLogicoTorre;
 import GameObject.Objeto;
 import GameObject.Objetos.Magia;
 import GameObject.Objetos.ObjetoPrecioso;
 import GameObject.Personajes.Enemigo;
 import GameObject.Personajes.Torre;
+import GameObject.Personajes.Disparos.DisparoLogicoEnemigo;
+import GameObject.Personajes.Disparos.DisparoLogicoTorre;
 
 public class VisitorAliado extends Visitor {
 	
