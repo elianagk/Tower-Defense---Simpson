@@ -2,10 +2,10 @@ package GameObject.Personajes.Torres;
 
 import javax.swing.JLabel;
 
-import Disparo.DisparoLogicoTorre;
 import GameObject.GameObject;
 import GameObject.Personaje;
 import GameObject.Personajes.Torre;
+import GameObject.Personajes.Disparos.DisparoLogicoTorre;
 import GameObjectGrafico.PersonajesGrafico.TorresGrafico.AbueloGrafico;
 
 import Mapa.MapaLogico;
@@ -29,6 +29,7 @@ public class Abuelo extends Torre {
 
 	@Override
 	public void atacar(Personaje e) {
+		e.aplicarDaño(daño);
 		accionar();
 		
 	}

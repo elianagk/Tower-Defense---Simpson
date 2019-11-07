@@ -18,7 +18,7 @@ public class Vender extends Boton {
 		this.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				tiendaLogica.getJuego().setVender();
+				tiendaLogica.getJuego().cambiarEstado(new Vendiendo(tiendaLogica.getJuego()));
 				
 			}
 		});	

@@ -19,6 +19,7 @@ public class TiendaLogica {
 	private MapaLogico mapaLogico;
 	private GameObject g;
 	private Visitor visitor;
+	private Juego juego;
 	private Jugador jugador;
 	private TiendaGrafica tienda;
 	
@@ -32,10 +33,13 @@ public class TiendaLogica {
 		visitor= new VisitorVender(this);
 		tienda= new TiendaGrafica(this);
 		
+		
+		
 	}
 	
-	public void setJugador(Jugador j) {
-		jugador=j;
+	public void setJugador() {
+		juego= mapaLogico.getJuego();
+		jugador= juego.getJugador();
 		tienda.actualizarPlata(jugador.getMonedas());
 		tienda.actualizarPuntaje(jugador.getPuntaje());
 	}

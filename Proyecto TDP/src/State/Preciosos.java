@@ -1,25 +1,27 @@
 package State;
 
+import java.awt.Point;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import java.util.Random;
 
 import GRAFICA.MapaGrafico;
 import GRAFICA.Mouse;
+import GameObject.Objetos.Magia;
+import GameObject.Objetos.ObjetoPrecioso;
 import Juego.Juego;
-import Mapa.MapaLogico;
 
-public class Comprando implements State {
-	
+public class Preciosos implements State {
 	protected Juego juego;
 	protected MapaGrafico mapaGrafico;
+	protected ObjetoPrecioso miobjeto;
 	
-	public Comprando(Juego j) {
+	public Preciosos(Juego j, ObjetoPrecioso o) {
 		juego=j;
 		mapaGrafico= j.getMapaGrafico();
+		miobjeto=o;
 	}
 
-
+	@Override
 	public void actuar() {
 		MouseListener mouseListener;
 		mapaGrafico.removeMouseListener(mapaGrafico.getMouseListener());
@@ -59,20 +61,19 @@ public class Comprando implements State {
 		    				}
 		    			}
 		    		}
-		    		//System.out.println("torre: " + verdaderoy);
-		    		mapaGrafico.avisarTienda((x/100)*100,(verdaderoy*100)/100);
-		    		juego.cambiarEstado(new Jugando(juego));
-
+		    		
+		    		Point p= new Point(x, verdaderoy);
+			    	miobjeto.setPosicion(p);
+			    	miobjeto.empezarHilo();
+		    		
 		    	}
+		    	
+		    	
 		    	
 		    }
 		});
 		mapaGrafico.setMouseListener(mouseListener);	
+		
 	}
-	
-	
-	
-
-	
 
 }

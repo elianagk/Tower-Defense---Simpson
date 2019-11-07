@@ -1,26 +1,25 @@
-package Disparo;
+package GameObject.Personajes.Disparos;
 
-import java.awt.Point;
 
-import javax.swing.JLabel;
 
+import Disparo.DisparoGraficoEnemigo;
 import GameObject.GameObject;
 import GameObject.Personaje;
 import GameObject.Personajes.Enemigo;
 import Mapa.MapaLogico;
 import VISITOR.Visitor;
-import VISITOR.VisitorDisparoEnemigo;
 import VISITOR.VisitorEnemigo;
 
 
-public class DisparoLogicoEnemigo extends DisparoLogico {
+public class DisparoLogicoEnemigo extends Enemigo {
 	
 	protected Enemigo mipersonaje;
+	protected int contador;
 	
 	public DisparoLogicoEnemigo(MapaLogico ml, Enemigo p) {
 		super(ml, new DisparoGraficoEnemigo());
 		mipersonaje=p;
-		visitor= new VisitorDisparoEnemigo(this);
+		visitor= new VisitorEnemigo(this);
 		velocidad= mipersonaje.getVelocidad()+3;
 		contador=0;
 		
