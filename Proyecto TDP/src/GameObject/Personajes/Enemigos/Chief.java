@@ -23,24 +23,30 @@ public class Chief extends Enemigo {
 		vida= 300;
 		velocidad= 6;
 		visitor= new VisitorEnemigo(this);
-		tiempo=20;
+		tiempo=18;
 		contador=0;
 		daño=50;
 	}
 	
 	@Override
+	public boolean estaEnRango(GameObject g) {		
+		return (g.getX()>=this.getX()-100 && g.getX()<=getX() && g.getY()==this.getY()); 
+	}
+	
+	@Override
 	public void atacar(Personaje e) {
-		accionar=false;
-		super.mover(still_key);
+		accionar=false;	
+		if (e.getX()>=this.getX()-100 && e.getX()<=getX() && e.getY()==this.getY()) {				
+			super.mover(still_key);
+		}
+		else
+			super.mover(backward_key);
 		miObjetoGrafico.atacar();
 		contador++;
-		if (contador==tiempo) {
+		if (contador>=tiempo) {
 			mapaLogico.entidadAAgregar(new DisparoLogicoEnemigo(mapaLogico, this), this.getX()-50, this.getY());
 			contador=0;
-		}
-		
-		if (!e.getEsValido())
-			accionar=true;		
+		}	
 	}
 
 	public GameObject clone() {
@@ -54,13 +60,8 @@ public class Chief extends Enemigo {
 		else {
 			if (accionar) {
 				super.mover(backward_key);
-				miObjetoGrafico.accionar();
 			}
-			contador++;
-			
-		}
-		
-	
+		}			
 	}
 	
 	

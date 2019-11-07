@@ -7,28 +7,33 @@ import VISITOR.Visitor;
 public abstract class Personaje extends GameObject {
 	protected int velocidad;
 	protected int daño;
-	protected int alcance;
+	protected int alcanceContador;
 	protected boolean accionar;		
 
 	protected int jump_strenght = 10;
 
 	public Personaje(MapaLogico ml, GameObjectGrafico gog) {
 		super(ml, gog);
+		alcanceContador=50;
 		accionar=true;
 	}
-
+	
+	public void setAccionar(boolean accionar) {
+		this.accionar=accionar;
+	}
+	
 	public int getAlcance() {
-		return alcance;
+		return alcanceContador;
 	}
 
 	public void setAlcance(int alcance) {
-		this.alcance = alcance;
+		this.alcanceContador = alcance;
 	}
 	
 	public void atacar(Personaje e) {
-		accionar=false;
-		miObjetoGrafico.atacar();
-		mover(still_key);
+		accionar=false;							
+		mover(still_key);		
+		miObjetoGrafico.atacar();		
 		e.aplicarDaño(daño);
 		if (!e.getEsValido())
 			accionar=true;
@@ -54,7 +59,8 @@ public abstract class Personaje extends GameObject {
 	
 	protected void cambiarGrafico(String dir){
 		if(miObjetoGrafico != null) {
-			miObjetoGrafico.accionar();
+			if (accionar)
+				miObjetoGrafico.accionar();
 			miObjetoGrafico.setBounds(posicion.x, posicion.y, 100, 100);
 		}
 	}
@@ -75,7 +81,7 @@ public abstract class Personaje extends GameObject {
 				dir = still_key;
 				break;
 		}
-		this.last_dir = dir;
+		this.last_dir = dir;		
 		cambiarGrafico(dir);
 	}
 	

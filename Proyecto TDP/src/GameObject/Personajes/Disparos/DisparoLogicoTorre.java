@@ -34,7 +34,7 @@ public class DisparoLogicoTorre extends Torre {
 		super.mover(still_key);
 		e.aplicarDaño(mipersonaje.getDaño());
 		mapaLogico.entidadAEliminar(this);
-		
+		mipersonaje.setAccionar(true);
 	}
 
 	@Override

@@ -15,9 +15,7 @@ public abstract class Torre extends Personaje {
 	public Torre(MapaLogico mapaLogico, GameObjectGrafico gog) {
 		super(mapaLogico, gog);
 		velocidad=0;
-		alcance=50;
-	}
-	
+	}	
 	
 	public void accionar() {
 		if (accionar) {
@@ -43,7 +41,7 @@ public abstract class Torre extends Personaje {
 	}
 	
 	public boolean estaEnRango(GameObject g) {
-		return (g.getX()>=getX() && g.getX()<=this.getX()+100 && g.getY()==this.getY())   ;
+		return (g.getX()>=getX() && g.getX()<=this.getX()+350 && g.getY()==this.getY())   ;
 	}
 	
 	
