@@ -2,10 +2,10 @@ package GameObject.Personajes.Disparos;
 
 
 
-import Disparo.DisparoGraficoEnemigo;
 import GameObject.GameObject;
 import GameObject.Personaje;
 import GameObject.Personajes.Enemigo;
+import GameObjectGrafico.PersonajesGrafico.DisparoGrafico.DisparoGraficoEnemigo;
 import Mapa.MapaLogico;
 import VISITOR.Visitor;
 import VISITOR.VisitorEnemigo;

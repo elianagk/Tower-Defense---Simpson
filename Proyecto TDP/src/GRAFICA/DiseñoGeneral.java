@@ -77,19 +77,21 @@ public class DiseñoGeneral extends JFrame{
 		tiendaLogica= new TiendaLogica(mapal);
 		
 		 
-		//mapal.setMapaGrafico(MAPA);
+		
 		mapal.setTiendaLogica(tiendaLogica);
 		MAPA.setTiendaLogica(tiendaLogica);
 		
 		
 		juego = new Juego(MAPA, mapal);
 		mapal.setJuego(juego);
-		tiendaLogica.setJugador();
+		
 		
 		PANELTIENDA= new TiendaGrafica(tiendaLogica);
 		PANELPRINCIPAL.add(PANELTIENDA);
 		PANELPRINCIPAL.setLayer(PANELTIENDA, 0);
 		
+		tiendaLogica.setTiendaGrafica(PANELTIENDA);
+		tiendaLogica.setJugador();
 		
 		PANELPRINCIPAL.add(MAPA); 
 		PANELPRINCIPAL.setLayer(MAPA, 0);
