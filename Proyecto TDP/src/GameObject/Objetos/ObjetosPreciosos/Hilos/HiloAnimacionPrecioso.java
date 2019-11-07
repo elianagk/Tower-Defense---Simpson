@@ -21,7 +21,7 @@ public abstract class HiloAnimacionPrecioso extends Thread {
 		this.mapa= mapaLogico.getMapaGrafico();
 		miobjeto=g;
 		this.label =g.getGrafico();
-		this.label.setBounds(miobjeto.getX(), miobjeto.getY(), 200, 200);
+		//this.label.setBounds(miobjeto.getX(), miobjeto.getY(), 200, 200);
 		
 		
 		

@@ -1,6 +1,9 @@
-package Disparo;
+package GameObjectGrafico.PersonajesGrafico.DisparoGrafico;
 
-public class DisparoGraficoTorre extends DisparoGrafico {
+
+import GameObjectGrafico.PersonajesGrafico.TorreGrafico;
+
+public class DisparoGraficoTorre extends TorreGrafico  {
 
 	public DisparoGraficoTorre() {
 		super("disparo3.png");

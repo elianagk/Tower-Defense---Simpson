@@ -6,7 +6,7 @@ import GRAFICA.MapaGrafico;
 import GameObject.Objetos.ObjetosPreciosos.SuperDuff;
 import Mapa.MapaLogico;
 
-public class DuffHilo extends HiloAnimacionDuff {
+public class DuffHilo extends HiloAnimacionPrecioso {
 
 	public DuffHilo(MapaLogico mapa, SuperDuff d) {
 		super(mapa, d);

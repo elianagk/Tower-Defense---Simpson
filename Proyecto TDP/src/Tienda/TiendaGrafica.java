@@ -66,14 +66,14 @@ public class TiendaGrafica extends JPanel {
 	public void actualizarPlata(int p) {
 		String s= String.valueOf(p);
 		dinero.setText("Plata= "+s);
-		tienda.getMapaLogico().getMapaGrafico().repaint();
+		dinero.repaint();
 		
 	}
 	
 	public void actualizarPuntaje(int p) {
 		String s= String.valueOf(p);
 		puntaje.setText("Puntaje= "+ s);
-		tienda.getMapaLogico().getMapaGrafico().repaint();
+		puntaje.repaint();
 	}
 	
 	
