@@ -1,5 +1,7 @@
 package GameObject.Objetos.ObjetosPreciosos.Hilos;
 
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
 import GRAFICA.MapaGrafico;
@@ -14,10 +16,11 @@ public abstract class HiloAnimacionDuff extends HiloAnimacionPrecioso {
 		super(mapa, g);
 		this.mapa= mapaLogico.getMapaGrafico();
 		this.label =miobjeto.getGrafico();
-		this.label.setBounds(miobjeto.getX(), miobjeto.getY(), 500, 450);
 		
-		
-		
+		Icon icon = label.getIcon();
+		this.label.setIcon(icon);
+		this.label.setSize(200, 100);
+		this.label.setBounds(miobjeto.getX(), miobjeto.getY(), 200, 100);
 	}
 	
 	

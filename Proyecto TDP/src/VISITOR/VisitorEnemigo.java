@@ -3,10 +3,12 @@ package VISITOR;
 
 import GameObject.Objeto;
 import GameObject.Objetos.ObjetoPrecioso;
+import GameObject.Objetos.ObjetosPreciosos.SuperDuff;
 import GameObject.Personajes.Enemigo;
 import GameObject.Personajes.Torre;
 import GameObject.Personajes.Disparos.DisparoLogicoEnemigo;
 import GameObject.Personajes.Disparos.DisparoLogicoTorre;
+import GameObjectGrafico.ObjetosGraficos.ObjetosPreciososGraficos.SuperDuffGrafico;
 
 public class VisitorEnemigo extends Visitor {
 	
@@ -44,6 +46,12 @@ public class VisitorEnemigo extends Visitor {
 		
 	}
 
+	public void visitar(SuperDuff s) {
+		SuperDuffGrafico gog= (SuperDuffGrafico) s.getGrafico();
+		if(gog.dentroHitbox(mipersonaje.getX(), mipersonaje.getY(), gog)) {
+			mipersonaje.accionar();
+		}
+	}
 	
 
 }
