@@ -8,6 +8,8 @@ public class BombaGrafica extends ObjetoPreciosoGrafico {
 	
 	public BombaGrafica(MapaLogico ml) {
 		super("bomba.gif", ml);
+		this.setSize(100,100);
+		
 	}
 
 }

@@ -20,7 +20,9 @@ public class Premio extends Boton {
 
 	
 	public Premio(String s, TiendaLogica tiendaLogica) {
+
 		super(tiendaLogica, s);
+
 		
 	
 	
@@ -39,7 +41,8 @@ public class Premio extends Boton {
 		Random r= new Random();
 		ObjetoPrecioso o = null;
 		
-		int n= r.nextInt(4);
+		int n= r.nextInt(3);
+		System.out.println(n);
 		switch (n) {
 		case 0: o= new Bomba(tiendaLogica.getMapaLogico());
 			break;
@@ -47,13 +50,13 @@ public class Premio extends Boton {
 			break;
 		case 2: o= new SuperDuff(tiendaLogica.getMapaLogico());
 			break;
-		case 3: o= new SuperDuff(tiendaLogica.getMapaLogico());
-			break;
 		
 		}
+
 		tiendaLogica.getJuego().cambiarEstado(new Preciosos(tiendaLogica.getJuego(), o));
 		
 		
+
 		
 	}
 	

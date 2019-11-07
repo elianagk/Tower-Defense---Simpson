@@ -9,7 +9,7 @@ public class SuperDuffGrafico extends ObjetoPreciosoGrafico{
 
 	public SuperDuffGrafico(MapaLogico ml) {
 		super("duff.png", ml);	
-		this.setSize(50, 100);
+		this.setSize(200, 100);
 		
 	}
 	

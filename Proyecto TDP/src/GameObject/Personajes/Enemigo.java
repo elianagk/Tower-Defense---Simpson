@@ -62,9 +62,9 @@ public abstract  class Enemigo extends Personaje {
 	@Override
 	public void accionar() {
 
-//		if (posicion.x<=0)
-//			mapaLogico.gameOver();
-//		else
+		if (posicion.x<=0)
+			mapaLogico.gameOver();
+		else
 			miObjetoGrafico.accionar();
 			super.mover(backward_key);
 

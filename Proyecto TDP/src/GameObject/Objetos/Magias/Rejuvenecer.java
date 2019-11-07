@@ -18,8 +18,7 @@ public class Rejuvenecer extends Magia {
 		super(mapaLogico, new RejuvenecerGrafico(mapaLogico), 20);	//3°duracion seg
 		visitor= new VisitorMagia(this);
 		hilo= new RejuvenecerHilo(this);
-		ObjetoGrafico o= (ObjetoGrafico) miObjetoGrafico;
-		o.setEntidad(this);
+		
 	}
 
 	@Override

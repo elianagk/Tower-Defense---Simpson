@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import GameObject.GameObject;
 import GameObject.Personaje;
 import GameObject.Objetos.ObjetoPrecioso;
+import GameObject.Objetos.ObjetosPreciosos.Hilos.BombaHilo;
 import GameObjectGrafico.GameObjectGrafico;
 import GameObjectGrafico.ObjetoGrafico;
 import GameObjectGrafico.ObjetosGraficos.ObjetosPreciososGraficos.BombaGrafica;
@@ -19,6 +20,7 @@ public class Bomba extends ObjetoPrecioso {
 		
 		visitor= new VisitorPrecioso(this);
 		costo=1000;
+		
 	}
 
 	public  void empezarHilo() {

@@ -9,6 +9,7 @@ public abstract class Objeto extends GameObject {
 	
 	public Objeto(MapaLogico ml, GameObjectGrafico gog) {
 		super(ml, gog);
+		costo=0;
 	}
 
 	

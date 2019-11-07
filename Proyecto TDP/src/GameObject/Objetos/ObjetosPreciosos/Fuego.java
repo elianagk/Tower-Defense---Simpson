@@ -2,8 +2,9 @@ package GameObject.Objetos.ObjetosPreciosos;
 
 import GameObject.GameObject;
 import GameObject.Personaje;
-import GameObject.Objetos.HiloAnimacionPrecioso;
 import GameObject.Objetos.ObjetoPrecioso;
+import GameObject.Objetos.ObjetosPreciosos.Hilos.FuegoHilo;
+import GameObject.Objetos.ObjetosPreciosos.Hilos.HiloAnimacionPrecioso;
 import GameObjectGrafico.ObjetoGrafico;
 import GameObjectGrafico.ObjetosGraficos.ObjetosPreciososGraficos.DonaExplosivaGrafica;
 import Mapa.MapaLogico;
@@ -17,10 +18,6 @@ public class Fuego extends ObjetoPrecioso {
 	public Fuego(MapaLogico mapaLogico) {
 		super(mapaLogico, new DonaExplosivaGrafica(mapaLogico), 100);	//3°vida
 		visitor= new VisitorPrecioso(this);
-		
-		//hilo.start();
-		ObjetoGrafico o= (ObjetoGrafico) miObjetoGrafico;
-		o.setEntidad(this);
 		costo=500;
 		
 	}
