@@ -68,7 +68,6 @@ public class MapaGrafico extends JLabel{
 		this.juego=juego;
 	}
 	
-	//Sirve para matar a apu desde un boton
 	public Juego getJuego() {
 		return juego;
 	}
@@ -85,19 +84,18 @@ public class MapaGrafico extends JLabel{
 		return actualMouseListener;
 	}
 	
-
-	
-
 	public void gameOver() {
 		juego.gameOver();
 		ImageIcon fot1= new ImageIcon(getClass().getClassLoader().getResource("gameover.gif"));
 		Icon mapa= new ImageIcon(fot1.getImage().getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_DEFAULT));
 		this.setIcon(mapa);
+		repaint();
 	}
 	
 	public void victory() {
 		ImageIcon fot1= new ImageIcon(getClass().getClassLoader().getResource("victory.gif"));
 		Icon mapa= new ImageIcon(fot1.getImage().getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_DEFAULT));
 		this.setIcon(mapa);
+		repaint();
 	}
 }

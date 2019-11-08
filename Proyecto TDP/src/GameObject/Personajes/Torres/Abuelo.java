@@ -42,7 +42,7 @@ public class Abuelo extends Torre {
 		miObjetoGrafico.atacar();
 		contador++;
 		if (contador==tiempo) {
-			mapaLogico.entidadAAgregar(new DisparoLogicoTorre(mapaLogico, this), this.getX()+50, this.getY());
+			mapaLogico.disparoAAgregar(new DisparoLogicoTorre(mapaLogico, this), this.getX()+50, this.getY());
 			contador=0;
 		}
 	}

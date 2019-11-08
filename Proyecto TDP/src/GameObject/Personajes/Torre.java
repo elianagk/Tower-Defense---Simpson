@@ -29,7 +29,7 @@ public abstract class Torre extends Personaje {
 		accionar=false;
 		miObjetoGrafico.atacar();				
 		e.aplicarDaño(daño);	
-		if (!e.getEsValido()) { 
+		if (e==null || !e.getEsValido()) { 
 			accionar=true;		
 			mover(still_key);
 		}
