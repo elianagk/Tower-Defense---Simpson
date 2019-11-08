@@ -20,8 +20,9 @@ public abstract  class Enemigo extends Personaje {
 	
 	
 	
-	public Enemigo(MapaLogico ml, GameObjectGrafico gog) {
+	public Enemigo(MapaLogico ml, GameObjectGrafico gog, int m) {
 		super(ml, gog);
+		monedas= m;
 	
 	}
 	
@@ -97,20 +98,15 @@ public abstract  class Enemigo extends Personaje {
 			
 			mapaLogico.entidadAEliminar(this);
 			Random r= new Random();
-			int n= r.nextInt(10);
-			if (n>5) {
+			int n= r.nextInt()%4;
+			if (n==0) {
 				Magia m= powerup();
-				mapaLogico.entidadAAgregar(m,x-5, y);
-				m.activar();
-				
-				
+				m.setX(this.getX());
+				m.setY(this.getY());
+				mapaLogico.getMapaGrafico().agregarEntidad(m);
 			}
 			
-			int m= r.nextInt(50);
-			if (m>25) {
-				monedas();
-			}
-			
+			monedas();			
 		}
 	}
 	
@@ -137,12 +133,8 @@ public abstract  class Enemigo extends Personaje {
 	}
 	
 	private void monedas() {
-		Random r= new Random();
-		int n= r.nextInt(20);
-		if (n==18) {
-			mapaLogico.getJuego().getJugador().setMonedas(mapaLogico.getJuego().getJugador().getMonedas()+500);
-			mapaLogico.getTiendaLogica().actualizarPlata();
-		}
+		mapaLogico.getJuego().getJugador().setMonedas(mapaLogico.getJuego().getJugador().getMonedas()+monedas);
+		mapaLogico.getTiendaLogica().actualizarPlata();
 	}
 	
 	

@@ -17,7 +17,7 @@ public class MrBurns extends Enemigo {
 	private int contador;
 	
 	public MrBurns(MapaLogico ml) {
-		super(ml, new MrBurnsGrafico());
+		super(ml, new MrBurnsGrafico(), 1000);
 		vida= 300;
 		velocidad= 6;
 		visitor= new VisitorEnemigo(this);

@@ -16,7 +16,7 @@ import VISITOR.VisitorEnemigo;
 public class BumbleeMan extends Enemigo {
 	
 	public BumbleeMan(MapaLogico ml) {
-		super(ml, new BumbleeManGrafico());
+		super(ml, new BumbleeManGrafico(), 650);
 		vida= 200;
 		velocidad= 3;
 		visitor= new VisitorEnemigo(this);

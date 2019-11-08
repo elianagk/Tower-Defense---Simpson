@@ -19,7 +19,7 @@ public class Moe extends Enemigo {
 	
 	
 	public Moe(MapaLogico ml) {
-		super(ml, new MoeGrafico());
+		super(ml, new MoeGrafico(), 550);
 		vida=300;
 		velocidad= 6;
 		visitor= new VisitorEnemigo(this);
