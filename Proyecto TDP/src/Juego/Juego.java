@@ -59,8 +59,8 @@ public class Juego {
 					
 				if(toCollide.size() == 0) {
 					e.accionar();
-				}else {
-					for(GameObject toCollideElement: toCollide) {
+				}else {					
+					for(GameObject toCollideElement: toCollide) {					
 						toCollideElement.Aceptar(e.getVisitor());		
 					}
 				}

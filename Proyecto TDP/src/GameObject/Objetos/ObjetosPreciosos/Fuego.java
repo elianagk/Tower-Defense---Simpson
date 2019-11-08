@@ -6,7 +6,7 @@ import GameObject.Objetos.ObjetoPrecioso;
 import GameObject.Objetos.ObjetosPreciosos.Hilos.FuegoHilo;
 import GameObject.Objetos.ObjetosPreciosos.Hilos.HiloAnimacionPrecioso;
 import GameObjectGrafico.ObjetoGrafico;
-import GameObjectGrafico.ObjetosGraficos.ObjetosPreciososGraficos.DonaExplosivaGrafica;
+import GameObjectGrafico.ObjetosGraficos.ObjetosPreciososGraficos.FuegoGrafico;
 import Mapa.MapaLogico;
 import VISITOR.Visitor;
 import VISITOR.VisitorPrecioso;
@@ -16,7 +16,7 @@ public class Fuego extends ObjetoPrecioso {
 	
 
 	public Fuego(MapaLogico mapaLogico) {
-		super(mapaLogico, new DonaExplosivaGrafica(mapaLogico), 100);	//3°vida
+		super(mapaLogico, new FuegoGrafico(mapaLogico));	//3°vida
 		visitor= new VisitorPrecioso(this);
 		costo=500;
 		
@@ -27,17 +27,6 @@ public class Fuego extends ObjetoPrecioso {
 		hilo.start();
 	}
 
-	@Override
-	public void accionar() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void accionar(Personaje c) {
-		c.aplicarDaño(50);
-		
-	}
 
 	@Override
 	public void Aceptar(Visitor visitante) {
@@ -51,15 +40,6 @@ public class Fuego extends ObjetoPrecioso {
 
 	
 
-	@Override
-	public void activar() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void accionar(GameObject o) {
-		// TODO Auto-generated method stub
-		
-	}
+	
+	
 }

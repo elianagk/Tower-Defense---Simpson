@@ -15,8 +15,7 @@ public abstract class PersonajeGrafico extends GameObjectGrafico {
 	public void atacar(String s) {
 		imagen=s;
 		this.setIcon(new ImageIcon(getClass().getClassLoader().getResource(imagen)));
-		repaint();
-		
+		repaint();		
 	}
 	
 	

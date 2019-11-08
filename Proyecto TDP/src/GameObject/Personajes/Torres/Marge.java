@@ -29,9 +29,7 @@ public class Marge extends Torre {
 	
 	@Override
 	public void atacar(Personaje e) {
-		accionar();
-		
-		
+		accionar();				
 	}
 	
 	public GameObject clone() {

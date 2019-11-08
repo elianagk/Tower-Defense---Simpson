@@ -8,19 +8,23 @@ import GameObjectGrafico.GameObjectGrafico;
 import GameObjectGrafico.ObjetosGraficos.ObjetoPreciosoGrafico;
 import Mapa.MapaLogico;
 
-public abstract class ObjetoPrecioso extends Objeto {
+public abstract class ObjetoPrecioso extends ObjetosSinMagia {
 	protected HiloAnimacionPrecioso hilo;
 	
-	public ObjetoPrecioso(MapaLogico mapaLogico, GameObjectGrafico objP, int vida) {
+	public ObjetoPrecioso(MapaLogico mapaLogico, GameObjectGrafico objP) {
 		super(mapaLogico, objP);
-		this.vida=vida;
+		
 	}
 	
-	public abstract void accionar(Personaje c);
+	
+	public void accionar(Personaje c) {
+		c.aplicarDaño(50);
+	}
 	
 	public abstract void empezarHilo();
 	
-	public abstract void activar();
+	public void accionar() {}
+	
 	
 	
 }

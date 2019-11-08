@@ -25,11 +25,11 @@ public abstract class Magia extends Objeto {
 		return miObjetoGrafico;
 	}
 	
-	public abstract void accionar(GameObject o);
 	
-	public abstract void accionar();
 	
 	public abstract void terminarMagia();
 	
 	public abstract void activar();
+	
+	public void accionar() {}
 }

@@ -18,14 +18,14 @@ String direccionImg;
 		return direccionImg;
 	}
 	
+	@Override
 	public void atacar() {
 		super.atacar("homeroatacando.gif");
 	}
 
 	@Override
 	public void accionar() {
-		super.accionar("homeroparado.png");
-		
+		super.accionar("homeroparado.png");		
 	}
 
 	

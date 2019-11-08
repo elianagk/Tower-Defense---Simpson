@@ -18,7 +18,7 @@ public class Barney extends Enemigo {
 	
 	public Barney(MapaLogico ml) {
 		super(ml, new BarneyGrafico());
-		vida= 100;
+		vida= 200;
 		velocidad= 4;
 		visitor= new VisitorEnemigo(this);
 		daño=10;

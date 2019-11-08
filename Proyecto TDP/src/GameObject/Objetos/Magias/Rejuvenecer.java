@@ -21,23 +21,9 @@ public class Rejuvenecer extends Magia {
 		
 	}
 
-
-
-	@Override
-	public void Aceptar(Visitor visitante) {
-		// TODO Auto-generated method stubs
-		
-	}
-
-	@Override
-	public GameObject clone() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	
 	
 	public void terminarMagia() {
-		mipersonaje.setVida(vida);
+		mipersonaje.setVida(mipersonaje.getVidaTotal());
 	}
 	
 	public void activar() {
@@ -46,16 +32,36 @@ public class Rejuvenecer extends Magia {
 		}
 	}
 
+
 	@Override
-	public void accionar() {
+	public void accionar(Personaje e) {
+		e.setVida(e.getVida()+300);
+		
+	}
+
+
+
+
+
+
+	@Override
+	public void Aceptar(Visitor v) {
 		// TODO Auto-generated method stub
 		
 	}
 
+
+
+
+
+
 	@Override
-	public void accionar(GameObject o) {
+	public GameObject clone() {
 		// TODO Auto-generated method stub
-		
+		return null;
 	}
+
+
+	
 
 }

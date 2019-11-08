@@ -1,4 +1,4 @@
-package GameObjectGrafico.ObjetosGraficos.ObjetosPreciososGraficos;
+package GameObjectGrafico.ObjetosGraficos.ObjetosConVida;
 
 import GameObject.Objeto;
 import GameObjectGrafico.GameObjectGrafico;
@@ -10,7 +10,7 @@ public class SuperDuffGrafico extends ObjetoPreciosoGrafico{
 
 	public SuperDuffGrafico(MapaLogico ml) {
 		super("duff.png", ml);	
-		this.setSize(200, 100);
+		this.setSize(500, 450);
 		
 	}
 	

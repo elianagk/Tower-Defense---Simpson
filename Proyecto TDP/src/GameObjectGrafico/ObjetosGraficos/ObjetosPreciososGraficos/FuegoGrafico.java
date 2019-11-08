@@ -4,9 +4,9 @@ import GameObject.Objeto;
 import GameObjectGrafico.ObjetoGrafico;
 import Mapa.MapaLogico;
 
-public class DonaExplosivaGrafica extends ObjetoGrafico {
+public class FuegoGrafico extends ObjetoGrafico {
 
-	public DonaExplosivaGrafica(MapaLogico ml) {
+	public FuegoGrafico(MapaLogico ml) {
 		super("fuego.png", ml);	
 		this.setSize(100,100);
 		

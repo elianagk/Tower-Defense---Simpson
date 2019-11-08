@@ -45,12 +45,14 @@ public class Vendiendo implements State {
 		    		
 		    		if (t.getX()==((x/100)*100) && t.getY()==((y/100)*100)) {
 		    			encontre=true;		    			
-		    			t.Aceptar(tienda.getVisitor());		    			
+		    			t.Aceptar(tienda.getVisitor());
+		    			juego.cambiarEstado(new Jugando(juego));
 		    		}
 		    	}		    			    
 		    }
+		    
 		});
-		juego.cambiarEstado(new Jugando(juego));
+		
 		mapaGrafico.setMouseListener(mouseListener);		
 	}
 
