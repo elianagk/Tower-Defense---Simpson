@@ -41,6 +41,7 @@ public class MapaLogico  {
 	public MapaGrafico getMapaGrafico() {
 		return mapaGrafico;
 	}
+	
 	public ArrayList<GameObject> hayEnElRango(GameObject g) {
 		ArrayList<GameObject> toReturn = new ArrayList<GameObject>();
 		
@@ -120,12 +121,9 @@ public class MapaLogico  {
 		juego=j;
 	}
 	
-	//Sirve para matar a apu desde un boton
 	public Juego getJuego() {
 		return juego;
-	}
-	
-	
+	}		
 	
 	public TiendaLogica getTiendaLogica() {
 		return tiendaLogica;
