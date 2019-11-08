@@ -31,7 +31,7 @@ public class Comprando implements State {
 		    	int y= e.getY();
 		    	System.out.println("x: "+ x+" y: "+y);
 		    	int verdaderoy=0;
-		    	if(y>=170 && y<=800) {
+		    	if(y>=170 && y<=800 && x<=1000) {
 		    		if (y>200 && y<300) {
 		    			verdaderoy=200;
 		    		}
