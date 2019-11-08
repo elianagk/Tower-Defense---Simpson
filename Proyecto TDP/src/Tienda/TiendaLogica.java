@@ -44,8 +44,12 @@ public class TiendaLogica {
 		tienda.actualizarPuntaje(jugador.getPuntaje());
 	}
 	
-	public void actualizarPuntaje(int p) {
+	public void actualizarPlata() {
 		tienda.actualizarPlata(jugador.getMonedas());
+	}
+	
+	public void actualizarPuntaje() {
+		tienda.actualizarPuntaje(jugador.getPuntaje());
 	}
 	
 	public Jugador getJugador() {

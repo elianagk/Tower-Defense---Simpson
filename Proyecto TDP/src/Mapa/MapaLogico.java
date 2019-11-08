@@ -27,6 +27,7 @@ public class MapaLogico  {
 		this.height=height;
 		tiendaLogica=null;
 		mapaGrafico=mapa;
+
 	}
 	
 		
