@@ -14,9 +14,8 @@ import VISITOR.VisitorAliado;
 public class Lisa extends Torre {
 	
 	public Lisa(MapaLogico mapaLogico) {
-		super(mapaLogico, new LisaGrafico());
+		super(mapaLogico, new LisaGrafico(),200);
 		visitor= new VisitorAliado(this);
-		vida= 150;
 		daño=30;
 		costo=50;
 	}

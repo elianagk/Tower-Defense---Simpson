@@ -11,17 +11,19 @@ import Mapa.MapaLogico;
 
 public abstract class MagiaGrafico extends ObjetoGrafico{
 	Magia magiaLogica;
-	public MagiaGrafico(String s, MapaLogico ml, Magia m) {
+	public MagiaGrafico(String s, MapaLogico ml) {
 		super(s, ml);
-		magiaLogica=m;
 		
 		this.addMouseListener(new MouseAdapter() {
 			public void mouseClicked(MouseEvent e) {
-				magiaLogica.accionar();
+				magiaLogica.activar();
+				mapaLogico.getMapaGrafico().removerEntidad(magiaLogica);
 			}
 		});
 	}
 
-	
+	public void setMagiaLogica(Magia m) {
+		magiaLogica=m;
+	}
 	
 }

@@ -19,7 +19,7 @@ public class DisparoLogicoTorre extends Torre {
 	protected int contador;
 	
 	public DisparoLogicoTorre(MapaLogico ml, Torre p) {
-		super(ml, new DisparoGraficoTorre());
+		super(ml, new DisparoGraficoTorre(),0);
 		mipersonaje=p;
 		visitor= new VisitorAliado(this);
 		velocidad=5;

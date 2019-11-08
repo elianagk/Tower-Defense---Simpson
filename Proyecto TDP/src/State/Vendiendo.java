@@ -39,16 +39,16 @@ public class Vendiendo implements State {
 		    	ArrayList<GameObject> entidades= mapaLogico.getEntidades();
 		    	Iterator<GameObject> it= entidades.iterator();
 		    	boolean encontre= false;
-		    	
+		    	GameObject t;
 		    	while (it.hasNext() && !encontre) {
-		    		GameObject t= it.next();
+		    		t= it.next();
 		    		
 		    		if (t.getX()==((x/100)*100) && t.getY()==((y/100)*100)) {
 		    			encontre=true;		    			
-		    			t.Aceptar(tienda.getVisitor());
-		    			juego.cambiarEstado(new Jugando(juego));
+		    			t.Aceptar(tienda.getVisitor());		    			
 		    		}
-		    	}		    			    
+		    	}		   
+		    	juego.cambiarEstado(new Jugando(juego));
 		    }
 		    
 		});

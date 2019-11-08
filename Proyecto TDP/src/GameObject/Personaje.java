@@ -12,10 +12,12 @@ public abstract class Personaje extends GameObject {
 
 	protected int jump_strenght = 10;
 
-	public Personaje(MapaLogico ml, GameObjectGrafico gog) {
+	public Personaje(MapaLogico ml, GameObjectGrafico gog, int vida) {
 		super(ml, gog);
 		alcanceContador=50;
 		accionar=true;
+		this.vida=vida;
+		vidaTotal=vida;
 	}
 	
 	public void setAccionar(boolean accionar) {
@@ -44,7 +46,7 @@ public abstract class Personaje extends GameObject {
 	}
 	
 	public void setDaño(int d) {
-		daño+=d;
+		daño=d;
 	}
 
 	public void aplicarDaño(int daño) {

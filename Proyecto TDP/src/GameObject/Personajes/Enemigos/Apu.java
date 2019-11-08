@@ -14,8 +14,7 @@ import GameObject.Personaje;
 public class Apu extends Enemigo {
 	
 	public Apu(MapaLogico ml) {
-		super(ml, new ApuGrafico(), 400);
-		vida=200;
+		super(ml, new ApuGrafico(), 400, 200);		
 		velocidad= 5;
 		visitor= new VisitorEnemigo(this);
 		daño=30;

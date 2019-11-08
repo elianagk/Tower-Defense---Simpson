@@ -49,7 +49,7 @@ public class Horda {
 				break;
 			}
 			
-			y=r.nextInt(600-250+1)+250;
+			y=r.nextInt(700-250+1)+250;
 			p= new Point(1080, (y/100)*100);
 			//System.out.println("Enemigo: "+ p.getY());
 

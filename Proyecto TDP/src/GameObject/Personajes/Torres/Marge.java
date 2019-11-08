@@ -17,12 +17,11 @@ public class Marge extends Torre {
 	private int contador;
 	
 	public Marge(MapaLogico mapaLogico) {
-		super(mapaLogico, new MargeGrafico());
+		super(mapaLogico, new MargeGrafico(), 400);
 		visitor= new VisitorAliado(this);
 		tiempo=12;
 		contador=0;
-		vida= 300;
-		daño=70;
+		daño=65;
 		costo=1000;
 	}
 	

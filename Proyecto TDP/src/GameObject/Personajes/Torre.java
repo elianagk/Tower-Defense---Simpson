@@ -12,9 +12,9 @@ import VISITOR.VisitorAliado;
 public abstract class Torre extends Personaje {
 	
 
-	public Torre(MapaLogico mapaLogico, GameObjectGrafico gog) {
-		super(mapaLogico, gog);
-		velocidad=0;
+	public Torre(MapaLogico mapaLogico, GameObjectGrafico gog, int vida) {
+		super(mapaLogico, gog, vida);		
+		velocidad=0;		
 	}	
 	
 	public void accionar() {

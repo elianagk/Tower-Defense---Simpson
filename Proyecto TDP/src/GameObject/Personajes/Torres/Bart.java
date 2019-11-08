@@ -13,9 +13,8 @@ import VISITOR.VisitorAliado;;
 public class Bart extends Torre {
 	
 	public Bart(MapaLogico mapaLogico) {
-		super(mapaLogico, new BartGrafico());
-		visitor= new VisitorAliado(this);
-		vida= 200;
+		super(mapaLogico, new BartGrafico(),200);
+		visitor= new VisitorAliado(this);	
 		daño=40;
 		costo=500;
 	}

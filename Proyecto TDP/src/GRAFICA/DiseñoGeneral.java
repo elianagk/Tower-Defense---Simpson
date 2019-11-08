@@ -61,8 +61,8 @@ public class DiseñoGeneral extends JFrame{
 	private void initialize() {
 		frmJuego = new JFrame();
 		frmJuego.setTitle("Juego");
-		//frmJuego.setResizable(false);
-		frmJuego.setBounds(100, 100, 1080, 800);
+//		frmJuego.setResizable(false);
+		frmJuego.setBounds(200, 100, 1080, 800);
 		frmJuego.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmJuego.getContentPane().setLayout(null);
 		
@@ -72,7 +72,7 @@ public class DiseñoGeneral extends JFrame{
 		frmJuego.setVisible(true);
 		PANELPRINCIPAL.setLayout(null);
 		
-		MAPA = new MapaGrafico(tiendaLogica, "casa.png", PANELPRINCIPAL.getWidth(), PANELPRINCIPAL.getHeight());
+		MAPA = new MapaGrafico(tiendaLogica, "casa.png", frmJuego.getWidth(), frmJuego.getHeight());
 		mapal= new MapaLogico(PANELPRINCIPAL.getWidth(), PANELPRINCIPAL.getHeight(),MAPA);
 		tiendaLogica= new TiendaLogica(mapal);
 		

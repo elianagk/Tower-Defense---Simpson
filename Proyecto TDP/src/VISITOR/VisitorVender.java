@@ -24,7 +24,6 @@ public class VisitorVender extends Visitor {
 	@Override
 	public void visitar(Torre t) {
 		tiendaLogica.vender(t);	
-		tiendaLogica.getJuego().cambiarEstado(new Jugando(tiendaLogica.getJuego()));
 	}
 
 	
