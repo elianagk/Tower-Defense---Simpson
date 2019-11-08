@@ -20,14 +20,11 @@ public abstract  class Enemigo extends Personaje {
 	private int contador;
 	private int tiempo;
 	
-//	protected VisitorEnemigo visitor;
-	
 	
 	public Enemigo(MapaLogico ml, GameObjectGrafico gog) {
 		super(ml, gog);
 		tiempo=3;
 		contador=0;
-		alcance=50;
 	}
 	
 	public int getVelocidad() {
@@ -58,20 +55,33 @@ public abstract  class Enemigo extends Personaje {
 	public void Aceptar(Visitor v) {
 		v.visitar(this);
 	}
-
+	
 	@Override
-	public void accionar() {
-
-		if (posicion.x<=0)
-			mapaLogico.gameOver();
+	public void atacar(Personaje e) {
+		accionar=false;	
+		if (e.getX()>=this.getX()-100 && e.getX()<=getX() && e.getY()==this.getY()) {				
+			super.mover(still_key);
+			miObjetoGrafico.atacar();		
+			e.aplicarDaño(daño);
+		}
 		else
-			miObjetoGrafico.accionar();
-			super.mover(backward_key);
-
+			super.mover(backward_key);		
+		
+		if (!e.getEsValido())
+			accionar=true;
 	}
 	
-	public boolean estaEnRango(GameObject g) {
-		
+	@Override
+	public void accionar() {		
+		if (posicion.x<=0)
+			mapaLogico.gameOver();
+		else {							
+			if (accionar)
+				super.mover(backward_key);
+		}
+	}
+	
+	public boolean estaEnRango(GameObject g) {		
 		return (g.getX()>=this.getX()-100 && g.getX()<=getX() && g.getY()==this.getY()); 
 	}
 	

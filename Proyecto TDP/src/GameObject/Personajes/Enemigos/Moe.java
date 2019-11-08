@@ -23,7 +23,7 @@ public class Moe extends Enemigo {
 		vida=300;
 		velocidad= 6;
 		visitor= new VisitorEnemigo(this);
-		tiempo=35;
+		tiempo=20;
 		contador=0;
 		daño=25;
 		
@@ -31,15 +31,18 @@ public class Moe extends Enemigo {
 
 	@Override
 	public void atacar(Personaje e) {
-		
+		accionar=false;	
+		if (e.getX()>=this.getX()-100 && e.getX()<=getX() && e.getY()==this.getY()) {				
 			super.mover(still_key);
-			miObjetoGrafico.atacar();
-			contador++;
-			if (contador==tiempo) {
-				mapaLogico.entidadAAgregar(new DisparoLogicoEnemigo(mapaLogico, this), this.getX()-50, this.getY());
-				contador=0;
-			}
-		
+		}
+		else
+			super.mover(backward_key);
+		miObjetoGrafico.atacar();
+		contador++;
+		if (contador>=tiempo) {
+			mapaLogico.entidadAAgregar(new DisparoLogicoEnemigo(mapaLogico, this), this.getX()-50, this.getY());
+			contador=0;
+		}	
 	}
 
 	public GameObject clone() {
@@ -48,15 +51,15 @@ public class Moe extends Enemigo {
 	
 	@Override
 	public void accionar() {
-		if (posicion.x<=0) 
+		if (posicion.x<=0)
 			mapaLogico.gameOver();
 		else {
-			super.mover(backward_key);
-			
-			
-		}
-	
-	}
+			if (accionar) {
+				super.mover(backward_key);
+				miObjetoGrafico.accionar();
+			}			
+		}			
 
+	}
 	
 }
