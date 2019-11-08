@@ -8,6 +8,7 @@ import GRAFICA.MapaGrafico;
 import GRAFICA.Mouse;
 import GameObject.Objetos.Magia;
 import GameObject.Objetos.ObjetoPrecioso;
+import GameObject.Objetos.ObjetosSinMagia;
 import Juego.Juego;
 
 public class Preciosos implements State {
@@ -64,6 +65,8 @@ public class Preciosos implements State {
 		    		
 		    		Point p= new Point(x, verdaderoy);
 			    	miobjeto.setPosicion(p);
+			    	juego.getJugador().setMonedas(juego.getJugador().getMonedas()-miobjeto.getCosto());
+			    	juego.getMapaL().getTiendaLogica().actualizarPuntaje(juego.getJugador().getMonedas());
 			    	miobjeto.empezarHilo();
 		    		
 		    	}

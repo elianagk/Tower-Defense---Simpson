@@ -16,7 +16,7 @@ public class Homero extends Torre {
 	public Homero(MapaLogico mapaLogico) {
 		super(mapaLogico, new HomeroGrafico());
 		visitor= new VisitorAliado(this);
-		vida= 100;
+		vida= 200;
 		daño=50;
 		costo=150;
 	}

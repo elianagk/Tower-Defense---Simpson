@@ -1,4 +1,4 @@
-package GameObjectGrafico.ObjetosGraficos.ObjetosPreciososGraficos;
+package GameObjectGrafico.ObjetosGraficos.ObjetosConVida;
 
 import GameObject.Objeto;
 import GameObjectGrafico.GameObjectGrafico;

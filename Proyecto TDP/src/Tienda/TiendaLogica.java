@@ -48,6 +48,10 @@ public class TiendaLogica {
 		tienda.actualizarPuntaje(jugador.getPuntaje());
 	}
 	
+	public void actualizarPuntaje(int p) {
+		tienda.actualizarPlata(jugador.getMonedas());
+	}
+	
 	public Jugador getJugador() {
 		return jugador;
 	}
@@ -63,9 +67,7 @@ public class TiendaLogica {
 		}
 	}
 	
-	public void aplicarMagia() {
-		
-	}
+	
 	
 	public void vender(Torre torre) {
 		int retornoDinero=0;
