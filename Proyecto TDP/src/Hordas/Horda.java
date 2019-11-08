@@ -27,7 +27,7 @@ public class Horda {
 	public GameObject crearEnemigo() {
 		int y=0;
 		int enemigo;
-		GameObject g= null;
+		GameObject g=  new Apu(mapaLogico);
 		Point p;
 		Random r = new Random();
 
