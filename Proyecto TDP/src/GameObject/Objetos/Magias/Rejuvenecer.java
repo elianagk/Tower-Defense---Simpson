@@ -1,8 +1,9 @@
 package GameObject.Objetos.Magias;
 
+import java.util.Random;
+
 import GameObject.GameObject;
 import GameObject.Personaje;
-import GameObject.Objetos.HiloAnimacionMagias;
 import GameObject.Objetos.Magia;
 import GameObjectGrafico.ObjetoGrafico;
 import GameObjectGrafico.ObjetosGraficos.MagiasGraficas.RejuvenecerGrafico;
@@ -15,50 +16,44 @@ public class Rejuvenecer extends Magia {
 	
 
 	public Rejuvenecer(MapaLogico mapaLogico) {
-		super(mapaLogico, new RejuvenecerGrafico(mapaLogico), 20);	//3°duracion seg
+		super(mapaLogico, new RejuvenecerGrafico(mapaLogico));	//3°duracion seg
 		visitor= new VisitorMagia(this);
-		hilo= new RejuvenecerHilo(this);
+		
 		
 	}
 
-	
-	public void terminarMagia() {
-		mipersonaje.setVida(mipersonaje.getVidaTotal());
-	}
-	
-	public void activar() {
-		for(GameObject o: mapaLogico.getEntidades()) {
-			o.Aceptar(visitor);
-		}
-	}
 
 
 	@Override
 	public void accionar(Personaje e) {
 		e.setVida(e.getVida()+300);
 		
+		
 	}
-
-
-
-
 
 
 	@Override
 	public void Aceptar(Visitor v) {
-		// TODO Auto-generated method stub
+		v.visitar(this);
 		
 	}
 
 
 
+	@Override
+	public GameObject clone() {
+		return new Rejuvenecer(mapaLogico);
+	}
 
 
 
 	@Override
-	public GameObject clone() {
-		// TODO Auto-generated method stub
-		return null;
+	public void activar() {
+		for(GameObject o: mapaLogico.getEntidades()) {
+			o.Aceptar(visitor);
+		}
+		mapaLogico.entidadAEliminar(this);
+		
 	}
 
 

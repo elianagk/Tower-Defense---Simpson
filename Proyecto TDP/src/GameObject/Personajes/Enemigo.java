@@ -17,14 +17,12 @@ public abstract  class Enemigo extends Personaje {
 	
 	protected int puntaje;
 	protected int monedas;
-	private int contador;
-	private int tiempo;
+	
 	
 	
 	public Enemigo(MapaLogico ml, GameObjectGrafico gog) {
 		super(ml, gog);
-		tiempo=3;
-		contador=0;
+	
 	}
 	
 	public int getVelocidad() {
@@ -93,13 +91,24 @@ public abstract  class Enemigo extends Personaje {
 		else {
 			vida = 0;
 			esValido=false;
-			mapaLogico.getJuego().getJugador().setPuntaje(mapaLogico.getJuego().getJugador().getPuntaje()+100);
+			int x= this.getX();
+			int y= this.getY();
+			actualizarP();
+			
 			mapaLogico.entidadAEliminar(this);
-			contador++;
-			if (contador==tiempo) {
-				Magia m= new Rejuvenecer(mapaLogico);
-				mapaLogico.entidadAAgregar(m, this.getX(), this.getY());
-				mapaLogico.proximaMagia(m);	
+			Random r= new Random();
+			int n= r.nextInt(10);
+			if (n>5) {
+				Magia m= powerup();
+				mapaLogico.entidadAAgregar(m,x-5, y);
+				m.activar();
+				
+				
+			}
+			
+			int m= r.nextInt(50);
+			if (m>25) {
+				monedas();
 			}
 			
 		}
@@ -112,14 +121,29 @@ public abstract  class Enemigo extends Personaje {
 		int n= r.nextInt(2);
 		Magia g=null;
 		switch (n) {
-		 case 1: g= new AumentoDeDaño(mapaLogico);
+		 case 0: g= new AumentoDeDaño(mapaLogico);
          break;
          
-         case 2: g= new Rejuvenecer(mapaLogico);
+         case 1: g= new Rejuvenecer(mapaLogico);
+         break;
 		}
 		
 		return g;
 	}
 	
-
+	private void actualizarP() {
+		mapaLogico.getJuego().getJugador().setPuntaje(mapaLogico.getJuego().getJugador().getPuntaje()+100);
+		mapaLogico.getTiendaLogica().actualizarPuntaje();
+	}
+	
+	private void monedas() {
+		Random r= new Random();
+		int n= r.nextInt(20);
+		if (n==18) {
+			mapaLogico.getJuego().getJugador().setMonedas(mapaLogico.getJuego().getJugador().getMonedas()+500);
+			mapaLogico.getTiendaLogica().actualizarPlata();
+		}
+	}
+	
+	
 }
