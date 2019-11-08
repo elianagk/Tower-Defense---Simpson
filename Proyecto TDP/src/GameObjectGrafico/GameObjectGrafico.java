@@ -34,7 +34,7 @@ public abstract class GameObjectGrafico extends JLabel {
 	
 	
 	
-	//public abstract void atacar(String s);
+	
 	
 	
 	

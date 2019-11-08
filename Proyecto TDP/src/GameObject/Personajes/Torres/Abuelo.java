@@ -23,7 +23,7 @@ public class Abuelo extends Torre {
 		tiempo=20;
 		contador=0;
 		vida= 300;
-		daño=95;
+		daño=60;
 		costo=1000;
 	}
 

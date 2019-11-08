@@ -3,12 +3,12 @@ package VISITOR;
 
 import GameObject.Objeto;
 import GameObject.Objetos.ObjetoPrecioso;
-import GameObject.Objetos.ObjetosPreciosos.SuperDuff;
+import GameObject.Objetos.ObjetosConVida.SuperDuff;
 import GameObject.Personajes.Enemigo;
 import GameObject.Personajes.Torre;
 import GameObject.Personajes.Disparos.DisparoLogicoEnemigo;
 import GameObject.Personajes.Disparos.DisparoLogicoTorre;
-import GameObjectGrafico.ObjetosGraficos.ObjetosPreciososGraficos.SuperDuffGrafico;
+import GameObjectGrafico.ObjetosGraficos.ObjetosConVida.SuperDuffGrafico;
 
 public class VisitorEnemigo extends Visitor {
 	

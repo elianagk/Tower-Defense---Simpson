@@ -59,6 +59,7 @@ public class Moe extends Enemigo {
 				miObjetoGrafico.accionar();
 			}			
 		}			
+
 	}
 	
 }

@@ -51,10 +51,12 @@ public class MrBurns extends Enemigo {
 		if (posicion.x<=0) 
 			mapaLogico.gameOver();		
 		else {
+
 			if (accionar) {	
 				super.mover(backward_key);
 				miObjetoGrafico.accionar();				
 			}			
+
 		}
 	}
 	
