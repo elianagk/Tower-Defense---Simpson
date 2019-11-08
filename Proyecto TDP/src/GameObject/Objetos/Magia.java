@@ -11,12 +11,11 @@ import Mapa.MapaLogico;
 
 public abstract class Magia extends Objeto {
 	protected int duracion;
-	protected HiloAnimacionMagias hilo;
 	protected Personaje mipersonaje; //las magias se le aplican siempre a aliados
 	
-	public Magia(MapaLogico mapaLogico, GameObjectGrafico m, int duracion) {
+	public Magia(MapaLogico mapaLogico, GameObjectGrafico m) {
 		super(mapaLogico, m);
-		this.duracion= duracion;
+		
 	}
 
 	@Override
@@ -25,9 +24,6 @@ public abstract class Magia extends Objeto {
 		return miObjetoGrafico;
 	}
 	
-	
-	
-	public abstract void terminarMagia();
 	
 	public abstract void activar();
 	
