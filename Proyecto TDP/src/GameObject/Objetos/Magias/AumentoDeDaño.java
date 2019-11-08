@@ -1,28 +1,29 @@
 package GameObject.Objetos.Magias;
 
+import java.util.Random;
+
 import GameObject.GameObject;
 import GameObject.Personaje;
 import GameObject.Objetos.Magia;
-import GameObjectGrafico.ObjetoGrafico;
-import GameObjectGrafico.ObjetosGraficos.MagiaGrafico;
 import GameObjectGrafico.ObjetosGraficos.MagiasGraficas.AumentoDeDañoGrafico;
 import Mapa.MapaLogico;
 import VISITOR.Visitor;
 import VISITOR.VisitorMagia;
 
 public class AumentoDeDaño extends Magia{
+	
 
 	public AumentoDeDaño(MapaLogico mapaLogico) {
-		super(mapaLogico, new AumentoDeDañoGrafico(mapaLogico), 25);	//3°duracion seg
+		super(mapaLogico, new AumentoDeDañoGrafico(mapaLogico));	//3°duracion seg
 		visitor= new VisitorMagia(this);
 		
 	}
 
 	@Override
-	public void accionar(Personaje o) {
-		Personaje p=  o;
+	public void accionar(Personaje p) {
 		p.setDaño(p.getDaño()+30);
-		mapaLogico.entidadAEliminar(this);
+		
+			
 	}
 
 	@Override
@@ -37,16 +38,16 @@ public class AumentoDeDaño extends Magia{
 	}
 
 	@Override
-	public void terminarMagia() {
-		// TODO Auto-generated method stub
-		
-	}
-
 	public void activar() {
 		for(GameObject o: mapaLogico.getEntidades()) {
 			o.Aceptar(visitor);
 		}
+		mapaLogico.entidadAEliminar(this);
+		
 	}
+
+	
+	
 
 	
 

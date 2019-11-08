@@ -88,7 +88,7 @@ public class MapaLogico  {
 			entidad=itEntidades.next();
 			if (entidad.getX()==x && entidad.getY()==y) {
 				ocupado=true;
-				System.out.println("ocupado");
+				//System.out.println("ocupado");
 			}
 		}
 		if (!ocupado) {					
