@@ -93,7 +93,7 @@ public class MapaGrafico extends JLabel{
 	}
 	
 	public void victory() {
-		ImageIcon fot1= new ImageIcon(getClass().getClassLoader().getResource("victory.gif"));
+		ImageIcon fot1= new ImageIcon(getClass().getClassLoader().getResource("victory.jpg"));
 		Icon mapa= new ImageIcon(fot1.getImage().getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_DEFAULT));
 		this.setIcon(mapa);
 		repaint();
