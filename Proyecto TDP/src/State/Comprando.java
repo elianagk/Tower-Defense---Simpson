@@ -58,9 +58,9 @@ public class Comprando implements State {
 		    					}
 		    				}
 		    			}
-		    		}
-		    		//System.out.println("torre: " + verdaderoy);
+		    		}		
 		    		mapaGrafico.avisarTienda((x/100)*100,(verdaderoy*100)/100);
+		    		
 		    		juego.cambiarEstado(new Jugando(juego));
 
 		    	}

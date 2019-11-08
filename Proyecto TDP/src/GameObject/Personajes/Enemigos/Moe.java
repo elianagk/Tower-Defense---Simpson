@@ -40,9 +40,11 @@ public class Moe extends Enemigo {
 		miObjetoGrafico.atacar();
 		contador++;
 		if (contador>=tiempo) {
-			mapaLogico.entidadAAgregar(new DisparoLogicoEnemigo(mapaLogico, this), this.getX()-50, this.getY());
+			mapaLogico.disparoAAgregar(new DisparoLogicoEnemigo(mapaLogico, this), this.getX()-50, this.getY());
 			contador=0;
 		}	
+		if (!e.getEsValido())
+			accionar=true;
 	}
 
 	public GameObject clone() {
