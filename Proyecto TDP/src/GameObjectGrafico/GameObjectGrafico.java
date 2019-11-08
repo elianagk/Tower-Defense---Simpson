@@ -12,9 +12,10 @@ public abstract class GameObjectGrafico extends JLabel {
 	
 	public GameObjectGrafico(String s) {
 		imagen= s;
-		this.setIcon(new ImageIcon(getClass().getClassLoader().getResource(imagen)));
 		this.setSize(100, 100);
-		
+		ImageIcon fot= new ImageIcon(getClass().getClassLoader().getResource(s));
+		Icon i= new ImageIcon(fot.getImage().getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_DEFAULT));
+		this.setIcon(i);
 		
 		
 	}
