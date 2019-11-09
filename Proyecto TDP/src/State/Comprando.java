@@ -29,7 +29,6 @@ public class Comprando implements State {
 		    public void mouseClicked(MouseEvent e) {
 		    	int x= e.getX();
 		    	int y= e.getY();
-		    	System.out.println("x: "+ x+" y: "+y);
 		    	int verdaderoy=0;
 		    	if(y>=170 && y<=800) {
 		    		if (y>200 && y<300) {

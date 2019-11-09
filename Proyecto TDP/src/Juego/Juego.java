@@ -2,6 +2,10 @@ package Juego;
 
 
 import java.util.ArrayList;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
+
 import GRAFICA.MapaGrafico;
 import GameObject.GameObject;
 import Jugador.Jugador;
@@ -17,7 +21,6 @@ import VISITOR.VisitorVictory;
 
 public class Juego {
 	
-//	public Enemigo enemigos[];
 	private int nivelActual;
 	private Nivel niveles[];	
 	private Jugador jugador;
@@ -25,15 +28,15 @@ public class Juego {
 	private MapaLogico mapaLogico;
 	private boolean hayEnemigos;
 	private State estado;
-	private TiendaGrafica tienda;
 	private Visitor visitorVictoria;
+	private final ScheduledExecutorService scheduler = Executors.newSingleThreadScheduledExecutor();
 	
-	
-	public Juego(MapaGrafico mapaGrafico, MapaLogico mapaLogico){
+	public Juego(MapaGrafico mapaGrafico, MapaLogico mapaLogico) {
 		visitorVictoria=new VisitorVictory(this);
 		nivelActual=0;
-		niveles= new Nivel[1];
-		niveles[0]= new Nivel(this, mapaLogico);
+		niveles= new Nivel[2];
+		niveles[0]= new Nivel(this, mapaLogico, 0);
+		niveles[1]= new Nivel (this, mapaLogico, 0);
 		jugador=new Jugador();
 		this.mapaGrafico=mapaGrafico;
 		this.mapaLogico= mapaLogico;
@@ -51,11 +54,9 @@ public class Juego {
 	
 			if (e.getEsValido()) {
 				toCollide= this.mapaLogico.hayEnElRango(e);
-				if (nivelActual==0 && niveles[nivelActual].ultimaHorda()) {
+				if (nivelActual==1 && niveles[nivelActual].ultimaHorda()) {
 					e.Aceptar(visitorVictoria);
-				}
-					
-					
+				}									
 					
 				if(toCollide.size() == 0) {
 					e.accionar();
@@ -66,13 +67,17 @@ public class Juego {
 				}
 			}
 		}
-		if (!hayEnemigos && nivelActual==0 && niveles[nivelActual].ultimaHorda())
+		if (!hayEnemigos && nivelActual==1 && niveles[nivelActual].ultimaHorda())
 			victory();
 	}
 	
 	
 	public void comenzarNiveles() {
 		niveles[0].ejecutarHordas();
+		scheduler.schedule(new Runnable() {public void run() { 
+			nivelActual++;
+			niveles[1].ejecutarHordas(); }
+	    }, niveles[0].tiempoSegundos()+15, TimeUnit.SECONDS);
 	}
 	
 	public void hayEnemigos(boolean e) {

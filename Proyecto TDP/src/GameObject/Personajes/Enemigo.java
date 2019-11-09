@@ -17,13 +17,17 @@ public abstract  class Enemigo extends Personaje {
 	
 	protected int puntaje;
 	protected int monedas;
-	
+	protected boolean atacando;
 	
 	
 	public Enemigo(MapaLogico ml, GameObjectGrafico gog, int m, int vida) {
 		super(ml, gog,vida);
 		monedas= m;
+		atacando=false;
+	}
 	
+	public void setAtacando(boolean a) {
+		atacando=a;
 	}
 	
 	public int getVelocidad() {
@@ -58,16 +62,21 @@ public abstract  class Enemigo extends Personaje {
 	@Override
 	public void atacar(Personaje e) {
 		accionar=false;	
-		if (e.getX()>=this.getX()-100 && e.getX()<=getX() && e.getY()==this.getY()) {				
+		if (e.getX()>=this.getX()-100 && e.getX()<=getX() && e.getY()==this.getY()) {	
+			atacando=true;
 			super.mover(still_key);
 			miObjetoGrafico.atacar();		
 			e.aplicarDaño(daño);
 		}
-		else
-			super.mover(backward_key);		
+		else {
+			if (!atacando)
+				super.mover(backward_key);
+		}				
 		
-		if (!e.getEsValido())
+		if (!e.getEsValido()) {
 			accionar=true;
+			atacando=false;
+		}
 	}
 	
 	@Override

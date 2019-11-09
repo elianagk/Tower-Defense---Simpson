@@ -33,7 +33,7 @@ public class MapaGrafico extends JLabel{
 		this.setBounds(0, 0, ancho, alto);
 		this.setLayout(null);
 		ImageIcon fot1= new ImageIcon(getClass().getClassLoader().getResource("CASA2.png"));
-		Icon mapa= new ImageIcon(fot1.getImage().getScaledInstance(ancho, alto, Image.SCALE_DEFAULT));
+		Icon mapa= new ImageIcon(fot1.getImage().getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_DEFAULT));
 		this.setIcon(mapa);
 
 		
