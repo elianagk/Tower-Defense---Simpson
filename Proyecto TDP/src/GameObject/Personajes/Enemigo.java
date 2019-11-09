@@ -101,16 +101,13 @@ public abstract  class Enemigo extends Personaje {
 		else {
 			vida = 0;
 			esValido=false;
-			int x= this.getX();
-			int y= this.getY();
 			actualizarPuntaje();
 						
 			Random r= new Random();
 			int n= r.nextInt()%4;
 			if (n==0) {
 				Magia m= powerup();
-//				Magia m= new AumentoDeDaño(mapaLogico);
-				m.setPosicion(new Point (x, y));							
+				m.setPosicion(new Point (this.getX(), this.getY()));							
 				mapaLogico.getMapaGrafico().agregarEntidad(m);
 			}
 			monedas();			
