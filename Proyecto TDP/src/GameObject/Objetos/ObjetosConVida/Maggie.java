@@ -27,7 +27,7 @@ public class Maggie extends ObjetoConVida {
 
 	@Override
 	public void accionar(Personaje e) {
-		// TODO Auto-generated method stub
+		
 		
 	}
 

@@ -19,8 +19,6 @@ public abstract class GameObject {
 	protected boolean esValido;		//para determinar si es valido hacer operaciones con el objeto
 
 	protected MapaLogico mapaLogico;
-
-	;// imagen statica, gif caminando, gif atacando
 	protected final int width = 100;
 	protected final int height = 100;
 
