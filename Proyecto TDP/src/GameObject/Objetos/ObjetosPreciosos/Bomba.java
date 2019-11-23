@@ -6,6 +6,7 @@ import GameObject.GameObject;
 import GameObject.Personaje;
 import GameObject.Objetos.ObjetoPrecioso;
 import GameObject.Objetos.ObjetosPreciosos.Hilos.BombaHilo;
+import GameObject.Personajes.Enemigo;
 import GameObjectGrafico.GameObjectGrafico;
 import GameObjectGrafico.ObjetoGrafico;
 import GameObjectGrafico.ObjetosGraficos.ObjetosPreciososGraficos.BombaGrafica;
@@ -47,11 +48,14 @@ public class Bomba extends ObjetoPrecioso {
 	public void accionar() {
 		ArrayList<GameObject> entidades=mapaLogico.getEntidades();
 		for (GameObject e: entidades) {
-			if (e!=this)
-			mapaLogico.entidadAEliminar(e);
+			e.Aceptar(visitor);
 		}
 		
 		
+	}
+	
+	public void accionar(Enemigo e) {
+		mapaLogico.entidadAEliminar(e);
 	}
 
 	

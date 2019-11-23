@@ -35,8 +35,8 @@ public class Juego {
 		visitorVictoria=new VisitorVictory(this);
 		nivelActual=0;
 		niveles= new Nivel[2];
-		niveles[0]= new Nivel(this, mapaLogico, 0);
-		niveles[1]= new Nivel (this, mapaLogico, 0);
+		niveles[0]= new Nivel(this, mapaLogico, 10);
+		niveles[1]= new Nivel (this, mapaLogico, 15);
 		jugador=new Jugador();
 		this.mapaGrafico=mapaGrafico;
 		this.mapaLogico= mapaLogico;
