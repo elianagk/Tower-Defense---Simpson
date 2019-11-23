@@ -60,10 +60,7 @@ public class Comprando implements State {
 		    				}
 		    			}
 		    		}		
-		    		mapaGrafico.avisarTienda((x/100)*100,(verdaderoy*100)/100);
-		    		
-		    		//juego.cambiarEstado(new Jugando(juego));
-
+		    		mapaGrafico.avisarTienda((x/100)*100,(verdaderoy*100)/100);		    	
 		    	}
 		    	
 		    	juego.cambiarEstado(new Jugando(juego));

@@ -16,7 +16,6 @@ import VISITOR.VisitorAliado;
 public class DisparoLogicoTorre extends Torre {
 	
 	protected Torre mipersonaje;
-	protected int contador;
 	
 	public DisparoLogicoTorre(MapaLogico ml, Torre p) {
 		super(ml, new DisparoGraficoTorre(),0);

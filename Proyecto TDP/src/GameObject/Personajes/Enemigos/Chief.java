@@ -15,8 +15,6 @@ import VISITOR.Visitor;
 import VISITOR.VisitorEnemigo;
 
 public class Chief extends Enemigo {
-	private int tiempo;
-	private int contador;
 	
 	public Chief(MapaLogico ml) {
 		super(ml, new ChiefGrafico(), 150,300);

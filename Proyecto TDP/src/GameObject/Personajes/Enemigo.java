@@ -18,6 +18,7 @@ public abstract  class Enemigo extends Personaje {
 	protected int puntaje;
 	protected int monedas;
 	protected boolean atacando;
+	protected int tiempo;
 	
 	
 	public Enemigo(MapaLogico ml, GameObjectGrafico gog, int m, int vida) {
@@ -66,7 +67,11 @@ public abstract  class Enemigo extends Personaje {
 			atacando=true;
 			super.mover(still_key);
 			miObjetoGrafico.atacar();		
-			e.aplicarDaño(daño);
+			contador++;
+			if (contador>=tiempo) {						
+				e.aplicarDaño(daño);	
+				contador=0;
+			}		
 		}
 		else {
 			if (!atacando)

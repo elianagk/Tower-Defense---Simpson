@@ -81,7 +81,6 @@ public class MapaLogico  {
 	}
 	
 	public void entidadAAgregar(GameObject o, int x, int y) {		
-//		actualizarListaDeEntidades();
 		boolean ocupado=false;
 		GameObject entidad;
 		Iterator<GameObject> itEntidades= entidades.iterator();
@@ -89,7 +88,6 @@ public class MapaLogico  {
 			entidad=itEntidades.next();
 			if (entidad.getX()==x && entidad.getY()==y) {
 				ocupado=true;
-				//System.out.println("ocupado");
 			}
 		}
 		if (!ocupado) {					
