@@ -3,6 +3,7 @@ package Tienda;
 
 import GameObject.GameObject;
 import GameObject.Objeto;
+import GameObject.Objetos.ObjetoPrecioso;
 import GameObject.Personajes.Enemigo;
 import GameObject.Personajes.Torre;
 import Juego.Juego;
@@ -58,13 +59,25 @@ public class TiendaLogica {
 	
 	
 	public void revisarTienda(int x, int y) {
-		if (ProximaEntidad() && g.getCosto()<=jugador.getMonedas()) {
+		if (ProximaEntidad() && jugador.getMonedas()>0 && g.getCosto()<=jugador.getMonedas()) {
 			jugador.setMonedas(jugador.getMonedas()-g.getCosto());
 			mapaLogico.entidadAAgregar(g, x, y);			
 			tienda.actualizarPlata(jugador.getMonedas());			
 			g= null;
 		}
 	}
+	
+//	public void revisarPremio(int x, int y) {
+//		if (ProximaEntidad() && jugador.getMonedas()>0 && g.getCosto()<=jugador.getMonedas()) {
+//			jugador.setMonedas(jugador.getMonedas()-g.getCosto());
+//			mapaLogico.entidadAAgregar(g, x, y);	
+//			ObjetoPrecioso a= (ObjetoPrecioso) g;
+//			a.empezarHilo();
+//			tienda.actualizarPlata(jugador.getMonedas());			
+//			g= null;
+//		}
+//	
+//	}
 	
 	public void vender(Torre torre) {
 		int retornoDinero=0;
@@ -79,7 +92,7 @@ public class TiendaLogica {
 		
 	}
 	
-	public void vender(Enemigo e) {		// por si se selecciona a un enemigo, retorna -1 para mostrar que no es valido y siga esperando que se venda una torre
+	public void vender(Enemigo e) {		
 
 	}
 	

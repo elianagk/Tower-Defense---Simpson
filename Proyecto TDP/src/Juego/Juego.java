@@ -97,6 +97,7 @@ public class Juego {
 		estado.actuar();
 	}
 	
+	
 	public Jugador getJugador() {
 		return jugador;
 	}

@@ -12,7 +12,7 @@ import VISITOR.Visitor;
 import VISITOR.VisitorPrecioso;
 
 public class Fuego extends ObjetoPrecioso {
-	protected HiloAnimacionPrecioso hilo;
+	
 	
 
 	public Fuego(MapaLogico mapaLogico) {

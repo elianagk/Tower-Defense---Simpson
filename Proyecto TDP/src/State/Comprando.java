@@ -1,5 +1,6 @@
 package State;
 
+import java.awt.Component;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.Random;
@@ -61,13 +62,16 @@ public class Comprando implements State {
 		    		}		
 		    		mapaGrafico.avisarTienda((x/100)*100,(verdaderoy*100)/100);
 		    		
-		    		juego.cambiarEstado(new Jugando(juego));
+		    		//juego.cambiarEstado(new Jugando(juego));
 
 		    	}
 		    	
+		    	juego.cambiarEstado(new Jugando(juego));
+		    	 ((Component) e.getSource()).removeMouseListener(this);
 		    }
 		});
 		mapaGrafico.setMouseListener(mouseListener);	
+		
 	}
 	
 	

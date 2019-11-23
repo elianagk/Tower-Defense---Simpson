@@ -43,7 +43,9 @@
     <targetRole xmi:id="_Tr8pJgKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="juego" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_ONFMsQKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a43i0QKIEeqTRuSLIkLPHA" position="5.0,-127.5"/>
-      <stereotypes xmi:id="_Tr8pJwKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
+      <stereotypes xmi:id="_ZH2JwAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZI-yMAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bHLkQAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
         <modelElement href="Proyecto%20TDP.uml#_ONFzwAKIEeqTRuSLIkLPHA"/>
       </stereotypes>
       <visibility xmi:id="_Tr8pKAKIEeqTRuSLIkLPHA" label="-"/>
@@ -91,6 +93,16 @@
     <targetRole xmi:id="_TsCItgKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="niveles" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_OM60ogKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a3KSoAKIEeqTRuSLIkLPHA" position="0.5,5.0"/>
+      <stereotypes xmi:id="_ZH07oAKLEeqLmsu8Oq5Sjg" name="Array"/>
+      <stereotypes xmi:id="_ZH1isAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZJB1gAKLEeqLmsu8Oq5Sjg" name="Array"/>
+      <stereotypes xmi:id="_ZJDDoAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bHOAgAKLEeqLmsu8Oq5Sjg" name="Array">
+        <modelElement href="Proyecto%20TDP.uml#_OM7bsQKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
+      <stereotypes xmi:id="_bHOnkAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_OM8CwAKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_TsCItwKIEeqTRuSLIkLPHA" label="-"/>
       <cardinality xmi:id="_TsCIuAKIEeqTRuSLIkLPHA" label="1..*" max="-1" min="1"/>
     </targetRole>
@@ -166,6 +178,11 @@
     <targetRole xmi:id="_TsGaJgKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="mapaLogico" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_OM8p0QKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a3RnYAKIEeqTRuSLIkLPHA" position="100.99999999999818,-32.49999999999818"/>
+      <stereotypes xmi:id="_ZH0UkQKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZJE40AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bHS5AAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_OM8p0gKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_TsGaJwKIEeqTRuSLIkLPHA" label="-"/>
       <cardinality xmi:id="_TsGaKAKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -190,6 +207,11 @@
     <targetRole xmi:id="_TsIPVgKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="estado" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_OM938AKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a3TckQKIEeqTRuSLIkLPHA" position="5.0,-48.5"/>
+      <stereotypes xmi:id="_ZH0UkAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZJGG8AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bHVVQAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_OM938QKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_TsIPVwKIEeqTRuSLIkLPHA" label="-"/>
       <cardinality xmi:id="_TsIPWAKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -212,6 +234,11 @@
     <targetRole xmi:id="_TsJddgKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="tienda" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_OM-fAAKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a3Wf4AKIEeqTRuSLIkLPHA" position="-52.5,3.5"/>
+      <stereotypes xmi:id="_ZHztgAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZJHVEAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bHXxgAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_OM_GEAKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_TsJddwKIEeqTRuSLIkLPHA" label="-"/>
       <cardinality xmi:id="_TsJdeAKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -237,6 +264,11 @@
     <targetRole xmi:id="_TsKrlgKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="visitorVictoria" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_OM_GEQKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a3Y8IAKIEeqTRuSLIkLPHA" position="135.5,-35.49999999999909"/>
+      <stereotypes xmi:id="_ZHzGcQKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZJIjMAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bHaNwAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_OM_tIAKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_TsKrlwKIEeqTRuSLIkLPHA" label="-"/>
       <cardinality xmi:id="_TsKrmAKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -259,6 +291,11 @@
     <targetRole xmi:id="_TvYXoAKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="elJuego" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_OMBcwAKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a3aKQQKIEeqTRuSLIkLPHA" position="5.0,-4456.5"/>
+      <stereotypes xmi:id="_ZHzGcAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZJJxUAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bHcqAAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_OMCD0AKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_TvcpEQKIEeqTRuSLIkLPHA" label="-"/>
       <cardinality xmi:id="_TvcpEAKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -282,7 +319,9 @@
     <targetRole xmi:id="_Tvaz4AKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="tiempo" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_OMHjYQKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a3qB4AKIEeqTRuSLIkLPHA" position="-65.5,-49.5"/>
-      <stereotypes xmi:id="_Tvd3MwKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
+      <stereotypes xmi:id="_ZHyfYAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZJK_cAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bHfGQAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
         <modelElement href="Proyecto%20TDP.uml#_OMHjYgKIEeqTRuSLIkLPHA"/>
       </stereotypes>
       <visibility xmi:id="_Tvd3MgKIEeqTRuSLIkLPHA" label="-"/>
@@ -308,6 +347,11 @@
     <targetRole xmi:id="_TxVfcgKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="juego" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_OMFHIAKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a3cmgAKIEeqTRuSLIkLPHA" position="5.0,-257.5"/>
+      <stereotypes xmi:id="_ZHx4UQKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZJLmgAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bHhigAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_OMFHIQKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_TxpogwKIEeqTRuSLIkLPHA" label="-"/>
       <cardinality xmi:id="_TxpoggKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -330,6 +374,11 @@
     <targetRole xmi:id="_TxWGggKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="tiempo" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_OMFHIgKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a3dNkQKIEeqTRuSLIkLPHA" position="5.0,-48.5"/>
+      <stereotypes xmi:id="_ZHx4UAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZJMNkAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bHkl0AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_OMFuMAKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_TxpoiAKIEeqTRuSLIkLPHA" label="-"/>
       <cardinality xmi:id="_TxpohwKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -352,6 +401,11 @@
     <targetRole xmi:id="_TxnzUgKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="MAPA" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_OMCq4gKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a3fCwAKIEeqTRuSLIkLPHA" position="5.5,-48.5"/>
+      <stereotypes xmi:id="_ZHxRQAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZJNbsAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bHnCEAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_OMDR8AKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_TxsEwgKIEeqTRuSLIkLPHA" label="-"/>
       <cardinality xmi:id="_TxsEwQKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -373,6 +427,11 @@
     <targetRole xmi:id="_TxoaYwKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="PANELTIENDA" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_OMEgEQKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a3hfAAKIEeqTRuSLIkLPHA" position="-96.50000000000182,-50.0"/>
+      <stereotypes xmi:id="_ZHwqMAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZJOCwAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bHqFYAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_OMEgEgKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_TxsExwKIEeqTRuSLIkLPHA" label="-"/>
       <cardinality xmi:id="_TxsExgKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -394,6 +453,11 @@
     <targetRole xmi:id="_TxqPkQKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="mapal" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_OMGVQAKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a3j7QAKIEeqTRuSLIkLPHA" position="52.0,-48.50000000000034"/>
+      <stereotypes xmi:id="_ZHwDIAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZJPQ4AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bHtIsAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_OMGVQQKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_TxtS4wKIEeqTRuSLIkLPHA" label="-"/>
       <cardinality xmi:id="_TxtS4gKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -414,6 +478,11 @@
     </sourceRole>
     <targetRole xmi:id="_TxwWNgKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="frmJuego" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_OMCq4AKIEeqTRuSLIkLPHA"/>
+      <stereotypes xmi:id="_ZHvcEQKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZJP38AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bHwzEAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_OMCq4QKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_TxwWNwKIEeqTRuSLIkLPHA" label="-"/>
       <cardinality xmi:id="_TxwWOAKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -439,6 +508,11 @@
     <targetRole xmi:id="_TxxkVgKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="btnHomero" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_OMDR8QKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a3lwcAKIEeqTRuSLIkLPHA" position="-82.00000000000182,3.5"/>
+      <stereotypes xmi:id="_ZHvcEAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZJRGEAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bHz2YAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_OMD5AAKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_TxxkVwKIEeqTRuSLIkLPHA" label="-"/>
       <cardinality xmi:id="_TxxkWAKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -456,6 +530,11 @@
     </sourceRole>
     <targetRole xmi:id="_TxyydgKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="PANELPRINCIPAL" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_OMD5AQKIEeqTRuSLIkLPHA"/>
+      <stereotypes xmi:id="_ZHu1AAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZJSUMAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bH3gwAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_OMEgEAKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_TxyydwKIEeqTRuSLIkLPHA" label="-"/>
       <cardinality xmi:id="_TxyyeAKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -481,6 +560,11 @@
     <targetRole xmi:id="_Tx0AlgKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="tiendaLogica" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_OMFuMQKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a3nloAKIEeqTRuSLIkLPHA" position="-162.0000000000009,-11.500000000001819"/>
+      <stereotypes xmi:id="_ZHs_0AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZJTiUAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bH7LIAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_OMFuMgKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_Tx0AlwKIEeqTRuSLIkLPHA" label="-"/>
       <cardinality xmi:id="_Tx0AmAKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -546,6 +630,11 @@
     <targetRole xmi:id="_Tz4dIAKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="queHagoConElClick" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_OMJYkQKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a3uTUAKIEeqTRuSLIkLPHA" position="-125.5,-49.5"/>
+      <stereotypes xmi:id="_ZHsYwAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZJUwcAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bH-OcAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_OMJ_oAKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_Tz65ZQKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_Tz65ZAKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -563,6 +652,11 @@
     </sourceRole>
     <targetRole xmi:id="_Tz_K1gKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="actualMouseListener" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_OMIxgAKIEeqTRuSLIkLPHA"/>
+      <stereotypes xmi:id="_ZHrxsAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZJUwcQKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bICf4AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_OMJYkAKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_Tz_K1wKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_Tz_K2AKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -610,7 +704,9 @@
     <targetRole xmi:id="_T-JMYgKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="mapaLogico" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_OMO4IQKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a4pgYAKIEeqTRuSLIkLPHA" position="5.0,2502.5"/>
-      <stereotypes xmi:id="_T-M2wwKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
+      <stereotypes xmi:id="_ZHrKoAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZJXMsAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bIGKQAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
         <modelElement href="Proyecto%20TDP.uml#_OMPfMAKIEeqTRuSLIkLPHA"/>
       </stereotypes>
       <visibility xmi:id="_T-M2wgKIEeqTRuSLIkLPHA" label="#"/>
@@ -636,7 +732,9 @@
     <targetRole xmi:id="_T-JzcQKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="mapaLogico" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_ONFzwQKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a45YAAKIEeqTRuSLIkLPHA" position="-45.5,-228.99999999999943"/>
-      <stereotypes xmi:id="_T-Nd1AKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
+      <stereotypes xmi:id="_ZHqjkAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZJYa0AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bIJNkAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
         <modelElement href="Proyecto%20TDP.uml#_ONGa0AKIEeqTRuSLIkLPHA"/>
       </stereotypes>
       <visibility xmi:id="_T-Nd0wKIEeqTRuSLIkLPHA" label="-"/>
@@ -704,6 +802,11 @@
     <targetRole xmi:id="_T-LBlgKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="proxMagia" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_ONPkwQKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a3wIgAKIEeqTRuSLIkLPHA" position="-2998.0,3.5000000000004547"/>
+      <stereotypes xmi:id="_ZHp8gAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZJZB4AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bILp0AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_ONQL0AKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_T-Or9QKIEeqTRuSLIkLPHA" label="-"/>
       <cardinality xmi:id="_T-Or9AKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -722,6 +825,21 @@
     </sourceRole>
     <targetRole xmi:id="_T-RvRgKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="entidades" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_ONKsQAKIEeqTRuSLIkLPHA"/>
+      <stereotypes xmi:id="_ZHouYAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZHpVcAKLEeqLmsu8Oq5Sjg" name="Generics"/>
+      <stereotypes xmi:id="_ZHpVcQKLEeqLmsu8Oq5Sjg" name="MultiDeclaration"/>
+      <stereotypes xmi:id="_ZJaQAAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZJa3EAKLEeqLmsu8Oq5Sjg" name="Generics"/>
+      <stereotypes xmi:id="_ZJa3EQKLEeqLmsu8Oq5Sjg" name="MultiDeclaration"/>
+      <stereotypes xmi:id="_bIP7QAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_ONKsQQKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
+      <stereotypes xmi:id="_bIP7QQKLEeqLmsu8Oq5Sjg" name="Generics">
+        <modelElement href="Proyecto%20TDP.uml#_ONLTUAKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
+      <stereotypes xmi:id="_bIP7QgKLEeqLmsu8Oq5Sjg" name="MultiDeclaration">
+        <modelElement href="Proyecto%20TDP.uml#_ONL6YAKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_T-RvRwKIEeqTRuSLIkLPHA" label="+"/>
       <cardinality xmi:id="_T-RvSAKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -739,6 +857,16 @@
     </sourceRole>
     <targetRole xmi:id="_T-TkdgKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="entidadesAAgregar" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_OOs9UAKIEeqTRuSLIkLPHA"/>
+      <stereotypes xmi:id="_ZHoHUAKLEeqLmsu8Oq5Sjg" name="MultiDeclaration"/>
+      <stereotypes xmi:id="_ZHoHUQKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZJcsQAKLEeqLmsu8Oq5Sjg" name="MultiDeclaration"/>
+      <stereotypes xmi:id="_ZJdTUAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bIYeIAKLEeqLmsu8Oq5Sjg" name="MultiDeclaration">
+        <modelElement href="Proyecto%20TDP.uml#_OOtkYAKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
+      <stereotypes xmi:id="_bIYeIQKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_OOtkYQKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_T-TkdwKIEeqTRuSLIkLPHA" label="+"/>
       <cardinality xmi:id="_T-TkeAKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -756,6 +884,16 @@
     </sourceRole>
     <targetRole xmi:id="_T-UylgKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="entidadesAEliminar" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_OOuLcAKIEeqTRuSLIkLPHA"/>
+      <stereotypes xmi:id="_ZHm5MAKLEeqLmsu8Oq5Sjg" name="MultiDeclaration"/>
+      <stereotypes xmi:id="_ZHngQAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZJfIgAKLEeqLmsu8Oq5Sjg" name="MultiDeclaration"/>
+      <stereotypes xmi:id="_ZJfIgQKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bIfL0AKLEeqLmsu8Oq5Sjg" name="MultiDeclaration">
+        <modelElement href="Proyecto%20TDP.uml#_OOuLcQKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
+      <stereotypes xmi:id="_bIfL0QKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_OOuLcgKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_T-UylwKIEeqTRuSLIkLPHA" label="+"/>
       <cardinality xmi:id="_T-UymAKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -773,6 +911,16 @@
     </sourceRole>
     <targetRole xmi:id="_T-WnxQKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="clonada" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_OOuygAKIEeqTRuSLIkLPHA"/>
+      <stereotypes xmi:id="_ZHlrEAKLEeqLmsu8Oq5Sjg" name="MultiDeclaration"/>
+      <stereotypes xmi:id="_ZHlrEQKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZJg9sAKLEeqLmsu8Oq5Sjg" name="MultiDeclaration"/>
+      <stereotypes xmi:id="_ZJg9sQKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bInHoAKLEeqLmsu8Oq5Sjg" name="MultiDeclaration">
+        <modelElement href="Proyecto%20TDP.uml#_OOuygQKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
+      <stereotypes xmi:id="_bInHoQKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_OOuyggKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_T-WnxgKIEeqTRuSLIkLPHA" label="+"/>
       <cardinality xmi:id="_T-WnxwKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -800,10 +948,14 @@
     <targetRole xmi:id="_UBO8oAKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="botones" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_ONVrYAKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a3x9sQKIEeqTRuSLIkLPHA" position="5.4999999999990905,-48.50000000000182"/>
-      <stereotypes xmi:id="_UBQx0AKIEeqTRuSLIkLPHA" name="Array">
+      <stereotypes xmi:id="_ZHkc8AKLEeqLmsu8Oq5Sjg" name="Array"/>
+      <stereotypes xmi:id="_ZHlEAAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZJiL0AKLEeqLmsu8Oq5Sjg" name="Array"/>
+      <stereotypes xmi:id="_ZJiy4AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bIsnMAKLEeqLmsu8Oq5Sjg" name="Array">
         <modelElement href="Proyecto%20TDP.uml#_ONVrYgKIEeqTRuSLIkLPHA"/>
       </stereotypes>
-      <stereotypes xmi:id="_UBQx0QKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
+      <stereotypes xmi:id="_bIsnMQKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
         <modelElement href="Proyecto%20TDP.uml#_ONWScAKIEeqTRuSLIkLPHA"/>
       </stereotypes>
       <visibility xmi:id="_UBQKwwKIEeqTRuSLIkLPHA" label="#"/>
@@ -827,6 +979,11 @@
     <targetRole xmi:id="_UBO8pAKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="tiendaLogica" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_ONUdQAKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a3xWoAKIEeqTRuSLIkLPHA" position="10.5,85.0"/>
+      <stereotypes xmi:id="_ZHjO0AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZJjZ8AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bIvDcAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_ONUdQQKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_UBQx1QKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_UBQx1AKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -880,7 +1037,9 @@
     <targetRole xmi:id="_Uh1IQQKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="tienda" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_ONdnMQKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a38VwAKIEeqTRuSLIkLPHA" position="-53.0,672.5"/>
-      <stereotypes xmi:id="_Uh29cwKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
+      <stereotypes xmi:id="_ZHinwAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZJkoEAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bIwRkAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
         <modelElement href="Proyecto%20TDP.uml#_ONeOQAKIEeqTRuSLIkLPHA"/>
       </stereotypes>
       <visibility xmi:id="_Uh29cgKIEeqTRuSLIkLPHA" label="-"/>
@@ -906,6 +1065,11 @@
     <targetRole xmi:id="_Uh1vUAKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="tienda" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_ONXgkAKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a30Z8AKIEeqTRuSLIkLPHA" position="144.0,-33.50000000000091"/>
+      <stereotypes xmi:id="_ZHhZoAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZJlPIAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bIyGwAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_ONXgkQKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_Uh4LkAKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_Uh3kggKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -923,6 +1087,11 @@
     </sourceRole>
     <targetRole xmi:id="_Uh7O5gKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="puntaje" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_ONWScQKIEeqTRuSLIkLPHA"/>
+      <stereotypes xmi:id="_ZHfkcAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZJmdQAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bI1xIAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_ONW5gAKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_Uh7O5wKIEeqTRuSLIkLPHA" label="~"/>
       <cardinality xmi:id="_Uh7O6AKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -940,6 +1109,11 @@
     </sourceRole>
     <targetRole xmi:id="_UiAudgKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="dinero" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_ONW5gQKIEeqTRuSLIkLPHA"/>
+      <stereotypes xmi:id="_ZHe9YAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZJnEUAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bI40cAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_ONW5ggKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_UiAudwKIEeqTRuSLIkLPHA" label="~"/>
       <cardinality xmi:id="_UiAueAKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -965,6 +1139,11 @@
     <targetRole xmi:id="_UmKOoAKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="juego" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_ONbyAQKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a35ScAKIEeqTRuSLIkLPHA" position="-50.0,17.5"/>
+      <stereotypes xmi:id="_ZHeWUAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZJoScAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bI7QsAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_ONcZEAKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_UmPuNAKIEeqTRuSLIkLPHA" label="+"/>
       <cardinality xmi:id="_UmPuMwKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -989,6 +1168,11 @@
     <targetRole xmi:id="_UmOgEgKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="g" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_ONbK8AKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a4DDcAKIEeqTRuSLIkLPHA" position="-2919.000000000001,5.0"/>
+      <stereotypes xmi:id="_ZHdvQAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZJpgkAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bI9s8AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_ONbK8QKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_UmSKcAKIEeqTRuSLIkLPHA" label="-"/>
       <cardinality xmi:id="_UmRjYgKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -1037,6 +1221,11 @@
     <targetRole xmi:id="_UtJAYQKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="juego" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_ONCwcAKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a4Gt0QKIEeqTRuSLIkLPHA" position="3.5,19.0"/>
+      <stereotypes xmi:id="_ZHdIMAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZJqusAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bI_iIAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_ONCwcQKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_UtLcoQKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_UtLcoAKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -1066,6 +1255,11 @@
     <targetRole xmi:id="_UtJAZQKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="mapaGrafico" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_ONCwcgKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a4JxIAKIEeqTRuSLIkLPHA" position="-88.0,40.5"/>
+      <stereotypes xmi:id="_ZHchIAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZJtyAAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bJClcAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_ONDXgAKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_UtMDswKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_UtMDsgKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -1098,6 +1292,11 @@
     <targetRole xmi:id="_UtQ8NgKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="miobjeto" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_ONDXgQKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a4LmUAKIEeqTRuSLIkLPHA" position="-68.0,26.49999999999909"/>
+      <stereotypes xmi:id="_ZHb6EQKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZJuZEAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bJFBsAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_ONDXggKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_UtQ8NwKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_UtQ8OAKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -1119,6 +1318,11 @@
     <targetRole xmi:id="_UyT0QgKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="juego" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_ONHo8AKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a4M0cQKIEeqTRuSLIkLPHA" position="-48.5,-4588.0"/>
+      <stereotypes xmi:id="_ZHb6EAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZJw1UAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bJG24AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_ONHo8QKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_UyVpcQKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_UyVpcAKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -1143,6 +1347,11 @@
     <targetRole xmi:id="_UyUbUwKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="mapaGrafico" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_ONHo8gKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a4OpoAKIEeqTRuSLIkLPHA" position="5.0,170.5"/>
+      <stereotypes xmi:id="_ZHbTAAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZJxcYAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bJJTIAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_ONIQAAKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_UyVpdgKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_UyVpdQKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -1170,6 +1379,11 @@
     <targetRole xmi:id="_U4YAAgKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="juego" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_ONI3EAKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a4Qe0AKIEeqTRuSLIkLPHA" position="-50.0,-4534.5"/>
+      <stereotypes xmi:id="_ZHar8AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZJz4oAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bJLIUAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_ONJeIAKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_U5CHUQKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_U5CHUAKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -1194,6 +1408,11 @@
     <targetRole xmi:id="_U4YABgKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="mapaGrafico" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_ONJeIQKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a4SUAAKIEeqTRuSLIkLPHA" position="-88.0,105.5"/>
+      <stereotypes xmi:id="_ZHaE4AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZJ1GwAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bJM9gAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_ONJeIgKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_U5CuYQKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_U5CuYAKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -1216,6 +1435,11 @@
     <targetRole xmi:id="_U4YnEgKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="mapaLogico" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_ONKFMAKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a4UwQAKIEeqTRuSLIkLPHA" position="4.9999999999990905,1085.500000000004"/>
+      <stereotypes xmi:id="_ZHY2wAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZJ2U4AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bJPZwAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_ONKFMQKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_U5DVcgKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_U5DVcQKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -1243,6 +1467,11 @@
     <targetRole xmi:id="_VEUKQgKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="mapaLogico" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_ONSBAAKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a4WlcAKIEeqTRuSLIkLPHA" position="5.0,2112.5"/>
+      <stereotypes xmi:id="_ZHYPsAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZJ4xIAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bJR2AAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_ONSBAQKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_VEctIwKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_VEctIgKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -1266,6 +1495,11 @@
     <targetRole xmi:id="_VEUxUwKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="tienda" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_ONSoEAKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a4XzkAKIEeqTRuSLIkLPHA" position="-52.99999999999977,-336.5"/>
+      <stereotypes xmi:id="_ZHXooAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZJ5_QAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bJTrMAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_ONSoEQKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_VEd7QgKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_VEd7QQKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -1288,6 +1522,11 @@
     <targetRole xmi:id="_VEUxVwKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="juego" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_ONTPIAKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a4ZBsAKIEeqTRuSLIkLPHA" position="-50.0,-3507.5"/>
+      <stereotypes xmi:id="_ZHXBkAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZJ7NYAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bJU5UAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_ONTPIQKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_VEeiUQKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_VEeiUAKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -1311,6 +1550,11 @@
     <targetRole xmi:id="_VEVYYQKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="mapaGrafico" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_ONT2MAKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a4aP0AKIEeqTRuSLIkLPHA" position="-6729.5,5.0"/>
+      <stereotypes xmi:id="_ZHVzcAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZJ70cAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bJVgYAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_ONT2MQKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_VEfJYQKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_VEfJYAKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -1337,6 +1581,11 @@
     </sourceRole>
     <targetRole xmi:id="_VGhwxgKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="scheduler" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_OMWz8QKIEeqTRuSLIkLPHA"/>
+      <stereotypes xmi:id="_ZHT-QAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZJ9poAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bJXVkAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_OMXbAQKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_VGhwxwKIEeqTRuSLIkLPHA" label="-"/>
       <cardinality xmi:id="_VGhwyAKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -1354,6 +1603,11 @@
     </sourceRole>
     <targetRole xmi:id="_VKjVIAKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="scheduler" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_OMYpIQKIEeqTRuSLIkLPHA"/>
+      <stereotypes xmi:id="_ZHSwIAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZJ_e0AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bJZKwAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_OMZQMQKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_VKj8MwKIEeqTRuSLIkLPHA" label="-"/>
       <cardinality xmi:id="_VKj8MgKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -1378,6 +1632,11 @@
     <targetRole xmi:id="_VaKecAKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="mapaLogico" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_OMcTgAKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a4bd8QKIEeqTRuSLIkLPHA" position="5.0,1189.5000000000014"/>
+      <stereotypes xmi:id="_ZHSJEAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZKAF4AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bJbnAAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_OMc6kAKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_Vb5j0QKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_Vb5j0AKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -1401,6 +1660,11 @@
     <targetRole xmi:id="_VaKedAKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="mapa" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_OMc6kQKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a4dTIAKIEeqTRuSLIkLPHA" position="-414.0,27.5"/>
+      <stereotypes xmi:id="_ZHRiAAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZKBUAAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bJfRYAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_OMdhoAKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_Vb6K4QKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_Vb6K4AKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -1436,7 +1700,9 @@
     <targetRole xmi:id="_Vb48wAKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="hilo" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_OMZ3QAKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a4kA0QKIEeqTRuSLIkLPHA" position="265.0,-32.5"/>
-      <stereotypes xmi:id="_Vb8nJAKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
+      <stereotypes xmi:id="_ZHQ68AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZKB7EAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bJhGkAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
         <modelElement href="Proyecto%20TDP.uml#_OMaeUAKIEeqTRuSLIkLPHA"/>
       </stereotypes>
       <visibility xmi:id="_Vb8nIwKIEeqTRuSLIkLPHA" label="#"/>
@@ -1462,7 +1728,9 @@
     <targetRole xmi:id="_Vb48xAKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="hilo" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_OMbFYAKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a4g9gQKIEeqTRuSLIkLPHA" position="4.9999999999990905,-48.5"/>
-      <stereotypes xmi:id="_Vb9OMgKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
+      <stereotypes xmi:id="_ZHPs0AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZKDJMAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bJi7wAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
         <modelElement href="Proyecto%20TDP.uml#_OMbscAKIEeqTRuSLIkLPHA"/>
       </stereotypes>
       <visibility xmi:id="_Vb9OMQKIEeqTRuSLIkLPHA" label="#"/>
@@ -1482,6 +1750,11 @@
     </sourceRole>
     <targetRole xmi:id="_Vb6x8AKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="label" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_OMdhoQKIEeqTRuSLIkLPHA"/>
+      <stereotypes xmi:id="_ZHOesAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZKEXUAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bJnNMAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_OMeIsAKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_Vb91QwKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_Vb91QgKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -1504,6 +1777,11 @@
     <targetRole xmi:id="_Vb6x9AKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="miobjeto" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_OMfW0QKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a4fvYAKIEeqTRuSLIkLPHA" position="5.0,195.49999999999727"/>
+      <stereotypes xmi:id="_ZHN3oAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZKJP0AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bJobUAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_OMhMAAKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_Vb-cVAKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_Vb-cUwKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -1546,6 +1824,11 @@
     <targetRole xmi:id="_Vy2EMgKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="mipersonaje" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_OMWM4AKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a4iysAKIEeqTRuSLIkLPHA" position="-859.0,22.5"/>
+      <stereotypes xmi:id="_ZHKNQAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZKJ24AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bJppcAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_OMWz8AKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_Vy35YQKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_Vy35YAKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -1575,7 +1858,9 @@
     <targetRole xmi:id="_V0b_oQKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="miobjeto" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_ONZVwQKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a41GkQKIEeqTRuSLIkLPHA" position="-67.50000000000045,3.5"/>
-      <stereotypes xmi:id="_V0cmsgKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
+      <stereotypes xmi:id="_ZHJmMAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZKLFAAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bJq3kAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
         <modelElement href="Proyecto%20TDP.uml#_ONZ80AKIEeqTRuSLIkLPHA"/>
       </stereotypes>
       <visibility xmi:id="_V0cmsQKIEeqTRuSLIkLPHA" label="#"/>
@@ -1611,6 +1896,11 @@
     <targetRole xmi:id="_V0-yMAKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="miObjetoGrafico" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_OMMb4AKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a4rVkAKIEeqTRuSLIkLPHA" position="161.0,-31.5"/>
+      <stereotypes xmi:id="_ZHI_IAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZKLsEAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bJsFsAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_OMNC8AKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_V19poQKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_V19poAKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -1635,6 +1925,11 @@
     <targetRole xmi:id="_V0_ZQAKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="visitor" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_OMNqAQKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a4sjsAKIEeqTRuSLIkLPHA" position="-51.5,3.5"/>
+      <stereotypes xmi:id="_ZHHxAAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZKM6MAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bJsswAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_OMOREAKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_V1-QsQKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_V1-QsAKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -1670,7 +1965,9 @@
     <targetRole xmi:id="_V2BUAgKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="mipersonaje" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_ONYusAKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a4z4cQKIEeqTRuSLIkLPHA" position="-308.5,-14.5"/>
-      <stereotypes xmi:id="_V2E-YAKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
+      <stereotypes xmi:id="_ZHHJ8AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZKNhQAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bJt64AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
         <modelElement href="Proyecto%20TDP.uml#_ONZVwAKIEeqTRuSLIkLPHA"/>
       </stereotypes>
       <visibility xmi:id="_V2EXUwKIEeqTRuSLIkLPHA" label="#"/>
@@ -1697,7 +1994,9 @@
     <targetRole xmi:id="_V2J25gKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="magiaLogica" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_OM0G8AKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a4tx0QKIEeqTRuSLIkLPHA" position="5.0,572.5"/>
-      <stereotypes xmi:id="_V2Kd8AKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
+      <stereotypes xmi:id="_ZHGi4AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZKOvYAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bJwXIAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
         <modelElement href="Proyecto%20TDP.uml#_OM0G8QKIEeqTRuSLIkLPHA"/>
       </stereotypes>
       <visibility xmi:id="_V2Kd8QKIEeqTRuSLIkLPHA" label="~"/>
@@ -1748,6 +2047,11 @@
     <targetRole xmi:id="_WBu0wgKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="mipersonaje" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_OMmrkAKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a4lO8QKIEeqTRuSLIkLPHA" position="1136.0,5.0"/>
+      <stereotypes xmi:id="_ZHF70AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZKPWcAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bJyzYAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_OMmrkQKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_WBx4EwKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_WBx4EgKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -1776,6 +2080,11 @@
     <targetRole xmi:id="_WEcKgAKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="mipersonaje" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_OMogwAKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a4nEIQKIEeqTRuSLIkLPHA" position="5.5,-48.5"/>
+      <stereotypes xmi:id="_ZHDfkAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZKQkkAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bJ0BgAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_OMogwQKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_WEdYowKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_WEdYogKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -1844,6 +2153,11 @@
     </sourceRole>
     <targetRole xmi:id="_WwkQtgKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="posicion" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_OMNC8QKIEeqTRuSLIkLPHA"/>
+      <stereotypes xmi:id="_ZHCRcAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZKRysAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bJ12sAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_OMNqAAKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_WwkQtwKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_WwkQuAKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -1958,6 +2272,11 @@
     <targetRole xmi:id="_Yps8kwKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="mapaLogico" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_OMy40AKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a4vnAQKIEeqTRuSLIkLPHA" position="5.0,1501.5000000000005"/>
+      <stereotypes xmi:id="_ZHBDUAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZKTA0AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bJ3r4AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_OMy40QKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_Yu1UMgKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_Yu1UMQKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -2015,6 +2334,11 @@
     <targetRole xmi:id="_Y9ur0gKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="tiendaLogica" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_ONYHoAKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a4yDQAKIEeqTRuSLIkLPHA" position="5.0,31.5"/>
+      <stereotypes xmi:id="_ZHAcQAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZKTn4AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bJ46AAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_ONYHoQKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_Y-wmkwKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_Y-wmkgKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -2073,6 +2397,11 @@
     <targetRole xmi:id="_ZsqOYAKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="juego" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_ONe1UAKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a42UsQKIEeqTRuSLIkLPHA" position="5.0,-48.5"/>
+      <stereotypes xmi:id="_ZG9Y8AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZKUO8AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bJ7WQAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_ONe1UQKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_Zst4wwKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_Zst4wgKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -2097,6 +2426,11 @@
     </sourceRole>
     <targetRole xmi:id="_ZyIkQgKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="scheduler" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_ONGa0QKIEeqTRuSLIkLPHA"/>
+      <stereotypes xmi:id="_ZG8x4AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZKWEIAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bJ9LcAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_ONHB4AKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_ZyLnkgKIEeqTRuSLIkLPHA" label="-"/>
       <cardinality xmi:id="_ZyLnkQKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -2119,7 +2453,9 @@
     <targetRole xmi:id="_ZyQgFgKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="nivel" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_OM4_cAKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a4-QgQKIEeqTRuSLIkLPHA" position="-46.0,-50.0"/>
-      <stereotypes xmi:id="_ZyQgFwKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
+      <stereotypes xmi:id="_ZG68sAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZKWrMAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bJ_AoAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
         <modelElement href="Proyecto%20TDP.uml#_OM4_cQKIEeqTRuSLIkLPHA"/>
       </stereotypes>
       <visibility xmi:id="_ZyQgGAKIEeqTRuSLIkLPHA" label="#"/>
@@ -2144,6 +2480,16 @@
     <targetRole xmi:id="_Z1ahxgKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="hordas" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_OND-kAKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a45_EQKIEeqTRuSLIkLPHA" position="5.0,104.50000000000546"/>
+      <stereotypes xmi:id="_ZG5ukAKLEeqLmsu8Oq5Sjg" name="Array"/>
+      <stereotypes xmi:id="_ZG5ukQKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZKXSQAKLEeqLmsu8Oq5Sjg" name="Array"/>
+      <stereotypes xmi:id="_ZKX5UAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bJ_nsAKLEeqLmsu8Oq5Sjg" name="Array">
+        <modelElement href="Proyecto%20TDP.uml#_OND-kgKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
+      <stereotypes xmi:id="_bKAOwAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_ONEloAKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_Z1ahxwKIEeqTRuSLIkLPHA" label="-"/>
       <cardinality xmi:id="_Z1ahyAKIEeqTRuSLIkLPHA" label="1..*" max="-1" min="1"/>
     </targetRole>
@@ -2167,6 +2513,11 @@
     <targetRole xmi:id="_Z1bv5gKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="hordaActual" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_ONEloQKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a48bUAKIEeqTRuSLIkLPHA" position="27.0,4.999999999999858"/>
+      <stereotypes xmi:id="_ZG5HgAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZKYgYAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bKBc4AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_ONFMsAKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_Z1bv5wKIEeqTRuSLIkLPHA" label="-"/>
       <cardinality xmi:id="_Z1bv6AKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -2188,6 +2539,11 @@
     <targetRole xmi:id="_Z6FmYgKIEeqTRuSLIkLPHA" aggregationKind="NONE" name="mapaLogico" navigable="true">
       <modelElement href="Proyecto%20TDP.uml#_OM5mgAKIEeqTRuSLIkLPHA"/>
       <visualProperties xmi:id="_a4_eoQKIEeqTRuSLIkLPHA" position="-92.50000000000023,-50.0"/>
+      <stereotypes xmi:id="_ZG4gcAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZKZugAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bKCrAAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement">
+        <modelElement href="Proyecto%20TDP.uml#_OM5mgQKIEeqTRuSLIkLPHA"/>
+      </stereotypes>
       <visibility xmi:id="_Z6HbkwKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_Z6HbkgKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
     </targetRole>
@@ -2221,12 +2577,16 @@
     </attributes>
     <attributes xmi:id="_TsLSqAKIEeqTRuSLIkLPHA" name="niveles">
       <modelElement href="Proyecto%20TDP.uml#_OM60ogKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_TsLSqQKIEeqTRuSLIkLPHA" name="Array">
-        <modelElement href="Proyecto%20TDP.uml#_OM7bsQKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
-      <stereotypes xmi:id="_TsLSqgKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_OM8CwAKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZG2rQAKLEeqLmsu8Oq5Sjg" name="Array"/>
+      <stereotypes xmi:id="_ZG3SUAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZKcKwAKLEeqLmsu8Oq5Sjg" name="Array"/>
+      <stereotypes xmi:id="_ZKcx0AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bO5V0AKLEeqLmsu8Oq5Sjg" name="Array"/>
+      <stereotypes xmi:id="_bO584AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bO-OUAKLEeqLmsu8Oq5Sjg" name="Array"/>
+      <stereotypes xmi:id="_bO-1YAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bV-1QAKLEeqLmsu8Oq5Sjg" name="Array"/>
+      <stereotypes xmi:id="_bV-1QQKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_TsLSqwKIEeqTRuSLIkLPHA" label="-"/>
       <cardinality xmi:id="_TsLSrAKIEeqTRuSLIkLPHA" label="1..*" max="-1" min="1"/>
       <type xmi:id="_TsLSrQKIEeqTRuSLIkLPHA" name="Nivel">
@@ -2251,9 +2611,11 @@
     </attributes>
     <attributes xmi:id="_TsLStgKIEeqTRuSLIkLPHA" name="mapaLogico">
       <modelElement href="Proyecto%20TDP.uml#_OM8p0QKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_TsLStwKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_OM8p0gKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZG1dIAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZKenAAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bPImYAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bPLpsAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bWFi8AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_TsLSuAKIEeqTRuSLIkLPHA" label="-"/>
       <cardinality xmi:id="_TsLSuQKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_TsL5sAKIEeqTRuSLIkLPHA" name="MapaLogico">
@@ -2273,9 +2635,11 @@
     </attributes>
     <attributes xmi:id="_TsL5tgKIEeqTRuSLIkLPHA" name="estado">
       <modelElement href="Proyecto%20TDP.uml#_OM938AKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_TsL5twKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_OM938QKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZG0PAAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZKf1IAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bPOtAAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bPQiMAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bWJ0YAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_TsL5uAKIEeqTRuSLIkLPHA" label="-"/>
       <cardinality xmi:id="_TsL5uQKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_TsL5ugKIEeqTRuSLIkLPHA" name="State">
@@ -2284,9 +2648,11 @@
     </attributes>
     <attributes xmi:id="_TsL5uwKIEeqTRuSLIkLPHA" name="tienda">
       <modelElement href="Proyecto%20TDP.uml#_OM-fAAKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_TsL5vAKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_OM_GEAKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZGzn8AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZKhDQAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bPS-cAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bPWBwAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bWOF0AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_TsL5vQKIEeqTRuSLIkLPHA" label="-"/>
       <cardinality xmi:id="_TsL5vgKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_TsL5vwKIEeqTRuSLIkLPHA" name="TiendaGrafica">
@@ -2295,9 +2661,11 @@
     </attributes>
     <attributes xmi:id="_TsL5wAKIEeqTRuSLIkLPHA" name="visitorVictoria">
       <modelElement href="Proyecto%20TDP.uml#_OM_GEQKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_TsL5wQKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_OM_tIAKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZGyZ0AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZKi4cAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bPZFEAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bPbhUAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bWRJIAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_TsL5wgKIEeqTRuSLIkLPHA" label="-"/>
       <cardinality xmi:id="_TsL5wwKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_TsL5xAKIEeqTRuSLIkLPHA" name="Visitor">
@@ -2392,9 +2760,11 @@
     <visibility xmi:id="_TvgTcgKIEeqTRuSLIkLPHA" label="+"/>
     <attributes xmi:id="_TvgTcwKIEeqTRuSLIkLPHA" name="elJuego">
       <modelElement href="Proyecto%20TDP.uml#_OMBcwAKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_TvgTdAKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_OMCD0AKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZGwkoAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZKnw8AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bPfywAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bPi2EAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bWUzgAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_TvgTdQKIEeqTRuSLIkLPHA" label="-"/>
       <cardinality xmi:id="_TvgTdgKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_TvgTdwKIEeqTRuSLIkLPHA" name="Juego">
@@ -2432,9 +2802,11 @@
     <visibility xmi:id="_Tx2c0gKIEeqTRuSLIkLPHA" label="+"/>
     <attributes xmi:id="_Tx2c0wKIEeqTRuSLIkLPHA" name="frmJuego">
       <modelElement href="Proyecto%20TDP.uml#_OMCq4AKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_Tx2c1AKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_OMCq4QKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZGv9kAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZKsCYAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bQDMYAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bQGPsAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bWWosAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_Tx2c1QKIEeqTRuSLIkLPHA" label="-"/>
       <cardinality xmi:id="_Tx2c1gKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_Tx2c1wKIEeqTRuSLIkLPHA" name="JFrame">
@@ -2443,9 +2815,11 @@
     </attributes>
     <attributes xmi:id="_Tx2c2AKIEeqTRuSLIkLPHA" name="MAPA">
       <modelElement href="Proyecto%20TDP.uml#_OMCq4gKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_Tx2c2QKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_OMDR8AKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZGuvcAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZKt3kAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bP2YEAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bP40UAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bWZsAAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_Tx2c2gKIEeqTRuSLIkLPHA" label="-"/>
       <cardinality xmi:id="_Tx2c2wKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_Tx2c3AKIEeqTRuSLIkLPHA" name="MapaGrafico">
@@ -2454,9 +2828,11 @@
     </attributes>
     <attributes xmi:id="_Tx2c3QKIEeqTRuSLIkLPHA" name="btnHomero">
       <modelElement href="Proyecto%20TDP.uml#_OMDR8QKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_Tx2c3gKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_OMD5AAKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZGuIYAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZKvswAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bQJ6EAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bQM9YAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bWdWYAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_Tx2c3wKIEeqTRuSLIkLPHA" label="-"/>
       <cardinality xmi:id="_Tx2c4AKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_Tx2c4QKIEeqTRuSLIkLPHA" name="BotonComprar">
@@ -2465,9 +2841,11 @@
     </attributes>
     <attributes xmi:id="_Tx2c4gKIEeqTRuSLIkLPHA" name="PANELPRINCIPAL">
       <modelElement href="Proyecto%20TDP.uml#_OMD5AQKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_Tx2c4wKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_OMEgEAKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZGs6QAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZKxh8AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bQPZoAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bQTrEAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bWhAwAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_Tx2c5AKIEeqTRuSLIkLPHA" label="-"/>
       <cardinality xmi:id="_Tx2c5QKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_Tx2c5gKIEeqTRuSLIkLPHA" name="JLayeredPane">
@@ -2476,9 +2854,11 @@
     </attributes>
     <attributes xmi:id="_Tx2c5wKIEeqTRuSLIkLPHA" name="PANELTIENDA">
       <modelElement href="Proyecto%20TDP.uml#_OMEgEQKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_Tx2c6AKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_OMEgEgKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZGrsIAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZK1MUAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bP6pgAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bP9FwAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bWkrIAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_Tx2c6QKIEeqTRuSLIkLPHA" label="-"/>
       <cardinality xmi:id="_Tx2c6gKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_Tx2c6wKIEeqTRuSLIkLPHA" name="TiendaGrafica">
@@ -2487,9 +2867,11 @@
     </attributes>
     <attributes xmi:id="_Tx2c7AKIEeqTRuSLIkLPHA" name="juego">
       <modelElement href="Proyecto%20TDP.uml#_OMFHIAKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_Tx2c7QKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_OMFHIQKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZGqeAAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZK2acAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bPo8sAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bPsnEAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bWoVgAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_Tx2c7gKIEeqTRuSLIkLPHA" label="-"/>
       <cardinality xmi:id="_Tx2c7wKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_Tx2c8AKIEeqTRuSLIkLPHA" name="Juego">
@@ -2498,9 +2880,11 @@
     </attributes>
     <attributes xmi:id="_Tx2c8QKIEeqTRuSLIkLPHA" name="tiempo">
       <modelElement href="Proyecto%20TDP.uml#_OMFHIgKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_Tx2c8gKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_OMFuMAKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZGp28AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZK3okAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bPwRcAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bPz70AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bWr_4AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_Tx2c8wKIEeqTRuSLIkLPHA" label="-"/>
       <cardinality xmi:id="_Tx2c9AKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_Tx2c9QKIEeqTRuSLIkLPHA" name="ContadorTiempo">
@@ -2509,9 +2893,11 @@
     </attributes>
     <attributes xmi:id="_Tx2c9gKIEeqTRuSLIkLPHA" name="tiendaLogica">
       <modelElement href="Proyecto%20TDP.uml#_OMFuMQKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_Tx2c9wKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_OMFuMgKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZGoo0AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZK42sAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bQVgQAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bQX8gAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bWvDMAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_Tx2c-AKIEeqTRuSLIkLPHA" label="-"/>
       <cardinality xmi:id="_Tx2c-QKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_Tx2c-gKIEeqTRuSLIkLPHA" name="TiendaLogica">
@@ -2520,9 +2906,11 @@
     </attributes>
     <attributes xmi:id="_Tx2c-wKIEeqTRuSLIkLPHA" name="mapal">
       <modelElement href="Proyecto%20TDP.uml#_OMGVQAKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_Tx2c_AKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_OMGVQQKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZGnasAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZK6E0AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bP_iAAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bQBXMAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bWzUoAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_Tx2c_QKIEeqTRuSLIkLPHA" label="-"/>
       <cardinality xmi:id="_Tx2c_gKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_Tx2c_wKIEeqTRuSLIkLPHA" name="MapaLogico">
@@ -2581,6 +2969,9 @@
     </attributes>
     <attributes xmi:id="_Tz_x6wKIEeqTRuSLIkLPHA" name="tiempo">
       <modelElement href="Proyecto%20TDP.uml#_OMHjYQKIEeqTRuSLIkLPHA"/>
+      <stereotypes xmi:id="_bPkrQAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bPmgcAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bW2_AAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_Tz_x7AKIEeqTRuSLIkLPHA" label="-"/>
       <cardinality xmi:id="_Tz_x7QKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_Tz_x7gKIEeqTRuSLIkLPHA" name="ContadorTiempo">
@@ -2589,9 +2980,11 @@
     </attributes>
     <attributes xmi:id="_Tz_x7wKIEeqTRuSLIkLPHA" name="actualMouseListener">
       <modelElement href="Proyecto%20TDP.uml#_OMIxgAKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_Tz_x8AKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_OMJYkAKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZGk-cAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZK9vMAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bQkJwAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bQn0IAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bW6CUAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_Tz_x8QKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_Tz_x8gKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_Tz_x8wKIEeqTRuSLIkLPHA" name="MouseListener">
@@ -2600,9 +2993,11 @@
     </attributes>
     <attributes xmi:id="_Tz_x9AKIEeqTRuSLIkLPHA" name="queHagoConElClick">
       <modelElement href="Proyecto%20TDP.uml#_OMJYkQKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_Tz_x9QKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_OMJ_oAKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZGkXYAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZK-9UAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bQfRQAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bQhtgAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bW9ssAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_Tz_x9gKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_Tz_x9wKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_Tz_x-AKIEeqTRuSLIkLPHA" name="State">
@@ -2952,15 +3347,21 @@
     <visibility xmi:id="_T-WnygKIEeqTRuSLIkLPHA" label="+"/>
     <attributes xmi:id="_T-WnywKIEeqTRuSLIkLPHA" name="entidades">
       <modelElement href="Proyecto%20TDP.uml#_ONKsQAKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_T-WnzAKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_ONKsQQKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
-      <stereotypes xmi:id="_T-WnzQKIEeqTRuSLIkLPHA" name="Generics">
-        <modelElement href="Proyecto%20TDP.uml#_ONLTUAKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
-      <stereotypes xmi:id="_T-WnzgKIEeqTRuSLIkLPHA" name="MultiDeclaration">
-        <modelElement href="Proyecto%20TDP.uml#_ONL6YAKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZGdpsAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZGe30AKLEeqLmsu8Oq5Sjg" name="Generics"/>
+      <stereotypes xmi:id="_ZGe30QKLEeqLmsu8Oq5Sjg" name="MultiDeclaration"/>
+      <stereotypes xmi:id="_ZLG5IAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZLG5IQKLEeqLmsu8Oq5Sjg" name="Generics"/>
+      <stereotypes xmi:id="_ZLHgMAKLEeqLmsu8Oq5Sjg" name="MultiDeclaration"/>
+      <stereotypes xmi:id="_bRA1sAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bRA1sQKLEeqLmsu8Oq5Sjg" name="Generics"/>
+      <stereotypes xmi:id="_bRA1sgKLEeqLmsu8Oq5Sjg" name="MultiDeclaration"/>
+      <stereotypes xmi:id="_bRHjYAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bRHjYQKLEeqLmsu8Oq5Sjg" name="Generics"/>
+      <stereotypes xmi:id="_bRIKcAKLEeqLmsu8Oq5Sjg" name="MultiDeclaration"/>
+      <stereotypes xmi:id="_bXB-IAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bXB-IQKLEeqLmsu8Oq5Sjg" name="Generics"/>
+      <stereotypes xmi:id="_bXB-IgKLEeqLmsu8Oq5Sjg" name="MultiDeclaration"/>
       <visibility xmi:id="_T-WnzwKIEeqTRuSLIkLPHA" label="+"/>
       <cardinality xmi:id="_T-Wn0AKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_T-Wn0QKIEeqTRuSLIkLPHA" name="ArrayList">
@@ -3007,9 +3408,11 @@
     </attributes>
     <attributes xmi:id="_T-Wn5AKIEeqTRuSLIkLPHA" name="proxMagia">
       <modelElement href="Proyecto%20TDP.uml#_ONPkwQKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_T-Wn5QKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_ONQL0AKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZGb0gAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZLKjgAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bQ6vEAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bQ9yYAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bXIEwAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_T-Wn5gKIEeqTRuSLIkLPHA" label="-"/>
       <cardinality xmi:id="_T-Wn5wKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_T-Wn6AKIEeqTRuSLIkLPHA" name="GameObject">
@@ -3018,12 +3421,16 @@
     </attributes>
     <attributes xmi:id="_T-Wn6QKIEeqTRuSLIkLPHA" name="entidadesAAgregar">
       <modelElement href="Proyecto%20TDP.uml#_OOs9UAKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_T-Wn6gKIEeqTRuSLIkLPHA" name="MultiDeclaration">
-        <modelElement href="Proyecto%20TDP.uml#_OOtkYAKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
-      <stereotypes xmi:id="_T-Wn6wKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_OOtkYQKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZGZYQAKLEeqLmsu8Oq5Sjg" name="MultiDeclaration"/>
+      <stereotypes xmi:id="_ZGZ_UAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZLLxoAKLEeqLmsu8Oq5Sjg" name="MultiDeclaration"/>
+      <stereotypes xmi:id="_ZLMYsAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bRRUYAKLEeqLmsu8Oq5Sjg" name="MultiDeclaration"/>
+      <stereotypes xmi:id="_bRRUYQKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bRUXsAKLEeqLmsu8Oq5Sjg" name="MultiDeclaration"/>
+      <stereotypes xmi:id="_bRUXsQKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bXKhAAKLEeqLmsu8Oq5Sjg" name="MultiDeclaration"/>
+      <stereotypes xmi:id="_bXKhAQKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_T-Wn7AKIEeqTRuSLIkLPHA" label="+"/>
       <cardinality xmi:id="_T-Wn7QKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_T-Wn7gKIEeqTRuSLIkLPHA" name="ArrayList">
@@ -3032,12 +3439,16 @@
     </attributes>
     <attributes xmi:id="_T-Wn7wKIEeqTRuSLIkLPHA" name="entidadesAEliminar">
       <modelElement href="Proyecto%20TDP.uml#_OOuLcAKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_T-Wn8AKIEeqTRuSLIkLPHA" name="MultiDeclaration">
-        <modelElement href="Proyecto%20TDP.uml#_OOuLcQKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
-      <stereotypes xmi:id="_T-Wn8QKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_OOuLcgKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZGXjEAKLEeqLmsu8Oq5Sjg" name="MultiDeclaration"/>
+      <stereotypes xmi:id="_ZGXjEQKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZLON4AKLEeqLmsu8Oq5Sjg" name="MultiDeclaration"/>
+      <stereotypes xmi:id="_ZLO08AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bRYCEAKLEeqLmsu8Oq5Sjg" name="MultiDeclaration"/>
+      <stereotypes xmi:id="_bRYpIAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bRbscAKLEeqLmsu8Oq5Sjg" name="MultiDeclaration"/>
+      <stereotypes xmi:id="_bRbscQKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bXM9QAKLEeqLmsu8Oq5Sjg" name="MultiDeclaration"/>
+      <stereotypes xmi:id="_bXM9QQKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_T-Wn8gKIEeqTRuSLIkLPHA" label="+"/>
       <cardinality xmi:id="_T-Wn8wKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_T-Wn9AKIEeqTRuSLIkLPHA" name="ArrayList">
@@ -3046,12 +3457,16 @@
     </attributes>
     <attributes xmi:id="_T-Wn9QKIEeqTRuSLIkLPHA" name="clonada">
       <modelElement href="Proyecto%20TDP.uml#_OOuygAKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_T-Wn9gKIEeqTRuSLIkLPHA" name="MultiDeclaration">
-        <modelElement href="Proyecto%20TDP.uml#_OOuygQKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
-      <stereotypes xmi:id="_T-Wn9wKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_OOuyggKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZGT4sAKLEeqLmsu8Oq5Sjg" name="MultiDeclaration"/>
+      <stereotypes xmi:id="_ZGUfwAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZLQqIAKLEeqLmsu8Oq5Sjg" name="MultiDeclaration"/>
+      <stereotypes xmi:id="_ZLRRMAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bRevwAKLEeqLmsu8Oq5Sjg" name="MultiDeclaration"/>
+      <stereotypes xmi:id="_bRevwQKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bRjBMAKLEeqLmsu8Oq5Sjg" name="MultiDeclaration"/>
+      <stereotypes xmi:id="_bRjBMQKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bXPZgAKLEeqLmsu8Oq5Sjg" name="MultiDeclaration"/>
+      <stereotypes xmi:id="_bXPZgQKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_T-Wn-AKIEeqTRuSLIkLPHA" label="+"/>
       <cardinality xmi:id="_T-Wn-QKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_T-Wn-gKIEeqTRuSLIkLPHA" name="ArrayList">
@@ -3273,9 +3688,11 @@
     <visibility xmi:id="_UBSnAgKIEeqTRuSLIkLPHA" label="+"/>
     <attributes xmi:id="_UBSnAwKIEeqTRuSLIkLPHA" name="tiendaLogica" staticAttribute="true">
       <modelElement href="Proyecto%20TDP.uml#_ONUdQAKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_UBSnBAKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_ONUdQQKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZGQOUAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZLVioAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bRwckAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bRyRwAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bXSc0AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_UBSnBQKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_UBSnBgKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_UBSnBwKIEeqTRuSLIkLPHA" name="TiendaLogica">
@@ -3687,6 +4104,12 @@
     <visibility xmi:id="_UiNiwgKIEeqTRuSLIkLPHA" label="+"/>
     <attributes xmi:id="_UiNiwwKIEeqTRuSLIkLPHA" name="botones">
       <modelElement href="Proyecto%20TDP.uml#_ONVrYAKIEeqTRuSLIkLPHA"/>
+      <stereotypes xmi:id="_bRpH0AKLEeqLmsu8Oq5Sjg" name="Array"/>
+      <stereotypes xmi:id="_bRpH0QKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bRsyMAKLEeqLmsu8Oq5Sjg" name="Array"/>
+      <stereotypes xmi:id="_bRsyMQKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bXTq8AKLEeqLmsu8Oq5Sjg" name="Array"/>
+      <stereotypes xmi:id="_bXTq8QKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_UiNixAKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_UiNixQKIEeqTRuSLIkLPHA" label="1..*" max="-1" min="1"/>
       <type xmi:id="_UiNixgKIEeqTRuSLIkLPHA" name="Boton">
@@ -3695,9 +4118,11 @@
     </attributes>
     <attributes xmi:id="_UiNixwKIEeqTRuSLIkLPHA" name="puntaje">
       <modelElement href="Proyecto%20TDP.uml#_ONWScQKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_UiNiyAKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_ONW5gAKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZGL84AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZLdecAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bSAUMAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bSD-kAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bXU5EAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_UiNiyQKIEeqTRuSLIkLPHA" label="~"/>
       <cardinality xmi:id="_UiNiygKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_UiNiywKIEeqTRuSLIkLPHA" name="JLabel">
@@ -3706,9 +4131,11 @@
     </attributes>
     <attributes xmi:id="_UiNizAKIEeqTRuSLIkLPHA" name="dinero">
       <modelElement href="Proyecto%20TDP.uml#_ONW5gQKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_UiNizQKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_ONW5ggKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZGKuwAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZLeskAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bSHo8AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bSKsQAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bXWHMAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_UiNizgKIEeqTRuSLIkLPHA" label="~"/>
       <cardinality xmi:id="_UiNizwKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_UiNi0AKIEeqTRuSLIkLPHA" name="JLabel">
@@ -3717,9 +4144,11 @@
     </attributes>
     <attributes xmi:id="_UiNi0QKIEeqTRuSLIkLPHA" name="tienda">
       <modelElement href="Proyecto%20TDP.uml#_ONXgkAKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_UiNi0gKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_ONXgkQKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZGKHsAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZLfToAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bR60oAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bR9Q4AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bXXVUAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_UiNi0wKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_UiNi1AKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_UiNi1QKIEeqTRuSLIkLPHA" name="TiendaLogica">
@@ -3784,9 +4213,11 @@
     </attributes>
     <attributes xmi:id="_UmV01wKIEeqTRuSLIkLPHA" name="g">
       <modelElement href="Proyecto%20TDP.uml#_ONbK8AKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_UmV02AKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_ONbK8QKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZGISgAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZLhv4AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bSVEUAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bSYusAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bXYjcAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_UmV02QKIEeqTRuSLIkLPHA" label="-"/>
       <cardinality xmi:id="_UmV02gKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_UmV02wKIEeqTRuSLIkLPHA" name="GameObject">
@@ -3803,9 +4234,11 @@
     </attributes>
     <attributes xmi:id="_UmV04AKIEeqTRuSLIkLPHA" name="juego">
       <modelElement href="Proyecto%20TDP.uml#_ONbyAQKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_UmV04QKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_ONcZEAKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZGHEYAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZLjlEAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bSO9sAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bSRZ8AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bXa_sAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_UmV04gKIEeqTRuSLIkLPHA" label="+"/>
       <cardinality xmi:id="_UmV04wKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_UmV05AKIEeqTRuSLIkLPHA" name="Juego">
@@ -3822,6 +4255,9 @@
     </attributes>
     <attributes xmi:id="_UmV06QKIEeqTRuSLIkLPHA" name="tienda">
       <modelElement href="Proyecto%20TDP.uml#_ONdnMQKIEeqTRuSLIkLPHA"/>
+      <stereotypes xmi:id="_bR1VEAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bR4YYAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bXc04AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_UmV06gKIEeqTRuSLIkLPHA" label="-"/>
       <cardinality xmi:id="_UmV06wKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_UmV07AKIEeqTRuSLIkLPHA" name="TiendaGrafica">
@@ -3984,9 +4420,11 @@
     <visibility xmi:id="_Ut-G0gKIEeqTRuSLIkLPHA" label="+"/>
     <attributes xmi:id="_Ut-G0wKIEeqTRuSLIkLPHA" name="juego">
       <modelElement href="Proyecto%20TDP.uml#_ONCwcAKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_Ut-G1AKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_ONCwcQKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZGEBEAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZLn2gAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bSe1UAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bSh4oAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bXeDAAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_Ut-G1QKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_Ut-G1gKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_Ut-G1wKIEeqTRuSLIkLPHA" name="Juego">
@@ -3995,9 +4433,11 @@
     </attributes>
     <attributes xmi:id="_Ut-G2AKIEeqTRuSLIkLPHA" name="mapaGrafico">
       <modelElement href="Proyecto%20TDP.uml#_ONCwcgKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_Ut-G2QKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_ONDXgAKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZGCy8AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZLpEoAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bSkU4AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bSmKEAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bXeqEAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_Ut-G2gKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_Ut-G2wKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_Ut-G3AKIEeqTRuSLIkLPHA" name="MapaGrafico">
@@ -4006,9 +4446,11 @@
     </attributes>
     <attributes xmi:id="_Ut-G3QKIEeqTRuSLIkLPHA" name="miobjeto">
       <modelElement href="Proyecto%20TDP.uml#_ONDXgQKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_Ut-G3gKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_ONDXggKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZGCL4AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZLqSwAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bSp0cAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bSs3wAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bXf4MAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_Ut-G3wKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_Ut-G4AKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_Ut-G4QKIEeqTRuSLIkLPHA" name="ObjetoPrecioso">
@@ -4059,9 +4501,11 @@
     <visibility xmi:id="_UyXeogKIEeqTRuSLIkLPHA" label="+"/>
     <attributes xmi:id="_UyXeowKIEeqTRuSLIkLPHA" name="juego">
       <modelElement href="Proyecto%20TDP.uml#_ONHo8AKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_UyXepAKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_ONHo8QKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZF9TYAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZLtWEAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bSxJMAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bS0zkAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bXhGUAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_UyXepQKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_UyXepgKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_UyXepwKIEeqTRuSLIkLPHA" name="Juego">
@@ -4070,9 +4514,11 @@
     </attributes>
     <attributes xmi:id="_UyXeqAKIEeqTRuSLIkLPHA" name="mapaGrafico">
       <modelElement href="Proyecto%20TDP.uml#_ONHo8gKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_UyXeqQKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_ONIQAAKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZF8FQAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZLvLQAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bS5FAAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bS7hQAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bXiUcAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_UyXeqgKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_UyXeqwKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_UyXerAKIEeqTRuSLIkLPHA" name="MapaGrafico">
@@ -4110,9 +4556,11 @@
     <visibility xmi:id="_U5FxsgKIEeqTRuSLIkLPHA" label="+"/>
     <attributes xmi:id="_U5FxswKIEeqTRuSLIkLPHA" name="juego">
       <modelElement href="Proyecto%20TDP.uml#_ONI3EAKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_U5FxtAKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_ONJeIAKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZF6QEAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZLxAcAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bS_ysAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bTCO8AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bXjikAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_U5FxtQKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_U5FxtgKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_U5FxtwKIEeqTRuSLIkLPHA" name="Juego">
@@ -4121,9 +4569,11 @@
     </attributes>
     <attributes xmi:id="_U5FxuAKIEeqTRuSLIkLPHA" name="mapaGrafico">
       <modelElement href="Proyecto%20TDP.uml#_ONJeIQKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_U5FxuQKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_ONJeIgKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZF5pAAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZLyOkAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bTFSQAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bTI8oAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bXml4AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_U5FxugKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_U5FxuwKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_U5FxvAKIEeqTRuSLIkLPHA" name="MapaGrafico">
@@ -4132,9 +4582,11 @@
     </attributes>
     <attributes xmi:id="_U5FxvQKIEeqTRuSLIkLPHA" name="mapaLogico">
       <modelElement href="Proyecto%20TDP.uml#_ONKFMAKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_U5FxvgKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_ONKFMQKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZF4a4AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZLzcsAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bTLY4AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bTNOEAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bXnM8AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_U5FxvwKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_U5FxwAKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_U5FxwQKIEeqTRuSLIkLPHA" name="MapaLogico">
@@ -4188,9 +4640,11 @@
     <visibility xmi:id="_VEmeIgKIEeqTRuSLIkLPHA" label="+"/>
     <attributes xmi:id="_VEmeIwKIEeqTRuSLIkLPHA" name="mapaLogico">
       <modelElement href="Proyecto%20TDP.uml#_ONSBAAKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_VEmeJAKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_ONSBAQKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZF3MwAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZL148AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bTPqUAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bTUi0AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bXobEAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_VEmeJQKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_VEmeJgKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_VEmeJwKIEeqTRuSLIkLPHA" name="MapaLogico">
@@ -4199,9 +4653,11 @@
     </attributes>
     <attributes xmi:id="_VEmeKAKIEeqTRuSLIkLPHA" name="tienda">
       <modelElement href="Proyecto%20TDP.uml#_ONSoEAKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_VEmeKQKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_ONSoEQKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZF2lsAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZL3uIAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bTW_EAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bTaCYAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bXppMAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_VEmeKgKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_VEmeKwKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_VEmeLAKIEeqTRuSLIkLPHA" name="TiendaLogica">
@@ -4210,9 +4666,11 @@
     </attributes>
     <attributes xmi:id="_VEmeLQKIEeqTRuSLIkLPHA" name="juego">
       <modelElement href="Proyecto%20TDP.uml#_ONTPIAKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_VEmeLgKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_ONTPIQKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZF1-oAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZL5jUAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bTdswAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bTgJAAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bXqQQAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_VEmeLwKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_VEmeMAKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_VEmeMQKIEeqTRuSLIkLPHA" name="Juego">
@@ -4221,9 +4679,11 @@
     </attributes>
     <attributes xmi:id="_VEmeMgKIEeqTRuSLIkLPHA" name="mapaGrafico">
       <modelElement href="Proyecto%20TDP.uml#_ONT2MAKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_VEmeMwKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_ONT2MQKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZF0wgAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZL6xcAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bTh-MAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bTjzYAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bXreYAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_VEmeNAKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_VEmeNQKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_VEmeNgKIEeqTRuSLIkLPHA" name="MapaGrafico">
@@ -4267,9 +4727,11 @@
     <visibility xmi:id="_VH2mcgKIEeqTRuSLIkLPHA" label="+"/>
     <attributes xmi:id="_VH2mcwKIEeqTRuSLIkLPHA" defaultValue="Executors.newSingleThreadScheduledExecutor()" name="scheduler">
       <modelElement href="Proyecto%20TDP.uml#_OMWz8QKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_VH2mdAKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_OMXbAQKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZFziYAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZL8moAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bTor4AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bTrIIAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bXssgAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_VH2mdQKIEeqTRuSLIkLPHA" label="-"/>
       <cardinality xmi:id="_VH2mdgKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_VH2mdwKIEeqTRuSLIkLPHA" name="ScheduledExecutorService">
@@ -4377,9 +4839,11 @@
     </attributes>
     <attributes xmi:id="_VKlxaAKIEeqTRuSLIkLPHA" defaultValue="Executors.newSingleThreadScheduledExecutor()" name="scheduler">
       <modelElement href="Proyecto%20TDP.uml#_OMYpIQKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_VKlxaQKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_OMZQMQKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZFxtMAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZL_p8AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bTtkYAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bTxOwAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bXuhsAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_VKlxagKIEeqTRuSLIkLPHA" label="-"/>
       <cardinality xmi:id="_VKlxawKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_VKlxbAKIEeqTRuSLIkLPHA" name="ScheduledExecutorService">
@@ -4538,9 +5002,11 @@
     <visibility xmi:id="_VcARggKIEeqTRuSLIkLPHA" label="+"/>
     <attributes xmi:id="_VcARgwKIEeqTRuSLIkLPHA" name="mapaLogico">
       <modelElement href="Proyecto%20TDP.uml#_OMcTgAKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_VcARhAKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_OMc6kAKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZFv4AAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZMD7YAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bT05IAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bT38cAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bXw98AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_VcARhQKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_VcARhgKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_VcARhwKIEeqTRuSLIkLPHA" name="MapaLogico">
@@ -4549,9 +5015,11 @@
     </attributes>
     <attributes xmi:id="_VcARiAKIEeqTRuSLIkLPHA" name="mapa">
       <modelElement href="Proyecto%20TDP.uml#_OMc6kQKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_VcARiQKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_OMdhoAKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZFup4AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZMFJgAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bT8N4AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bT_RMAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bXyMEAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_VcARigKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_VcARiwKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_VcARjAKIEeqTRuSLIkLPHA" name="MapaGrafico">
@@ -4560,9 +5028,11 @@
     </attributes>
     <attributes xmi:id="_VcARjQKIEeqTRuSLIkLPHA" name="label">
       <modelElement href="Proyecto%20TDP.uml#_OMdhoQKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_VcARjgKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_OMeIsAKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZFuC0AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZMGXoAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bUNToAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bUQ-AAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bXzaMAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_VcARjwKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_VcA4kAKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_VcA4kQKIEeqTRuSLIkLPHA" name="JLabel">
@@ -4582,9 +5052,11 @@
     </attributes>
     <attributes xmi:id="_VcA4lwKIEeqTRuSLIkLPHA" name="miobjeto">
       <modelElement href="Proyecto%20TDP.uml#_OMfW0QKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_VcA4mAKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_OMhMAAKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZFtbwAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZMHlwAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bUTaQAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bUVPcAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bX0oUAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_VcA4mQKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_VcA4mgKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_VcA4mwKIEeqTRuSLIkLPHA" name="ObjetoPrecioso">
@@ -4710,6 +5182,9 @@
     <visibility xmi:id="_VhsCwgKIEeqTRuSLIkLPHA" label="+"/>
     <attributes xmi:id="_VhsCwwKIEeqTRuSLIkLPHA" name="hilo">
       <modelElement href="Proyecto%20TDP.uml#_OMbFYAKIEeqTRuSLIkLPHA"/>
+      <stereotypes xmi:id="_bUH0EAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bUK3YAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bX12cAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_VhsCxAKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_VhsCxQKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_VhsCxgKIEeqTRuSLIkLPHA" name="HiloAnimacionPrecioso">
@@ -4955,9 +5430,11 @@
     </attributes>
     <attributes xmi:id="_V2QkmAKIEeqTRuSLIkLPHA" name="mipersonaje">
       <modelElement href="Proyecto%20TDP.uml#_OMWM4AKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_V2QkmQKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_OMWz8AKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZFpxYAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZMO6gAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bUY50AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bUb9IAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bX3EkAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_V2QkmgKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_V2QkmwKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_V2QknAKIEeqTRuSLIkLPHA" name="Personaje">
@@ -5126,6 +5603,9 @@
     <visibility xmi:id="_V62JogKIEeqTRuSLIkLPHA" label="+"/>
     <attributes xmi:id="_V62JowKIEeqTRuSLIkLPHA" name="hilo">
       <modelElement href="Proyecto%20TDP.uml#_OMZ3QAKIEeqTRuSLIkLPHA"/>
+      <stereotypes xmi:id="_bUBtcAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bUDioAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bX4SsAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_V62JpAKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_V62JpQKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_V62JpgKIEeqTRuSLIkLPHA" name="HiloAnimacionPrecioso">
@@ -5244,9 +5724,11 @@
     <visibility xmi:id="_WB07YgKIEeqTRuSLIkLPHA" label="+"/>
     <attributes xmi:id="_WB07YwKIEeqTRuSLIkLPHA" name="mipersonaje">
       <modelElement href="Proyecto%20TDP.uml#_OMmrkAKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_WB07ZAKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_OMmrkQKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZFnVIAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZMTzAAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bU1lwAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bU5QIAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bX6u8AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_WB07ZQKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_WB07ZgKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_WB07ZwKIEeqTRuSLIkLPHA" name="Enemigo">
@@ -5378,9 +5860,11 @@
     <visibility xmi:id="_WEgb8gKIEeqTRuSLIkLPHA" label="+"/>
     <attributes xmi:id="_WEgb8wKIEeqTRuSLIkLPHA" name="mipersonaje">
       <modelElement href="Proyecto%20TDP.uml#_OMogwAKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_WEgb9AKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_OMogwQKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZFk44AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZMWPQAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bU8TcAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bU-vsAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bX79EAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_WEgb9QKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_WEgb9gKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_WEgb9wKIEeqTRuSLIkLPHA" name="Torre">
@@ -6492,9 +6976,11 @@
     </attributes>
     <attributes xmi:id="_Wy_5qQKIEeqTRuSLIkLPHA" name="miObjetoGrafico">
       <modelElement href="Proyecto%20TDP.uml#_OMMb4AKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_Wy_5qgKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_OMNC8AKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZFc9EAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZMk4wAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bUg1oAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bUjR4AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bYBcoAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_Wy_5qwKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_Wy_5rAKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_Wy_5rQKIEeqTRuSLIkLPHA" name="GameObjectGrafico">
@@ -6503,9 +6989,11 @@
     </attributes>
     <attributes xmi:id="_Wy_5rgKIEeqTRuSLIkLPHA" name="posicion">
       <modelElement href="Proyecto%20TDP.uml#_OMNC8QKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_Wy_5rwKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_OMNqAAKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZFcWAAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZMmG4AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bVDBIAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bVHSkAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bYD44AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_Wy_5sAKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_Wy_5sQKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_Wy_5sgKIEeqTRuSLIkLPHA" name="Point">
@@ -6514,9 +7002,11 @@
     </attributes>
     <attributes xmi:id="_Wy_5swKIEeqTRuSLIkLPHA" name="visitor">
       <modelElement href="Proyecto%20TDP.uml#_OMNqAQKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_Wy_5tAKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_OMOREAKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZFbH4QKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZMmt8AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bUluIAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bUoKYAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bYFHAAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_Wy_5tQKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_Wy_5tgKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_Wy_5twKIEeqTRuSLIkLPHA" name="Visitor">
@@ -6536,6 +7026,9 @@
     </attributes>
     <attributes xmi:id="_Wy_5vQKIEeqTRuSLIkLPHA" name="mapaLogico">
       <modelElement href="Proyecto%20TDP.uml#_OMO4IQKIEeqTRuSLIkLPHA"/>
+      <stereotypes xmi:id="_bQssoAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bQuh0AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bYG8MAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_Wy_5vgKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_Wy_5vwKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_Wy_5wAKIEeqTRuSLIkLPHA" name="MapaLogico">
@@ -7326,6 +7819,9 @@
     <visibility xmi:id="_XYz8cgKIEeqTRuSLIkLPHA" label="+"/>
     <attributes xmi:id="_XYz8cwKIEeqTRuSLIkLPHA" name="magiaLogica">
       <modelElement href="Proyecto%20TDP.uml#_OM0G8AKIEeqTRuSLIkLPHA"/>
+      <stereotypes xmi:id="_bUwtQAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bUzJgAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bYLNoAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_XYz8dAKIEeqTRuSLIkLPHA" label="~"/>
       <cardinality xmi:id="_XYz8dQKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_XYz8dgKIEeqTRuSLIkLPHA" name="Magia">
@@ -8177,9 +8673,11 @@
     <visibility xmi:id="_Yu3JYgKIEeqTRuSLIkLPHA" label="+"/>
     <attributes xmi:id="_Yu3JYwKIEeqTRuSLIkLPHA" name="mapaLogico">
       <modelElement href="Proyecto%20TDP.uml#_OMy40AKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_Yu3JZAKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_OMy40QKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZFO6oAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZM8FIAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bVK88AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bVOnUAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bYPfEAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_Yu3JZQKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_Yu3JZgKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_Yu3JZwKIEeqTRuSLIkLPHA" name="MapaLogico">
@@ -8293,9 +8791,11 @@
     <visibility xmi:id="_Y-04AgKIEeqTRuSLIkLPHA" label="+"/>
     <attributes xmi:id="_Y-04AwKIEeqTRuSLIkLPHA" name="tiendaLogica">
       <modelElement href="Proyecto%20TDP.uml#_ONYHoAKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_Y-04BAKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_ONYHoQKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZFNsgAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZM96UAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bVSRsAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bVWjIAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bYQtMAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_Y-04BQKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_Y-04BgKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_Y-1fEAKIEeqTRuSLIkLPHA" name="TiendaLogica">
@@ -8418,6 +8918,9 @@
     <visibility xmi:id="_ZCWGEgKIEeqTRuSLIkLPHA" label="+"/>
     <attributes xmi:id="_ZCWGEwKIEeqTRuSLIkLPHA" name="mipersonaje">
       <modelElement href="Proyecto%20TDP.uml#_ONYusAKIEeqTRuSLIkLPHA"/>
+      <stereotypes xmi:id="_bUqmoAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bUtp8AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bYR7UAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_ZCWGFAKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_ZCWGFQKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_ZCWGFgKIEeqTRuSLIkLPHA" name="Personaje">
@@ -8426,6 +8929,9 @@
     </attributes>
     <attributes xmi:id="_ZCWGFwKIEeqTRuSLIkLPHA" name="miobjeto">
       <modelElement href="Proyecto%20TDP.uml#_ONZVwQKIEeqTRuSLIkLPHA"/>
+      <stereotypes xmi:id="_bUdyUAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bUfngAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bYTJcAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_ZCWGGAKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_ZCWGGQKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_ZCWGGgKIEeqTRuSLIkLPHA" name="Objeto">
@@ -8967,9 +9473,11 @@
     <visibility xmi:id="_ZszYUgKIEeqTRuSLIkLPHA" label="+"/>
     <attributes xmi:id="_ZszYUwKIEeqTRuSLIkLPHA" name="juego">
       <modelElement href="Proyecto%20TDP.uml#_ONe1UAKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_ZszYVAKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_ONe1UQKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZFFJoAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZNEoAAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bVaNgAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bVcpwAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bYTwgAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_ZszYVQKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_ZszYVgKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_ZszYVwKIEeqTRuSLIkLPHA" name="Juego">
@@ -9092,12 +9600,16 @@
     <visibility xmi:id="_Z1cW8gKIEeqTRuSLIkLPHA" label="+"/>
     <attributes xmi:id="_Z1cW8wKIEeqTRuSLIkLPHA" name="hordas">
       <modelElement href="Proyecto%20TDP.uml#_OND-kAKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_Z1cW9AKIEeqTRuSLIkLPHA" name="Array">
-        <modelElement href="Proyecto%20TDP.uml#_OND-kgKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
-      <stereotypes xmi:id="_Z1cW9QKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_ONEloAKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZE9N0AKLEeqLmsu8Oq5Sjg" name="Array"/>
+      <stereotypes xmi:id="_ZE904AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZNHEQAKLEeqLmsu8Oq5Sjg" name="Array"/>
+      <stereotypes xmi:id="_ZNHEQQKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bVo3AAKLEeqLmsu8Oq5Sjg" name="Array"/>
+      <stereotypes xmi:id="_bVo3AQKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bVtvgAKLEeqLmsu8Oq5Sjg" name="Array"/>
+      <stereotypes xmi:id="_bVtvgQKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bYU-oAKLEeqLmsu8Oq5Sjg" name="Array"/>
+      <stereotypes xmi:id="_bYU-oQKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_Z1cW9gKIEeqTRuSLIkLPHA" label="-"/>
       <cardinality xmi:id="_Z1cW9wKIEeqTRuSLIkLPHA" label="1..*" max="-1" min="1"/>
       <type xmi:id="_Z1cW-AKIEeqTRuSLIkLPHA" name="Horda">
@@ -9106,9 +9618,11 @@
     </attributes>
     <attributes xmi:id="_Z1cW-QKIEeqTRuSLIkLPHA" name="hordaActual">
       <modelElement href="Proyecto%20TDP.uml#_ONEloQKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_Z1cW-gKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_ONFMsAKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZE5jcQKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZNI5cAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bVwLwAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bVyA8AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bYXa4AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_Z1cW-wKIEeqTRuSLIkLPHA" label="-"/>
       <cardinality xmi:id="_Z1cW_AKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_Z1cW_QKIEeqTRuSLIkLPHA" name="Horda">
@@ -9117,6 +9631,9 @@
     </attributes>
     <attributes xmi:id="_Z1cW_gKIEeqTRuSLIkLPHA" name="juego">
       <modelElement href="Proyecto%20TDP.uml#_ONFMsQKIEeqTRuSLIkLPHA"/>
+      <stereotypes xmi:id="_bOwy8AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bOzPMAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bYZQEAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_Z1cW_wKIEeqTRuSLIkLPHA" label="-"/>
       <cardinality xmi:id="_Z1cXAAKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_Z1cXAQKIEeqTRuSLIkLPHA" name="Juego">
@@ -9125,6 +9642,9 @@
     </attributes>
     <attributes xmi:id="_Z1cXAgKIEeqTRuSLIkLPHA" name="mapaLogico">
       <modelElement href="Proyecto%20TDP.uml#_ONFzwQKIEeqTRuSLIkLPHA"/>
+      <stereotypes xmi:id="_bQxlIAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bQzaUAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bYaeMAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_Z1cXAwKIEeqTRuSLIkLPHA" label="-"/>
       <cardinality xmi:id="_Z1cXBAKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_Z1cXBQKIEeqTRuSLIkLPHA" name="MapaLogico">
@@ -9133,9 +9653,11 @@
     </attributes>
     <attributes xmi:id="_Z1cXBgKIEeqTRuSLIkLPHA" defaultValue="Executors.newSingleThreadScheduledExecutor()" name="scheduler">
       <modelElement href="Proyecto%20TDP.uml#_ONGa0QKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_Z1cXBwKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_ONHB4AKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZE4VUAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZNKHkAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bVfGAAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bVjXcAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bYbFQAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_Z1cXCAKIEeqTRuSLIkLPHA" label="-"/>
       <cardinality xmi:id="_Z1cXCQKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_Z1cXCgKIEeqTRuSLIkLPHA" name="ScheduledExecutorService">
@@ -9225,6 +9747,9 @@
     <visibility xmi:id="_Z6Ke4gKIEeqTRuSLIkLPHA" label="+"/>
     <attributes xmi:id="_Z6Ke4wKIEeqTRuSLIkLPHA" name="nivel">
       <modelElement href="Proyecto%20TDP.uml#_OM4_cAKIEeqTRuSLIkLPHA"/>
+      <stereotypes xmi:id="_bVlMoAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bVnB0AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bYcTYAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_Z6Ke5AKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_Z6Ke5QKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_Z6Ke5gKIEeqTRuSLIkLPHA" name="Nivel">
@@ -9233,9 +9758,11 @@
     </attributes>
     <attributes xmi:id="_Z6Ke5wKIEeqTRuSLIkLPHA" name="mapaLogico">
       <modelElement href="Proyecto%20TDP.uml#_OM5mgAKIEeqTRuSLIkLPHA"/>
-      <stereotypes xmi:id="_Z6Ke6AKIEeqTRuSLIkLPHA" name="LegacyStyledElement">
-        <modelElement href="Proyecto%20TDP.uml#_OM5mgQKIEeqTRuSLIkLPHA"/>
-      </stereotypes>
+      <stereotypes xmi:id="_ZEwZgAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_ZNLVsAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bV25cAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bV6j0AKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_bYdhgAKLEeqLmsu8Oq5Sjg" name="LegacyStyledElement"/>
       <visibility xmi:id="_Z6Ke6QKIEeqTRuSLIkLPHA" label="#"/>
       <cardinality xmi:id="_Z6Ke6gKIEeqTRuSLIkLPHA" label="1" max="1" min="1"/>
       <type xmi:id="_Z6Ke6wKIEeqTRuSLIkLPHA" name="MapaLogico">

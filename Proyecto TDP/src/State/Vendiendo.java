@@ -1,5 +1,6 @@
 package State;
 
+import java.awt.Component;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.ArrayList;
@@ -47,13 +48,18 @@ public class Vendiendo implements State {
 		    			encontre=true;		    			
 		    			t.Aceptar(tienda.getVisitor());		    			
 		    		}
-		    	}		   
+		    	}
+		    	
 		    	juego.cambiarEstado(new Jugando(juego));
+		    	((Component) e.getSource()).removeMouseListener(this);
+		    	
 		    }
+		    
 		    
 		});
 		
-		mapaGrafico.setMouseListener(mouseListener);		
+		mapaGrafico.setMouseListener(mouseListener);
+		
 	}
 
 	

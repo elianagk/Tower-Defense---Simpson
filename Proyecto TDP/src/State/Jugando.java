@@ -31,7 +31,10 @@ public class Jugando implements State {
 		    @Override
 		    public void mouseClicked(MouseEvent e) {
 		    	int x= e.getX();
-		    	int y= e.getY();		    	
+		    	int y= e.getY();
+		    	
+		    	
+
 		    }
 		});
 		

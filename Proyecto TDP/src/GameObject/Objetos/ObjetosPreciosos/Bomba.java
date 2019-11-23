@@ -47,6 +47,7 @@ public class Bomba extends ObjetoPrecioso {
 	public void accionar() {
 		ArrayList<GameObject> entidades=mapaLogico.getEntidades();
 		for (GameObject e: entidades) {
+			if (e!=this)
 			mapaLogico.entidadAEliminar(e);
 		}
 		
