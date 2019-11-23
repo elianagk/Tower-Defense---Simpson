@@ -21,19 +21,23 @@ public class Nivel {
 	private MapaLogico mapaLogico;
 	private final ScheduledExecutorService scheduler = Executors.newSingleThreadScheduledExecutor();
 	
-	public Nivel(Juego juego, MapaLogico mapaLogico) {
+	public Nivel(Juego juego, MapaLogico mapaLogico, int enemigosAñadidos) {
 		this.juego= juego;
 		this.mapaLogico= mapaLogico;
 		hordas= new Horda[3];
-		hordas[0]= new Horda(this, mapaLogico, 15);
+		hordas[0]= new Horda(this, mapaLogico, 1+enemigosAñadidos);
 		hordaActual= hordas[0];
-		hordas[1]= new Horda(this, mapaLogico, 20);
-		hordas[2]= new Horda(this, mapaLogico, 25);
+		hordas[1]= new Horda(this, mapaLogico, 2+enemigosAñadidos);
+		hordas[2]= new Horda(this, mapaLogico, 3+enemigosAñadidos);
 	}
 	
 	public void crearEnemigo(Horda horda) {
 		GameObject g= horda.crearEnemigo();
 		mapaLogico.entidadAAgregar(g, g.getX(), g.getY());
+	}
+	
+	public int tiempoSegundos() {
+		return hordas[0].getCantEnemigos()*5+20+hordas[1].getCantEnemigos()*5+15+hordas[2].getCantEnemigos()*5;
 	}
 	
 	public void ejecutarHorda(Horda horda) {

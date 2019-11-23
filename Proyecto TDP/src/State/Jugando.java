@@ -21,8 +21,6 @@ public class Jugando implements State {
 		juego =j;
 		mapaGrafico= juego.getMapaGrafico();
 		mapaGrafico.setMouseListener(null);		//suponiendo que se inicializa el juego con este estado
-		
-//		mapaLogico= juego.getMapaL();   //para que tiene un mapaLogico
 	}
 
 	@Override
@@ -30,13 +28,13 @@ public class Jugando implements State {
 		MouseListener mouseListener;
 		mapaGrafico.removeMouseListener(mapaGrafico.getMouseListener());
 		mapaGrafico.addMouseListener(mouseListener= new Mouse() {
-
 		    @Override
 		    public void mouseClicked(MouseEvent e) {
 		    	int x= e.getX();
 		    	int y= e.getY();
 		    	
 		    	
+
 		    }
 		});
 		

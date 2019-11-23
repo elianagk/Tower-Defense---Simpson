@@ -32,7 +32,10 @@ public class DisparoLogicoEnemigo extends Enemigo {
 			super.mover(still_key);
 			e.aplicarDaño(mipersonaje.getDaño());
 			mapaLogico.entidadAEliminar(this);
-			mipersonaje.setAccionar(true);
+			if (!e.getEsValido()) {
+				mipersonaje.setAccionar(true);
+				mipersonaje.setAtacando(false);
+			}
 		}		
 	}
 
