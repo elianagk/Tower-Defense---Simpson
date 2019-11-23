@@ -8,13 +8,14 @@ import GameObjectGrafico.ObjetoGrafico;
 import GameObjectGrafico.ObjetosGraficos.ObjetosConVida.SuperDuffGrafico;
 import Mapa.MapaLogico;
 import VISITOR.Visitor;
+import VISITOR.VisitorConVida;
 import VISITOR.VisitorPrecioso;
 
 public class SuperDuff extends ObjetoConVida {
 
 	public SuperDuff(MapaLogico mapaLogico) {
 		super(mapaLogico, new SuperDuffGrafico(mapaLogico),500);	//3°vida
-		
+		visitor= new VisitorConVida(this);
 	}
 
 	
@@ -36,8 +37,10 @@ public class SuperDuff extends ObjetoConVida {
 
 	@Override
 	public void accionar(Personaje e) {
-		// TODO Auto-generated method stub
-		
+		int d= e.getDaño();
+		vida= vida-d;
+		if(vida<=0)
+			mapaLogico.entidadAEliminar(this);
 	}
 
 	

@@ -3,13 +3,14 @@ package Nivel;
 import java.awt.Point;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Random;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 import GameObject.GameObject;
-
+import GameObject.Objetos.ObjetosConVida.SuperDuff;
 import Hordas.Horda;
 import Juego.Juego;
 import Mapa.MapaLogico;
@@ -34,6 +35,21 @@ public class Nivel {
 	public void crearEnemigo(Horda horda) {
 		GameObject g= horda.crearEnemigo();
 		mapaLogico.entidadAAgregar(g, g.getX(), g.getY());
+	}
+	
+	public void crearEventoAleatorio() {
+		GameObject g;
+		Random r = new Random();
+		int x;
+		int y;
+		int eventoAleatorio= r.nextInt(2)+1;
+		if(eventoAleatorio==1) {
+			System.out.println("--EVENTO ALEATORIO--");
+			g= new SuperDuff(mapaLogico);
+			y= (r.nextInt(6)+2)*100;
+			x= (r.nextInt(10)+1)*100;
+			mapaLogico.entidadAAgregar(g, x, y);
+		}	
 	}
 	
 	public int tiempoSegundos() {

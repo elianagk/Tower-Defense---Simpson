@@ -47,10 +47,7 @@ public class VisitorEnemigo extends Visitor {
 	}
 
 	public void visitar(SuperDuff s) {
-		SuperDuffGrafico gog= (SuperDuffGrafico) s.getGrafico();
-		if(gog.dentroHitbox(mipersonaje.getX(), mipersonaje.getY(), gog)) {
-			mipersonaje.accionar();
-		}
+		miobjeto.accionar();
 	}
 	
 

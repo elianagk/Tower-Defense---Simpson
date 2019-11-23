@@ -7,6 +7,7 @@ import java.awt.Point;
 import java.util.Random;
 
 import GameObject.GameObject;
+import GameObject.Objetos.ObjetosConVida.SuperDuff;
 import GameObject.Personajes.Enemigos.*;
 import Mapa.MapaLogico;
 
@@ -30,10 +31,11 @@ public class Horda {
 		GameObject g=  new Apu(mapaLogico);
 		Point p;
 		Random r = new Random();
-
+		
 		if (cantEnemigos!=0) {
 			enemigo= r.nextInt(6)+1;
-				
+			
+			
 			switch(enemigo) {
 			case 1: g= new Apu(mapaLogico);
 				break;
@@ -51,8 +53,7 @@ public class Horda {
 			
 			y=r.nextInt(700-250+1)+250;
 			p= new Point(1080, (y/100)*100);
-			//System.out.println("Enemigo: "+ p.getY());
-
+			
 			g.setPosicion(p);
 			
 			cantEnemigos--;			
