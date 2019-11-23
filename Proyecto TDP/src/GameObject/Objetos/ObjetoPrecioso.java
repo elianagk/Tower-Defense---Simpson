@@ -18,12 +18,14 @@ public abstract class ObjetoPrecioso extends ObjetosSinMagia {
 	
 	
 	public void accionar(Personaje c) {
-		c.aplicarDaño(50);
+		mapaLogico.entidadAEliminar(c);
 	}
 	
 	public abstract void empezarHilo();
 	
-	public void accionar() {}
+	public void accionar() {
+		
+	}
 	
 	
 	
