@@ -25,6 +25,7 @@ public abstract  class Enemigo extends Personaje {
 		super(ml, gog,vida);
 		monedas= m;
 		atacando=false;
+		tiempo=15;
 	}
 	
 	public void setAtacando(boolean a) {
