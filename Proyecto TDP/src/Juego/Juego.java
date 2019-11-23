@@ -25,7 +25,6 @@ public class Juego {
 	private MapaLogico mapaLogico;
 	private boolean hayEnemigos;
 	private State estado;
-	private TiendaGrafica tienda;
 	private Visitor visitorVictoria;
 	
 	
@@ -91,6 +90,7 @@ public class Juego {
 		estado=s;
 		estado.actuar();
 	}
+	
 	
 	public Jugador getJugador() {
 		return jugador;

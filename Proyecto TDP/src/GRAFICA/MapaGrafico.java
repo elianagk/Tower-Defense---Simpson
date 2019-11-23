@@ -59,6 +59,10 @@ public class MapaGrafico extends JLabel{
 		tiendaLogica.revisarTienda(x, y);
 	}
 	
+//	public void avisarPremio(int x, int y) {
+//		tiendaLogica.revisarPremio(x, y);
+//	}
+	
 	public void removerEntidad(GameObject o) {
 		this.remove(o.getGrafico());
 		repaint();

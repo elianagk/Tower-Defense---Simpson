@@ -1,5 +1,6 @@
 package State;
 
+import java.awt.Component;
 import java.awt.Point;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
@@ -20,6 +21,7 @@ public class Preciosos implements State {
 		juego=j;
 		mapaGrafico= j.getMapaGrafico();
 		miobjeto=o;
+		
 	}
 
 	@Override
@@ -68,10 +70,12 @@ public class Preciosos implements State {
 			    	juego.getJugador().setMonedas(juego.getJugador().getMonedas()-miobjeto.getCosto());
 			    	juego.getMapaL().getTiendaLogica().actualizarPlata();
 			    	miobjeto.empezarHilo();
+			    	
+			    	
 		    		
 		    	}
 		    	
-		    	
+		    	((Component) e.getSource()).removeMouseListener(this);
 		    	
 		    }
 		});

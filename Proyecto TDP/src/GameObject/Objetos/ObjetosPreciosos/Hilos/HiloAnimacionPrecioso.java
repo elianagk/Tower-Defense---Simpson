@@ -15,6 +15,7 @@ public abstract class HiloAnimacionPrecioso extends Thread {
 	protected JLabel label;
 	protected int tiempo;
 	protected ObjetoPrecioso miobjeto;
+	protected volatile boolean flag= false;
 	
 	public HiloAnimacionPrecioso(MapaLogico mapa, ObjetoPrecioso g) {
 		mapaLogico=mapa;
@@ -28,21 +29,33 @@ public abstract class HiloAnimacionPrecioso extends Thread {
 	}
 	
 	
+	
+	
 	@SuppressWarnings("deprecation")
 	public void run() {
 		mapaLogico.entidadAAgregar(miobjeto, miobjeto.getX(), miobjeto.getY());
-		miobjeto.accionar();
 		
-		try {
-			Thread.sleep(tiempo);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
+		
+			try {
+				Thread.sleep(tiempo);
+				miobjeto.accionar();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			
 		
 		mapaLogico.entidadAEliminar(miobjeto);
+		//mapaLogico.getJuego().cambiarEstado(new Jugando(mapaLogico.getJuego()));
 		
 		this.stop();
-		mapaLogico.getJuego().cambiarEstado(new Jugando(mapaLogico.getJuego()));
+		this.destroy();
 	}
+	
+	
+	public void stopRunning() {
+		flag= true;
+	}
+	
+	
 	
 }

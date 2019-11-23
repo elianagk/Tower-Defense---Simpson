@@ -1,5 +1,6 @@
 package State;
 
+import java.awt.Component;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.Random;
@@ -29,7 +30,6 @@ public class Comprando implements State {
 		    public void mouseClicked(MouseEvent e) {
 		    	int x= e.getX();
 		    	int y= e.getY();
-		    	System.out.println("x: "+ x+" y: "+y);
 		    	int verdaderoy=0;
 		    	if(y>=170 && y<=800) {
 		    		if (y>200 && y<300) {
@@ -62,13 +62,16 @@ public class Comprando implements State {
 		    		}		
 		    		mapaGrafico.avisarTienda((x/100)*100,(verdaderoy*100)/100);
 		    		
-		    		juego.cambiarEstado(new Jugando(juego));
+		    		//juego.cambiarEstado(new Jugando(juego));
 
 		    	}
 		    	
+		    	juego.cambiarEstado(new Jugando(juego));
+		    	 ((Component) e.getSource()).removeMouseListener(this);
 		    }
 		});
 		mapaGrafico.setMouseListener(mouseListener);	
+		
 	}
 	
 	
