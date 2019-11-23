@@ -8,14 +8,14 @@ import GameObjectGrafico.ObjetoGrafico;
 import GameObjectGrafico.ObjetosGraficos.ObjetosConVida.SuperDuffGrafico;
 import Mapa.MapaLogico;
 import VISITOR.Visitor;
-import VISITOR.VisitorConVida;
+import VISITOR.VisitorAliado;
 import VISITOR.VisitorPrecioso;
 
 public class SuperDuff extends ObjetoConVida {
 
 	public SuperDuff(MapaLogico mapaLogico) {
-		super(mapaLogico, new SuperDuffGrafico(mapaLogico),500);	//3°vida
-		visitor= new VisitorConVida(this);
+		super(mapaLogico, new SuperDuffGrafico(mapaLogico),600);	//3°vida
+		visitor= new VisitorAliado(this);
 	}
 
 	
@@ -32,8 +32,8 @@ public class SuperDuff extends ObjetoConVida {
 		return new SuperDuff(mapaLogico);
 	}
 
-
-
+	@Override
+	public void atacar(Personaje e) {}
 
 	@Override
 	public void accionar(Personaje e) {

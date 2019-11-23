@@ -47,8 +47,6 @@ public class Juego {
 		comenzarNiveles();
 	}
 	
-	
-	
 	public void mover(){
 		ArrayList<GameObject> entidades = this.mapaLogico.getEntidades();
 		ArrayList<GameObject> toCollide;

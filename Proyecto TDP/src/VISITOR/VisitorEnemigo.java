@@ -47,7 +47,7 @@ public class VisitorEnemigo extends Visitor {
 	}
 
 	public void visitar(SuperDuff s) {
-		miobjeto.accionar();
+		mipersonaje.atacar(s);
 	}
 	
 

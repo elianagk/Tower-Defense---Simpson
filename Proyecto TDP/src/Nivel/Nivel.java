@@ -42,9 +42,8 @@ public class Nivel {
 		Random r = new Random();
 		int x;
 		int y;
-		int eventoAleatorio= r.nextInt(2)+1;
+		int eventoAleatorio= r.nextInt(7)+1;
 		if(eventoAleatorio==1) {
-			System.out.println("--EVENTO ALEATORIO--");
 			g= new SuperDuff(mapaLogico);
 			y= (r.nextInt(6)+2)*100;
 			x= (r.nextInt(10)+1)*100;
@@ -63,7 +62,10 @@ public class Nivel {
 		final ScheduledFuture<?> crearHorda = 
 	    scheduler.scheduleAtFixedRate(new Runnable() {
 	    	 @Override
-	    	 public void run() { crearEnemigo(horda); }
+	    	 public void run() {
+	    		 crearEnemigo(horda); 
+	    		 crearEventoAleatorio();
+	    	 }
 	     }, 0, 5, TimeUnit.SECONDS);
 		
 	    if (cantEnemigos==0)
