@@ -14,7 +14,6 @@ import VISITOR.VisitorEnemigo;
 public class DisparoLogicoEnemigo extends Enemigo {
 	
 	protected Enemigo mipersonaje;
-	protected int contador;
 	
 	public DisparoLogicoEnemigo(MapaLogico ml, Enemigo p) {
 		super(ml, new DisparoGraficoEnemigo(),0,0);
@@ -46,6 +45,8 @@ public class DisparoLogicoEnemigo extends Enemigo {
 		contador++;
 		if (contador==mipersonaje.getAlcance()) {
 			mapaLogico.entidadAEliminar(this);
+			mipersonaje.setAccionar(true);
+			mipersonaje.setAtacando(false);
 		}
 	}
 

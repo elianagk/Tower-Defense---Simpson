@@ -13,10 +13,7 @@ import Mapa.MapaLogico;
 import VISITOR.Visitor;
 import VISITOR.VisitorEnemigo;
 
-public class Moe extends Enemigo {
-	private int tiempo;
-	private int contador;
-	
+public class Moe extends Enemigo {		
 	
 	public Moe(MapaLogico ml) {
 		super(ml, new MoeGrafico(), 550, 300);		

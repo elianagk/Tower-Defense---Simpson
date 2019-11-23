@@ -4,17 +4,19 @@ import java.awt.Point;
 
 import GameObject.GameObject;
 import GameObject.Personaje;
+import GameObject.Personajes.Disparos.DisparoLogicoEnemigo;
 import GameObjectGrafico.GameObjectGrafico;
 import Mapa.MapaLogico;
 import VISITOR.Visitor;
 import VISITOR.VisitorAliado;
 
 public abstract class Torre extends Personaje {
-	
+	protected int tiempo;
 
 	public Torre(MapaLogico mapaLogico, GameObjectGrafico gog, int vida) {
 		super(mapaLogico, gog, vida);		
 		velocidad=0;		
+		tiempo=15;
 	}	
 	
 	public void accionar() {
@@ -26,9 +28,15 @@ public abstract class Torre extends Personaje {
 
 	@Override
 	public void atacar(Personaje e) {
-		accionar=false;
-		miObjetoGrafico.atacar();				
-		e.aplicarDaño(daño);	
+		accionar=false;			
+		miObjetoGrafico.atacar();	
+		contador++;
+		
+		if (contador>=tiempo) {						
+			e.aplicarDaño(daño);	
+			contador=0;
+		}		
+		
 		if (!e.getEsValido()) { 
 			accionar=true;		
 			mover(still_key);

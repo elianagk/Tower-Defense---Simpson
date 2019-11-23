@@ -13,8 +13,6 @@ import VISITOR.Visitor;
 import VISITOR.VisitorEnemigo;
 
 public class MrBurns extends Enemigo {
-	private int tiempo;
-	private int contador;
 	
 	public MrBurns(MapaLogico ml) {
 		super(ml, new MrBurnsGrafico(), 1000,300);

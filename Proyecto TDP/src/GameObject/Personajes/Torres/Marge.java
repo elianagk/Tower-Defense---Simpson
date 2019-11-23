@@ -13,8 +13,6 @@ import VISITOR.Visitor;
 import VISITOR.VisitorAliado;
 
 public class Marge extends Torre {
-	private int tiempo;
-	private int contador;
 	
 	public Marge(MapaLogico mapaLogico) {
 		super(mapaLogico, new MargeGrafico(), 400);

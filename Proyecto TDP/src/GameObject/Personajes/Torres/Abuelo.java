@@ -14,7 +14,6 @@ import VISITOR.VisitorAliado;
 import VISITOR.VisitorEnemigo;
 
 public class Abuelo extends Torre {
-	protected int tiempo;
 	protected int contador;
 	
 	public Abuelo(MapaLogico mapaLogico) {

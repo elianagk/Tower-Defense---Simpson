@@ -9,7 +9,8 @@ public abstract class Personaje extends GameObject {
 	protected int daño;
 	protected int alcanceContador;
 	protected boolean accionar;		
-
+	protected int contador;
+	
 	protected int jump_strenght = 10;
 
 	public Personaje(MapaLogico ml, GameObjectGrafico gog, int vida) {
@@ -32,14 +33,7 @@ public abstract class Personaje extends GameObject {
 		this.alcanceContador = alcance;
 	}
 	
-	public void atacar(Personaje e) {
-		accionar=false;							
-		mover(still_key);		
-		miObjetoGrafico.atacar();		
-		e.aplicarDaño(daño);
-		if (!e.getEsValido())
-			accionar=true;
-	}
+	public abstract void atacar(Personaje e) ;
 
 	public int getDaño() {
 		return daño;
