@@ -64,12 +64,13 @@ public class Preciosos implements State {
 		    				}
 		    			}
 		    		}
-		    		
-		    		Point p= new Point(x, verdaderoy);
-			    	miobjeto.setPosicion(p);
-			    	juego.getJugador().setMonedas(juego.getJugador().getMonedas()-miobjeto.getCosto());
-			    	juego.getMapaL().getTiendaLogica().actualizarPlata();
-			    	miobjeto.empezarHilo();
+		    		if (mapaGrafico.getTiendaLogica().sePuedeComprar(miobjeto.getCosto())) {
+			    		Point p= new Point(x, verdaderoy);
+				    	miobjeto.setPosicion(p);
+				    	juego.getJugador().setMonedas(juego.getJugador().getMonedas()-miobjeto.getCosto());
+				    	juego.getMapaL().getTiendaLogica().actualizarPlata();
+				    	miobjeto.empezarHilo();
+		    		}
 			    	
 			    	
 		    		

@@ -57,9 +57,18 @@ public class TiendaLogica {
 		return jugador;
 	}
 	
+	public boolean sePuedeComprar( int x) {
+		boolean sepuede=true;
+		if (jugador.getMonedas()==0 || jugador.getMonedas()<x) {
+			sepuede=false;
+		}
+		
+		
+		return sepuede;
+	}
 	
 	public void revisarTienda(int x, int y) {
-		if (ProximaEntidad() && jugador.getMonedas()>0 && g.getCosto()<=jugador.getMonedas()) {
+		if (ProximaEntidad() && sePuedeComprar(g.getCosto())) {
 			jugador.setMonedas(jugador.getMonedas()-g.getCosto());
 			mapaLogico.entidadAAgregar(g, x, y);			
 			tienda.actualizarPlata(jugador.getMonedas());			
