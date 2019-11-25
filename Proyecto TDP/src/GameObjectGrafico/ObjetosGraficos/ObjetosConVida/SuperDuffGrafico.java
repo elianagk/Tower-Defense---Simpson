@@ -13,13 +13,5 @@ public class SuperDuffGrafico extends ObjetoPreciosoGrafico{
 		this.setSize(100, 100);
 		
 	}
-	
-	public boolean dentroHitbox(int x, int y, GameObjectGrafico gog) {
-		boolean dentro= false;
-		if(gog.getBounds().intersects(x, y, 100, 100)) {
-			dentro= true;
-		}
-		return dentro;
-	}
 
 }
