@@ -9,6 +9,12 @@ import java.util.Random;
 import GameObject.GameObject;
 import GameObject.Objetos.ObjetosConVida.SuperDuff;
 import GameObject.Personajes.Enemigos.*;
+import GameObject.Personajes.Enemigos.EnemigosCuerpo.Apu;
+import GameObject.Personajes.Enemigos.EnemigosCuerpo.Barney;
+import GameObject.Personajes.Enemigos.EnemigosCuerpo.BumbleeMan;
+import GameObject.Personajes.Enemigos.EnemigosDisparan.Chief;
+import GameObject.Personajes.Enemigos.EnemigosDisparan.Moe;
+import GameObject.Personajes.Enemigos.EnemigosDisparan.MrBurns;
 import Mapa.MapaLogico;
 
 public class Horda {

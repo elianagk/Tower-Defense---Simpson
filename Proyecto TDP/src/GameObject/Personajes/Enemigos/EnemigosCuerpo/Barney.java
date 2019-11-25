@@ -1,4 +1,4 @@
-package GameObject.Personajes.Enemigos;
+package GameObject.Personajes.Enemigos.EnemigosCuerpo;
 
 
 
@@ -7,13 +7,13 @@ import javax.swing.JLabel;
 import GameObject.GameObject;
 import GameObject.Personaje;
 import GameObject.Personajes.Enemigo;
-
+import GameObject.Personajes.Enemigos.EnemigoCuerpo;
 import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.BarneyGrafico;
 import Mapa.MapaLogico;
 import VISITOR.Visitor;
 import VISITOR.VisitorEnemigo;
 
-public class Barney extends Enemigo {
+public class Barney extends EnemigoCuerpo {
 	
 	
 	public Barney(MapaLogico ml) {

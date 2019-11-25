@@ -1,4 +1,4 @@
-package GameObject.Personajes.Enemigos;
+package GameObject.Personajes.Enemigos.EnemigosDisparan;
 
 
 
@@ -8,23 +8,29 @@ import GameObject.GameObject;
 import GameObject.Personaje;
 import GameObject.Personajes.Enemigo;
 import GameObject.Personajes.Disparos.DisparoLogicoEnemigo;
-import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.MoeGrafico;
+import GameObject.Personajes.Disparos.DisparoLogicoTorre;
+import GameObject.Personajes.Enemigos.EnemigoDisparo;
+import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.ChiefGrafico;
 import Mapa.MapaLogico;
 import VISITOR.Visitor;
 import VISITOR.VisitorEnemigo;
 
-public class Moe extends Enemigo {		
+public class Chief extends EnemigoDisparo {
 	
-	public Moe(MapaLogico ml) {
-		super(ml, new MoeGrafico(), 550, 300);		
+	public Chief(MapaLogico ml) {
+		super(ml, new ChiefGrafico(), 150,300);
 		velocidad= 6;
 		visitor= new VisitorEnemigo(this);
-		tiempo=20;
+		tiempo=18;
 		contador=0;
-		daño=25;
-		
+		daño=50;
 	}
-
+	
+	@Override
+	public boolean estaEnRango(GameObject g) {		
+		return (g.getX()>=this.getX()-100 && g.getX()<=getX() && g.getY()==this.getY()); 
+	}
+	
 	@Override
 	public void atacar(Personaje e) {
 		accionar=false;	
@@ -49,7 +55,7 @@ public class Moe extends Enemigo {
 	}
 
 	public GameObject clone() {
-		return new Moe(mapaLogico);
+		return new Chief(mapaLogico);
 	}
 	
 	@Override
@@ -59,10 +65,9 @@ public class Moe extends Enemigo {
 		else {
 			if (accionar) {
 				super.mover(backward_key);
-				miObjetoGrafico.accionar();
-			}			
+			}
 		}			
-
 	}
+	
 	
 }
