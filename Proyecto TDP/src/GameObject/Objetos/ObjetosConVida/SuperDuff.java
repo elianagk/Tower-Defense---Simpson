@@ -40,8 +40,8 @@ public class SuperDuff extends ObjetoConVida {
 		int d= e.getDaño();
 		vida= vida-d;
 		if(vida<=0) {
-			mapaLogico.entidadAEliminar(this);
 			esValido=false;
+			mapaLogico.entidadAEliminar(this);
 		}
 	}
 

@@ -7,12 +7,13 @@ import GameObjectGrafico.GameObjectGrafico;
 import GameObjectGrafico.ObjetosGraficos.ObjetosConVida.MaggieGrafica;
 import Mapa.MapaLogico;
 import VISITOR.Visitor;
+import VISITOR.VisitorAliado;
 
 public class Maggie extends ObjetoConVida {
 
-	public Maggie(MapaLogico ml, GameObjectGrafico gog, int vida) {
-		super(ml, new MaggieGrafica(ml), 900);
-		
+	public Maggie(MapaLogico ml) {
+		super(ml, new MaggieGrafica(ml), 10000);
+		visitor= new VisitorAliado(this);
 	}
 
 	@Override
@@ -22,12 +23,24 @@ public class Maggie extends ObjetoConVida {
 
 	@Override
 	public GameObject clone() {
-		return new Maggie(mapaLogico, miObjetoGrafico, vida);
+		return new Maggie(mapaLogico);
+	}
+
+	@Override
+	public void accionar() {		
+	}
+		
+	@Override
+	public void atacar(Personaje e) {
+		esValido= false;
+		mapaLogico.entidadAEliminar(this);
+		e.aplicarDaño(e.getVidaTotal());
+		mapaLogico.entidadAEliminar(e);
 	}
 
 	@Override
 	public void accionar(Personaje e) {
-		
+		// TODO Auto-generated method stub
 		
 	}
 

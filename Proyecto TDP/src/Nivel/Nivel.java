@@ -10,6 +10,7 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 import GameObject.GameObject;
+import GameObject.Objetos.ObjetosConVida.Maggie;
 import GameObject.Objetos.ObjetosConVida.SuperDuff;
 import Hordas.Horda;
 import Juego.Juego;
@@ -42,12 +43,21 @@ public class Nivel {
 		Random r = new Random();
 		int x;
 		int y;
+		int opcion;
 		int eventoAleatorio= r.nextInt(7)+1;
 		if(eventoAleatorio==1) {
-			g= new SuperDuff(mapaLogico);
-			y= (r.nextInt(6)+2)*100;
-			x= (r.nextInt(10)+1)*100;
-			mapaLogico.entidadAAgregar(g, x, y);
+			opcion= r.nextInt(2)+1;
+			if(opcion==0) {
+				g= new SuperDuff(mapaLogico);
+				y= (r.nextInt(6)+2)*100;
+				x= (r.nextInt(9)+1)*100;
+				mapaLogico.entidadAAgregar(g, x, y);
+			}else {
+				g= new Maggie(mapaLogico);
+				y= (r.nextInt(6)+2)*100;
+				x= (r.nextInt(9)+1)*100;
+				mapaLogico.entidadAAgregar(g, x, y);
+			}
 		}	
 	}
 	
