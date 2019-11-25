@@ -33,8 +33,7 @@ public abstract class GameObject {
 	public GameObject(MapaLogico ml, GameObjectGrafico gog) {
 		posicion = null;
 		mapaLogico = ml;
-		miObjetoGrafico = gog;
-		
+		miObjetoGrafico = gog;		
 		esValido=true;
 		
 	}

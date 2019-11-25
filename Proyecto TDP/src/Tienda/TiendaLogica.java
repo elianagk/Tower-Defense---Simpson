@@ -63,15 +63,17 @@ public class TiendaLogica {
 			sepuede=false;
 		}
 		
-		
 		return sepuede;
 	}
 	
 	public void revisarTienda(int x, int y) {
-		if (ProximaEntidad() && sePuedeComprar(g.getCosto())) {
-			jugador.setMonedas(jugador.getMonedas()-g.getCosto());
-			mapaLogico.entidadAAgregar(g, x, y);			
-			tienda.actualizarPlata(jugador.getMonedas());			
+		boolean ocupado;
+		if (ProximaEntidad() && sePuedeComprar(g.getCosto())) {			
+			ocupado= mapaLogico.entidadAAgregar(g, x, y);
+			if (!ocupado) {
+				jugador.setMonedas(jugador.getMonedas()-g.getCosto());
+				tienda.actualizarPlata(jugador.getMonedas());
+			}
 			g= null;
 		}
 	}
