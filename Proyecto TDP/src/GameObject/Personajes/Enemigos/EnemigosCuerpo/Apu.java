@@ -1,9 +1,10 @@
-package GameObject.Personajes.Enemigos;
+package GameObject.Personajes.Enemigos.EnemigosCuerpo;
 
 import java.awt.Point;
 
 import javax.swing.JLabel;
 import GameObject.Personajes.Enemigo;
+import GameObject.Personajes.Enemigos.EnemigoCuerpo;
 import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.ApuGrafico;
 import Mapa.MapaLogico;
 import VISITOR.Visitor;
@@ -11,7 +12,7 @@ import VISITOR.VisitorEnemigo;
 import GameObject.GameObject;
 import GameObject.Personaje;
 
-public class Apu extends Enemigo {
+public class Apu extends EnemigoCuerpo {
 	
 	public Apu(MapaLogico ml) {
 		super(ml, new ApuGrafico(), 400, 200);		

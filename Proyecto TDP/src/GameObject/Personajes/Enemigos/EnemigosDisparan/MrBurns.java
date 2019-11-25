@@ -1,5 +1,4 @@
-package GameObject.Personajes.Enemigos;
-
+package GameObject.Personajes.Enemigos.EnemigosDisparan;
 
 
 import javax.swing.JLabel;
@@ -8,26 +7,21 @@ import GameObject.GameObject;
 import GameObject.Personaje;
 import GameObject.Personajes.Enemigo;
 import GameObject.Personajes.Disparos.DisparoLogicoEnemigo;
-import GameObject.Personajes.Disparos.DisparoLogicoTorre;
-import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.ChiefGrafico;
+import GameObject.Personajes.Enemigos.EnemigoDisparo;
+import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.MrBurnsGrafico;
 import Mapa.MapaLogico;
 import VISITOR.Visitor;
 import VISITOR.VisitorEnemigo;
 
-public class Chief extends Enemigo {
+public class MrBurns extends EnemigoDisparo {
 	
-	public Chief(MapaLogico ml) {
-		super(ml, new ChiefGrafico(), 150,300);
+	public MrBurns(MapaLogico ml) {
+		super(ml, new MrBurnsGrafico(), 1000,300);
 		velocidad= 6;
 		visitor= new VisitorEnemigo(this);
-		tiempo=18;
+		tiempo=16;
 		contador=0;
-		daño=50;
-	}
-	
-	@Override
-	public boolean estaEnRango(GameObject g) {		
-		return (g.getX()>=this.getX()-100 && g.getX()<=getX() && g.getY()==this.getY()); 
+		daño=95;
 	}
 	
 	@Override
@@ -54,18 +48,21 @@ public class Chief extends Enemigo {
 	}
 
 	public GameObject clone() {
-		return new Chief(mapaLogico);
+		return new MrBurns(mapaLogico);
 	}
 	
 	@Override
 	public void accionar() {
-		if (posicion.x<=0)
-			mapaLogico.gameOver();
+		if (posicion.x<=0) 
+			mapaLogico.gameOver();		
 		else {
-			if (accionar) {
+
+			if (accionar) {	
 				super.mover(backward_key);
-			}
-		}			
+				miObjetoGrafico.accionar();				
+			}			
+
+		}
 	}
 	
 	
