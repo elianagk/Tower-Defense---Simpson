@@ -21,6 +21,8 @@ public abstract class Personaje extends GameObject {
 		vidaTotal=vida;
 	}
 	
+	public abstract boolean enContacto(Personaje e); 			
+	
 	public void setAccionar(boolean accionar) {
 		this.accionar=accionar;
 	}

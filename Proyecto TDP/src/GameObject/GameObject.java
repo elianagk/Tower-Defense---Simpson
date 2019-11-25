@@ -23,7 +23,7 @@ public abstract class GameObject {
 	protected final int height = 100;
 
 	public static final String jump_key = "Jump";
-	public static final String forward_key = "Froward";
+	public static final String forward_key = "Forward";
 	public static final String backward_key = "Backward";
 	public static final String still_key = "Still";
 
