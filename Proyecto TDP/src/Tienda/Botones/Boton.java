@@ -10,8 +10,8 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.border.Border;
 
+import State.StateJuego.State;
 import Tienda.TiendaLogica;
-import State.State;
 
 public class Boton extends JButton {
 	

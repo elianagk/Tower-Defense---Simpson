@@ -3,8 +3,8 @@ package Tienda.Botones;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import State.Comprando;
-import State.Vendiendo;
+import State.StateJuego.Comprando;
+import State.StateJuego.Vendiendo;
 import Tienda.TiendaLogica;
 
 public class Vender extends Boton {

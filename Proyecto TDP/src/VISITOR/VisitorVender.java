@@ -6,7 +6,7 @@ import GameObject.Personajes.Enemigo;
 import GameObject.Personajes.Torre;
 import GameObject.Personajes.Disparos.DisparoLogicoEnemigo;
 import GameObject.Personajes.Disparos.DisparoLogicoTorre;
-import State.Jugando;
+import State.StateJuego.Jugando;
 import Tienda.TiendaLogica;
 
 public class VisitorVender extends Visitor {

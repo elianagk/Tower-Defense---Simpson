@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 import GameObject.Objetos.ObjetoPrecioso;
 import GameObject.Objetos.ObjetosPreciosos.Bomba;
 import GameObject.Objetos.ObjetosPreciosos.Fuego;
-import State.Preciosos;
+import State.StateJuego.Preciosos;
 
 public class Premio extends Boton {
 

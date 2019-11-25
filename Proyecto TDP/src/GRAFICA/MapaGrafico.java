@@ -4,8 +4,8 @@ import Tienda.TiendaGrafica;
 import Tienda.TiendaLogica;
 import GameObject.GameObject;
 import Juego.Juego;
-import State.Jugando;
-import State.State;
+import State.StateJuego.Jugando;
+import State.StateJuego.State;
 
 import javax.swing.Icon;
 import javax.swing.ImageIcon;

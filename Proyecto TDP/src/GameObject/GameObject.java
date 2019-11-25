@@ -87,7 +87,7 @@ public abstract class GameObject {
 		esValido=valido;
 	}
 	
-	public JLabel getGrafico() {
+	public GameObjectGrafico getGrafico() {
 		last_dir= still_key;
 		return miObjetoGrafico;
 	}

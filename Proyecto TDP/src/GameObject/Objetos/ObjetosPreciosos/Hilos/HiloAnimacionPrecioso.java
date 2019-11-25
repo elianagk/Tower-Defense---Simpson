@@ -6,7 +6,7 @@ import GRAFICA.MapaGrafico;
 import GameObject.GameObject;
 import GameObject.Objetos.ObjetoPrecioso;
 import Mapa.MapaLogico;
-import State.Jugando;
+import State.StateJuego.Jugando;
 
 public abstract class HiloAnimacionPrecioso extends Thread {
 	
