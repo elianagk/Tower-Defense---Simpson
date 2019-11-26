@@ -10,6 +10,7 @@ import GameObject.Personajes.Disparos.DisparoLogicoEnemigo;
 import GameObject.Personajes.Enemigos.EnemigoDisparo;
 import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.MrBurnsGrafico;
 import Mapa.MapaLogico;
+import State.StatePersonaje.PersonajeOcioso;
 import VISITOR.Visitor;
 import VISITOR.VisitorEnemigo;
 
@@ -22,6 +23,7 @@ public class MrBurns extends EnemigoDisparo {
 		tiempo=16;
 		contador=0;
 		daño=95;
+		estado=new PersonajeOcioso(this, backward_key);
 	}
 	
 	@Override
@@ -51,19 +53,7 @@ public class MrBurns extends EnemigoDisparo {
 		return new MrBurns(mapaLogico);
 	}
 	
-	@Override
-	public void accionar() {
-		if (posicion.x<=0) 
-			mapaLogico.gameOver();		
-		else {
-
-			if (accionar) {	
-				super.mover(backward_key);
-				miObjetoGrafico.accionar();				
-			}			
-
-		}
-	}
+	
 	
 	
 }

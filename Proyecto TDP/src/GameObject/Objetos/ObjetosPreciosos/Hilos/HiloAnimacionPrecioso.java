@@ -48,7 +48,6 @@ public abstract class HiloAnimacionPrecioso extends Thread {
 		//mapaLogico.getJuego().cambiarEstado(new Jugando(mapaLogico.getJuego()));
 		
 		this.stop();
-		this.destroy();
 	}
 	
 	

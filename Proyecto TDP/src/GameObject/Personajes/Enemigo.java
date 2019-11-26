@@ -62,36 +62,11 @@ public abstract  class Enemigo extends Personaje {
 	}
 	
 	@Override
-	public void atacar(Personaje e) {
-		accionar=false;	
-		if (e.getX()>=this.getX()-100 && e.getX()<=getX() && e.getY()==this.getY()) {	
-			atacando=true;
-			super.mover(still_key);
-			miObjetoGrafico.atacar();		
-			contador++;
-			if (contador>=tiempo) {						
-				e.aplicarDaño(daño);	
-				contador=0;
-			}		
-		}
+	public void accionar() {
+		if (posicion.x<=0) 
+			mapaLogico.gameOver();		
 		else {
-			if (!atacando)
-				super.mover(backward_key);
-		}				
-		
-		if (!e.getEsValido()) {
-			accionar=true;
-			atacando=false;
-		}
-	}
-	
-	@Override
-	public void accionar() {		
-		if (posicion.x<=0)
-			mapaLogico.gameOver();
-		else {							
-			if (accionar)
-				super.mover(backward_key);
+			estado.accionar();
 		}
 	}
 	
