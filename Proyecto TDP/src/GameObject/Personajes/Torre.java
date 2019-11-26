@@ -48,10 +48,14 @@ public abstract class Torre extends Personaje {
 		v.visitar(this);
 	}
 	
+	@Override
 	public boolean estaEnRango(GameObject g) {
 		return (g.getX()>=getX() && g.getX()<=this.getX()+350 && g.getY()==this.getY())   ;
 	}
 	
-	
+	@Override
+	public boolean enContacto (Personaje e) {
+		return (e.getX()>=getX() && e.getX()<=this.getX()+100 && e.getY()==this.getY());
+	}
 	
 }

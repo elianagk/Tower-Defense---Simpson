@@ -39,8 +39,10 @@ public class SuperDuff extends ObjetoConVida {
 	public void accionar(Personaje e) {
 		int d= e.getDaño();
 		vida= vida-d;
-		if(vida<=0)
+		if(vida<=0) {
+			esValido=false;
 			mapaLogico.entidadAEliminar(this);
+		}
 	}
 
 	

@@ -5,11 +5,11 @@ import javax.swing.*;
 import Juego.Juego;
 import Jugador.Jugador;
 import Mapa.MapaLogico;
+import State.StateJuego.State;
+import State.StateJuego.Vendiendo;
 import Tienda.TiendaGrafica;
 import Tienda.TiendaLogica;
 import Tienda.Botones.BotonComprar;
-import State.State;
-import State.Vendiendo;
 
 
 public class DiseñoGeneral extends JFrame{

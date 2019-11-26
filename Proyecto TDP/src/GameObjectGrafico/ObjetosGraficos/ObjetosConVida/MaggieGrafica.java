@@ -8,7 +8,7 @@ public class MaggieGrafica extends ObjetoPreciosoGrafico{
 
 	public MaggieGrafica(MapaLogico ml) {
 		super("maggie.png", ml);
-		
+		this.setSize(100, 100);
 	}
 
 }

@@ -23,7 +23,7 @@ public abstract class GameObject {
 	protected final int height = 100;
 
 	public static final String jump_key = "Jump";
-	public static final String forward_key = "Froward";
+	public static final String forward_key = "Forward";
 	public static final String backward_key = "Backward";
 	public static final String still_key = "Still";
 
@@ -33,8 +33,7 @@ public abstract class GameObject {
 	public GameObject(MapaLogico ml, GameObjectGrafico gog) {
 		posicion = null;
 		mapaLogico = ml;
-		miObjetoGrafico = gog;
-		
+		miObjetoGrafico = gog;		
 		esValido=true;
 		
 	}
@@ -88,7 +87,7 @@ public abstract class GameObject {
 		esValido=valido;
 	}
 	
-	public JLabel getGrafico() {
+	public GameObjectGrafico getGrafico() {
 		last_dir= still_key;
 		return miObjetoGrafico;
 	}

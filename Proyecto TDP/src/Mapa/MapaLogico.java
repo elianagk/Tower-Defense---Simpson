@@ -80,7 +80,7 @@ public class MapaLogico  {
 		entidadesAAgregar.add(o);	
 	}
 	
-	public void entidadAAgregar(GameObject o, int x, int y) {		
+	public boolean entidadAAgregar(GameObject o, int x, int y) {		
 		boolean ocupado=false;
 		GameObject entidad;
 		Iterator<GameObject> itEntidades= entidades.iterator();
@@ -95,6 +95,7 @@ public class MapaLogico  {
 			o.setPosicion(p);
 			entidadesAAgregar.add(o);		
 		}
+		return ocupado;
 	}
 	
 	private void agregarEntidad(GameObject o, ArrayList<GameObject> lista) {				

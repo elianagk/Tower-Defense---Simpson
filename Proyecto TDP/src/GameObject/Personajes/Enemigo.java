@@ -95,10 +95,15 @@ public abstract  class Enemigo extends Personaje {
 		}
 	}
 	
+	@Override
 	public boolean estaEnRango(GameObject g) {		
 		return (g.getX()>=this.getX()-100 && g.getX()<=getX() && g.getY()==this.getY()); 
 	}
 	
+	@Override
+	public boolean enContacto(Personaje e) {
+		return estaEnRango(e);
+	}
 	
 	@Override
 	public void aplicarDaño(int daño) {		

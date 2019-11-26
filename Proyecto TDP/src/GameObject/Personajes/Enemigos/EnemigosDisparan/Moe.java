@@ -1,4 +1,5 @@
-package GameObject.Personajes.Enemigos;
+package GameObject.Personajes.Enemigos.EnemigosDisparan;
+
 
 
 import javax.swing.JLabel;
@@ -7,22 +8,24 @@ import GameObject.GameObject;
 import GameObject.Personaje;
 import GameObject.Personajes.Enemigo;
 import GameObject.Personajes.Disparos.DisparoLogicoEnemigo;
-import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.MrBurnsGrafico;
+import GameObject.Personajes.Enemigos.EnemigoDisparo;
+import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.MoeGrafico;
 import Mapa.MapaLogico;
 import VISITOR.Visitor;
 import VISITOR.VisitorEnemigo;
 
-public class MrBurns extends Enemigo {
+public class Moe extends EnemigoDisparo {		
 	
-	public MrBurns(MapaLogico ml) {
-		super(ml, new MrBurnsGrafico(), 1000,300);
+	public Moe(MapaLogico ml) {
+		super(ml, new MoeGrafico(), 550, 300);		
 		velocidad= 6;
 		visitor= new VisitorEnemigo(this);
-		tiempo=16;
+		tiempo=20;
 		contador=0;
-		daño=95;
+		daño=25;
+		
 	}
-	
+
 	@Override
 	public void atacar(Personaje e) {
 		accionar=false;	
@@ -47,22 +50,20 @@ public class MrBurns extends Enemigo {
 	}
 
 	public GameObject clone() {
-		return new MrBurns(mapaLogico);
+		return new Moe(mapaLogico);
 	}
 	
 	@Override
 	public void accionar() {
-		if (posicion.x<=0) 
-			mapaLogico.gameOver();		
+		if (posicion.x<=0)
+			mapaLogico.gameOver();
 		else {
-
-			if (accionar) {	
+			if (accionar) {
 				super.mover(backward_key);
-				miObjetoGrafico.accionar();				
+				miObjetoGrafico.accionar();
 			}			
+		}			
 
-		}
 	}
-	
 	
 }

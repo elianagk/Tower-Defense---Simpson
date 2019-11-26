@@ -1,4 +1,4 @@
-package State;
+package State.StateJuego;
 
 import java.awt.Component;
 import java.awt.event.MouseEvent;

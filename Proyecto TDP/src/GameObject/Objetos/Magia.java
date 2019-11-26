@@ -18,13 +18,6 @@ public abstract class Magia extends Objeto {
 		super(mapaLogico, m);
 		
 	}
-
-	@Override
-	public JLabel getGrafico() {
-		last_dir= still_key;
-		return miObjetoGrafico;
-	}
-	
 	
 	public abstract void activar();
 	

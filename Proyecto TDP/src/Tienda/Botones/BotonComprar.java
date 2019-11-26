@@ -15,9 +15,7 @@ import javax.swing.JButton;
 import javax.swing.border.Border;
 
 import GameObject.GameObject;
-
-import State.Comprando;
-
+import State.StateJuego.Comprando;
 import Tienda.TiendaLogica;
 
 public class BotonComprar extends Boton {
