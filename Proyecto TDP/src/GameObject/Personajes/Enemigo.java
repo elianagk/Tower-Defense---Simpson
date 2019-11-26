@@ -76,7 +76,7 @@ public abstract  class Enemigo extends Personaje {
 		}
 		else {
 			if (!atacando)
-				super.mover(backward_key);
+				accionar();
 		}				
 		
 		if (!e.getEsValido()) {
