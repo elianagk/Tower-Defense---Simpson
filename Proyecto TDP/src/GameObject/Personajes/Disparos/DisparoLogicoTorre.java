@@ -7,6 +7,7 @@ import GameObject.Personaje;
 import GameObject.Personajes.Torre;
 import GameObjectGrafico.PersonajesGrafico.DisparoGrafico.DisparoGraficoTorre;
 import Mapa.MapaLogico;
+import State.StatePersonaje.PersonajeOcioso;
 import VISITOR.Visitor;
 import VISITOR.VisitorAliado;
 
@@ -23,13 +24,11 @@ public class DisparoLogicoTorre extends Torre {
 		visitor= new VisitorAliado(this);
 		velocidad=5;
 		contador=0;
-		
-		
+		estado=new PersonajeOcioso(this, forward_key);		
 	}
 
-	
 	@Override
-	public void atacar(Personaje e) {
+	public void atacarPersonaje(Personaje e) {
 		super.mover(still_key);
 		e.aplicarDaño(mipersonaje.getDaño());
 		mapaLogico.entidadAEliminar(this);
@@ -40,21 +39,19 @@ public class DisparoLogicoTorre extends Torre {
 
 	@Override
 	public void accionar() {
-		super.mover(forward_key);
-		contador++;
-		if (contador==mipersonaje.getAlcance()) {
-			mapaLogico.entidadAEliminar(this);
-		}
-		
+		estado.accionar();
+//		super.mover(forward_key);
+//		contador++;
+//		if (contador==mipersonaje.getAlcance()) {
+//			mapaLogico.entidadAEliminar(this);
+//		}
+//		
 	}
 	
-
-
 	@Override
 	public void Aceptar(Visitor visitor) {
 		visitor.visitarDisparo(this);
 	}
-
 
 	@Override
 	public Visitor getVisitor() {
@@ -62,15 +59,10 @@ public class DisparoLogicoTorre extends Torre {
 		return visitor;
 	}
 
-
 	@Override
 	public GameObject clone() {
 		
 		return new DisparoLogicoTorre(mapaLogico, mipersonaje);
 	}
 	
-	
-
-	
-
 }

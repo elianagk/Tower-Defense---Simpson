@@ -3,8 +3,7 @@ package Tienda.Botones;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import GameObject.Personajes.Torres.Homero;
-import GameObject.Personajes.Torres.Marge;
+import GameObject.Personajes.Torres.TorresDisparo.Marge;
 import Tienda.TiendaLogica;
 
 public class BotonMarge extends BotonComprar {

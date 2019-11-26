@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 
-import GameObject.Personajes.Torres.Bart;
+import GameObject.Personajes.Torres.TorresCuerpo.Bart;
 import Tienda.TiendaLogica;
 
 public class BotonBart extends BotonComprar {

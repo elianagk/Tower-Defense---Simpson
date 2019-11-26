@@ -7,6 +7,7 @@ import GameObject.Objetos.ObjetoPrecioso;
 import GameObjectGrafico.ObjetoGrafico;
 import GameObjectGrafico.ObjetosGraficos.ObjetosConVida.SuperDuffGrafico;
 import Mapa.MapaLogico;
+import State.StatePersonaje.PersonajeOcioso;
 import VISITOR.Visitor;
 import VISITOR.VisitorAliado;
 import VISITOR.VisitorPrecioso;
@@ -16,10 +17,8 @@ public class SuperDuff extends ObjetoConVida {
 	public SuperDuff(MapaLogico mapaLogico) {
 		super(mapaLogico, new SuperDuffGrafico(mapaLogico),600);	//3°vida
 		visitor= new VisitorAliado(this);
+		estado=new PersonajeOcioso(this, still_key);
 	}
-
-	
-
 
 	@Override
 	public void Aceptar(Visitor visitante) {
@@ -43,6 +42,11 @@ public class SuperDuff extends ObjetoConVida {
 			esValido=false;
 			mapaLogico.entidadAEliminar(this);
 		}
+	}
+
+	@Override
+	public void atacarPersonaje(Personaje e) {
+
 	}
 
 	

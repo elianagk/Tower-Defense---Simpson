@@ -19,28 +19,9 @@ public abstract class Torre extends Personaje {
 		tiempo=15;
 	}	
 	
-	public void accionar() {
-		if (accionar) {
-			miObjetoGrafico.accionar();
-			super.mover(still_key);
-		}
-	}
-
 	@Override
-	public void atacar(Personaje e) {
-		accionar=false;			
-		miObjetoGrafico.atacar();	
-		contador++;
+	public void accionar() {
 		
-		if (contador>=tiempo) {						
-			e.aplicarDaño(daño);	
-			contador=0;
-		}		
-		
-		if (!e.getEsValido()) { 
-			accionar=true;		
-			mover(still_key);
-		}
 	}
 	
 	@Override

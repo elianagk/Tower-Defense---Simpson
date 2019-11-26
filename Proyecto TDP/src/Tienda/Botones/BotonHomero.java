@@ -7,8 +7,7 @@ import java.awt.event.ActionListener;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 
-import GameObject.Personajes.Torres.Bart;
-import GameObject.Personajes.Torres.Homero;
+import GameObject.Personajes.Torres.TorresCuerpo.Homero;
 import Tienda.TiendaLogica;
 
 public class BotonHomero extends BotonComprar {

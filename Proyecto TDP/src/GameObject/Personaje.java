@@ -40,6 +40,11 @@ public abstract class Personaje extends GameObject {
 		estado.atacar(e);
 	}
 	
+	@Override
+	public void accionar() {
+		estado.accionar();
+	}
+	
 	public abstract void atacarPersonaje(Personaje e);
 
 	public int getDaño() {
