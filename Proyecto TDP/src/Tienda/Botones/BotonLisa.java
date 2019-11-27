@@ -3,8 +3,7 @@ package Tienda.Botones;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import GameObject.Personajes.Torres.Homero;
-import GameObject.Personajes.Torres.Lisa;
+import GameObject.Personajes.Torres.TorresCuerpo.Lisa;
 import Tienda.TiendaLogica;
 
 public class BotonLisa extends BotonComprar {

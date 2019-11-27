@@ -1,4 +1,4 @@
-package GameObject.Personajes.Torres;
+package GameObject.Personajes.Torres.TorresDisparo;
 
 import javax.swing.JLabel;
 
@@ -6,13 +6,15 @@ import GameObject.GameObject;
 import GameObject.Personaje;
 import GameObject.Personajes.Torre;
 import GameObject.Personajes.Disparos.DisparoLogicoTorre;
+import GameObject.Personajes.Torres.TorreDisparo;
 import GameObjectGrafico.PersonajesGrafico.TorresGrafico.BartGrafico;
 import GameObjectGrafico.PersonajesGrafico.TorresGrafico.MargeGrafico;
 import Mapa.MapaLogico;
+import State.StatePersonaje.PersonajeOcioso;
 import VISITOR.Visitor;
 import VISITOR.VisitorAliado;
 
-public class Marge extends Torre {
+public class Marge extends TorreDisparo {
 	
 	public Marge(MapaLogico mapaLogico) {
 		super(mapaLogico, new MargeGrafico(), 400);
@@ -21,30 +23,14 @@ public class Marge extends Torre {
 		contador=0;
 		daño=65;
 		costo=1000;
-	}
-	
-	
-	@Override
-	public void atacar(Personaje e) {
-		accionar();				
+		estado=new PersonajeOcioso(this, still_key);
 	}
 	
 	public GameObject clone() {
 		return new Marge(mapaLogico);
 	}
 
-	
 
-
-	@Override
-	public void accionar() {
-		miObjetoGrafico.atacar();
-		contador++;
-		if (contador==tiempo) {
-			mapaLogico.disparoAAgregar(new DisparoLogicoTorre(mapaLogico, this), this.getX()+50, this.getY());
-			contador=0;
-		}
-	}
 	
 	
 

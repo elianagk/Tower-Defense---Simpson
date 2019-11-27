@@ -18,13 +18,13 @@ public class PersonajeAtaque extends StatePersonaje {
 			miPersonaje.atacarPersonaje(e);
 		}
 		else
-			miPersonaje.cambiarEstado(new EnemigoOcioso(miPersonaje, direccion));
+			miPersonaje.cambiarEstado(new PersonajeOcioso(miPersonaje, direccion));
 	}
 	
 	@Override
 	public void accionar() {
 		if (!atacando.getEsValido()) {
-			miPersonaje.cambiarEstado(new EnemigoOcioso(miPersonaje, direccion));			
+			miPersonaje.cambiarEstado(new PersonajeOcioso(miPersonaje, direccion));			
 		}
 		else {
 			if (miPersonaje.enContacto(atacando))

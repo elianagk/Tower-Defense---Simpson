@@ -2,6 +2,7 @@ package GameObject;
 
 import GameObjectGrafico.GameObjectGrafico;
 import Mapa.MapaLogico;
+import State.StatePersonaje.StatePersonaje;
 import VISITOR.Visitor;
 
 public abstract class Personaje extends GameObject {
@@ -9,8 +10,8 @@ public abstract class Personaje extends GameObject {
 	protected int daño;
 	protected int alcanceContador;
 	protected boolean accionar;		
-	protected int contador;
-	
+	protected int contador;	
+	protected StatePersonaje estado;
 	protected int jump_strenght = 10;
 
 	public Personaje(MapaLogico ml, GameObjectGrafico gog, int vida) {
@@ -18,7 +19,7 @@ public abstract class Personaje extends GameObject {
 		alcanceContador=50;
 		accionar=true;
 		this.vida=vida;
-		vidaTotal=vida;
+		vidaTotal=vida;		
 	}
 	
 	public abstract boolean enContacto(Personaje e); 			
@@ -35,7 +36,16 @@ public abstract class Personaje extends GameObject {
 		this.alcanceContador = alcance;
 	}
 	
-	public abstract void atacar(Personaje e) ;
+	public void atacar(Personaje e) {
+		estado.atacar(e);
+	}
+	
+	@Override
+	public void accionar() {
+		estado.accionar();
+	}
+	
+	public abstract void atacarPersonaje(Personaje e);
 
 	public int getDaño() {
 		return daño;
@@ -56,11 +66,12 @@ public abstract class Personaje extends GameObject {
 	}
 	
 	protected void cambiarGrafico(String dir){
-		if(miObjetoGrafico != null) {
-			if (accionar)
-				miObjetoGrafico.accionar();
-			miObjetoGrafico.setBounds(posicion.x, posicion.y, 100, 100);
-		}
+		estado.cambiarGrafico();
+	}
+	
+	public void cambiarEstado(StatePersonaje est) {
+		estado.cambiarGrafico();
+		this.estado=est;
 	}
 	
 	public void mover(String dir){	
@@ -82,7 +93,5 @@ public abstract class Personaje extends GameObject {
 		this.last_dir = dir;		
 		cambiarGrafico(dir);
 	}
-	
-	
 	
 }
