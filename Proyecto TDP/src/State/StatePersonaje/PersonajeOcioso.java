@@ -21,7 +21,8 @@ public class PersonajeOcioso extends StatePersonaje {
 	
 	@Override
 	public void cambiarGrafico() {
-		miPersonaje.getGrafico().atacar();
+		System.out.println("Ocioso");
+		miPersonaje.getGrafico().accionar();
 	}
 	
 }

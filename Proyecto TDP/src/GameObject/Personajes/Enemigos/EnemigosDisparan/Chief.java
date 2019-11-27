@@ -12,6 +12,7 @@ import GameObject.Personajes.Disparos.DisparoLogicoTorre;
 import GameObject.Personajes.Enemigos.EnemigoDisparo;
 import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.ChiefGrafico;
 import Mapa.MapaLogico;
+import State.StatePersonaje.PersonajeOcioso;
 import VISITOR.Visitor;
 import VISITOR.VisitorEnemigo;
 
@@ -24,6 +25,7 @@ public class Chief extends EnemigoDisparo {
 		tiempo=18;
 		contador=0;
 		daño=50;
+		estado=new PersonajeOcioso(this, backward_key);
 	}
 	
 	@Override

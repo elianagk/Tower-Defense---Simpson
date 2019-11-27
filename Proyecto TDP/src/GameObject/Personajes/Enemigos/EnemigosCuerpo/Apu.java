@@ -7,6 +7,7 @@ import GameObject.Personajes.Enemigo;
 import GameObject.Personajes.Enemigos.EnemigoCuerpo;
 import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.ApuGrafico;
 import Mapa.MapaLogico;
+import State.StatePersonaje.PersonajeOcioso;
 import VISITOR.Visitor;
 import VISITOR.VisitorEnemigo;
 import GameObject.GameObject;
@@ -19,7 +20,7 @@ public class Apu extends EnemigoCuerpo {
 		velocidad= 5;
 		visitor= new VisitorEnemigo(this);
 		daño=30;
-
+		estado=new PersonajeOcioso(this, backward_key);
 	}
 	
 	public GameObject clone() {

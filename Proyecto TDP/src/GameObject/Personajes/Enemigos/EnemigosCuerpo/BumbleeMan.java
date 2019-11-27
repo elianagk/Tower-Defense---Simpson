@@ -10,6 +10,7 @@ import GameObject.Personajes.Enemigo;
 import GameObject.Personajes.Enemigos.EnemigoCuerpo;
 import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.BumbleeManGrafico;
 import Mapa.MapaLogico;
+import State.StatePersonaje.PersonajeOcioso;
 import VISITOR.Visitor;
 import VISITOR.VisitorEnemigo;
 
@@ -20,6 +21,7 @@ public class BumbleeMan extends EnemigoCuerpo {
 		velocidad= 3;
 		visitor= new VisitorEnemigo(this);
 		daño=30; //solo por ser abeja
+		estado=new PersonajeOcioso(this, backward_key);
 	}
 	
 	public GameObject clone() {

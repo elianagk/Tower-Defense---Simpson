@@ -14,26 +14,18 @@ public abstract class EnemigoCuerpo extends Enemigo{
 
 	@Override
 	public void atacarPersonaje(Personaje e) {
-		accionar=false;	
 		if (e.getX()>=this.getX()-100 && e.getX()<=getX() && e.getY()==this.getY()) {	
-			atacando=true;
-			super.mover(still_key);
-			miObjetoGrafico.atacar();		
 			contador++;
 			if (contador>=tiempo) {						
 				e.aplicarDaño(daño);	
 				contador=0;
 			}		
-		}
-		else {
-			if (!atacando)
-				super.mover(backward_key);
 		}				
-		
-		if (!e.getEsValido()) {
-			accionar=true;
-			atacando=false;
-		}
+	}
+	
+	@Override
+	public boolean cambiarGrafico(Personaje e) {
+		return enContacto(e);
 	}
 	
 }

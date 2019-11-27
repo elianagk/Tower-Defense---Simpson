@@ -11,6 +11,7 @@ import GameObject.Personajes.Disparos.DisparoLogicoEnemigo;
 import GameObject.Personajes.Enemigos.EnemigoDisparo;
 import GameObjectGrafico.PersonajesGrafico.EnemigosGrafico.MoeGrafico;
 import Mapa.MapaLogico;
+import State.StatePersonaje.PersonajeOcioso;
 import VISITOR.Visitor;
 import VISITOR.VisitorEnemigo;
 
@@ -23,7 +24,7 @@ public class Moe extends EnemigoDisparo {
 		tiempo=20;
 		contador=0;
 		daño=25;
-		
+		estado=new PersonajeOcioso(this, backward_key);
 	}
 
 	public GameObject clone() {

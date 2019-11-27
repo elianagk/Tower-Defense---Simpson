@@ -10,25 +10,14 @@ public class ApuGrafico extends EnemigoGrafico {
 		super ("apucaminandogif.gif");
 		
 	}
-
-	
-	
-	
-	
 	
 	public void atacar() {
 		super.atacar("apuatacando.gif");
 	}
 
-
-
 	@Override
 	public void accionar() {
-		super.accionar("apucaminandogif.gif");
-		
-	}
-
-	
-	
+		super.accionar("apucaminandogif.gif");	
+	}	
 
 }

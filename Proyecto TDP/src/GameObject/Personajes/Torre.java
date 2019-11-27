@@ -39,4 +39,8 @@ public abstract class Torre extends Personaje {
 		return (e.getX()>=getX() && e.getX()<=this.getX()+100 && e.getY()==this.getY());
 	}
 	
+	@Override
+	public boolean cambiarGrafico(Personaje e) {
+		return enContacto(e);
+	}
 }

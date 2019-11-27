@@ -22,7 +22,9 @@ public abstract class Personaje extends GameObject {
 		vidaTotal=vida;		
 	}
 	
-	public abstract boolean enContacto(Personaje e); 			
+	public abstract boolean enContacto(Personaje e);
+	
+	public abstract boolean cambiarGrafico(Personaje e);
 	
 	public void setAccionar(boolean accionar) {
 		this.accionar=accionar;
@@ -65,12 +67,12 @@ public abstract class Personaje extends GameObject {
 		}
 	}
 	
-	protected void cambiarGrafico(String dir){
+	public void cambiarGrafico(){
 		estado.cambiarGrafico();
 	}
 	
 	public void cambiarEstado(StatePersonaje est) {
-		estado.cambiarGrafico();
+//		estado.cambiarGrafico();
 		this.estado=est;
 	}
 	
@@ -91,7 +93,7 @@ public abstract class Personaje extends GameObject {
 				break;
 		}
 		this.last_dir = dir;		
-		cambiarGrafico(dir);
+//		cambiarGrafico(dir);
 	}
 	
 }

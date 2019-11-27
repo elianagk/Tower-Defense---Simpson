@@ -25,35 +25,9 @@ public class MrBurns extends EnemigoDisparo {
 		daño=95;
 		estado=new PersonajeOcioso(this, backward_key);
 	}
-	
-	@Override
-	public void atacar(Personaje e) {
-		accionar=false;	
-		if (e.getX()>=this.getX()-100 && e.getX()<=getX() && e.getY()==this.getY()) {
-			atacando=true;
-			super.mover(still_key);
-		}
-		else {
-			if (!atacando)
-				super.mover(backward_key);
-		}
-		miObjetoGrafico.atacar();
-		contador++;
-		if (contador>=tiempo) {
-			mapaLogico.disparoAAgregar(new DisparoLogicoEnemigo(mapaLogico, this), this.getX()-50, this.getY());
-			contador=0;
-		}	
-		if (!e.getEsValido()) {
-			accionar=true;
-			atacando=false;
-		}
-	}
 
 	public GameObject clone() {
 		return new MrBurns(mapaLogico);
 	}
-	
-	
-	
-	
+		
 }

@@ -8,13 +8,13 @@ public class PersonajeAtaque extends StatePersonaje {
 	public PersonajeAtaque (Personaje e, Personaje atacando, String direccion) {
 		super(e, direccion);
 		this.atacando=atacando;
-		miPersonaje.getGrafico().atacar();
-		
 	}
 	
 	@Override
 	public void atacar(Personaje e) {
 		if (atacando.getEsValido()) {
+			if (miPersonaje.cambiarGrafico(e))
+				miPersonaje.cambiarGrafico();
 			miPersonaje.atacarPersonaje(e);
 		}
 		else
@@ -24,7 +24,8 @@ public class PersonajeAtaque extends StatePersonaje {
 	@Override
 	public void accionar() {
 		if (!atacando.getEsValido()) {
-			miPersonaje.cambiarEstado(new PersonajeOcioso(miPersonaje, direccion));			
+			miPersonaje.cambiarEstado(new PersonajeOcioso(miPersonaje, direccion));
+			miPersonaje.cambiarGrafico();
 		}
 		else {
 			if (miPersonaje.enContacto(atacando))
@@ -38,6 +39,7 @@ public class PersonajeAtaque extends StatePersonaje {
 	
 	@Override
 	public void cambiarGrafico() {
-		miPersonaje.getGrafico().accionar();
+		System.out.println("Ataque");
+		miPersonaje.getGrafico().atacar();
 	}
 }
