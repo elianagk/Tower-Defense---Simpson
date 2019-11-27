@@ -69,12 +69,22 @@ public abstract class Personaje extends GameObject {
 	
 	public void cambiarGrafico(){
 		estado.cambiarGrafico();
+		
 	}
 	
 	public void cambiarEstado(StatePersonaje est) {
 //		estado.cambiarGrafico();
 		this.estado=est;
 	}
+	
+//	protected void cambiarGrafico(String dir){
+//		if(miObjetoGrafico != null) {
+//			
+//			miObjetoGrafico.accionar();
+//			miObjetoGrafico.setBounds(posicion.x, posicion.y, 100, 100);
+//		}
+//	}
+//	
 	
 	public void mover(String dir){	
 		switch (dir) {
@@ -93,7 +103,8 @@ public abstract class Personaje extends GameObject {
 				break;
 		}
 		this.last_dir = dir;		
-//		cambiarGrafico(dir);
+		cambiarGrafico();
+		
 	}
 	
 }

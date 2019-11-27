@@ -66,4 +66,10 @@ public class DisparoLogicoEnemigo extends Enemigo {
 		return new DisparoLogicoEnemigo(mapaLogico, mipersonaje);
 	}
 
+	@Override
+	public boolean cambiarGrafico(Personaje e) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
 }

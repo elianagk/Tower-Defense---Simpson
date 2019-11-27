@@ -19,7 +19,7 @@ public class VisitorEnemigo extends Visitor {
 	}
 
 	@Override
-	public void visitar(Enemigo e) {	
+	public void visitar(Enemigo e) {
 		mipersonaje.accionar();
 	}
 
