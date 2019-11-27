@@ -88,7 +88,7 @@ public abstract class GameObject {
 	}
 	
 	public GameObjectGrafico getGrafico() {
-		last_dir= still_key;
+		//last_dir= still_key;
 		return miObjetoGrafico;
 	}
 	

@@ -39,7 +39,8 @@ public class PersonajeAtaque extends StatePersonaje {
 	
 	@Override
 	public void cambiarGrafico() {
-		System.out.println("Ataque");
+		//System.out.println("Ataque");
 		miPersonaje.getGrafico().atacar();
+		miPersonaje.getGrafico().setBounds(miPersonaje.getX(), miPersonaje.getY(), 100, 100);
 	}
 }
