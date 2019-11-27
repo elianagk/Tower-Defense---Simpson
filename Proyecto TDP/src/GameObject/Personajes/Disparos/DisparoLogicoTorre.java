@@ -29,23 +29,21 @@ public class DisparoLogicoTorre extends Torre {
 
 	@Override
 	public void atacarPersonaje(Personaje e) {
-		super.mover(still_key);
-		e.aplicarDaño(mipersonaje.getDaño());
-		mapaLogico.entidadAEliminar(this);
-		if (!e.getEsValido()) {
-			mipersonaje.setAccionar(true);			
+//		super.mover(still_key);
+		if (enContacto(e)) {
+			e.aplicarDaño(mipersonaje.getDaño());
+			mapaLogico.entidadAEliminar(this);
 		}
 	}
 
 	@Override
 	public void accionar() {
+		contador++;
+		if (contador>=mipersonaje.getAlcance()) {
+			mapaLogico.entidadAEliminar(this);
+		}
 		estado.accionar();
 //		super.mover(forward_key);
-//		contador++;
-//		if (contador==mipersonaje.getAlcance()) {
-//			mapaLogico.entidadAEliminar(this);
-//		}
-//		
 	}
 	
 	@Override
@@ -63,6 +61,12 @@ public class DisparoLogicoTorre extends Torre {
 	public GameObject clone() {
 		
 		return new DisparoLogicoTorre(mapaLogico, mipersonaje);
+	}
+
+	@Override
+	public boolean cambiarGrafico(Personaje e) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 	
 }

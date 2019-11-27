@@ -15,9 +15,9 @@ public abstract class EnemigoDisparo extends Enemigo{
 	
 	@Override
 	public void atacarPersonaje(Personaje e) {
-		if (e.getX()>=this.getX()-100 && e.getX()<=getX() && e.getY()==this.getY()) {
-			super.mover(still_key);
-		}
+//		if (e.getX()>=this.getX()-100 && e.getX()<=getX() && e.getY()==this.getY()) {
+//			super.mover(still_key);
+//		}
 		contador++;
 		if (contador>=tiempo) {
 			mapaLogico.disparoAAgregar(new DisparoLogicoEnemigo(mapaLogico, this), this.getX()-50, this.getY());

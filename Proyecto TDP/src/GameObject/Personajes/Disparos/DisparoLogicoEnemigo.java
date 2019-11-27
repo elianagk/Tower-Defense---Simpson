@@ -28,26 +28,21 @@ public class DisparoLogicoEnemigo extends Enemigo {
 	@Override
 	public void atacarPersonaje(Personaje e) {
 		if (e.getX()>=this.getX()-100 && e.getX()<=getX() && e.getY()==this.getY()) {
-			super.mover(still_key);
+//			super.mover(still_key);
 			e.aplicarDaño(mipersonaje.getDaño());
-			mapaLogico.entidadAEliminar(this);
-			if (!e.getEsValido()) {
-				mipersonaje.setAccionar(true);
-				mipersonaje.setAtacando(false);
-			}
+			mapaLogico.entidadAEliminar(this);			
 		}		
 	}
 
 	@Override
 	public void accionar() {
+		contador++;
+		if (contador>=mipersonaje.getAlcance()) {
+			mapaLogico.entidadAEliminar(this);
+		}
 		estado.accionar();
 //		super.mover(backward_key);
-//		contador++;
-//		if (contador==mipersonaje.getAlcance()) {
-//			mapaLogico.entidadAEliminar(this);
-//			mipersonaje.setAccionar(true);
-//			mipersonaje.setAtacando(false);
-//		}
+		
 	}
 
 	@Override

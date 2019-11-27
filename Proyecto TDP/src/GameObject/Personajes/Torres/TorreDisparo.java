@@ -22,4 +22,8 @@ public abstract class TorreDisparo extends Torre {
 		}
 	}
 	
+	@Override
+	public boolean cambiarGrafico(Personaje e) {
+		return estaEnRango(e);
+	}
 }

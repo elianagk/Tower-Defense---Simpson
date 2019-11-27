@@ -66,20 +66,18 @@ public abstract  class Enemigo extends Personaje {
 		if (posicion.x<=0) 
 			mapaLogico.gameOver();		
 		else {
-
 			estado.accionar();
-
 		}
 	}
 	
 	@Override
 	public boolean estaEnRango(GameObject g) {		
-		return (g.getX()>=this.getX()-100 && g.getX()<=getX() && g.getY()==this.getY()); 
+		return (g.getX()>=this.getX()-450 && g.getX()<=getX() && g.getY()==this.getY()); 
 	}
 	
 	@Override
 	public boolean enContacto(Personaje e) {
-		return estaEnRango(e);
+		return (e.getX()>=this.getX()-100 && e.getX()<=getX() && e.getY()==this.getY());
 	}
 	
 	@Override

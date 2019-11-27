@@ -16,15 +16,20 @@ public abstract class TorreCuerpo extends Torre {
 //		accionar=false;			
 //		miObjetoGrafico.atacar();	
 		contador++;
-		
-		if (contador>=tiempo) {						
-			e.aplicarDaño(daño);	
-			contador=0;
-		}		
-		
+		if(enContacto(e)) {				
+			if (contador>=tiempo) {						
+				e.aplicarDaño(daño);	
+				contador=0;
+			}		
+		}
 //		if (!e.getEsValido()) { 
 //			accionar=true;		
 //			mover(still_key);
 //		}
+	}
+	
+	@Override
+	public boolean cambiarGrafico(Personaje e) {
+		return enContacto(e);
 	}
 }

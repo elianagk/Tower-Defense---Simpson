@@ -12,17 +12,17 @@ public abstract class PersonajeGrafico extends GameObjectGrafico {
 	public void atacar(String s) {
 		if (!imagen.equals(s)) {
 			imagen=s;
-			this.setIcon(new ImageIcon(getClass().getClassLoader().getResource(imagen)));
-			repaint();		
+			this.setIcon(new ImageIcon(getClass().getClassLoader().getResource(imagen)));				
 		}
+		repaint();
 	}	
 	
 	public void accionar(String s) {
 		if (!imagen.equals(s)) {
 			imagen= s;
-			this.setIcon(new ImageIcon(getClass().getClassLoader().getResource(imagen)));
-			repaint();
+			this.setIcon(new ImageIcon(getClass().getClassLoader().getResource(imagen)));			
 		}
+		repaint();
 	}
 	
 	public abstract void atacar() ;

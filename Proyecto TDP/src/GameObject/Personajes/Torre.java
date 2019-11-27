@@ -19,10 +19,10 @@ public abstract class Torre extends Personaje {
 		tiempo=15;
 	}	
 	
-	@Override
-	public void accionar() {
-		
-	}
+//	@Override
+//	public void accionar() {
+//		
+//	}
 	
 	@Override
 	public void Aceptar(Visitor v) {
@@ -31,16 +31,12 @@ public abstract class Torre extends Personaje {
 	
 	@Override
 	public boolean estaEnRango(GameObject g) {
-		return (g.getX()>=getX() && g.getX()<=this.getX()+350 && g.getY()==this.getY())   ;
+		return (g.getX()>=getX() && g.getX()<=this.getX()+350 && g.getY()==this.getY());
 	}
 	
 	@Override
 	public boolean enContacto (Personaje e) {
 		return (e.getX()>=getX() && e.getX()<=this.getX()+100 && e.getY()==this.getY());
 	}
-	
-	@Override
-	public boolean cambiarGrafico(Personaje e) {
-		return enContacto(e);
-	}
+		
 }

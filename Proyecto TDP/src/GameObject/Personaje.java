@@ -8,8 +8,7 @@ import VISITOR.Visitor;
 public abstract class Personaje extends GameObject {
 	protected int velocidad;
 	protected int daño;
-	protected int alcanceContador;
-	protected boolean accionar;		
+	protected int alcanceContador;	
 	protected int contador;	
 	protected StatePersonaje estado;
 	protected int jump_strenght = 10;
@@ -17,7 +16,6 @@ public abstract class Personaje extends GameObject {
 	public Personaje(MapaLogico ml, GameObjectGrafico gog, int vida) {
 		super(ml, gog);
 		alcanceContador=50;
-		accionar=true;
 		this.vida=vida;
 		vidaTotal=vida;		
 	}
@@ -25,10 +23,6 @@ public abstract class Personaje extends GameObject {
 	public abstract boolean enContacto(Personaje e);
 	
 	public abstract boolean cambiarGrafico(Personaje e);
-	
-	public void setAccionar(boolean accionar) {
-		this.accionar=accionar;
-	}
 	
 	public int getAlcance() {
 		return alcanceContador;
@@ -68,23 +62,12 @@ public abstract class Personaje extends GameObject {
 	}
 	
 	public void cambiarGrafico(){
-		estado.cambiarGrafico();
-		
+		estado.cambiarGrafico();		
 	}
 	
 	public void cambiarEstado(StatePersonaje est) {
-//		estado.cambiarGrafico();
 		this.estado=est;
 	}
-	
-//	protected void cambiarGrafico(String dir){
-//		if(miObjetoGrafico != null) {
-//			
-//			miObjetoGrafico.accionar();
-//			miObjetoGrafico.setBounds(posicion.x, posicion.y, 100, 100);
-//		}
-//	}
-//	
 	
 	public void mover(String dir){	
 		switch (dir) {
@@ -102,9 +85,10 @@ public abstract class Personaje extends GameObject {
 				dir = still_key;
 				break;
 		}
-		this.last_dir = dir;		
-		cambiarGrafico();
+		this.last_dir = dir;	
 		
+		getGrafico().setBounds(getX(), getY(), 100, 100);
+		getGrafico().repaint();
 	}
 	
 }

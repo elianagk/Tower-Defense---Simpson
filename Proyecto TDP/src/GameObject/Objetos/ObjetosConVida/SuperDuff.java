@@ -49,9 +49,10 @@ public class SuperDuff extends ObjetoConVida {
 
 	}
 
-	
-
-	
-
+	@Override
+	public boolean cambiarGrafico(Personaje e) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 	
 }
