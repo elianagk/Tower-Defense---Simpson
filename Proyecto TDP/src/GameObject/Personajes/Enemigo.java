@@ -66,7 +66,9 @@ public abstract  class Enemigo extends Personaje {
 		if (posicion.x<=0) 
 			mapaLogico.gameOver();		
 		else {
+
 			estado.accionar();
+
 		}
 	}
 	
