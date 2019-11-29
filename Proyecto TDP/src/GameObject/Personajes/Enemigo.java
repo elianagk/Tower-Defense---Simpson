@@ -72,12 +72,12 @@ public abstract  class Enemigo extends Personaje {
 	
 	@Override
 	public boolean estaEnRango(GameObject g) {		
-		return (g.getX()>=this.getX()-450 && g.getX()<=getX() && g.getY()==this.getY()); 
+		return (g.getX()>=this.getX()-100 && g.getX()<=getX() && g.getY()==this.getY()); 
 	}
 	
 	@Override
-	public boolean enContacto(Personaje e) {
-		return (e.getX()>=this.getX()-100 && e.getX()<=getX() && e.getY()==this.getY());
+	public boolean enContacto(Personaje e) {						
+		return estaEnRango(e);
 	}
 	
 	@Override

@@ -107,8 +107,8 @@ public class Nivel {
 		scheduler.shutdown();
 	}
 	
-	public boolean ultimaHorda() {
-		return hordaActual==hordas[2];
+	public boolean finNivel() {
+		return hordaActual==hordas[2] && hordaActual.finalizarHorda();
 	}
 	
 	public void shutdown() {
