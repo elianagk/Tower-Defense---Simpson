@@ -81,6 +81,11 @@ public abstract  class Enemigo extends Personaje {
 	}
 	
 	@Override
+	public boolean primerPersonajeMasCercano(Personaje e1, Personaje e2) {
+		return e1.getX()>e2.getX();
+	}
+	
+	@Override
 	public void aplicarDaño(int daño) {		
 		if (vida > daño)
 			vida -= daño;
@@ -127,6 +132,5 @@ public abstract  class Enemigo extends Personaje {
 		mapaLogico.getJuego().getJugador().setMonedas(mapaLogico.getJuego().getJugador().getMonedas()+monedas);
 		mapaLogico.getTiendaLogica().actualizarPlata();
 	}
-	
 	
 }

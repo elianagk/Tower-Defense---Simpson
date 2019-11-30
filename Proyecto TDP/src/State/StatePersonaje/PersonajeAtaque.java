@@ -14,6 +14,8 @@ public class PersonajeAtaque extends StatePersonaje {
 	
 	@Override
 	public void atacar(Personaje e) {
+		if (miPersonaje.primerPersonajeMasCercano(e, atacando))
+			atacando=e;
 		if (atacando.getEsValido()) {
 			if (miPersonaje.cambiarGrafico(e))
 				miPersonaje.cambiarGrafico();
