@@ -3,6 +3,7 @@ package VISITOR;
 
 import GameObject.Objeto;
 import GameObject.Objetos.Magia;
+import GameObject.Objetos.ObjetoConVida;
 import GameObject.Objetos.ObjetoPrecioso;
 import GameObject.Personajes.Enemigo;
 import GameObject.Personajes.Torre;
@@ -32,15 +33,17 @@ public class VisitorAliado extends Visitor {
 
 	@Override
 	public void visitarDisparo(DisparoLogicoEnemigo e) {
-//		mipersonaje.accionar();		
+
 	}
 
 	@Override
 	public void visitar(Objeto o) {
-//		mipersonaje.accionar();
 		
 	}
 
-	
+	@Override
+	public void visitar(ObjetoConVida o) {
+		
+	}
 
 }

@@ -24,6 +24,8 @@ public abstract class Personaje extends GameObject {
 	
 	public abstract boolean cambiarGrafico(Personaje e);
 	
+	public abstract boolean primerPersonajeMasCercano(Personaje e1, Personaje e2);
+	
 	public int getAlcance() {
 		return alcanceContador;
 	}

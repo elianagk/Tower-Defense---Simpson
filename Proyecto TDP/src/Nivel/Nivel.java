@@ -47,7 +47,7 @@ public class Nivel {
 		int eventoAleatorio= r.nextInt(7)+1;
 		if(eventoAleatorio==1) {
 			opcion= r.nextInt(2)+1;
-			if(opcion==0) {
+			if(opcion==1) {
 				g= new SuperDuff(mapaLogico);
 				y= (r.nextInt(6)+2)*100;
 				x= (r.nextInt(9)+1)*100;
@@ -107,8 +107,8 @@ public class Nivel {
 		scheduler.shutdown();
 	}
 	
-	public boolean ultimaHorda() {
-		return hordaActual==hordas[2];
+	public boolean finNivel() {
+		return hordaActual==hordas[2] && hordaActual.finalizarHorda();
 	}
 	
 	public void shutdown() {

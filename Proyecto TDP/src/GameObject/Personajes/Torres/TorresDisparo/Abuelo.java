@@ -3,17 +3,13 @@ package GameObject.Personajes.Torres.TorresDisparo;
 import javax.swing.JLabel;
 
 import GameObject.GameObject;
-import GameObject.Personaje;
-import GameObject.Personajes.Torre;
-import GameObject.Personajes.Disparos.DisparoLogicoTorre;
+
 import GameObject.Personajes.Torres.TorreDisparo;
 import GameObjectGrafico.PersonajesGrafico.TorresGrafico.AbueloGrafico;
 
 import Mapa.MapaLogico;
-import State.StatePersonaje.PersonajeOcioso;
-import VISITOR.Visitor;
+import State.StatePersonaje.StateTorreDisparo;
 import VISITOR.VisitorAliado;
-import VISITOR.VisitorEnemigo;
 
 public class Abuelo extends TorreDisparo {
 	protected int contador;
@@ -24,8 +20,8 @@ public class Abuelo extends TorreDisparo {
 		tiempo=20;
 		contador=0;		
 		daño=80;
-		costo=1000;
-		estado=new PersonajeOcioso(this, still_key);
+		costo=700;
+		estado=new StateTorreDisparo(this, still_key);	
 	}
 	
 	public GameObject clone() {

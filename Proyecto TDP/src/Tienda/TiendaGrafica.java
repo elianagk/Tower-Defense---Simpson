@@ -74,11 +74,6 @@ public class TiendaGrafica extends JPanel {
 		String s= String.valueOf(p);
 		puntaje.setText("Puntaje= "+ s);
 		puntaje.repaint();
-	}
-	
-	
-	
-	
-	
+	}	
 
 }

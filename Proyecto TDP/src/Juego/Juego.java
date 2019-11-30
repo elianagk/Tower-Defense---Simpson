@@ -55,7 +55,7 @@ public class Juego {
 	
 			if (e.getEsValido()) {
 				toCollide= this.mapaLogico.hayEnElRango(e);
-				if (nivelActual==1 && niveles[nivelActual].ultimaHorda()) {
+				if (nivelActual==1 && niveles[nivelActual].finNivel()) {
 					e.Aceptar(visitorVictoria);
 				}									
 					
@@ -68,7 +68,7 @@ public class Juego {
 				}
 			}
 		}
-		if (!hayEnemigos && nivelActual==1 && niveles[nivelActual].ultimaHorda())
+		if (!hayEnemigos && nivelActual==1 && niveles[nivelActual].finNivel())
 			victory();
 	}
 	

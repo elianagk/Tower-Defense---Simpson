@@ -2,6 +2,7 @@ package VISITOR;
 
 
 import GameObject.Objeto;
+import GameObject.Objetos.ObjetoConVida;
 import GameObject.Objetos.ObjetoPrecioso;
 import GameObject.Objetos.ObjetosConVida.Maggie;
 import GameObject.Objetos.ObjetosConVida.SuperDuff;
@@ -47,12 +48,9 @@ public class VisitorEnemigo extends Visitor {
 		
 	}
 
-	public void visitar(SuperDuff s) {
-		mipersonaje.atacar(s);
+	@Override
+	public void visitar(ObjetoConVida o) {
+		mipersonaje.atacar(o);
 	}
-	
-	public void visitar(Maggie m) {
-		mipersonaje.setVida(0);
-		m.setVida(0);
-	}
+
 }

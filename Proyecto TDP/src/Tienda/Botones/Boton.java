@@ -28,14 +28,7 @@ public class Boton extends JButton {
 		Icon i= new ImageIcon(fot.getImage().getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_DEFAULT));
 		this.setIcon(i);
 	}
-	
-	
-	
-	
-	
-	
-	
-	
+		
 	private static class RoundedBorder implements Border {
 
 	    private int radius;

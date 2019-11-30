@@ -39,4 +39,8 @@ public abstract class Torre extends Personaje {
 		return (e.getX()>=getX() && e.getX()<=this.getX()+100 && e.getY()==this.getY() );
 	}
 		
+	@Override
+	public boolean primerPersonajeMasCercano(Personaje e1, Personaje e2) {
+		return e1.getX()<e2.getX();
+	}
 }

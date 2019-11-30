@@ -1,6 +1,7 @@
 package VISITOR;
 
 import GameObject.Objeto;
+import GameObject.Objetos.ObjetoConVida;
 import GameObject.Objetos.ObjetoPrecioso;
 import GameObject.Personajes.Enemigo;
 import GameObject.Personajes.Torre;
@@ -44,5 +45,10 @@ public class VisitorPrecioso extends Visitor {
 		// TODO Auto-generated method stub
 		
 	}
+	
+	@Override
+	public void visitar(ObjetoConVida o) {
+		
+	}	
 
 }

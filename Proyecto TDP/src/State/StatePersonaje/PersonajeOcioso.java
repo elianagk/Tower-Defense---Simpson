@@ -10,7 +10,7 @@ public class PersonajeOcioso extends StatePersonaje {
 	
 	@Override
 	public void atacar(Personaje e) {
-		miPersonaje.cambiarEstado(new PersonajeAtaque(miPersonaje, e, direccion));
+		miPersonaje.cambiarEstado(new PersonajeAtaque(miPersonaje, e, direccion, this));
 		miPersonaje.atacar(e);		
 	}
 	
