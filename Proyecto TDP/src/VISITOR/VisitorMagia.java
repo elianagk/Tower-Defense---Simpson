@@ -2,6 +2,7 @@ package VISITOR;
 
 import GameObject.Objeto;
 import GameObject.Objetos.Magia;
+import GameObject.Objetos.ObjetoConVida;
 import GameObject.Objetos.ObjetoPrecioso;
 import GameObject.Personajes.Enemigo;
 import GameObject.Personajes.Torre;
@@ -16,14 +17,12 @@ public class VisitorMagia extends Visitor {
 
 	@Override
 	public void visitar(Enemigo e) {
-		
-		
+				
 	}
 
 	@Override
 	public void visitar(Torre t) {
-		miobjeto.accionar(t);
-		
+		miobjeto.accionar(t);		
 	}
 
 	
@@ -44,6 +43,11 @@ public class VisitorMagia extends Visitor {
 	public void visitar(Objeto o) {
 		// TODO Auto-generated method stub
 		
+	}
+	
+	@Override
+	public void visitar(ObjetoConVida o) {
+		miobjeto.accionar();
 	}
 
 }

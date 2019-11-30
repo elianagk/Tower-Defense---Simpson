@@ -3,6 +3,7 @@ package Tienda;
 
 import GameObject.GameObject;
 import GameObject.Objeto;
+import GameObject.Objetos.ObjetoConVida;
 import GameObject.Objetos.ObjetoPrecioso;
 import GameObject.Personajes.Enemigo;
 import GameObject.Personajes.Torre;
@@ -24,10 +25,7 @@ public class TiendaLogica {
 	private Jugador jugador;
 	private TiendaGrafica tienda;
 	
-	
-	
-	
-	
+		
 	public TiendaLogica(MapaLogico mapa) {
 		g= null;
 		mapaLogico= mapa;
@@ -78,18 +76,6 @@ public class TiendaLogica {
 		}
 	}
 	
-//	public void revisarPremio(int x, int y) {
-//		if (ProximaEntidad() && jugador.getMonedas()>0 && g.getCosto()<=jugador.getMonedas()) {
-//			jugador.setMonedas(jugador.getMonedas()-g.getCosto());
-//			mapaLogico.entidadAAgregar(g, x, y);	
-//			ObjetoPrecioso a= (ObjetoPrecioso) g;
-//			a.empezarHilo();
-//			tienda.actualizarPlata(jugador.getMonedas());			
-//			g= null;
-//		}
-//	
-//	}
-	
 	public void vender(Torre torre) {
 		int retornoDinero=0;
 		if (torre.getVida()>=torre.getVidaTotal()/2)
@@ -97,9 +83,14 @@ public class TiendaLogica {
 		else
 			retornoDinero=torre.getCosto()/2;
 		
+		torre.setEsValido(false);
 		mapaLogico.entidadAEliminar(torre);
 		jugador.setMonedas(jugador.getMonedas()+retornoDinero);
 		tienda.actualizarPlata(jugador.getMonedas());
+		
+	}
+	
+	public void vender(ObjetoConVida o) {
 		
 	}
 	

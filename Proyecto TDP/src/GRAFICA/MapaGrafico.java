@@ -90,6 +90,8 @@ public class MapaGrafico extends JLabel{
 	
 	public void gameOver() {
 		juego.gameOver();
+		removeAll();
+		revalidate();
 		ImageIcon fot1= new ImageIcon(getClass().getClassLoader().getResource("gameover.gif"));
 		Icon mapa= new ImageIcon(fot1.getImage().getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_DEFAULT));
 		this.setIcon(mapa);
@@ -97,6 +99,8 @@ public class MapaGrafico extends JLabel{
 	}
 	
 	public void victory() {
+		removeAll();
+		revalidate();	
 		ImageIcon fot1= new ImageIcon(getClass().getClassLoader().getResource("victory.jpg"));
 		Icon mapa= new ImageIcon(fot1.getImage().getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_DEFAULT));
 		this.setIcon(mapa);

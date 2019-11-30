@@ -28,7 +28,6 @@ public class DisparoLogicoEnemigo extends Enemigo {
 	@Override
 	public void atacarPersonaje(Personaje e) {
 		if (e.getX()>=this.getX()-100 && e.getX()<=getX() && e.getY()==this.getY()) {
-//			super.mover(still_key);
 			e.aplicarDaño(mipersonaje.getDaño());
 			mapaLogico.entidadAEliminar(this);			
 		}		
@@ -41,8 +40,6 @@ public class DisparoLogicoEnemigo extends Enemigo {
 			mapaLogico.entidadAEliminar(this);
 		}
 		estado.accionar();
-//		super.mover(backward_key);
-		
 	}
 
 	@Override
