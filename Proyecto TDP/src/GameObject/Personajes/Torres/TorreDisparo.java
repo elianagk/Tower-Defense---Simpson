@@ -16,6 +16,7 @@ public abstract class TorreDisparo extends Torre {
 	public void atacarPersonaje(Personaje e) {
 //		miObjetoGrafico.atacar();
 		contador++;
+		
 		if (contador==tiempo) {
 			mapaLogico.disparoAAgregar(new DisparoLogicoTorre(mapaLogico, this), this.getX()+50, this.getY());
 			contador=0;

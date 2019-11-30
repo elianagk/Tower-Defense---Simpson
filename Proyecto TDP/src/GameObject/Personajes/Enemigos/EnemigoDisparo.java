@@ -19,6 +19,7 @@ public abstract class EnemigoDisparo extends Enemigo{
 //			super.mover(still_key);
 //		}
 		contador++;
+		
 		if (contador>=tiempo) {
 			mapaLogico.disparoAAgregar(new DisparoLogicoEnemigo(mapaLogico, this), this.getX()-50, this.getY());
 			contador=0;
