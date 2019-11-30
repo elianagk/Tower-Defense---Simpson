@@ -75,7 +75,7 @@ public abstract  class Enemigo extends Personaje {
 		return (g.getX()>=this.getX()-100 && g.getX()<=getX() && g.getY()==this.getY()); 
 	}
 	
-	@Override
+
 	public boolean enContacto(Personaje e) {						
 		return estaEnRango(e);
 	}
@@ -83,6 +83,7 @@ public abstract  class Enemigo extends Personaje {
 	@Override
 	public boolean primerPersonajeMasCercano(Personaje e1, Personaje e2) {
 		return e1.getX()>e2.getX();
+
 	}
 	
 	@Override
@@ -92,14 +93,15 @@ public abstract  class Enemigo extends Personaje {
 		else {
 			vida = 0;
 			esValido=false;
-			actualizarPuntaje();
-						
+			actualizarPuntaje();	
 			Random r= new Random();
 			int n= r.nextInt()%4;
 			if (n==0) {
 				Magia m= powerup();
 				m.setPosicion(new Point (this.getX(), this.getY()));							
 				mapaLogico.getMapaGrafico().agregarEntidad(m);
+				
+				
 			}
 			monedas();			
 			mapaLogico.entidadAEliminar(this);

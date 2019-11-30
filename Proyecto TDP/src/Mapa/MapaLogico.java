@@ -133,6 +133,7 @@ public class MapaLogico  {
 		entidadesAEliminar=(ArrayList<GameObject>) entidades.clone();
 		entidadesAAgregar.clear();
 		actualizarListaDeEntidades();
+		getEntidades();
 		mapaGrafico.gameOver();
 		
 	}
@@ -141,6 +142,7 @@ public class MapaLogico  {
 		entidadesAEliminar=(ArrayList<GameObject>) entidades.clone();
 		entidadesAAgregar.clear();
 		actualizarListaDeEntidades();
+		getEntidades();
 		mapaGrafico.victory();
 	}
 	
